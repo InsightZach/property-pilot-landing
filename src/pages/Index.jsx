@@ -1,10 +1,12 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building2, CheckCircle, DollarSign, LineChart, Percent, Clock, ThumbsUp, Briefcase } from 'lucide-react';
+import { Building2, CheckCircle, DollarSign, LineChart } from 'lucide-react';
 import MeetTheOwner from '../components/MeetTheOwner';
 import RecentAppeals from '../components/RecentAppeals';
 import Header from '../components/Header';
+import CallToAction from '../components/CallToAction';
+import Footer from '../components/Footer';
 
 const StatCard = ({ icon: Icon, title, description }) => (
   <Card className="border-[#d7b971]">
@@ -67,24 +69,6 @@ const WhoWeWorkWith = () => (
       ))}
     </div>
   </Section>
-);
-
-const CallToAction = () => (
-  <section className="bg-[#0A2647] text-white py-16">
-    <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-      <div className="md:w-2/3 mb-8 md:mb-0">
-        <h2 className="text-4xl font-bold mb-4">Get Started</h2>
-        <p className="text-xl">
-          We'll review your property and provide an appeal recommendation. If an appeal benefits you, we'll take care of everything.
-        </p>
-      </div>
-      <div className="md:w-1/3 text-center">
-        <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-xl px-8 py-4">
-          Get Started
-        </Button>
-      </div>
-    </div>
-  </section>
 );
 
 const Index = () => {
@@ -188,15 +172,7 @@ const Index = () => {
 
       <CallToAction />
 
-      <footer className="py-8 bg-gray-800 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
-          <p className="mb-2">Phone: [Your Phone Number]</p>
-          <p className="mb-2">Email: [Your Email Address]</p>
-          <p className="mb-4">LinkedIn: [Your LinkedIn Profile URL]</p>
-          <p>&copy; 2024 Insight Property Tax. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
