@@ -16,16 +16,15 @@ const Header = () => {
             <Link to="/" className="text-white hover:text-[#d7b971]">Home</Link>
             <Link to="/why-insight" className="text-white hover:text-[#d7b971]">Why Insight?</Link>
             <Link to="/faq" className="text-white hover:text-[#d7b971]">FAQ</Link>
+            <Link to="/contact" className="text-white hover:text-[#d7b971]">Contact</Link>
           </nav>
-          <Button 
-            className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]"
-            onClick={() => {
-              // Add HubSpot contact form link here in the future
-              console.log("Contact button clicked");
-            }}
-          >
-            Contact Us
-          </Button>
+          <Link to="/contact">
+            <Button 
+              className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]"
+            >
+              Contact Us
+            </Button>
+          </Link>
         </div>
       </div>
     </header>
