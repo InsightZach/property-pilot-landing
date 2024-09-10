@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building2, CheckCircle, DollarSign, LineChart } from 'lucide-react';
+import { Building2, CheckCircle, DollarSign, LineChart, ArrowRight } from 'lucide-react';
 import MeetTheOwner from '../components/MeetTheOwner';
 import RecentAppeals from '../components/RecentAppeals';
 import Header from '../components/Header';
@@ -57,8 +57,11 @@ const WhoWeWorkWith = () => (
         industrial, and apartment properties in the Minneapolis-St. Paul metro area.
       </p>
     </div>
-    <div className="flex justify-center">
-      <img src="/placeholder.svg" alt="Property Types We Work With" className="w-full max-w-2xl rounded-lg shadow-lg" />
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="/placeholder.svg" alt="Commercial" className="w-full rounded-lg shadow-lg" />
+      <img src="/placeholder.svg" alt="Industrial" className="w-full rounded-lg shadow-lg" />
+      <img src="/placeholder.svg" alt="Apartments" className="w-full rounded-lg shadow-lg" />
+      <img src="/placeholder.svg" alt="Metro Area" className="w-full rounded-lg shadow-lg" />
     </div>
   </Section>
 );
@@ -74,9 +77,15 @@ const Index = () => {
 
       <section className="bg-[#0A2647] text-white py-20">
         <div className="container mx-auto px-4 text-left">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">We Reduce Property Taxes.</h1>
-          <p className="text-xl mb-8">Minnesota Assessment Appeals</p>
-          <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Get a Free Consultation</Button>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            We save our clients <span className="text-[#d7b971]">tens of thousands</span> on property taxes, without the hassle.
+          </h1>
+          <p className="text-xl mb-8">
+            Get started. We'll provide you an appeal recommendation. If an appeal benefits you, we'll take care of everything.
+          </p>
+          <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] flex items-center">
+            Get Started <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
         </div>
       </section>
 
