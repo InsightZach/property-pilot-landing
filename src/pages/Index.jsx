@@ -72,20 +72,17 @@ const Index = () => {
       <Header />
 
       <section className="relative bg-cover bg-center py-20" style={{ backgroundImage: 'url("/hero-background.svg")' }}>
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between relative z-10">
-          <div className="md:w-1/2 mb-8 md:mb-0">
+        <div className="container mx-auto px-4 flex items-center justify-center relative z-10">
+          <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
               Our clients save <span className="text-[#d7b971]">tens of thousands</span> on Property Taxes.
             </h1>
             <p className="text-xl mb-8 text-white">
               Get started with our expert property tax appeal services today.
             </p>
-            <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 flex items-center">
+            <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 flex items-center mx-auto">
               Get Started <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
-          </div>
-          <div className="md:w-1/2">
-            <img src="/placeholder.svg" alt="Property Tax Savings" className="w-full rounded-lg shadow-lg" />
           </div>
         </div>
       </section>
