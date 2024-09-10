@@ -65,8 +65,8 @@ const Contact = () => {
                   <Input id="propertyId" {...register("propertyId")} />
                 </div>
                 <div className="mb-4">
-                  <Label htmlFor="address">Address (Optional)</Label>
-                  <Textarea id="address" {...register("address")} />
+                  <Label htmlFor="propertyDetails">Tell me about your property (Optional)</Label>
+                  <Textarea id="propertyDetails" {...register("propertyDetails")} />
                 </div>
                 <Button type="submit" className="w-full bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">
                   Send Message
