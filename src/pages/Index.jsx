@@ -86,9 +86,9 @@ const Index = () => {
           <div className="max-w-2xl">
             <p className="text-[#d7b971] mb-4">Commercial - Industrial - Apartments</p>
             <h1 className="text-5xl font-bold mb-6 leading-tight">
-              Our clients save <span className="text-[#d7b971]">tens of thousands</span> on Property Taxes.
+              Our clients save <span className="text-[#d7b971]">tens of thousands</span> on property taxes.
             </h1>
-            <p className="text-xl mb-8 leading-relaxed">
+            <p className="text-xl mb-8">
               Get started → We provide you an appeal recommendation.
               If an appeal benefits you, we'll take care of everything.
             </p>
