@@ -74,6 +74,10 @@ const Index = () => {
     <div className="min-h-screen bg-gray-100">
       <Header />
 
+      <div className="bg-[#0A2647] text-white py-2 text-center">
+        <p className="text-sm md:text-base">Commercial - Industrial - Apartments</p>
+      </div>
+
       <section className="bg-[#0A2647] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-4">We Reduce Property Taxes.</h1>
