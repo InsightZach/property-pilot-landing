@@ -28,7 +28,7 @@ const Header = () => {
           <div className="md:hidden">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="text-white border-white hover:bg-[#1E3A5F]">
+                <Button className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">
                   <Menu className="h-5 w-5" />
                   <span className="ml-2">Menu</span>
                 </Button>
