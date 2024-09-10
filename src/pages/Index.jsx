@@ -7,6 +7,7 @@ import RecentAppeals from '../components/RecentAppeals';
 import Header from '../components/Header';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
+import ProcessSection from '../components/ProcessSection';
 
 const StatCard = ({ icon: Icon, title, description }) => (
   <Card className="border-[#d7b971]">
@@ -140,18 +141,7 @@ const Index = () => {
 
       <WhoWeWorkWith />
 
-      <Section title="Our Process" bgColor="bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {['Property Review', 'Value Analysis', 'Appeal Strategy', 'Negotiation & Resolution'].map((step, index) => (
-            <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-[#d7b971] text-[#0A2647] rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                {index + 1}
-              </div>
-              <h3 className="font-semibold mb-2 text-[#0A2647]">{step}</h3>
-            </div>
-          ))}
-        </div>
-      </Section>
+      <ProcessSection />
 
       <MeetTheOwner />
 
