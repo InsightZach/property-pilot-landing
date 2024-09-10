@@ -5,10 +5,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { CheckCircle, Percent, Clock, Wrench, DollarSign, HelpingHand, Building, MapPin } from 'lucide-react';
 
-const FeatureCard = ({ icon: Icon, title, description }) => (
+const FeatureCard = ({ icon: Icon, title, description, tagline }) => (
   <Card className="h-full">
     <CardHeader>
       <Icon className="w-12 h-12 text-[#d7b971] mx-auto" />
+      <p className="text-[#d7b971] text-sm text-center mb-2">{tagline}</p>
     </CardHeader>
     <CardContent>
       <CardTitle className="mb-2 text-center">{title}</CardTitle>
@@ -21,41 +22,49 @@ const WhyInsight = () => {
   const features = [
     {
       icon: Percent,
+      tagline: "ROI",
       title: "218%",
       description: "Insight's contingency fee structure ensures our interests are aligned. We only profit when your property taxes are reduced."
     },
     {
       icon: Clock,
+      tagline: "Hassle-Free",
       title: "Straight To The Point",
       description: "We have no intention of extending the appeal process. Our goal is to maximize your savings quickly."
     },
     {
       icon: Clock,
+      tagline: "Time",
       title: "90-day Average Settlement",
       description: "Minnesota Tax Court petitions can take up to 2 years to resolve. Our average appeal is settled in less than 90 days."
     },
     {
       icon: Wrench,
+      tagline: "Expertise",
       title: "All-Three Tools",
-      description: "We're a rare breed: combining legal, appraisal, and assessing experience. Unmatched, this leads to quicker settlements and higher savings when appealing your assessment."
+      description: "We're a rare breed: combining analytics, appraisal, and assessing experience. Unmatched, this leads to quicker settlements and higher savings when appealing your assessment."
     },
     {
       icon: DollarSign,
+      tagline: "Risk",
       title: "No Reduction- You Pay $0",
-      description: "Another benefit of our contingency fee model: If we don't reduce your taxes, you pay nothing."
+      description: "Benefits of our contingency fee model: If we don't reduce your taxes, you pay nothing."
     },
     {
       icon: HelpingHand,
+      tagline: "DIY",
       title: "Appeal on Your Own",
-      description: "This situation isn't suitable for everyone. We'll guide your decision-making process. Ultimately, we only want to work with clients who truly need our services."
+      description: "Statistics certainly favor using a professional to appeal your property taxes. Low single-digit reductions are common in DIY appeals, compared to the -17.9% reduction average we have posted in 2024."
     },
     {
       icon: Building,
+      tagline: "Competition",
       title: "National Firms",
       description: "National firms often prioritize larger clients. With Insight, you have a high-touch experience. Your property receives the attention it deserves."
     },
     {
       icon: MapPin,
+      tagline: "Local",
       title: "We Only Appeal In Minnesota",
       description: "Property tax is a completely different ball game in every state. We have extensive knowledge of Minnesota's unique assessment and more than state and local property tax knowledge that comes from decades of experience."
     }
