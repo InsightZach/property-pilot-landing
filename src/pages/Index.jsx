@@ -47,7 +47,7 @@ const ResultsCostSection = ({ title, subtitle, items, buttonText, description })
 );
 
 const WhoWeWorkWith = () => (
-  <Section title="Who We Work With">
+  <Section title="Who We Work With" bgColor="bg-gray-100">
     <p className="text-lg mb-8 text-center">
       We provide property tax appeal services for property owners and tenants of commercial,
       industrial, and apartment properties.
@@ -62,7 +62,7 @@ const WhoWeWorkWith = () => (
         { icon: "/placeholder.svg", title: "INDUSTRIAL" },
         { icon: "/placeholder.svg", title: "APARTMENTS" },
       ].map((item, index) => (
-        <div key={index} className="bg-gray-100 p-8 rounded-lg text-center">
+        <div key={index} className="bg-white p-8 rounded-lg text-center">
           <img src={item.icon} alt={item.title} className="w-24 h-24 mx-auto mb-4" />
           <h3 className="text-xl font-semibold text-[#0A2647]">{item.title}</h3>
         </div>
@@ -88,7 +88,7 @@ const Index = () => {
         </div>
       </section>
 
-      <Section title="Why Choose Insight Property Tax">
+      <Section title="Why Choose Insight Property Tax" bgColor="bg-white">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <StatCard icon={DollarSign} title="Risk-Free Service" description="Pay only if we successfully reduce your property taxes." />
           <StatCard icon={CheckCircle} title="Minnesota Expertise" description="Decades of experience in Minnesota property tax law." />
@@ -105,7 +105,7 @@ const Index = () => {
         </p>
       </Section>
 
-      <Section title="Results and Cost" bgColor="bg-gray-100">
+      <Section title="Results and Cost" bgColor="bg-white">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <ResultsCostSection
             title="Results"
@@ -138,7 +138,7 @@ const Index = () => {
 
       <WhoWeWorkWith />
 
-      <Section title="Our Process">
+      <Section title="Our Process" bgColor="bg-white">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {['Property Review', 'Value Analysis', 'Appeal Strategy', 'Negotiation & Resolution'].map((step, index) => (
             <div key={index} className="text-center">
