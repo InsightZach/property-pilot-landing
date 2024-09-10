@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building2, CheckCircle, DollarSign, LineChart } from 'lucide-react';
+import { Building2, CheckCircle, DollarSign, LineChart, Percent, Clock, ThumbsUp, Briefcase } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -55,6 +55,114 @@ const Index = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Results Section */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-semibold text-center mb-12 text-[#0A2647]">Insight's 2024 Appeal Statistics</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <Card className="border-[#D4AF37]">
+              <CardHeader>
+                <CardTitle className="flex items-center justify-center text-[#0A2647]">
+                  <Percent className="mr-2 h-6 w-6 text-[#D4AF37]" />
+                  17.9%
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                Average reduction
+              </CardContent>
+            </Card>
+            <Card className="border-[#D4AF37]">
+              <CardHeader>
+                <CardTitle className="flex items-center justify-center text-[#0A2647]">
+                  <DollarSign className="mr-2 h-6 w-6 text-[#D4AF37]" />
+                  $49k
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                Tax savings per property
+              </CardContent>
+            </Card>
+            <Card className="border-[#D4AF37]">
+              <CardHeader>
+                <CardTitle className="flex items-center justify-center text-[#0A2647]">
+                  <Clock className="mr-2 h-6 w-6 text-[#D4AF37]" />
+                  90 Days
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                Average appeal duration
+              </CardContent>
+            </Card>
+            <Card className="border-[#D4AF37]">
+              <CardHeader>
+                <CardTitle className="flex items-center justify-center text-[#0A2647]">
+                  <ThumbsUp className="mr-2 h-6 w-6 text-[#D4AF37]" />
+                  100%
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                Appeal success rate
+              </CardContent>
+            </Card>
+          </div>
+          <p className="text-center mt-8 text-lg text-[#0A2647]">Our clients save tens of thousands on property taxes.</p>
+        </div>
+      </section>
+
+      {/* Cost Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-semibold text-center mb-12 text-[#0A2647]">Cost: Contingency Fee</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <Card className="border-[#D4AF37]">
+              <CardHeader>
+                <CardTitle className="flex items-center justify-center text-[#0A2647]">
+                  <DollarSign className="mr-2 h-6 w-6 text-[#D4AF37]" />
+                  $0 Upfront
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                You pay nothing to start
+              </CardContent>
+            </Card>
+            <Card className="border-[#D4AF37]">
+              <CardHeader>
+                <CardTitle className="flex items-center justify-center text-[#0A2647]">
+                  <Percent className="mr-2 h-6 w-6 text-[#D4AF37]" />
+                  30% Fee
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                Our fee is 30% of tax savings
+              </CardContent>
+            </Card>
+            <Card className="border-[#D4AF37]">
+              <CardHeader>
+                <CardTitle className="flex items-center justify-center text-[#0A2647]">
+                  <DollarSign className="mr-2 h-6 w-6 text-[#D4AF37]" />
+                  You Keep 70%
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                You pocket the rest
+              </CardContent>
+            </Card>
+            <Card className="border-[#D4AF37]">
+              <CardHeader>
+                <CardTitle className="flex items-center justify-center text-[#0A2647]">
+                  <Briefcase className="mr-2 h-6 w-6 text-[#D4AF37]" />
+                  Full Service
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                We handle everything
+              </CardContent>
+            </Card>
+          </div>
+          <p className="text-center mt-8 text-lg text-[#0A2647]">Leverage our expertise, maximize your profit and time.</p>
         </div>
       </section>
 
