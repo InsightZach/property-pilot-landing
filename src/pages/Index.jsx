@@ -74,7 +74,7 @@ const Index = () => {
       <section 
         className="bg-[#0A2647] text-white py-20" 
         style={{ 
-          backgroundImage: `url('/hero-background-new.svg')`, 
+          backgroundImage: `url('/hero-background-logo-inspired.svg')`, 
           backgroundSize: 'cover', 
           backgroundPosition: 'center' 
         }}
