@@ -23,27 +23,27 @@ const FAQ = () => {
   const faqItems = [
     {
       question: "What is the process for appealing my property tax assessment in Minnesota?",
-      answer: "The process involves reviewing your assessment, gathering evidence, filing an appeal with the local assessor's office or tax court, and presenting your case. Insight Property Tax handles all these steps for you."
+      answer: "The process begins with a thorough analysis of your property's assessment. If we identify an over-assessment, we prepare and file an appeal on your behalf. We handle all aspects of the appeal process, including negotiations and hearings, to ensure your property taxes are accurately assessed."
     },
     {
       question: "How do I know if my property is over-assessed?",
-      answer: "Signs of over-assessment include recent property value declines in your area, significant increases in your assessment without improvements, or assessments higher than comparable properties. We provide a free initial review to determine if your property might be over-assessed."
+      answer: "An over-assessment occurs when the assessment value is higher than 'market value'. Many factors should be taken into account. Some typical indicators are: 1) Value Increase - An increase in value relative to your property's income production. 2) Equalization - Comparable properties received a lower value, but your property was not included. 3) Purchase price - You recently purchased your property below the assessment value. 4) Overstated improvement - You completed an improvement and the taxing jurisdiction added the permitted value on top of your assessment value."
     },
     {
       question: "What kind of savings can I expect from a successful property tax appeal?",
-      answer: "Savings vary, but our clients have seen reductions averaging 17.9% in their assessed values, translating to an average of $49,000 in tax savings per property."
+      answer: "While savings can vary, our clients have seen an average reduction of 17.9% in their property tax assessments, resulting in average net savings of $24k+ per appeal. The actual savings will depend on your specific property and assessment. The tax consulting industry standard is around a 10% average reduction for context."
     },
     {
       question: "How long does the property tax appeal process typically take?",
-      answer: "The duration can vary, but our average appeal process takes about 90 days from start to finish."
+      answer: "The appeal process in Minnesota falls into two categories: Board Appeals (Local or County) and Tax Court petitions. Board appeals apply to value notices, which you receive in early spring. There is a predetermined time frame depending on your taxing jurisdiction, typically ranging from 1-3 months. For Tax Court Petitions, a 2-year appeal time frame is not uncommon. However, our average timeframe is 90 days."
     },
     {
       question: "What information or documentation do I need to provide for the appeal process?",
-      answer: "Typically, we need your property details, recent tax bills, and any relevant information about your property's condition or recent changes. We guide you through providing the necessary documentation."
+      answer: "This is all on a case by case basis, but information showing your property's Income & Expense for the last two years is standard. These include: Rent Roll, Income and Expense Report, and Lease."
     },
     {
       question: "How do you determine if an appeal is worth pursuing?",
-      answer: "We conduct a thorough analysis of your property's assessed value, compare it to similar properties, and evaluate recent market trends. If we believe there's potential for significant savings, we'll recommend pursuing an appeal."
+      answer: "We conduct a detailed analysis of your property's assessment compared to its market value and similar properties. If we identify a significant over-assessment, we will recommend pursuing an appeal and outline the potential benefits."
     }
   ];
 
@@ -67,8 +67,8 @@ const FAQ = () => {
             Join our clients who benefited from Insight's 2024 appeal stats.
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <StatItem value="-17%" label="Appeal Reduction Average" />
-            <StatItem value="49 K ($)" label="Tax Savings Average" />
+            <StatItem value="-17.9%" label="Appeal Reduction Average" />
+            <StatItem value="24 K+ ($)" label="Net Savings Average" />
             <StatItem value="100%" label="Appeal Success" />
             <StatItem value="90 Day" label="Average Appeal Length" />
           </div>
