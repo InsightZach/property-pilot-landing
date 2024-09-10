@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, CheckCircle, DollarSign, LineChart, Percent, Clock, ThumbsUp, Briefcase } from 'lucide-react';
 import MeetTheOwner from '../components/MeetTheOwner';
+import RecentAppeals from '../components/RecentAppeals';
 
 const StatCard = ({ icon: Icon, title, description }) => (
   <Card className="border-[#D4AF37]">
@@ -64,6 +65,8 @@ const Index = () => {
         </div>
         <p className="text-center mt-8 text-lg text-[#0A2647]">Leverage our expertise, maximize your profit and time.</p>
       </Section>
+
+      <RecentAppeals />
 
       <Section title="About Insight Property Tax" bgColor="bg-gray-100">
         <p className="text-lg mb-4">
