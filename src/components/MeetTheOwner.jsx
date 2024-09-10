@@ -13,7 +13,7 @@ const MeetTheOwner = () => {
             <img 
               src="/Zach_Hepburn.svg" 
               alt="Zach Hepburn" 
-              className="rounded-full w-80 h-80 mx-auto object-cover object-center border-4 border-[#D4AF37]" 
+              className="rounded-full w-64 h-64 mx-auto object-cover object-center border-4 border-[#D4AF37]" 
             />
           </div>
           <Card className="w-full md:w-2/3 border-[#D4AF37]">
