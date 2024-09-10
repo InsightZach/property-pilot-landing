@@ -69,6 +69,24 @@ const WhoWeWorkWith = () => (
   </Section>
 );
 
+const CallToAction = () => (
+  <section className="bg-[#0A2647] text-white py-16">
+    <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+      <div className="md:w-2/3 mb-8 md:mb-0">
+        <h2 className="text-4xl font-bold mb-4">Get Started</h2>
+        <p className="text-xl">
+          We'll review your property and provide an appeal recommendation. If an appeal benefits you, we'll take care of everything.
+        </p>
+      </div>
+      <div className="md:w-1/3 text-center">
+        <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-xl px-8 py-4">
+          Get Started
+        </Button>
+      </div>
+    </div>
+  </section>
+);
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-gray-100">
@@ -168,12 +186,7 @@ const Index = () => {
         </div>
       </Section>
 
-      <section className="py-16 bg-[#0A2647] text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-semibold mb-8">Ready to Reduce Your Property Taxes?</h2>
-          <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Start Your Property Review Today</Button>
-        </div>
-      </section>
+      <CallToAction />
 
       <footer className="py-8 bg-gray-800 text-white">
         <div className="container mx-auto px-4 text-center">
