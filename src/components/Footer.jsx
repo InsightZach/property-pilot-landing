@@ -11,10 +11,11 @@ const Footer = () => (
         </div>
         <Button 
           variant="outline" 
-          className="bg-[#D4AF37] text-[#0A2647] hover:bg-[#D4AF37]/90"
+          size="icon"
+          className="rounded-full bg-[#D4AF37] text-[#0A2647] hover:bg-[#D4AF37]/90"
           onClick={() => window.open('https://www.linkedin.com/in/zach-hepburn', '_blank')}
         >
-          <Linkedin className="mr-2 h-4 w-4" /> Connect on LinkedIn
+          <Linkedin className="h-4 w-4" />
         </Button>
       </div>
     </div>
