@@ -84,8 +84,8 @@ const Index = () => {
       </div>
 
       <section className="bg-[#0A2647] text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4">We Reduce Property Taxes.</h1>
+        <div className="container mx-auto px-4 text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">We Reduce Property Taxes.</h1>
           <p className="text-xl mb-8">Minnesota Assessment Appeals</p>
           <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Get a Free Consultation</Button>
         </div>
