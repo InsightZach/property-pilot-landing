@@ -1,5 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Linkedin } from 'lucide-react';
 
 const MeetTheOwner = () => {
   return (
@@ -17,7 +19,14 @@ const MeetTheOwner = () => {
               <p className="mb-4">I started Insight Property Tax to offer Minnesota tax payers the same expertise the national players use to maximize their profits, without the tiresome corporate process.</p>
               <p className="mb-4">In my first year as an owner-operator, my clients received just that: market-high success without the hassle.</p>
               <p className="mb-4">Property tax appeals don't have to be costly, long-term, attorney-driven sagas. The vast majority of over-assessed properties can be promptly settled with significant financial benefits.</p>
-              <p className="font-semibold">Want to increase your profits? Let's connect.</p>
+              <p className="mb-4">Want to increase your profits? Let's connect.</p>
+              <Button 
+                variant="outline" 
+                className="mt-4 bg-[#0A2647] text-white hover:bg-[#0A2647]/90"
+                onClick={() => window.open('https://www.linkedin.com/in/zach-hepburn', '_blank')}
+              >
+                <Linkedin className="mr-2 h-4 w-4" /> Connect on LinkedIn
+              </Button>
             </CardContent>
           </Card>
         </div>
