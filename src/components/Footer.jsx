@@ -7,7 +7,7 @@ const Footer = () => (
     <div className="container mx-auto px-4">
       <div className="flex justify-between items-center">
         <div className="flex items-center">
-          <img src="/logo.png" alt="Insight Property Tax Logo" className="h-12 w-auto" />
+          <img src="/logo.svg" alt="Insight Property Tax Logo" className="h-12 w-auto" />
         </div>
         <Button 
           variant="outline" 
