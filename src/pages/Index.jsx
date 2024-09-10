@@ -51,27 +51,14 @@ const ResultsCostSection = ({ title, subtitle, items, buttonText, description })
 
 const WhoWeWorkWith = () => (
   <Section title="Who We Work With" bgColor="bg-gray-100">
-    <div className="text-left">
-      <p className="text-lg mb-8">
+    <div className="text-left mb-8">
+      <p className="text-lg mb-4">
         We provide property tax appeal services for property owners and tenants of commercial,
-        industrial, and apartment properties.
-      </p>
-      <p className="text-lg mb-12">
-        Our primary service area is the Minneapolis-St. Paul metro.
+        industrial, and apartment properties in the Minneapolis-St. Paul metro area.
       </p>
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {[
-        { icon: "/placeholder.svg", title: "MINNESOTA" },
-        { icon: "/placeholder.svg", title: "COMMERCIAL" },
-        { icon: "/placeholder.svg", title: "INDUSTRIAL" },
-        { icon: "/placeholder.svg", title: "APARTMENTS" },
-      ].map((item, index) => (
-        <div key={index} className="bg-white p-8 rounded-lg text-center">
-          <img src={item.icon} alt={item.title} className="w-24 h-24 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-[#0A2647]">{item.title}</h3>
-        </div>
-      ))}
+    <div className="flex justify-center">
+      <img src="/placeholder.svg" alt="Property Types We Work With" className="w-full max-w-2xl rounded-lg shadow-lg" />
     </div>
   </Section>
 );
