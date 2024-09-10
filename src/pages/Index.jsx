@@ -29,19 +29,17 @@ const Section = ({ title, children, bgColor = "bg-white" }) => (
 const Index = () => {
   return (
     <div className="min-h-screen bg-gray-100">
-      <header className="bg-[#0A2647] text-white py-8">
+      <header className="bg-[#0A2647] text-white py-4">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center">
             <img src="/logo.png" alt="Insight Property Tax Logo" className="h-16 w-auto" />
-            <nav>
-              {/* Add navigation items here if needed */}
-            </nav>
           </div>
         </div>
       </header>
 
       <section className="bg-[#0A2647] text-white py-20">
         <div className="container mx-auto px-4 text-center">
+          <p className="text-[#D4AF37] text-xl mb-4">Commercial - Industrial - Apartments</p>
           <h1 className="text-5xl font-bold mb-4">Reduce Your Minnesota Property Taxes</h1>
           <p className="text-xl mb-8">Expert assessment appeals for commercial property owners and tenants</p>
           <Button size="lg" className="bg-[#D4AF37] hover:bg-[#C4A137] text-[#0A2647]">Get a Free Consultation</Button>
