@@ -30,20 +30,22 @@ const Section = ({ title, children, bgColor = "bg-white" }) => (
 );
 
 const ResultsCostSection = ({ title, subtitle, items, buttonText, description }) => (
-  <div className="bg-white rounded-lg shadow-md p-8">
-    <h3 className="text-2xl font-bold text-[#0A2647] mb-2">{title}</h3>
-    <p className="text-lg text-[#0A2647] mb-6">{subtitle}</p>
-    <ul className="space-y-4 mb-8">
-      {items.map((item, index) => (
-        <li key={index} className="flex items-center">
-          <CheckCircle className="text-[#d7b971] mr-2" />
-          <span>{item}</span>
-        </li>
-      ))}
-    </ul>
-    <p className="text-lg text-[#0A2647] mb-6">{description}</p>
-    <Button className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">{buttonText}</Button>
-  </div>
+  <Card className="border-[#d7b971]">
+    <CardContent className="p-8">
+      <h3 className="text-2xl font-bold text-[#0A2647] mb-2">{title}</h3>
+      <p className="text-lg text-[#0A2647] mb-6">{subtitle}</p>
+      <ul className="space-y-4 mb-8">
+        {items.map((item, index) => (
+          <li key={index} className="flex items-center">
+            <CheckCircle className="text-[#d7b971] mr-2" />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+      <p className="text-lg text-[#0A2647] mb-6">{description}</p>
+      <Button className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">{buttonText}</Button>
+    </CardContent>
+  </Card>
 );
 
 const WhoWeWorkWith = () => (
