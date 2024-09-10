@@ -76,9 +76,8 @@ const Index = () => {
 
       <section className="bg-[#0A2647] text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-[#d7b971] text-xl mb-4">Commercial - Industrial - Apartments</p>
-          <h1 className="text-5xl font-bold mb-4">Reduce Your Minnesota Property Taxes</h1>
-          <p className="text-xl mb-8">Expert assessment appeals for commercial property owners and tenants</p>
+          <h1 className="text-5xl font-bold mb-4">We Reduce Property Taxes.</h1>
+          <p className="text-xl mb-8">Minnesota Assessment Appeals</p>
           <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Get a Free Consultation</Button>
         </div>
       </section>
