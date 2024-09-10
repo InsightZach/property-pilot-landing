@@ -8,6 +8,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <img src="/logo.png" alt="Insight Property Tax Logo" className="h-16 w-auto" />
+            <span className="ml-2 text-xl font-semibold">Insight property tax</span>
           </div>
           <nav className="hidden md:flex space-x-4">
             {/* Add menu items here when future pages are added */}
