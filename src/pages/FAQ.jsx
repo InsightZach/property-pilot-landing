@@ -72,12 +72,19 @@ const FAQ = () => {
             <StatItem value="100%" label="Appeal Success" />
             <StatItem value="90 Day" label="Average Appeal Length" />
           </div>
-          <div className="bg-white p-6 rounded-lg text-center">
-            <h3 className="text-xl font-semibold mb-4">Get Started</h3>
-            <p className="mb-4">We'll review your property and provide an appeal recommendation. If an appeal benefits you, we'll take care of everything.</p>
-            <Button className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">
-              Get Started
-            </Button>
+          <div className="bg-white p-8 rounded-lg flex flex-col md:flex-row justify-between items-center">
+            <div className="md:w-2/3">
+              <h3 className="text-4xl font-bold text-[#0A2647] mb-4">Get Started</h3>
+              <p className="text-[#0A2647] mb-4">
+                We'll review your property and provide an appeal recommendation. If an appeal benefits you, we'll take care of everything.
+              </p>
+            </div>
+            <div className="md:w-1/3 text-center">
+              <h4 className="text-2xl font-semibold text-[#0A2647] mb-4">See how much you will save.</h4>
+              <Button className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-3">
+                Get Started
+              </Button>
+            </div>
           </div>
         </div>
       </main>
