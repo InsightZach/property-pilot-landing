@@ -11,8 +11,8 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
       <Icon className="w-12 h-12 text-[#d7b971] mx-auto" />
     </CardHeader>
     <CardContent>
-      <CardTitle className="mb-2">{title}</CardTitle>
-      <p>{description}</p>
+      <CardTitle className="mb-2 text-center">{title}</CardTitle>
+      <p className="text-left">{description}</p>
     </CardContent>
   </Card>
 );
