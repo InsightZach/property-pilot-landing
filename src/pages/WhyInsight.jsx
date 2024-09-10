@@ -87,7 +87,7 @@ const WhyInsight = () => {
 
         <section className="bg-white rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold text-[#0A2647] mb-4">We save our clients <span className="text-[#d7b971]">tens of thousands</span> on property taxes, without the hassle.</h2>
-          <p className="text-lg text-[#0A2647] mb-8">Our service isn't a miracle, but it comes close. We'll review your property taxes, and if we can save you money, we'll take care of everything.</p>
+          <p className="text-lg text-[#0A2647] mb-8">Get started. We'll provide you an appeal recommendation. If an appeal benefits you, we'll take care of everything.</p>
           <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
             Get Started
           </Button>
