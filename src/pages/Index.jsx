@@ -74,9 +74,9 @@ const Index = () => {
       <section 
         className="bg-[#0A2647] text-white py-20" 
         style={{ 
-          backgroundImage: `url('/hero-background-logo-inspired.svg')`, 
+          backgroundImage: `url('/hero-background-new.svg')`, 
           backgroundSize: 'cover', 
-          backgroundPosition: 'right center' 
+          backgroundPosition: 'center' 
         }}
       >
         <div className="container mx-auto px-4">
