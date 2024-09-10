@@ -71,7 +71,7 @@ const Index = () => {
     <div className="min-h-screen bg-gray-100">
       <Header />
 
-      <section className="bg-[#0A2647] text-white py-20" style={{ backgroundImage: "url('/hero-background-logo-inspired.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="bg-[#0A2647] text-white py-20" style={{ backgroundImage: "url('/hero-background-logo-inspired.svg')", backgroundSize: 'cover', backgroundPosition: 'right center' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-2xl">
             <p className="text-[#d7b971] mb-4">Commercial - Industrial - Apartments</p>
