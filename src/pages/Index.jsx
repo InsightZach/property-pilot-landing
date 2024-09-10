@@ -76,15 +76,15 @@ const Index = () => {
       </div>
 
       <section className="bg-[#0A2647] text-white py-20">
-        <div className="container mx-auto px-4 text-left">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            We save our clients <span className="text-[#d7b971]">tens of thousands</span> on property taxes, without the hassle.
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            We save our clients <span className="text-[#d7b971]">tens of thousands</span> on property taxes.
           </h1>
-          <p className="text-xl mb-8">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Get started. We'll provide you an appeal recommendation. If an appeal benefits you, we'll take care of everything.
           </p>
-          <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] flex items-center">
-            Get Started <ArrowRight className="ml-2 h-5 w-5" />
+          <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 flex items-center mx-auto">
+            Get Started <ArrowRight className="ml-2 h-6 w-6" />
           </Button>
         </div>
       </section>
