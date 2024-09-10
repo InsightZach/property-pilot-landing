@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { CheckCircle, Percent, Clock, Tools, DollarSign, HelpingHand, Building, MapPin } from 'lucide-react';
+import { CheckCircle, Percent, Clock, Wrench, DollarSign, HelpingHand, Building, MapPin } from 'lucide-react';
 
 const FeatureCard = ({ icon: Icon, title, description }) => (
   <Card className="h-full">
@@ -35,7 +35,7 @@ const WhyInsight = () => {
       description: "Minnesota Tax Court petitions can take up to 2 years to resolve. Our average appeal is settled in less than 90 days."
     },
     {
-      icon: Tools,
+      icon: Wrench,
       title: "All-Three Tools",
       description: "We're a rare breed: combining legal, appraisal, and assessing experience. Unmatched, this leads to quicker settlements and higher savings when appealing your assessment."
     },
