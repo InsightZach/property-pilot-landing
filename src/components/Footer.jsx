@@ -17,14 +17,6 @@ const Footer = () => (
           <Linkedin className="mr-2 h-4 w-4" /> Connect on LinkedIn
         </Button>
       </div>
-      <nav className="mt-8">
-        <ul className="flex justify-center space-x-4">
-          <li><a href="#" className="hover:text-[#D4AF37]">Why Insight?</a></li>
-          <li><a href="#" className="hover:text-[#D4AF37]">FAQ's</a></li>
-          <li><a href="#" className="hover:text-[#D4AF37]">Resources</a></li>
-          <li><a href="#" className="hover:text-[#D4AF37]">Contact</a></li>
-        </ul>
-      </nav>
     </div>
   </footer>
 );
