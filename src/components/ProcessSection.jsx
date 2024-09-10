@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, LineChart, FileText, Handshake, ArrowRight } from 'lucide-react';
+import { Building2, LineChart, FileText, Handshake, ArrowRight, ArrowDown } from 'lucide-react';
 
 const ProcessStep = ({ icon: Icon, title, description }) => (
   <div className="flex flex-col items-center bg-[#0A2647] text-white p-6 rounded-full w-48 h-48 justify-center relative">
@@ -11,9 +11,15 @@ const ProcessStep = ({ icon: Icon, title, description }) => (
   </div>
 );
 
-const Arrow = () => (
-  <div className="flex-1 flex items-center justify-center">
+const DesktopArrow = () => (
+  <div className="hidden md:flex flex-1 items-center justify-center">
     <ArrowRight className="w-8 h-8 text-[#D4AF37]" />
+  </div>
+);
+
+const MobileArrow = () => (
+  <div className="flex md:hidden items-center justify-center my-4">
+    <ArrowDown className="w-8 h-8 text-[#D4AF37]" />
   </div>
 );
 
@@ -27,19 +33,22 @@ const ProcessSection = () => (
           title="Property Review"
           description="We analyze your property details and assessment history."
         />
-        <Arrow />
+        <MobileArrow />
+        <DesktopArrow />
         <ProcessStep
           icon={LineChart}
           title="Value Analysis"
           description="Our experts determine if your property is over-assessed."
         />
-        <Arrow />
+        <MobileArrow />
+        <DesktopArrow />
         <ProcessStep
           icon={FileText}
           title="Appeal Strategy"
           description="We develop a customized strategy for your appeal."
         />
-        <Arrow />
+        <MobileArrow />
+        <DesktopArrow />
         <ProcessStep
           icon={Handshake}
           title="Negotiation & Resolution"
