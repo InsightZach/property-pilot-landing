@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -7,10 +8,13 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <img src="/logo.png" alt="Insight Property Tax Logo" className="h-16 w-auto" />
+            <Link to="/">
+              <img src="/logo.png" alt="Insight Property Tax Logo" className="h-16 w-auto" />
+            </Link>
           </div>
           <nav className="hidden md:flex space-x-4">
-            {/* Add menu items here when future pages are added */}
+            <Link to="/" className="text-white hover:text-[#d7b971]">Home</Link>
+            <Link to="/faq" className="text-white hover:text-[#d7b971]">FAQ</Link>
           </nav>
           <Button 
             className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]"
