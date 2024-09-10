@@ -10,11 +10,11 @@ const MeetTheOwner = () => {
         <h2 className="text-3xl font-semibold text-center mb-12 text-[#0A2647]">Meet the Owner</h2>
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/2 flex justify-center">
-            <div className="w-[76.8px] h-[76.8px] overflow-hidden rounded-full border-4 border-[#D4AF37]">
+            <div className="w-96 h-96 overflow-hidden rounded-full border-4 border-[#D4AF37]">
               <img 
                 src="/Zach_Hepburn.svg" 
                 alt="Zach Hepburn" 
-                className="w-full h-full object-cover object-center scale-[1.985156]"
+                className="w-full h-full object-cover object-center scale-[1.588125]"
               />
             </div>
           </div>
