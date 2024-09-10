@@ -61,10 +61,10 @@ const WhoWeWorkWith = () => (
       </p>
     </div>
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <img src="/Commercial.png" alt="Commercial" className="w-full h-48 rounded-lg shadow-lg object-cover" />
-      <img src="/Industrial.png" alt="Industrial" className="w-full h-48 rounded-lg shadow-lg object-cover" />
-      <img src="/Apartments.png" alt="Apartments" className="w-full h-48 rounded-lg shadow-lg object-cover" />
-      <img src="/Minnesota.png" alt="Minnesota" className="w-full h-48 rounded-lg shadow-lg object-cover" />
+      <img src="/Commercial.svg" alt="Commercial" className="w-full h-48 rounded-lg shadow-lg object-cover" />
+      <img src="/Industrial.svg" alt="Industrial" className="w-full h-48 rounded-lg shadow-lg object-cover" />
+      <img src="/Apartments.svg" alt="Apartments" className="w-full h-48 rounded-lg shadow-lg object-cover" />
+      <img src="/Minnesota.svg" alt="Minnesota" className="w-full h-48 rounded-lg shadow-lg object-cover" />
     </div>
   </Section>
 );
