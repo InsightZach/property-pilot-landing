@@ -18,11 +18,10 @@ const Footer = () => (
         </Button>
       </div>
       <nav className="mt-8">
-        {/* Placeholder for future menu items */}
         <ul className="flex justify-center space-x-4">
-          <li><a href="#" className="hover:text-[#D4AF37]">Home</a></li>
-          <li><a href="#" className="hover:text-[#D4AF37]">Services</a></li>
-          <li><a href="#" className="hover:text-[#D4AF37]">About</a></li>
+          <li><a href="#" className="hover:text-[#D4AF37]">Why Insight?</a></li>
+          <li><a href="#" className="hover:text-[#D4AF37]">FAQ's</a></li>
+          <li><a href="#" className="hover:text-[#D4AF37]">Resources</a></li>
           <li><a href="#" className="hover:text-[#D4AF37]">Contact</a></li>
         </ul>
       </nav>

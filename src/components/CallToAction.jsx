@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 
 const CallToAction = () => (
-  <section className="bg-[#0A2647] text-white py-16">
+  <section className="bg-[#1E3A5F] text-white py-16">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-4xl font-bold mb-4 text-[#d7b971]">Get Started</h2>
       <p className="text-xl mb-8">
