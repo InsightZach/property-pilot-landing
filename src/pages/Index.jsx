@@ -31,7 +31,7 @@ const Section = ({ title, children, bgColor = "bg-white" }) => (
   </section>
 );
 
-const ResultsCostSection = ({ title, subtitle, items, buttonText, description }) => (
+const ResultsCostSection = ({ title, subtitle, items, buttonText, description, linkTo }) => (
   <Card className="border-[#d7b971]">
     <CardContent className="p-8">
       <h3 className="text-2xl font-bold text-[#0A2647] mb-2">{title}</h3>
@@ -45,7 +45,7 @@ const ResultsCostSection = ({ title, subtitle, items, buttonText, description })
         ))}
       </ul>
       <p className="text-lg text-[#0A2647] mb-6">{description}</p>
-      <Link to="/contact">
+      <Link to={linkTo}>
         <Button className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">{buttonText}</Button>
       </Link>
     </CardContent>
@@ -131,6 +131,7 @@ const Index = () => {
             ]}
             buttonText="Get Started"
             description="Our clients save tens of thousands on property taxes."
+            linkTo="/contact"
           />
           <ResultsCostSection
             title="Cost"
@@ -143,6 +144,7 @@ const Index = () => {
             ]}
             buttonText="Why Choose Insight?"
             description="Leverage our expertise, maximize your profit and time."
+            linkTo="/why-insight"
           />
         </div>
       </Section>
