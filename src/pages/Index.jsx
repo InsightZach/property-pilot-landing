@@ -71,25 +71,26 @@ const Index = () => {
     <div className="min-h-screen bg-gray-100">
       <Header />
 
-      <section className="bg-[#0A2647] text-white py-20">
-        <div className="container mx-auto px-4 flex items-center justify-between">
-          <div className="max-w-2xl">
-            <p className="text-[#d7b971] mb-4">Commercial - Industrial - Apartments</p>
-            <h1 className="text-5xl font-bold mb-6 leading-tight">
-              Our clients save <span className="text-[#d7b971]">tens of thousands</span> on Property Taxes.
+      <section className="bg-[#0A2647] text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/hero-background.svg')] bg-cover bg-center opacity-20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-[#d7b971] mb-8 text-xl">Commercial - Industrial - Apartments</p>
+            <h1 className="text-5xl font-bold mb-1 leading-tight">
+              Our clients save
             </h1>
-            <p className="text-xl mb-8">
-              Get started → We provide you an appeal recommendation.<br />
+            <h1 className="text-5xl font-bold mb-8 leading-tight">
+              <span className="text-[#d7b971]">tens of thousands</span> on Property Taxes.
+            </h1>
+            <p className="text-xl mb-2">
+              Get started → We provide you an appeal recommendation.
+            </p>
+            <p className="text-xl mb-12">
               If an appeal benefits you, we'll take care of everything.
             </p>
             <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
               Get Started <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
-          </div>
-          <div className="hidden md:flex flex-col items-center">
-            <CheckCircle className="w-16 h-16 text-[#0A2647] bg-[#d7b971] rounded-full p-2 mb-4" />
-            <CheckCircle className="w-16 h-16 text-[#0A2647] bg-[#d7b971] rounded-full p-2 mb-4" />
-            <CheckCircle className="w-16 h-16 text-white rounded-full p-2" />
           </div>
         </div>
       </section>
