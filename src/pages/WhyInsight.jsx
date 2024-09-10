@@ -72,9 +72,10 @@ const WhyInsight = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0A2647]">
+    <div className="min-h-screen bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] relative">
+      <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
       <Header />
-      <main className="container mx-auto px-4 py-16">
+      <main className="container mx-auto px-4 py-16 relative z-10">
         <section className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-4">Why Choose <span className="text-[#d7b971]">Insight</span>?</h1>
           <p className="text-xl text-white">Discover the Insight advantage in property tax appeals</p>

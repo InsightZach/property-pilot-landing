@@ -11,8 +11,9 @@ import { Menu } from 'lucide-react';
 
 const Header = () => {
   return (
-    <header className="bg-[#0A2647] text-white py-4">
-      <div className="container mx-auto px-4">
+    <header className="bg-gradient-to-r from-[#0A2647] to-[#1E3A5F] text-white py-4 relative">
+      <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/">

@@ -17,9 +17,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A2647]">
+    <div className="min-h-screen bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] relative">
+      <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
       <Header />
-      <main className="container mx-auto px-4 py-16">
+      <main className="container mx-auto px-4 py-16 relative z-10">
         <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
           <div className="md:flex">
             <div className="md:w-1/2 bg-[#0A2647] p-8 text-white">

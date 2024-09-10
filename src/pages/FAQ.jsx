@@ -48,9 +48,10 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0A2647]">
+    <div className="min-h-screen bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] relative">
+      <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
       <Header />
-      <main className="container mx-auto px-4 py-16">
+      <main className="container mx-auto px-4 py-16 relative z-10">
         <h1 className="text-4xl font-bold text-center text-white mb-12">Frequently Asked Questions</h1>
         <div className="flex justify-center mb-12">
           <CheckCircle className="text-[#d7b971] w-12 h-12 mx-2" />
