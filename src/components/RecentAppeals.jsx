@@ -7,6 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+import useEmblaCarousel from 'embla-carousel-react';
 
 const appeals = [
   { id: 1, image: "/placeholder.svg", description: "Commercial Property Appeal" },
@@ -16,6 +17,12 @@ const appeals = [
 ];
 
 const RecentAppeals = () => {
+  const [emblaRef] = useEmblaCarousel({
+    align: "start",
+    loop: false,
+    dragFree: true,
+  });
+
   return (
     <section className="py-16 bg-[#F4F5F7]">
       <div className="container mx-auto px-4">
@@ -26,7 +33,7 @@ const RecentAppeals = () => {
           }}
           className="w-full max-w-5xl mx-auto"
         >
-          <CarouselContent>
+          <CarouselContent ref={emblaRef}>
             {appeals.map((appeal) => (
               <CarouselItem key={appeal.id} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
