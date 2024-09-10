@@ -74,13 +74,13 @@ const Index = () => {
       <section className="bg-[#0A2647] text-white py-20" style={{ backgroundImage: "url('/hero-background.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-2xl">
-            <p className="text-[#d7b971] mb-8">Commercial - Industrial - Apartments</p>
-            <h1 className="text-5xl font-bold mb-8 leading-tight">
+            <p className="text-[#d7b971] mb-12">Commercial - Industrial - Apartments</p>
+            <h1 className="text-5xl font-bold mb-12 leading-none">
               <span className="block">Our clients save</span>
               <span className="block text-[#d7b971]">tens of thousands</span>
               <span className="block">on Property Taxes.</span>
             </h1>
-            <p className="text-xl mb-8">
+            <p className="text-xl mb-12 leading-snug">
               <span className="block">Get started → We provide you an appeal recommendation.</span>
               <span className="block">If an appeal benefits you, we'll take care of everything.</span>
             </p>
