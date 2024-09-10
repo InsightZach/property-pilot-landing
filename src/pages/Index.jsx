@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, CheckCircle, DollarSign, LineChart, ArrowRight } from 'lucide-react';
@@ -8,7 +8,6 @@ import Header from '../components/Header';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
 import ProcessSection from '../components/ProcessSection';
-import ImageUpload from '../components/ImageUpload';
 
 const StatCard = ({ icon: Icon, title, description }) => (
   <Card className="border-[#d7b971]">
@@ -68,8 +67,6 @@ const WhoWeWorkWith = () => (
 );
 
 const Index = () => {
-  const [backgroundImage, setBackgroundImage] = useState('/hero-background-logo-inspired.svg');
-
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
@@ -77,7 +74,7 @@ const Index = () => {
       <section 
         className="bg-[#0A2647] text-white py-20" 
         style={{ 
-          backgroundImage: `url(${backgroundImage})`, 
+          backgroundImage: `url('/hero-background-logo-inspired.svg')`, 
           backgroundSize: 'cover', 
           backgroundPosition: 'right center' 
         }}
@@ -85,7 +82,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl">
             <p className="text-[#d7b971] mb-4">Commercial - Industrial - Apartments</p>
-            <h1 className="text-5xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl font-bold mb-6">
               Our clients save <span className="text-[#d7b971]">tens of thousands</span> on property taxes.
             </h1>
             <p className="text-xl mb-8">
@@ -98,8 +95,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      <ImageUpload setBackgroundImage={setBackgroundImage} />
 
       <Section title="Why Choose Insight Property Tax" bgColor="bg-white">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
