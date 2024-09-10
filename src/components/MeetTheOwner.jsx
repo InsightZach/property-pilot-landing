@@ -5,7 +5,7 @@ import { Linkedin } from 'lucide-react';
 
 const MeetTheOwner = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-semibold text-center mb-12 text-[#0A2647]">Meet the Owner</h2>
         <div className="flex flex-col md:flex-row items-center gap-8">
