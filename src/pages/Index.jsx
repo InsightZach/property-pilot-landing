@@ -7,23 +7,24 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
-      <header className="bg-blue-900 text-white py-20">
+      <header className="bg-[#0A2647] text-white py-20">
         <div className="container mx-auto px-4">
+          <img src="/logo.png" alt="Insight Property Tax Logo" className="mb-8 max-w-md mx-auto" />
           <h1 className="text-5xl font-bold mb-4">Reduce Your Minnesota Property Taxes</h1>
           <p className="text-xl mb-8">Expert assessment appeals for commercial property owners and tenants</p>
-          <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-blue-900">Get a Free Consultation</Button>
+          <Button size="lg" className="bg-[#D4AF37] hover:bg-[#C4A137] text-[#0A2647]">Get a Free Consultation</Button>
         </div>
       </header>
 
       {/* Unique Selling Points */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center mb-12">Why Choose Insight Property Tax</h2>
+          <h2 className="text-3xl font-semibold text-center mb-12 text-[#0A2647]">Why Choose Insight Property Tax</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card>
+            <Card className="border-[#D4AF37]">
               <CardHeader>
-                <CardTitle className="flex items-center">
-                  <DollarSign className="mr-2 h-6 w-6 text-blue-600" />
+                <CardTitle className="flex items-center text-[#0A2647]">
+                  <DollarSign className="mr-2 h-6 w-6 text-[#D4AF37]" />
                   Risk-Free Service
                 </CardTitle>
               </CardHeader>
@@ -31,10 +32,10 @@ const Index = () => {
                 Pay only if we successfully reduce your property taxes.
               </CardContent>
             </Card>
-            <Card>
+            <Card className="border-[#D4AF37]">
               <CardHeader>
-                <CardTitle className="flex items-center">
-                  <CheckCircle className="mr-2 h-6 w-6 text-blue-600" />
+                <CardTitle className="flex items-center text-[#0A2647]">
+                  <CheckCircle className="mr-2 h-6 w-6 text-[#D4AF37]" />
                   Minnesota Expertise
                 </CardTitle>
               </CardHeader>
@@ -42,10 +43,10 @@ const Index = () => {
                 Decades of experience in Minnesota property tax law.
               </CardContent>
             </Card>
-            <Card>
+            <Card className="border-[#D4AF37]">
               <CardHeader>
-                <CardTitle className="flex items-center">
-                  <LineChart className="mr-2 h-6 w-6 text-blue-600" />
+                <CardTitle className="flex items-center text-[#0A2647]">
+                  <LineChart className="mr-2 h-6 w-6 text-[#D4AF37]" />
                   Advanced Analytics
                 </CardTitle>
               </CardHeader>
@@ -60,7 +61,7 @@ const Index = () => {
       {/* About Us */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-semibold mb-8">About Insight Property Tax</h2>
+          <h2 className="text-3xl font-semibold mb-8 text-[#0A2647]">About Insight Property Tax</h2>
           <p className="text-lg mb-4">
             Insight Property Tax helps Minnesota commercial property owners and tenants reduce their property tax liabilities through expert assessment appeals. We use advanced analytics and industry expertise to identify over-assessed properties and provide end-to-end appeal services to ensure maximum tax savings.
           </p>
@@ -73,14 +74,14 @@ const Index = () => {
       {/* Our Process */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center mb-12">Our Process</h2>
+          <h2 className="text-3xl font-semibold text-center mb-12 text-[#0A2647]">Our Process</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {['Property Review', 'Value Analysis', 'Appeal Strategy', 'Negotiation & Resolution'].map((step, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                <div className="w-16 h-16 bg-[#D4AF37] text-[#0A2647] rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                   {index + 1}
                 </div>
-                <h3 className="font-semibold mb-2">{step}</h3>
+                <h3 className="font-semibold mb-2 text-[#0A2647]">{step}</h3>
               </div>
             ))}
           </div>
@@ -90,18 +91,18 @@ const Index = () => {
       {/* Testimonials */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center mb-12">What Our Clients Say</h2>
+          <h2 className="text-3xl font-semibold text-center mb-12 text-[#0A2647]">What Our Clients Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card>
+            <Card className="border-[#D4AF37]">
               <CardContent className="pt-6">
                 <p className="italic mb-4">"Insight Property Tax saved us $30,000 last year. Their expertise and personalized service made the process seamless."</p>
-                <p className="font-semibold">— Commercial Property Owner</p>
+                <p className="font-semibold text-[#0A2647]">— Commercial Property Owner</p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="border-[#D4AF37]">
               <CardContent className="pt-6">
                 <p className="italic mb-4">"I was amazed by how quickly Insight handled my appeal, saving me thousands in property taxes."</p>
-                <p className="font-semibold">— Industrial Property Owner</p>
+                <p className="font-semibold text-[#0A2647]">— Industrial Property Owner</p>
               </CardContent>
             </Card>
           </div>
@@ -109,10 +110,10 @@ const Index = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-blue-900 text-white">
+      <section className="py-16 bg-[#0A2647] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-semibold mb-8">Ready to Reduce Your Property Taxes?</h2>
-          <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-blue-900">Start Your Property Review Today</Button>
+          <Button size="lg" className="bg-[#D4AF37] hover:bg-[#C4A137] text-[#0A2647]">Start Your Property Review Today</Button>
         </div>
       </section>
 
