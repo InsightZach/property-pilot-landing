@@ -25,12 +25,47 @@ const ExternalLinkButton = ({ href, children }) => (
 const Resources = () => {
   const counties = [
     {
+      name: "Anoka",
+      appealGuide: "https://www.anokacounty.us/3744/Property-Tax-Appeals",
+      gis: "https://gis.anokacounty.us/propertysearch/",
+      taxSystem: "https://www.anokacounty.us/1108/Property-Records-Taxation",
+    },
+    {
+      name: "Carver",
+      appealGuide: "https://www.co.carver.mn.us/departments/property-financial-services/assessor/property-tax-appeals",
+      gis: "https://gis.co.carver.mn.us/publicparcel/",
+      taxSystem: "https://www.co.carver.mn.us/departments/property-financial-services/property-taxation",
+    },
+    {
+      name: "Dakota",
+      appealGuide: "https://www.co.dakota.mn.us/HomeProperty/PropertyTaxes/Appeals/Pages/default.aspx",
+      gis: "https://gis.co.dakota.mn.us/PropertyMap/",
+      taxSystem: "https://www.co.dakota.mn.us/HomeProperty/PropertyTaxes/Pages/default.aspx",
+    },
+    {
       name: "Hennepin",
       appealGuide: "https://www.hennepin.us/your-government/property/property-tax-appeals",
       gis: "https://gis.hennepin.us/property/map/",
       taxSystem: "https://www.hennepin.us/your-government/property/property-taxes",
     },
-    // Add other counties here
+    {
+      name: "Ramsey",
+      appealGuide: "https://www.ramseycounty.us/residents/property/property-tax-and-value-appeals",
+      gis: "https://www.ramseycounty.us/residents/property/maps-surveys/interactive-map-gis",
+      taxSystem: "https://www.ramseycounty.us/residents/property-home",
+    },
+    {
+      name: "Scott",
+      appealGuide: "https://www.scottcountymn.gov/1095/Appeals",
+      gis: "https://gis.co.scott.mn.us/scottgis/",
+      taxSystem: "https://www.scottcountymn.gov/415/Property-Taxes",
+    },
+    {
+      name: "Washington",
+      appealGuide: "https://www.co.washington.mn.us/638/Appeals",
+      gis: "https://gis.co.washington.mn.us/publicparcel/",
+      taxSystem: "https://www.co.washington.mn.us/638/Appeals",
+    },
   ];
 
   const cities = [
