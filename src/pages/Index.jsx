@@ -6,10 +6,10 @@ import MeetTheOwner from '../components/MeetTheOwner';
 import RecentAppeals from '../components/RecentAppeals';
 
 const StatCard = ({ icon: Icon, title, description }) => (
-  <Card className="border-[#D4AF37]">
+  <Card className="border-[#d7b971]">
     <CardHeader>
       <CardTitle className="flex items-center justify-center text-[#0A2647]">
-        <Icon className="mr-2 h-6 w-6 text-[#D4AF37]" />
+        <Icon className="mr-2 h-6 w-6 text-[#d7b971]" />
         {title}
       </CardTitle>
     </CardHeader>
@@ -39,10 +39,10 @@ const Index = () => {
 
       <section className="bg-[#0A2647] text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-[#D4AF37] text-xl mb-4">Commercial - Industrial - Apartments</p>
+          <p className="text-[#d7b971] text-xl mb-4">Commercial - Industrial - Apartments</p>
           <h1 className="text-5xl font-bold mb-4">Reduce Your Minnesota Property Taxes</h1>
           <p className="text-xl mb-8">Expert assessment appeals for commercial property owners and tenants</p>
-          <Button size="lg" className="bg-[#D4AF37] hover:bg-[#C4A137] text-[#0A2647]">Get a Free Consultation</Button>
+          <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Get a Free Consultation</Button>
         </div>
       </section>
 
@@ -89,7 +89,7 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {['Property Review', 'Value Analysis', 'Appeal Strategy', 'Negotiation & Resolution'].map((step, index) => (
             <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-[#D4AF37] text-[#0A2647] rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+              <div className="w-16 h-16 bg-[#d7b971] text-[#0A2647] rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 {index + 1}
               </div>
               <h3 className="font-semibold mb-2 text-[#0A2647]">{step}</h3>
@@ -102,13 +102,13 @@ const Index = () => {
 
       <Section title="What Our Clients Say" bgColor="bg-gray-100">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Card className="border-[#D4AF37]">
+          <Card className="border-[#d7b971]">
             <CardContent className="pt-6">
               <p className="italic mb-4">"Insight Property Tax saved us $30,000 last year. Their expertise and personalized service made the process seamless."</p>
               <p className="font-semibold text-[#0A2647]">— Commercial Property Owner</p>
             </CardContent>
           </Card>
-          <Card className="border-[#D4AF37]">
+          <Card className="border-[#d7b971]">
             <CardContent className="pt-6">
               <p className="italic mb-4">"I was amazed by how quickly Insight handled my appeal, saving me thousands in property taxes."</p>
               <p className="font-semibold text-[#0A2647]">— Industrial Property Owner</p>
@@ -120,7 +120,7 @@ const Index = () => {
       <section className="py-16 bg-[#0A2647] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-semibold mb-8">Ready to Reduce Your Property Taxes?</h2>
-          <Button size="lg" className="bg-[#D4AF37] hover:bg-[#C4A137] text-[#0A2647]">Start Your Property Review Today</Button>
+          <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Start Your Property Review Today</Button>
         </div>
       </section>
 
