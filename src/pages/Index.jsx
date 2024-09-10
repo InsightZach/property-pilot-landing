@@ -71,21 +71,22 @@ const Index = () => {
     <div className="min-h-screen bg-gray-100">
       <Header />
 
-      <div className="bg-[#0A2647] text-[#d7b971] py-2 text-center">
-        <p className="text-sm md:text-base">Commercial - Industrial - Apartments</p>
-      </div>
-
       <section className="bg-[#0A2647] text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            We save our clients <span className="text-[#d7b971]">tens of thousands</span> on property taxes.
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Get started. We'll provide you an appeal recommendation. If an appeal benefits you, we'll take care of everything.
-          </p>
-          <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 flex items-center mx-auto">
-            Get Started <ArrowRight className="ml-2 h-6 w-6" />
-          </Button>
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+          <div className="md:w-1/2 mb-8 md:mb-0">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              Our clients save <span className="text-[#d7b971]">tens of thousands</span> on Property Taxes.
+            </h1>
+            <p className="text-xl mb-8">
+              Get started with our expert property tax appeal services today.
+            </p>
+            <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 flex items-center">
+              Get Started <ArrowRight className="ml-2 h-6 w-6" />
+            </Button>
+          </div>
+          <div className="md:w-1/2">
+            <img src="/placeholder.svg" alt="Property Tax Savings" className="w-full rounded-lg shadow-lg" />
+          </div>
         </div>
       </section>
 
