@@ -26,6 +26,23 @@ const Section = ({ title, children, bgColor = "bg-white" }) => (
   </section>
 );
 
+const ResultsCostSection = ({ title, subtitle, items, buttonText, description }) => (
+  <div className="bg-white rounded-lg shadow-md p-8">
+    <h3 className="text-2xl font-bold text-[#0A2647] mb-2">{title}</h3>
+    <p className="text-lg text-[#0A2647] mb-6">{subtitle}</p>
+    <ul className="space-y-4 mb-8">
+      {items.map((item, index) => (
+        <li key={index} className="flex items-center">
+          <CheckCircle className="text-[#d7b971] mr-2" />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+    <p className="text-lg text-[#0A2647] mb-6">{description}</p>
+    <Button className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">{buttonText}</Button>
+  </div>
+);
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-gray-100">
@@ -54,24 +71,33 @@ const Index = () => {
         </div>
       </Section>
 
-      <Section title="Insight's 2024 Appeal Statistics" bgColor="bg-gray-100">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <StatCard icon={Percent} title="17.9%" description="Average reduction" />
-          <StatCard icon={DollarSign} title="$49k" description="Tax savings per property" />
-          <StatCard icon={Clock} title="90 Days" description="Average appeal duration" />
-          <StatCard icon={ThumbsUp} title="100%" description="Appeal success rate" />
+      <Section title="Results and Cost" bgColor="bg-gray-100">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <ResultsCostSection
+            title="Results"
+            subtitle="Insight's 2024 Appeal Statistics"
+            items={[
+              "-17.9% reduction average",
+              "$49k tax savings per property",
+              "90-day appeal duration average",
+              "100% appeal success rate"
+            ]}
+            buttonText="Get Started"
+            description="Our clients save tens of thousands on property taxes."
+          />
+          <ResultsCostSection
+            title="Cost"
+            subtitle="Contingency Fee"
+            items={[
+              "You pay $0 upfront",
+              "Our fee is 30% of tax savings",
+              "You pocket the rest",
+              "We handle everything"
+            ]}
+            buttonText="Why Choose Insight?"
+            description="Leverage our expertise, maximize your profit and time."
+          />
         </div>
-        <p className="text-center mt-8 text-lg text-[#0A2647]">Our clients save tens of thousands on property taxes.</p>
-      </Section>
-
-      <Section title="Cost: Contingency Fee">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <StatCard icon={DollarSign} title="$0 Upfront" description="You pay nothing to start" />
-          <StatCard icon={Percent} title="30% Fee" description="Our fee is 30% of tax savings" />
-          <StatCard icon={DollarSign} title="You Keep 70%" description="You pocket the rest" />
-          <StatCard icon={Briefcase} title="Full Service" description="We handle everything" />
-        </div>
-        <p className="text-center mt-8 text-lg text-[#0A2647]">Leverage our expertise, maximize your profit and time.</p>
       </Section>
 
       <RecentAppeals />
