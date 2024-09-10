@@ -14,7 +14,7 @@ const MeetTheOwner = () => {
               <img 
                 src="/Zach_Hepburn.svg" 
                 alt="Zach Hepburn" 
-                className="w-full h-full object-cover object-center scale-[1.375]"
+                className="w-full h-full object-cover object-center scale-[1.5125]"
               />
             </div>
           </div>
