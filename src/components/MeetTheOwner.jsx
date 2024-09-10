@@ -10,7 +10,7 @@ const MeetTheOwner = () => {
         <h2 className="text-3xl font-semibold text-center mb-12 text-[#0A2647]">Meet the Owner</h2>
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/3">
-            <img src="/placeholder.svg" alt="Zach Hepburn" className="rounded-full w-64 h-64 mx-auto object-cover" />
+            <img src="/Zach_Hepburn.svg" alt="Zach Hepburn" className="rounded-full w-64 h-64 mx-auto object-cover" />
           </div>
           <Card className="w-full md:w-2/3 border-[#D4AF37]">
             <CardContent className="pt-6">
