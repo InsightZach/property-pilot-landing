@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, CheckCircle, DollarSign, LineChart, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import MeetTheOwner from '../components/MeetTheOwner';
 import RecentAppeals from '../components/RecentAppeals';
 import Header from '../components/Header';
@@ -44,7 +45,9 @@ const ResultsCostSection = ({ title, subtitle, items, buttonText, description })
         ))}
       </ul>
       <p className="text-lg text-[#0A2647] mb-6">{description}</p>
-      <Button className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">{buttonText}</Button>
+      <Link to="/contact">
+        <Button className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">{buttonText}</Button>
+      </Link>
     </CardContent>
   </Card>
 );
@@ -89,9 +92,11 @@ const Index = () => {
               Get started → We provide you an appeal recommendation.
               If an appeal benefits you, we'll take care of everything.
             </p>
-            <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
-              Get Started <ArrowRight className="ml-2 h-6 w-6" />
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
+                Get Started <ArrowRight className="ml-2 h-6 w-6" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

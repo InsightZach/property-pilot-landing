@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { CheckCircle, Percent, Clock, Wrench, DollarSign, HelpingHand, Building, MapPin } from 'lucide-react';
@@ -88,9 +89,11 @@ const WhyInsight = () => {
         <section className="bg-white rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold text-[#0A2647] mb-4">We save our clients <span className="text-[#d7b971]">tens of thousands</span> on property taxes, without the hassle.</h2>
           <p className="text-lg text-[#0A2647] mb-8">Get started. We'll provide you an appeal recommendation. If an appeal benefits you, we'll take care of everything.</p>
-          <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
-            Get Started
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
+              Get Started
+            </Button>
+          </Link>
         </section>
 
         <section className="mt-16 text-center">
@@ -100,9 +103,11 @@ const WhyInsight = () => {
           </div>
           <h2 className="text-3xl font-bold text-white mb-4">Ready to reduce your property taxes?</h2>
           <p className="text-xl text-white mb-8">Let's get started with a free analysis of your property.</p>
-          <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
-            Get Started
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
+              Get Started
+            </Button>
+          </Link>
         </section>
       </main>
       <Footer />

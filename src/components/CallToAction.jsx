@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { Link } from 'react-router-dom';
 
 const CallToAction = () => (
   <section className="bg-[#1E3A5F] text-white py-16">
@@ -8,9 +9,11 @@ const CallToAction = () => (
       <p className="text-xl mb-8">
         We'll review your property and provide an appeal recommendation. If an appeal benefits you, we'll take care of everything.
       </p>
-      <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-xl px-8 py-4">
-        Get Started
-      </Button>
+      <Link to="/contact">
+        <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-xl px-8 py-4">
+          Get Started
+        </Button>
+      </Link>
     </div>
   </section>
 );
