@@ -101,6 +101,7 @@ const WhyInsight = () => {
           <div className="flex justify-center mb-8">
             <CheckCircle className="text-[#d7b971] w-12 h-12 mx-2" />
             <CheckCircle className="text-[#d7b971] w-12 h-12 mx-2" />
+            <CheckCircle className="text-[#d7b971] w-12 h-12 mx-2" />
           </div>
           <h2 className="text-3xl font-bold text-white mb-4">Ready to reduce your property taxes?</h2>
           <p className="text-xl text-white mb-8">Let's get started with a free analysis of your property.</p>
