@@ -72,14 +72,14 @@ const Index = () => {
       <Header />
 
       <section 
-        className="bg-[#0A2647] text-white py-20" 
+        className="bg-[#0A2647] text-white py-20 relative overflow-hidden" 
         style={{ 
           backgroundImage: `url('/hero-background-new.svg')`, 
           backgroundSize: 'cover', 
-          backgroundPosition: 'center' 
+          backgroundPosition: 'center right' 
         }}
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl">
             <p className="text-[#d7b971] mb-4">Commercial - Industrial - Apartments</p>
             <h1 className="text-5xl font-bold mb-6">
