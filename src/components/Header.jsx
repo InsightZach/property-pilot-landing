@@ -23,6 +23,7 @@ const Header = () => {
           <nav className="hidden md:flex space-x-4">
             <Link to="/" className="text-white hover:text-[#d7b971]">Home</Link>
             <Link to="/why-insight" className="text-white hover:text-[#d7b971]">Why Insight?</Link>
+            <Link to="/resources" className="text-white hover:text-[#d7b971]">Resources</Link>
             <Link to="/faq" className="text-white hover:text-[#d7b971]">FAQ</Link>
             <Link to="/contact" className="text-white hover:text-[#d7b971]">Contact</Link>
           </nav>
@@ -40,6 +41,9 @@ const Header = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/why-insight" className="text-white hover:bg-[#1E3A5F] hover:text-[#d7b971]">Why Insight?</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/resources" className="text-white hover:bg-[#1E3A5F] hover:text-[#d7b971]">Resources</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/faq" className="text-white hover:bg-[#1E3A5F] hover:text-[#d7b971]">FAQ</Link>
