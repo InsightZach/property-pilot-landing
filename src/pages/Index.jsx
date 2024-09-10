@@ -71,18 +71,25 @@ const Index = () => {
     <div className="min-h-screen bg-gray-100">
       <Header />
 
-      <section className="relative bg-cover bg-center py-20" style={{ backgroundImage: 'url("/hero-background.svg")' }}>
-        <div className="container mx-auto px-4 flex items-center justify-center relative z-10">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
+      <section className="bg-[#0A2647] text-white py-20">
+        <div className="container mx-auto px-4 flex items-center justify-between">
+          <div className="max-w-2xl">
+            <p className="text-[#d7b971] mb-4">Commercial - Industrial - Apartments</p>
+            <h1 className="text-5xl font-bold mb-6 leading-tight">
               Our clients save <span className="text-[#d7b971]">tens of thousands</span> on Property Taxes.
             </h1>
-            <p className="text-xl mb-8 text-white">
-              Get started with our expert property tax appeal services today.
+            <p className="text-xl mb-8">
+              Get started → We provide you an appeal recommendation.<br />
+              If an appeal benefits you, we'll take care of everything.
             </p>
-            <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 flex items-center mx-auto">
+            <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
               Get Started <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
+          </div>
+          <div className="hidden md:flex flex-col items-center">
+            <CheckCircle className="w-16 h-16 text-[#0A2647] bg-[#d7b971] rounded-full p-2 mb-4" />
+            <CheckCircle className="w-16 h-16 text-[#0A2647] bg-[#d7b971] rounded-full p-2 mb-4" />
+            <CheckCircle className="w-16 h-16 text-white rounded-full p-2" />
           </div>
         </div>
       </section>
