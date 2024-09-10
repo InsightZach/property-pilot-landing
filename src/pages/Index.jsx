@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, CheckCircle, DollarSign, LineChart, Percent, Clock, ThumbsUp, Briefcase } from 'lucide-react';
 import MeetTheOwner from '../components/MeetTheOwner';
 import RecentAppeals from '../components/RecentAppeals';
+import Header from '../components/Header';
 
 const StatCard = ({ icon: Icon, title, description }) => (
   <Card className="border-[#d7b971]">
@@ -71,13 +72,7 @@ const WhoWeWorkWith = () => (
 const Index = () => {
   return (
     <div className="min-h-screen bg-gray-100">
-      <header className="bg-[#0A2647] text-white py-4">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center">
-            <img src="/logo.png" alt="Insight Property Tax Logo" className="h-16 w-auto" />
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <section className="bg-[#0A2647] text-white py-20">
         <div className="container mx-auto px-4 text-center">
