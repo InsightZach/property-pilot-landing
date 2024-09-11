@@ -97,7 +97,7 @@ const Index = () => {
       <Section title="Why Choose Insight Property Tax" bgColor="bg-white">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <StatCard icon={DollarSign} title="Risk-Free Service" description="Pay only if we successfully reduce your property taxes." />
-          <StatCard icon={CheckCircle} title="Minnesota Expertise" description="Decades of experience in Minnesota property tax law." />
+          <StatCard icon={CheckCircle} title="Minnesota Expertise" description="Hundreds of settled appeals from local professionals with appraisal and assessment backgrounds." />
           <StatCard icon={LineChart} title="Advanced Analytics" description="Data-driven strategies to maximize your savings." />
         </div>
       </Section>
@@ -114,7 +114,6 @@ const Index = () => {
       <Section bgColor="bg-white">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Property Tax Appeal Results</h2>
             <ResultsCostSection
               title="Insight's 2024 Appeal Statistics"
               items={[
@@ -129,7 +128,6 @@ const Index = () => {
             />
           </div>
           <div>
-            <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Appeal Service Cost</h2>
             <ResultsCostSection
               title="Contingency Fee"
               items={[
