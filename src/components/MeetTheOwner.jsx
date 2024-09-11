@@ -21,13 +21,13 @@ const MeetTheOwner = () => {
             <h3 className="text-2xl font-semibold text-white mb-1">Zach Hepburn</h3>
             <p className="text-lg text-[#D4AF37]">Owner/Consultant</p>
           </div>
-          <Card className="w-full md:w-1/2 border-[#D4AF37] bg-white/10 backdrop-blur-sm">
+          <Card className="w-full md:w-1/2 border-[#D4AF37] bg-gray-100">
             <CardContent className="pt-6">
-              <p className="mb-4 text-white">Hi! I'm Zach Hepburn. I've settled hundreds of property tax appeals through my experience as a Hennepin County Assessor's office senior and corporate property tax consultant.</p>
-              <p className="mb-4 text-white">I started Insight Property Tax to offer Minnesota tax payers the same expertise the national players use to maximize their profits, without the tiresome corporate process.</p>
-              <p className="mb-4 text-white">In my first year as an owner-operator, my clients received just that: market-high success without the hassle.</p>
-              <p className="mb-4 text-white">Property tax appeals don't have to be costly, long-term, attorney-driven sagas. The vast majority of over-assessed properties can be promptly settled with significant financial benefits.</p>
-              <p className="mb-4 text-white">Want to increase your profits? Let's connect.</p>
+              <p className="mb-4 text-[#0A2647]">Hi! I'm Zach Hepburn. I've settled hundreds of property tax appeals through my experience as a Hennepin County Assessor's office senior and corporate property tax consultant.</p>
+              <p className="mb-4 text-[#0A2647]">I started Insight Property Tax to offer Minnesota tax payers the same expertise the national players use to maximize their profits, without the tiresome corporate process.</p>
+              <p className="mb-4 text-[#0A2647]">In my first year as an owner-operator, my clients received just that: market-high success without the hassle.</p>
+              <p className="mb-4 text-[#0A2647]">Property tax appeals don't have to be costly, long-term, attorney-driven sagas. The vast majority of over-assessed properties can be promptly settled with significant financial benefits.</p>
+              <p className="mb-4 text-[#0A2647]">Want to increase your profits? Let's connect.</p>
               <Button 
                 variant="outline" 
                 className="mt-4 bg-[#D4AF37] text-[#0A2647] hover:bg-[#D4AF37]/90"
