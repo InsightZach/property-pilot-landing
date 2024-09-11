@@ -30,7 +30,8 @@ const CityTownshipResources = ({ cities, searchTerm, setSearchTerm }) => {
             <TableHead>City/Township</TableHead>
             <TableHead>Assessor</TableHead>
             <TableHead>Appeal Process</TableHead>
-            <TableHead>2025 Appeal Deadline</TableHead>
+            <TableHead>2025 Assessment Appeal Deadline (Informal Appeal)</TableHead>
+            <TableHead>2024 Assessment Appeal Deadline (Tax Court)</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -40,6 +41,7 @@ const CityTownshipResources = ({ cities, searchTerm, setSearchTerm }) => {
               <TableCell>{city.assessor}</TableCell>
               <TableCell>{city.appealProcess}</TableCell>
               <TableCell>{city.deadline2025}</TableCell>
+              <TableCell>04/30/2025</TableCell>
             </TableRow>
           ))}
         </TableBody>
