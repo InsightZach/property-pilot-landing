@@ -15,6 +15,7 @@ import {
 import ResourcesContent from '../components/ResourcesContent';
 import CountyResources from '../components/CountyResources';
 import CityTownshipResources from '../components/CityTownshipResources';
+import PropertyTaxCalendar from '../components/PropertyTaxCalendar';
 
 const ExternalLinkButton = ({ href, children }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
@@ -64,6 +65,7 @@ const Resources = () => {
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center mb-8">Minnesota Property Tax Resources</h1>
         <ResourcesContent />
+        <PropertyTaxCalendar />
         <CountyResources />
         <CityTownshipResources 
           cities={filteredCities} 
