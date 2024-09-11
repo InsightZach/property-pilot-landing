@@ -112,7 +112,7 @@ const Index = () => {
         </p>
       </Section>
 
-      <Section title="Results and Cost" bgColor="bg-white">
+      <Section title="Property Tax Appeal Results" bgColor="bg-white">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <ResultsCostSection
             title="Results"
@@ -127,6 +127,11 @@ const Index = () => {
             description="Our clients save tens of thousands on property taxes."
             linkTo="/contact"
           />
+        </div>
+      </Section>
+
+      <Section title="Appeal Service Cost" bgColor="bg-gray-100">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <ResultsCostSection
             title="Cost"
             subtitle="Contingency Fee"
