@@ -31,11 +31,10 @@ const Section = ({ title, children, bgColor = "bg-white" }) => (
   </section>
 );
 
-const ResultsCostSection = ({ title, subtitle, items, buttonText, description, linkTo }) => (
+const ResultsCostSection = ({ title, items, buttonText, description, linkTo }) => (
   <Card className="border-[#d7b971] h-full">
     <CardContent className="p-8">
-      <h3 className="text-2xl font-bold text-[#0A2647] mb-2">{title}</h3>
-      <p className="text-lg text-[#0A2647] mb-6">{subtitle}</p>
+      <h3 className="text-2xl font-bold text-[#0A2647] mb-6">{title}</h3>
       <ul className="space-y-4 mb-8">
         {items.map((item, index) => (
           <li key={index} className="flex items-center">
@@ -117,8 +116,7 @@ const Index = () => {
           <div>
             <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Property Tax Appeal Results</h2>
             <ResultsCostSection
-              title="Results"
-              subtitle="Insight's 2024 Appeal Statistics"
+              title="Insight's 2024 Appeal Statistics"
               items={[
                 "-17.9% reduction average",
                 "$49k tax savings per property",
@@ -133,8 +131,7 @@ const Index = () => {
           <div>
             <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Appeal Service Cost</h2>
             <ResultsCostSection
-              title="Cost"
-              subtitle="Contingency Fee"
+              title="Contingency Fee"
               items={[
                 "You pay $0 upfront",
                 "Our fee is 30% of tax savings",
