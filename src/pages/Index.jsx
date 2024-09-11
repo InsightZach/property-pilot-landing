@@ -157,13 +157,13 @@ const Index = () => {
           <Card className="border-[#d7b971]">
             <CardContent className="pt-6">
               <p className="italic mb-4">"Insight Property Tax saved us $30,000 last year. Their expertise and personalized service made the process seamless."</p>
-              <p className="font-semibold text-[#0A2647]">— Commercial Property Owner</p>
+              <p className="font-semibold text-[#0A2647]">— St. Paul Commercial Property Owner</p>
             </CardContent>
           </Card>
           <Card className="border-[#d7b971]">
             <CardContent className="pt-6">
               <p className="italic mb-4">"I was amazed by how quickly Insight handled my appeal, saving me thousands in property taxes."</p>
-              <p className="font-semibold text-[#0A2647]">— Industrial Property Owner</p>
+              <p className="font-semibold text-[#0A2647]">— Roseville Industrial Property Owner</p>
             </CardContent>
           </Card>
         </div>
