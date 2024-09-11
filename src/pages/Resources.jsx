@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Search } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Table,
   TableBody,
@@ -23,6 +24,38 @@ const ExternalLinkButton = ({ href, children }) => (
 );
 
 const Resources = () => {
+  const [cities, setCities] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  useEffect(() => {
+    // Simulated API call to fetch city data
+    const fetchCityData = async () => {
+      // In a real scenario, this would be an API call to your backend
+      const mockData = [
+        {
+          name: "Minneapolis",
+          assessor: "City",
+          appealProcess: "Local Board",
+          deadline2025: "TBD",
+        },
+        {
+          name: "St. Paul",
+          assessor: "County",
+          appealProcess: "Open Book",
+          deadline2025: "TBD",
+        },
+        // Add more mock data as needed
+      ];
+      setCities(mockData);
+    };
+
+    fetchCityData();
+  }, []);
+
+  const filteredCities = cities.filter(city =>
+    city.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   const counties = [
     {
       name: "Anoka",
@@ -66,16 +99,6 @@ const Resources = () => {
       gis: "https://gis.co.washington.mn.us/publicparcel/",
       taxSystem: "https://www.co.washington.mn.us/638/Appeals",
     },
-  ];
-
-  const cities = [
-    {
-      name: "Minneapolis",
-      assessor: "City",
-      appealProcess: "Local Board",
-      deadline2025: "TBD",
-    },
-    // Add other cities here
   ];
 
   return (
@@ -153,18 +176,28 @@ const Resources = () => {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">City Resources (7-County Metro)</h2>
+          <h2 className="text-2xl font-semibold mb-4">City/Township Resources</h2>
+          <div className="mb-4">
+            <Input
+              type="text"
+              placeholder="Search for a city or township..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full"
+              icon={<Search className="h-4 w-4 text-gray-500" />}
+            />
+          </div>
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>City</TableHead>
+                <TableHead>City/Township</TableHead>
                 <TableHead>Assessor</TableHead>
                 <TableHead>Appeal Process</TableHead>
                 <TableHead>2025 Appeal Deadline</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {cities.map((city) => (
+              {filteredCities.map((city) => (
                 <TableRow key={city.name}>
                   <TableCell>{city.name}</TableCell>
                   <TableCell>{city.assessor}</TableCell>
