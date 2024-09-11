@@ -32,7 +32,7 @@ const Section = ({ title, children, bgColor = "bg-white" }) => (
 );
 
 const ResultsCostSection = ({ title, subtitle, items, buttonText, description, linkTo }) => (
-  <Card className="border-[#d7b971]">
+  <Card className="border-[#d7b971] h-full">
     <CardContent className="p-8">
       <h3 className="text-2xl font-bold text-[#0A2647] mb-2">{title}</h3>
       <p className="text-lg text-[#0A2647] mb-6">{subtitle}</p>
@@ -112,39 +112,40 @@ const Index = () => {
         </p>
       </Section>
 
-      <Section title="Property Tax Appeal Results" bgColor="bg-white">
+      <Section bgColor="bg-white">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <ResultsCostSection
-            title="Results"
-            subtitle="Insight's 2024 Appeal Statistics"
-            items={[
-              "-17.9% reduction average",
-              "$49k tax savings per property",
-              "90-day appeal duration average",
-              "100% appeal success rate"
-            ]}
-            buttonText="Get Started"
-            description="Our clients save tens of thousands on property taxes."
-            linkTo="/contact"
-          />
-        </div>
-      </Section>
-
-      <Section title="Appeal Service Cost" bgColor="bg-gray-100">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <ResultsCostSection
-            title="Cost"
-            subtitle="Contingency Fee"
-            items={[
-              "You pay $0 upfront",
-              "Our fee is 30% of tax savings",
-              "You pocket the rest",
-              "We handle everything"
-            ]}
-            buttonText="Why Choose Insight?"
-            description="Leverage our expertise, maximize your profit and time."
-            linkTo="/why-insight"
-          />
+          <div>
+            <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Property Tax Appeal Results</h2>
+            <ResultsCostSection
+              title="Results"
+              subtitle="Insight's 2024 Appeal Statistics"
+              items={[
+                "-17.9% reduction average",
+                "$49k tax savings per property",
+                "90-day appeal duration average",
+                "100% appeal success rate"
+              ]}
+              buttonText="Get Started"
+              description="Our clients save tens of thousands on property taxes."
+              linkTo="/contact"
+            />
+          </div>
+          <div>
+            <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Appeal Service Cost</h2>
+            <ResultsCostSection
+              title="Cost"
+              subtitle="Contingency Fee"
+              items={[
+                "You pay $0 upfront",
+                "Our fee is 30% of tax savings",
+                "You pocket the rest",
+                "We handle everything"
+              ]}
+              buttonText="Why Choose Insight?"
+              description="Leverage our expertise, maximize your profit and time."
+              linkTo="/why-insight"
+            />
+          </div>
         </div>
       </Section>
 
