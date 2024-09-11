@@ -32,7 +32,7 @@ const PropertyTaxCalendar = () => {
           {calendarData.map((item, index) => (
             <TableRow key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
               <TableCell className="py-3 font-medium">{item.event}</TableCell>
-              <TableCell className="py-3 text-[#d7b971]">{item.date}</TableCell>
+              <TableCell className="py-3 font-bold text-[#0A2647]">{item.date}</TableCell>
             </TableRow>
           ))}
         </TableBody>
