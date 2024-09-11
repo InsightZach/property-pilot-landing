@@ -96,7 +96,7 @@ const Index = () => {
 
       <Section title="Why Choose Insight Property Tax" bgColor="bg-white">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <StatCard icon={DollarSign} title="Risk-Free Service" description="Pay only if we successfully reduce your property taxes." />
+          <StatCard icon={DollarSign} title="Risk-Free Service" description="You pay only if we successfully reduce your property taxes." />
           <StatCard icon={CheckCircle} title="Minnesota Expertise" description="Hundreds of settled appeals from local professionals with appraisal and assessment backgrounds." />
           <StatCard icon={LineChart} title="Advanced Analytics" description="Data-driven strategies to maximize your savings." />
         </div>
