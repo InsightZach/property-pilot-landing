@@ -15,16 +15,6 @@ import {
 import ResourcesContent from '../components/ResourcesContent';
 import CountyResources from '../components/CountyResources';
 import CityTownshipResources from '../components/CityTownshipResources';
-import PropertyTaxCalendar from '../components/PropertyTaxCalendar';
-
-const ExternalLinkButton = ({ href, children }) => (
-  <a href={href} target="_blank" rel="noopener noreferrer">
-    <Button variant="outline" className="flex items-center">
-      {children}
-      <ExternalLink className="ml-2 h-4 w-4" />
-    </Button>
-  </a>
-);
 
 const Resources = () => {
   const [cities, setCities] = useState([]);
@@ -62,10 +52,15 @@ const Resources = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
-      <main className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-8">Minnesota Property Tax Resources</h1>
+      <div className="bg-[#0A2647] text-white py-20 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/hero-background-logo-inspired.svg')] opacity-20"></div>
+        <div className="container mx-auto relative z-10">
+          <h1 className="text-5xl font-bold mb-4">Minnesota Property Tax Resources</h1>
+          <p className="text-xl max-w-2xl">Comprehensive information and tools to help you navigate the complex world of Minnesota property taxes.</p>
+        </div>
+      </div>
+      <main className="container mx-auto px-4 py-12">
         <ResourcesContent />
-        <PropertyTaxCalendar />
         <CountyResources />
         <CityTownshipResources 
           cities={filteredCities} 

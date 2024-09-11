@@ -20,20 +20,19 @@ const PropertyTaxCalendar = () => {
   ];
 
   return (
-    <div className="mt-4 mb-8">
-      <h3 className="text-lg font-semibold mb-2">Property Tax Calendar</h3>
-      <Table>
+    <div className="mt-4 mb-8 overflow-x-auto">
+      <Table className="w-full">
         <TableHeader>
-          <TableRow>
+          <TableRow className="bg-[#0A2647] text-white">
             <TableHead className="w-2/3">Event</TableHead>
             <TableHead className="w-1/3">Date</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {calendarData.map((item, index) => (
-            <TableRow key={index}>
-              <TableCell className="py-2">{item.event}</TableCell>
-              <TableCell className="py-2">{item.date}</TableCell>
+            <TableRow key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+              <TableCell className="py-3 font-medium">{item.event}</TableCell>
+              <TableCell className="py-3 text-[#d7b971]">{item.date}</TableCell>
             </TableRow>
           ))}
         </TableBody>
