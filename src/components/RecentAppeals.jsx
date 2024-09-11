@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 const appeals = [
   {
@@ -40,10 +41,18 @@ const appeals = [
 ];
 
 const RecentAppeals = () => {
-  const [emblaRef] = useEmblaCarousel({
-    align: "center",
-    loop: true,
-  });
+  const [emblaRef] = useEmblaCarousel(
+    {
+      align: "center",
+      loop: true,
+    },
+    [
+      Autoplay({
+        delay: 7000,
+        stopOnInteraction: false,
+      })
+    ]
+  );
 
   return (
     <section className="py-16 bg-[#F4F5F7]">
@@ -54,6 +63,12 @@ const RecentAppeals = () => {
             align: "center",
             loop: true,
           }}
+          plugins={[
+            Autoplay({
+              delay: 7000,
+              stopOnInteraction: false,
+            })
+          ]}
           className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent ref={emblaRef}>
