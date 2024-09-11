@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import PropertyTaxCalendar from './PropertyTaxCalendar';
 
 const ExternalLinkButton = ({ href, children }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
@@ -21,6 +22,7 @@ const ResourcesContent = () => {
           Each county oversees the assessments of cities and townships within its jurisdiction. 
           The cycle includes property valuation, tax rate setting, and the collection of taxes.
         </p>
+        <PropertyTaxCalendar />
       </section>
 
       <section className="mb-12">
