@@ -13,7 +13,7 @@ import Autoplay from 'embla-carousel-autoplay';
 const appeals = [
   {
     id: 1,
-    image: "/placeholder.svg",
+    image: "/images/appeal-1.png",
     year: "2024",
     property: "St. Paul - Warehouse",
     assessment: "$4.15m",
@@ -22,7 +22,7 @@ const appeals = [
   },
   {
     id: 2,
-    image: "/placeholder.svg",
+    image: "/images/appeal-2.png",
     year: "2024",
     property: "Minneapolis - Office Building",
     assessment: "$10.2m",
@@ -31,7 +31,7 @@ const appeals = [
   },
   {
     id: 3,
-    image: "/placeholder.svg",
+    image: "/images/appeal-3.png",
     year: "2024",
     property: "Bloomington - Retail Center",
     assessment: "$7.8m",
