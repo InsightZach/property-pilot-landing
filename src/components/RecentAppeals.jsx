@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import {
   Carousel,
   CarouselContent,
@@ -27,6 +27,16 @@ const appeals = [
   "/St. Paul Warehouse 2023.png",
 ];
 
+// Fisher-Yates shuffle algorithm
+const shuffleArray = (array) => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
 const RecentAppeals = () => {
   const [emblaRef] = useEmblaCarousel(
     {
@@ -40,6 +50,9 @@ const RecentAppeals = () => {
       })
     ]
   );
+
+  // Memoize the shuffled array to prevent re-shuffling on every render
+  const shuffledAppeals = useMemo(() => shuffleArray(appeals), []);
 
   return (
     <section className="py-16 bg-[#F4F5F7]">
@@ -59,7 +72,7 @@ const RecentAppeals = () => {
           className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent ref={emblaRef}>
-            {appeals.map((image, index) => (
+            {shuffledAppeals.map((image, index) => (
               <CarouselItem key={index} className="w-full">
                 <Card className="border-0 overflow-hidden">
                   <CardContent className="p-0">
