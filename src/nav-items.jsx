@@ -1,8 +1,9 @@
-import { HomeIcon, HelpCircleIcon, PhoneIcon, BookOpenIcon } from "lucide-react";
+import { HomeIcon, HelpCircleIcon, PhoneIcon, BookOpenIcon, InfoIcon } from "lucide-react";
 import Index from "./pages/Index.jsx";
 import FAQ from "./pages/FAQ.jsx";
 import Contact from "./pages/Contact.jsx";
 import Resources from "./pages/Resources.jsx";
+import WhyInsight from "./pages/WhyInsight.jsx";
 
 /**
  * Central place for defining the navigation items. Used for navigation components and routing.
@@ -13,6 +14,12 @@ export const navItems = [
     to: "/",
     icon: <HomeIcon className="h-4 w-4" />,
     page: <Index />,
+  },
+  {
+    title: "Why Insight?",
+    to: "/why-insight",
+    icon: <InfoIcon className="h-4 w-4" />,
+    page: <WhyInsight />,
   },
   {
     title: "FAQ",

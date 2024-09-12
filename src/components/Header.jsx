@@ -8,6 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Menu } from 'lucide-react';
+import { navItems } from '../nav-items';
 
 const Header = () => {
   return (
@@ -21,11 +22,11 @@ const Header = () => {
             </Link>
           </div>
           <nav className="hidden md:flex space-x-4">
-            <Link to="/" className="text-white hover:text-[#d7b971]">Home</Link>
-            <Link to="/why-insight" className="text-white hover:text-[#d7b971]">Why Insight?</Link>
-            <Link to="/resources" className="text-white hover:text-[#d7b971]">Resources</Link>
-            <Link to="/faq" className="text-white hover:text-[#d7b971]">FAQ</Link>
-            <Link to="/contact" className="text-white hover:text-[#d7b971]">Contact</Link>
+            {navItems.map((item) => (
+              <Link key={item.to} to={item.to} className="text-white hover:text-[#d7b971]">
+                {item.title}
+              </Link>
+            ))}
           </nav>
           <div className="md:hidden">
             <DropdownMenu>
@@ -36,21 +37,13 @@ const Header = () => {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56 bg-[#0A2647] border-[#1E3A5F]">
-                <DropdownMenuItem asChild>
-                  <Link to="/" className="text-white hover:bg-[#1E3A5F] hover:text-[#d7b971]">Home</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/why-insight" className="text-white hover:bg-[#1E3A5F] hover:text-[#d7b971]">Why Insight?</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/resources" className="text-white hover:bg-[#1E3A5F] hover:text-[#d7b971]">Resources</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/faq" className="text-white hover:bg-[#1E3A5F] hover:text-[#d7b971]">FAQ</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/contact" className="text-white hover:bg-[#1E3A5F] hover:text-[#d7b971]">Contact</Link>
-                </DropdownMenuItem>
+                {navItems.map((item) => (
+                  <DropdownMenuItem key={item.to} asChild>
+                    <Link to={item.to} className="text-white hover:bg-[#1E3A5F] hover:text-[#d7b971]">
+                      {item.title}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
