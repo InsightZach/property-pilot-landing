@@ -18,7 +18,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/">
-              <img src="/logo.svg" alt="Insight Property Tax Logo" className="h-16 w-auto" />
+              <img src="/logo.svg" alt="Insight Property Tax Logo" className="h-14 w-auto" /> {/* Changed from h-16 to h-14 */}
             </Link>
           </div>
           <nav className="hidden md:flex space-x-4">
