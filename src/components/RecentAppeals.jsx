@@ -13,7 +13,7 @@ import Autoplay from 'embla-carousel-autoplay';
 const appeals = [
   {
     id: 1,
-    image: "/images/appeal-1.png",
+    image: "/St. Paul Warehouse 2024.png",
     year: "2024",
     property: "St. Paul - Warehouse",
     assessment: "$4.15m",
@@ -22,21 +22,120 @@ const appeals = [
   },
   {
     id: 2,
-    image: "/images/appeal-2.png",
-    year: "2024",
-    property: "Minneapolis - Office Building",
-    assessment: "$10.2m",
-    settlement: "$8.5m",
-    reduction: "17%"
+    image: "/Ramsey County Industrial 2023.png",
+    year: "2023",
+    property: "Ramsey County - Industrial",
+    assessment: "$6.2m",
+    settlement: "$5.1m",
+    reduction: "18%"
   },
   {
     id: 3,
-    image: "/images/appeal-3.png",
+    image: "/Ramsey County Industrial 2024.png",
     year: "2024",
-    property: "Bloomington - Retail Center",
-    assessment: "$7.8m",
-    settlement: "$6.2m",
-    reduction: "21%"
+    property: "Ramsey County - Industrial",
+    assessment: "$6.5m",
+    settlement: "$5.3m",
+    reduction: "19%"
+  },
+  {
+    id: 4,
+    image: "/Ramsey County Office-Warehouse 2023.png",
+    year: "2023",
+    property: "Ramsey County - Office-Warehouse",
+    assessment: "$8.3m",
+    settlement: "$7.1m",
+    reduction: "14%"
+  },
+  {
+    id: 5,
+    image: "/Ramsey County Office-Warehouse 2024.png",
+    year: "2024",
+    property: "Ramsey County - Office-Warehouse",
+    assessment: "$8.7m",
+    settlement: "$7.3m",
+    reduction: "16%"
+  },
+  {
+    id: 6,
+    image: "/St. Paul Flex 2023.png",
+    year: "2023",
+    property: "St. Paul - Flex",
+    assessment: "$5.8m",
+    settlement: "$4.9m",
+    reduction: "15%"
+  },
+  {
+    id: 7,
+    image: "/St. Paul Flex 2024.png",
+    year: "2024",
+    property: "St. Paul - Flex",
+    assessment: "$6.1m",
+    settlement: "$5.1m",
+    reduction: "16%"
+  },
+  {
+    id: 8,
+    image: "/St. Paul Office 2024.png",
+    year: "2024",
+    property: "St. Paul - Office",
+    assessment: "$12.5m",
+    settlement: "$10.6m",
+    reduction: "15%"
+  },
+  {
+    id: 9,
+    image: "/St. Paul Office 2023 (2).png",
+    year: "2023",
+    property: "St. Paul - Office",
+    assessment: "$11.8m",
+    settlement: "$10.1m",
+    reduction: "14%"
+  },
+  {
+    id: 10,
+    image: "/St. Paul Office 2023.png",
+    year: "2023",
+    property: "St. Paul - Office",
+    assessment: "$10.9m",
+    settlement: "$9.3m",
+    reduction: "15%"
+  },
+  {
+    id: 11,
+    image: "/St. Paul Office-Retail 2023.png",
+    year: "2023",
+    property: "St. Paul - Office-Retail",
+    assessment: "$7.6m",
+    settlement: "$6.5m",
+    reduction: "14%"
+  },
+  {
+    id: 12,
+    image: "/St. Paul Office-Retail 2024.png",
+    year: "2024",
+    property: "St. Paul - Office-Retail",
+    assessment: "$8.0m",
+    settlement: "$6.8m",
+    reduction: "15%"
+  },
+  {
+    id: 13,
+    image: "/St. Paul Warehouse 2023.png",
+    year: "2023",
+    property: "St. Paul - Warehouse",
+    assessment: "$3.9m",
+    settlement: "$2.6m",
+    reduction: "33%"
+  },
+  {
+    id: 14,
+    image: "/St. Paul Warehouse 2024.png",
+    year: "2024",
+    property: "St. Paul - Warehouse",
+    assessment: "$4.15m",
+    settlement: "$2.7m",
+    reduction: "35%"
   },
 ];
 
