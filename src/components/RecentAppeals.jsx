@@ -79,22 +79,22 @@ const RecentAppeals = () => {
                     <img
                       src={appeal.image}
                       alt={appeal.property}
-                      className="w-full h-[400px] object-cover"
+                      className="w-full h-auto aspect-video object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-[#0A2647]/80 to-transparent flex items-center">
-                      <div className="text-white p-8">
-                        <h3 className="text-4xl font-bold mb-2">{appeal.year} Appeal</h3>
-                        <h4 className="text-2xl mb-4">{appeal.property}</h4>
-                        <ul className="space-y-2">
+                      <div className="text-white p-4 md:p-8">
+                        <h3 className="text-2xl md:text-4xl font-bold mb-2">{appeal.year} Appeal</h3>
+                        <h4 className="text-xl md:text-2xl mb-4">{appeal.property}</h4>
+                        <ul className="space-y-1 md:space-y-2 text-sm md:text-base">
                           <li>Assessment: {appeal.assessment}</li>
                           <li>Settlement: {appeal.settlement}</li>
                           <li>{appeal.reduction} Reduction</li>
                         </ul>
                       </div>
                     </div>
-                    <div className="absolute top-4 right-4 bg-[#D4AF37] text-[#0A2647] p-2 rounded">
-                      <span className="text-3xl font-bold">{appeal.reduction}</span>
-                      <span className="block text-sm">Reduced</span>
+                    <div className="absolute top-2 right-2 md:top-4 md:right-4 bg-[#D4AF37] text-[#0A2647] p-2 rounded">
+                      <span className="text-xl md:text-3xl font-bold">{appeal.reduction}</span>
+                      <span className="block text-xs md:text-sm">Reduced</span>
                     </div>
                   </CardContent>
                 </Card>
