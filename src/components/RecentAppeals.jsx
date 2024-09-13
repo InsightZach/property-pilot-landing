@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 
 const images = [
@@ -18,6 +18,35 @@ const images = [
 ];
 
 const RecentAppeals = () => {
+  const [loadedImages, setLoadedImages] = useState({});
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const preloadImages = async () => {
+      try {
+        const imageModules = import.meta.glob('/public/*.png');
+        const loadedImageUrls = {};
+
+        for (const [path, loader] of Object.entries(imageModules)) {
+          const module = await loader();
+          const fileName = path.split('/').pop();
+          loadedImageUrls[fileName] = module.default;
+        }
+
+        setLoadedImages(loadedImageUrls);
+      } catch (err) {
+        console.error('Error loading images:', err);
+        setError('Failed to load images. Please try again later.');
+      }
+    };
+
+    preloadImages();
+  }, []);
+
+  if (error) {
+    return <div className="text-center text-red-500">{error}</div>;
+  }
+
   return (
     <section className="py-16 bg-[#F4F5F7]">
       <div className="container mx-auto px-4">
@@ -26,16 +55,21 @@ const RecentAppeals = () => {
           {images.map((image, index) => (
             <Card key={index}>
               <CardContent className="p-4">
-                <img
-                  src={`/${image.src}`}
-                  alt={image.alt}
-                  className="w-full h-auto object-contain"
-                  onError={(e) => {
-                    console.error(`Failed to load image: ${image.src}`);
-                    e.target.onerror = null;
-                    e.target.src = '/placeholder.svg';
-                  }}
-                />
+                {loadedImages[image.src] ? (
+                  <img
+                    src={loadedImages[image.src]}
+                    alt={image.alt}
+                    className="w-full h-auto object-contain"
+                    onError={(e) => {
+                      console.error(`Failed to load image: ${image.src}`);
+                      e.target.src = '/placeholder.svg';
+                    }}
+                  />
+                ) : (
+                  <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
+                    Loading...
+                  </div>
+                )}
               </CardContent>
             </Card>
           ))}
