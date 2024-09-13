@@ -43,7 +43,7 @@ const CountyResources = () => {
     },
     {
       name: "Ramsey",
-      appealGuide: "https://www.ramseycounty.us/residents/property/property-tax-and-value-appeals",
+      appealGuide: "https://www.ramseycounty.us/residents/property-home/taxes-values/property-value-assessment/appealing-your-value",
       gis: "https://www.ramseycounty.us/residents/property/maps-surveys/interactive-map-gis",
       taxSystem: "https://www.ramseycounty.us/residents/property-home",
       boardAppealType: "#",
