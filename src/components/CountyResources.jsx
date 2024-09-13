@@ -30,7 +30,7 @@ const CountyResources = () => {
     {
       name: "Dakota",
       appealGuide: "https://www.co.dakota.mn.us/HomeProperty/Assessing/Appeal/Pages/default.aspx",
-      gis: "https://gis.co.dakota.mn.us/PropertyMap/",
+      gis: "https://gis.co.dakota.mn.us/Webappbuilder/PropertyInformationPublic/index.html",
       taxSystem: "https://www.co.dakota.mn.us/HomeProperty/PropertyTaxes/Pages/default.aspx",
       boardAppealType: "#",
     },
