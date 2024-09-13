@@ -1,23 +1,56 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import { navItems } from "./nav-items";
 import WhyInsight from "./pages/WhyInsight";
+import React, { Suspense, useTransition } from 'react';
 
 const queryClient = new QueryClient();
+
+const NavigationWrapper = ({ children }) => {
+  const navigate = useNavigate();
+  const [isPending, startTransition] = useTransition();
+
+  const handleNavigation = (to) => {
+    startTransition(() => {
+      navigate(to);
+    });
+  };
+
+  return React.cloneElement(children, { handleNavigation });
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <BrowserRouter>
-        <Routes>
-          {navItems.map(({ to, page }) => (
-            <Route key={to} path={to} element={page} />
-          ))}
-          <Route path="/why-insight" element={<WhyInsight />} />
-        </Routes>
+        <NavigationWrapper>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              {navItems.map(({ to, page: Page }) => (
+                <Route
+                  key={to}
+                  path={to}
+                  element={
+                    <Suspense fallback={<div>Loading...</div>}>
+                      <Page />
+                    </Suspense>
+                  }
+                />
+              ))}
+              <Route
+                path="/why-insight"
+                element={
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <WhyInsight />
+                  </Suspense>
+                }
+              />
+            </Routes>
+          </Suspense>
+        </NavigationWrapper>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
