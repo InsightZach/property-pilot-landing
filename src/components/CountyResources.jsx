@@ -25,7 +25,7 @@ const CountyResources = () => {
       appealGuide: "https://www.carvercountymn.gov/departments/property-finance/property-assessment/appeals-process",
       gis: "https://gis.carvercountymn.gov/property/",
       taxSystem: "https://www.co.carver.mn.us/departments/property-financial-services/property-taxation",
-      boardAppealType: "#",
+      boardAppealType: "https://www.carvercountymn.gov/home/showpublisheddocument/25934/638423967737970000",
     },
     {
       name: "Dakota",
