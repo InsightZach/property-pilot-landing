@@ -54,12 +54,8 @@ const RecentAppeals = () => {
   const shuffledAppeals = useMemo(() => shuffleArray(appeals), []);
 
   const getImageUrl = (src) => {
-    // Check if we're in a development environment
-    if (process.env.NODE_ENV === 'development') {
-      return `/${src}`;
-    }
-    // For production, use the full URL
-    return `https://insightpropertytax.com/${src}`;
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    return `${baseUrl}${src}`;
   };
 
   return (
