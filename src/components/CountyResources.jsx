@@ -23,7 +23,7 @@ const CountyResources = () => {
   const counties = [
     {
       name: "Anoka",
-      appealGuide: "https://www.anokacounty.us/3744/Property-Tax-Appeals",
+      appealGuide: "https://www.anokacountymn.gov/4279/How-to-Appeal-Your-Value",
       gis: "https://gis.anokacounty.us/propertysearch/",
       taxSystem: "https://www.anokacounty.us/1108/Property-Records-Taxation",
     },
