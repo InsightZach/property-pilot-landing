@@ -1,18 +1,10 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 
 const ExternalLinkButton = ({ href, children }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
-    <Button variant="outline" className="flex items-center">
+    <Button variant="outline" className="flex items-center w-full justify-center">
       {children}
       <ExternalLink className="ml-2 h-4 w-4" />
     </Button>
@@ -75,36 +67,19 @@ const CountyResources = () => {
   return (
     <section className="mb-12">
       <h2 className="text-2xl font-semibold mb-4">County Resources</h2>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>County</TableHead>
-            <TableHead>Appeal Guide</TableHead>
-            <TableHead>GIS System</TableHead>
-            <TableHead>Property Tax System</TableHead>
-            <TableHead>Board of Appeal Type</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {counties.map((county) => (
-            <TableRow key={county.name}>
-              <TableCell>{county.name}</TableCell>
-              <TableCell>
-                <ExternalLinkButton href={county.appealGuide}>Guide</ExternalLinkButton>
-              </TableCell>
-              <TableCell>
-                <ExternalLinkButton href={county.gis}>GIS</ExternalLinkButton>
-              </TableCell>
-              <TableCell>
-                <ExternalLinkButton href={county.taxSystem}>Tax System</ExternalLinkButton>
-              </TableCell>
-              <TableCell>
-                <ExternalLinkButton href={county.boardAppealType}>Appeal Type</ExternalLinkButton>
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {counties.map((county) => (
+          <div key={county.name} className="bg-white p-4 rounded-lg shadow">
+            <h3 className="text-lg font-semibold mb-2">{county.name} County</h3>
+            <div className="space-y-2">
+              <ExternalLinkButton href={county.appealGuide}>Appeal Guide</ExternalLinkButton>
+              <ExternalLinkButton href={county.gis}>GIS System</ExternalLinkButton>
+              <ExternalLinkButton href={county.taxSystem}>Tax System</ExternalLinkButton>
+              <ExternalLinkButton href={county.boardAppealType}>Board Appeal Type</ExternalLinkButton>
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
