@@ -13,7 +13,10 @@ import Autoplay from "embla-carousel-autoplay";
 
 const RecentAppeals = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 7000, stopOnInteraction: false })]);
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true },
+    [Autoplay({ delay: 7000, stopOnInteraction: false })]
+  );
 
   const appealImages = [
     'Appeal14.svg', 'Appeal1.svg', 'Appeal2.svg', 'Appeal3.svg',
