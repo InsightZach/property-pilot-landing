@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
   Carousel,
   CarouselContent,
@@ -7,15 +7,18 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 const RecentAppeals = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const autoplayOptions = {
+    delay: 7000,
+    rootNode: (emblaRoot) => emblaRoot.parentElement,
+  };
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true },
-    [Autoplay({ delay: 7000, stopOnInteraction: false })]
+    [Autoplay(autoplayOptions)]
   );
 
   const appealImages = [
@@ -53,6 +56,7 @@ const RecentAppeals = () => {
               align: "center",
               loop: true,
             }}
+            plugins={[Autoplay(autoplayOptions)]}
             className="w-full"
           >
             <CarouselContent>
