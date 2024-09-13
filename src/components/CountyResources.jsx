@@ -36,7 +36,7 @@ const CountyResources = () => {
     },
     {
       name: "Hennepin",
-      appealGuide: "https://www.hennepin.us/your-government/property/property-tax-appeals",
+      appealGuide: "https://www.hennepin.us/residents/property/assessment",
       gis: "https://gis.hennepin.us/property/map/",
       taxSystem: "https://www.hennepin.us/your-government/property/property-taxes",
       boardAppealType: "#",
