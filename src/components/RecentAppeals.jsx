@@ -39,9 +39,9 @@ const RecentAppeals = () => {
   };
 
   return (
-    <section className="py-12 bg-[#F4F5F7]">
-      <div className="container mx-auto px-4 max-w-3xl">
-        <h2 className="text-2xl font-semibold text-center mb-8 text-[#1c1d29]">Recent Property Tax Appeals</h2>
+    <section className="py-8 bg-[#F4F5F7]">
+      <div className="container mx-auto px-4 max-w-2xl">
+        <h2 className="text-xl font-semibold text-center mb-6 text-[#1c1d29]">Recent Property Tax Appeals</h2>
         <div className="relative">
           <div className="overflow-hidden">
             <div
@@ -49,9 +49,9 @@ const RecentAppeals = () => {
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {appealImages.map((image, index) => (
-                <div key={index} className="w-full flex-shrink-0">
-                  <Card className="mx-2">
-                    <CardContent className="p-2">
+                <div key={index} className="flex-shrink-0 min-w-full">
+                  <Card className="mx-1">
+                    <CardContent className="p-1">
                       <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                         <img
                           src={`/${image}`}
@@ -71,21 +71,21 @@ const RecentAppeals = () => {
             className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-1 rounded-full shadow-md"
             aria-label="Previous slide"
           >
-            <ChevronLeft className="h-4 w-4 text-[#0A2647]" />
+            <ChevronLeft className="h-3 w-3 text-[#0A2647]" />
           </button>
           <button
             onClick={nextSlide}
             className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-1 rounded-full shadow-md"
             aria-label="Next slide"
           >
-            <ChevronRight className="h-4 w-4 text-[#0A2647]" />
+            <ChevronRight className="h-3 w-3 text-[#0A2647]" />
           </button>
         </div>
-        <div className="flex justify-center mt-4">
+        <div className="flex justify-center mt-3">
           {appealImages.map((_, index) => (
             <button
               key={index}
-              className={`h-1.5 w-1.5 rounded-full mx-1 ${
+              className={`h-1 w-1 rounded-full mx-0.5 ${
                 index === currentIndex ? 'bg-[#d7b971]' : 'bg-gray-300'
               }`}
               onClick={() => setCurrentIndex(index)}
