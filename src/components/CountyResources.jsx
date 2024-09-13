@@ -59,7 +59,7 @@ const CountyResources = () => {
       name: "Washington",
       appealGuide: "https://www.washingtoncountymn.gov/3076/Appealing-Your-Value",
       gis: "https://gis.co.washington.mn.us/publicparcel/",
-      taxSystem: "https://www.co.washington.mn.us/638/Appeals",
+      taxSystem: "https://mn-washington.manatron.com/",
       boardAppealType: "https://www.washingtoncountymn.gov/3076/Appealing-Your-Value",
     },
   ];
