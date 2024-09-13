@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import {
   Carousel,
   CarouselContent,
@@ -53,10 +53,19 @@ const RecentAppeals = () => {
   // Memoize the shuffled array to prevent re-shuffling on every render
   const shuffledAppeals = useMemo(() => shuffleArray(appeals), []);
 
-  const getImageUrl = (src) => {
-    const baseUrl = import.meta.env.BASE_URL || '/';
-    return `${baseUrl}${src}`;
-  };
+  const [imageModules, setImageModules] = useState({});
+
+  useEffect(() => {
+    const loadImages = async () => {
+      const modules = {};
+      for (const appeal of shuffledAppeals) {
+        modules[appeal.src] = await import(`../../public/${appeal.src}`);
+      }
+      setImageModules(modules);
+    };
+
+    loadImages();
+  }, [shuffledAppeals]);
 
   return (
     <section className="py-16 bg-[#F4F5F7]">
@@ -80,11 +89,13 @@ const RecentAppeals = () => {
               <CarouselItem key={index} className="w-full">
                 <Card className="border-0 overflow-hidden">
                   <CardContent className="p-0">
-                    <img
-                      src={getImageUrl(image.src)}
-                      alt={image.alt}
-                      className="w-full h-auto aspect-video object-cover"
-                    />
+                    {imageModules[image.src] && (
+                      <img
+                        src={imageModules[image.src].default}
+                        alt={image.alt}
+                        className="w-full h-auto aspect-video object-cover"
+                      />
+                    )}
                   </CardContent>
                 </Card>
               </CarouselItem>
