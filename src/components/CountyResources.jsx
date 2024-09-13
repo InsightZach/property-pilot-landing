@@ -30,7 +30,7 @@ const CountyResources = () => {
     },
     {
       name: "Carver",
-      appealGuide: "https://www.co.carver.mn.us/departments/property-financial-services/assessor/property-tax-appeals",
+      appealGuide: "https://www.carvercountymn.gov/departments/property-finance/property-assessment/appeals-process",
       gis: "https://gis.co.carver.mn.us/publicparcel/",
       taxSystem: "https://www.co.carver.mn.us/departments/property-financial-services/property-taxation",
       boardAppealType: "#",
