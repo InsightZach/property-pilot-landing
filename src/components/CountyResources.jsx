@@ -51,7 +51,7 @@ const CountyResources = () => {
     {
       name: "Scott",
       appealGuide: "https://www.scottcountymn.gov/346/Appeal-Process",
-      gis: "https://gis.co.scott.mn.us/scottgis/",
+      gis: "https://gis.co.scott.mn.us/sg3/",
       taxSystem: "https://www.scottcountymn.gov/415/Property-Taxes",
       boardAppealType: "https://www.scottcountymn.gov/346/Appeal-Process",
     },
