@@ -45,7 +45,7 @@ const CountyResources = () => {
       name: "Ramsey",
       appealGuide: "https://www.ramseycounty.us/residents/property-home/taxes-values/property-value-assessment/appealing-your-value",
       gis: "https://www.ramseycounty.us/residents/property/maps-surveys/interactive-map-gis",
-      taxSystem: "https://www.ramseycounty.us/residents/property-home",
+      taxSystem: "https://beacon.schneidercorp.com/application.aspx?app=RamseyCountyMN&PageType=Search",
       boardAppealType: "https://www.ramseycounty.us/residents/property-home/taxes-values/property-value-assessment/appealing-your-value",
     },
     {
