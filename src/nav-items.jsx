@@ -1,9 +1,11 @@
 import { HomeIcon, HelpCircleIcon, PhoneIcon, BookOpenIcon, InfoIcon } from "lucide-react";
-import Index from "./pages/Index.jsx";
-import FAQ from "./pages/FAQ.jsx";
-import Contact from "./pages/Contact.jsx";
-import Resources from "./pages/Resources.jsx";
-import WhyInsight from "./pages/WhyInsight.jsx";
+import { lazy } from 'react';
+
+const Index = lazy(() => import("./pages/Index.jsx"));
+const FAQ = lazy(() => import("./pages/FAQ.jsx"));
+const Contact = lazy(() => import("./pages/Contact.jsx"));
+const Resources = lazy(() => import("./pages/Resources.jsx"));
+const WhyInsight = lazy(() => import("./pages/WhyInsight.jsx"));
 
 /**
  * Central place for defining the navigation items. Used for navigation components and routing.
