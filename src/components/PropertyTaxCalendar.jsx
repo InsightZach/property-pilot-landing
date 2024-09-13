@@ -10,13 +10,15 @@ import {
 
 const PropertyTaxCalendar = () => {
   const calendarData = [
-    { event: "2nd half property tax payments due", date: "10/15/2024" },
-    { event: "2025 Property tax estimates mailed", date: "mid-Nov 2024" },
-    { event: "2025 Assessment values set", date: "1/2/2025" },
-    { event: "2025 Assessment values mailed", date: "Feb-Mar 2025" },
-    { event: "2025 Assessment appeal deadline", date: "Mar-May 2025" },
-    { event: "2024 Property tax petition deadline", date: "4/30/2025" },
-    { event: "1st half property tax payment due", date: "5/15/2025" },
+    { event: "Sales Study", date: "October - September" },
+    { event: "Property Valuations Set", date: "January 2" },
+    { event: "Tax Statements & Valuation Notices Mailed", date: "March" },
+    { event: "Appeals Process May Begin", date: "March - May" },
+    { event: "MN Tax Court Filing Deadline", date: "April 30th" },
+    { event: "First Half of Property Taxes Due", date: "May 15th" },
+    { event: "Board of Appeal Meets", date: "June" },
+    { event: "Second Half of Property Taxes Due", date: "October 15th" },
+    { event: "Truth in Budget Meetings", date: "Nov - Dec" },
   ];
 
   return (
