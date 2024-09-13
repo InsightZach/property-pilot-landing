@@ -23,20 +23,20 @@ const RecentAppeals = () => {
   };
 
   return (
-    <section className="py-6 bg-[#F4F5F7]">
+    <section className="py-12 bg-[#F4F5F7]">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="text-lg font-semibold text-center mb-4 text-[#1c1d29]">Recent Property Tax Appeals</h2>
+        <h2 className="text-2xl font-semibold text-center mb-8 text-[#1c1d29]">Recent Property Tax Appeals</h2>
         <Carousel
           opts={{
-            align: "start",
+            align: "center",
             loop: true,
           }}
           className="w-full"
         >
           <CarouselContent>
             {appealImages.map((image, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <Card className="mx-1">
+              <CarouselItem key={index} className="w-full">
+                <Card className="border-none shadow-none bg-transparent">
                   <CardContent className="p-1">
                     <div className="relative w-full" style={{ paddingBottom: '75%' }}>
                       <img
@@ -51,8 +51,8 @@ const RecentAppeals = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="absolute left-4 top-1/2 transform -translate-y-1/2" />
+          <CarouselNext className="absolute right-4 top-1/2 transform -translate-y-1/2" />
         </Carousel>
       </div>
     </section>
