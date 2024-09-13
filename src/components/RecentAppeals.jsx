@@ -52,12 +52,14 @@ const RecentAppeals = () => {
                 <div key={index} className="w-full flex-shrink-0">
                   <Card>
                     <CardContent className="p-4">
-                      <img
-                        src={`/${image}`}
-                        alt={`Appeal ${index + 1}`}
-                        className="w-full h-auto object-contain mx-auto"
-                        onError={handleImageError}
-                      />
+                      <div className="aspect-w-16 aspect-h-9">
+                        <img
+                          src={`/${image}`}
+                          alt={`Appeal ${index + 1}`}
+                          className="w-full h-full object-contain"
+                          onError={handleImageError}
+                        />
+                      </div>
                     </CardContent>
                   </Card>
                 </div>
