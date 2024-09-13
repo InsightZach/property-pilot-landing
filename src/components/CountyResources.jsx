@@ -39,7 +39,7 @@ const CountyResources = () => {
       appealGuide: "https://www.hennepin.us/residents/property/assessment",
       gis: "https://gis.hennepin.us/property/",
       taxSystem: "https://www.hennepin.us/residents/property/property-tax-payment-options",
-      boardAppealType: "#",
+      boardAppealType: "https://www.hennepin.us/residents/property/assessment#commercial-assessment-offices",
     },
     {
       name: "Ramsey",
