@@ -24,7 +24,7 @@ const RecentAppeals = () => {
 
   return (
     <section className="py-6 bg-[#F4F5F7]">
-      <div className="container mx-auto px-4 max-w-xl">
+      <div className="container mx-auto px-4 max-w-4xl">
         <h2 className="text-lg font-semibold text-center mb-4 text-[#1c1d29]">Recent Property Tax Appeals</h2>
         <Carousel
           opts={{
@@ -35,10 +35,10 @@ const RecentAppeals = () => {
         >
           <CarouselContent>
             {appealImages.map((image, index) => (
-              <CarouselItem key={index}>
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <Card className="mx-1">
                   <CardContent className="p-1">
-                    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                    <div className="relative w-full" style={{ paddingBottom: '75%' }}>
                       <img
                         src={`/${image}`}
                         alt={`Appeal ${index + 1}`}
