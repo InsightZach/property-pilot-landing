@@ -11,20 +11,20 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
 const appeals = [
-  "/St. Paul Warehouse 2024.png",
-  "/Ramsey County Industrial 2023.png",
-  "/Ramsey County Industrial 2024.png",
-  "/Ramsey County Office-Warehouse 2023.png",
-  "/Ramsey County Office-Warehouse 2024.png",
-  "/St. Paul Flex 2023.png",
-  "/St. Paul Flex 2024.png",
-  "/St. Paul Office 2024.png",
-  "/St. Paul Office 2023 (2).png",
-  "/St. Paul Office 2023.png",
-  "/St. Paul Office 2024.png",
-  "/St. Paul Office-Retail 2023.png",
-  "/St. Paul Office-Retail 2024.png",
-  "/St. Paul Warehouse 2023.png",
+  "/St._Paul_Warehouse_2024.png",
+  "/Ramsey_County_Industrial_2023.png",
+  "/Ramsey_County_Industrial_2024.png",
+  "/Ramsey_County_Office-Warehouse_2023.png",
+  "/Ramsey_County_Office-Warehouse_2024.png",
+  "/St._Paul_Flex_2023.png",
+  "/St._Paul_Flex_2024.png",
+  "/St._Paul_Office_2024.png",
+  "/St._Paul_Office_2023_(2).png",
+  "/St._Paul_Office_2023.png",
+  "/St._Paul_Office_2024.png",
+  "/St._Paul_Office-Retail_2023.png",
+  "/St._Paul_Office-Retail_2024.png",
+  "/St._Paul_Warehouse_2023.png",
 ];
 
 // Fisher-Yates shuffle algorithm
@@ -77,7 +77,7 @@ const RecentAppeals = () => {
                 <Card className="border-0 overflow-hidden">
                   <CardContent className="p-0">
                     <img
-                      src={image}
+                      src={`${window.location.origin}${image}`}
                       alt={`Recent appeal ${index + 1}`}
                       className="w-full h-auto aspect-video object-cover"
                     />
