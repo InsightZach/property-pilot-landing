@@ -10,15 +10,15 @@ import {
 
 const PropertyTaxCalendar = () => {
   const calendarData = [
-    { event: "Sales Study", date: "October - September" },
-    { event: "Property Valuations Set", date: "January 2" },
-    { event: "Tax Statements & Valuation Notices Mailed", date: "March" },
-    { event: "Appeals Process May Begin", date: "March - May" },
-    { event: "MN Tax Court Filing Deadline", date: "April 30th" },
-    { event: "First Half of Property Taxes Due", date: "May 15th" },
-    { event: "Board of Appeal Meets", date: "June" },
-    { event: "Second Half of Property Taxes Due", date: "October 15th" },
-    { event: "Truth in Budget Meetings", date: "Nov - Dec" },
+    { date: "October - September", event: "Sales Study" },
+    { date: "January 2", event: "Property Valuations Set" },
+    { date: "March", event: "Tax Statements & Valuation Notices Mailed" },
+    { date: "March - May", event: "Appeals Process May Begin" },
+    { date: "April 30th", event: "MN Tax Court Filing Deadline" },
+    { date: "May 15th", event: "First Half of Property Taxes Due" },
+    { date: "June", event: "Board of Appeal Meets" },
+    { date: "October 15th", event: "Second Half of Property Taxes Due" },
+    { date: "Nov - Dec", event: "Truth in Budget Meetings" },
   ];
 
   return (
@@ -27,15 +27,15 @@ const PropertyTaxCalendar = () => {
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-2/3">Event</TableHead>
             <TableHead className="w-1/3">Date</TableHead>
+            <TableHead className="w-2/3">Event</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {calendarData.map((item, index) => (
             <TableRow key={index}>
-              <TableCell>{item.event}</TableCell>
               <TableCell>{item.date}</TableCell>
+              <TableCell>{item.event}</TableCell>
             </TableRow>
           ))}
         </TableBody>
