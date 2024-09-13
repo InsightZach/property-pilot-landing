@@ -10,36 +10,20 @@ import { Card, CardContent } from "@/components/ui/card";
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
-// Import all images
-import ramseyIndustrial2023 from '/Ramsey County Industrial 2023.png';
-import ramseyIndustrial2024 from '/Ramsey County Industrial 2024.png';
-import ramseyOfficeWarehouse2023 from '/Ramsey County Office-Warehouse 2023.png';
-import ramseyOfficeWarehouse2024 from '/Ramsey County Office-Warehouse 2024.png';
-import stPaulFlex2023 from '/St. Paul Flex 2023.png';
-import stPaulFlex2024 from '/St. Paul Flex 2024.png';
-import stPaulOffice2024 from '/St. Paul Office 2024.png';
-import stPaulOffice2023_2 from '/St. Paul Office 2023 (2).png';
-import stPaulOffice2023 from '/St. Paul Office 2023.png';
-import stPaulOfficeRetail2023 from '/St. Paul Office-Retail 2023.png';
-import stPaulOfficeRetail2024 from '/St. Paul Office-Retail 2024.png';
-import stPaulWarehouse2023 from '/St. Paul Warehouse 2023.png';
-import stPaulWarehouse2024 from '/St. Paul Warehouse 2024.png';
-
 const appeals = [
-  { src: ramseyIndustrial2023, alt: "Ramsey County Industrial 2023" },
-  { src: ramseyIndustrial2024, alt: "Ramsey County Industrial 2024" },
-  { src: ramseyOfficeWarehouse2023, alt: "Ramsey County Office-Warehouse 2023" },
-  { src: ramseyOfficeWarehouse2024, alt: "Ramsey County Office-Warehouse 2024" },
-  { src: stPaulFlex2023, alt: "St. Paul Flex 2023" },
-  { src: stPaulFlex2024, alt: "St. Paul Flex 2024" },
-  { src: stPaulOffice2024, alt: "St. Paul Office 2024" },
-  { src: stPaulOffice2023_2, alt: "St. Paul Office 2023 (2)" },
-  { src: stPaulOffice2023, alt: "St. Paul Office 2023" },
-  { src: stPaulOffice2024, alt: "St. Paul Office 2024" },
-  { src: stPaulOfficeRetail2023, alt: "St. Paul Office-Retail 2023" },
-  { src: stPaulOfficeRetail2024, alt: "St. Paul Office-Retail 2024" },
-  { src: stPaulWarehouse2023, alt: "St. Paul Warehouse 2023" },
-  { src: stPaulWarehouse2024, alt: "St. Paul Warehouse 2024" }
+  { src: '/Ramsey County Industrial 2023.png', alt: "Ramsey County Industrial 2023" },
+  { src: '/Ramsey County Industrial 2024.png', alt: "Ramsey County Industrial 2024" },
+  { src: '/Ramsey County Office-Warehouse 2023.png', alt: "Ramsey County Office-Warehouse 2023" },
+  { src: '/Ramsey County Office-Warehouse 2024.png', alt: "Ramsey County Office-Warehouse 2024" },
+  { src: '/St. Paul Flex 2023.png', alt: "St. Paul Flex 2023" },
+  { src: '/St. Paul Flex 2024.png', alt: "St. Paul Flex 2024" },
+  { src: '/St. Paul Office 2024.png', alt: "St. Paul Office 2024" },
+  { src: '/St. Paul Office 2023 (2).png', alt: "St. Paul Office 2023 (2)" },
+  { src: '/St. Paul Office 2023.png', alt: "St. Paul Office 2023" },
+  { src: '/St. Paul Office-Retail 2023.png', alt: "St. Paul Office-Retail 2023" },
+  { src: '/St. Paul Office-Retail 2024.png', alt: "St. Paul Office-Retail 2024" },
+  { src: '/St. Paul Warehouse 2023.png', alt: "St. Paul Warehouse 2023" },
+  { src: '/St. Paul Warehouse 2024.png', alt: "St. Paul Warehouse 2024" }
 ];
 
 // Fisher-Yates shuffle algorithm
