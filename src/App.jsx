@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import { navItems } from "./nav-items";
 import WhyInsight from "./pages/WhyInsight";
-import React, { Suspense, useTransition } from 'react';
+import React, { Suspense, useTransition, lazy } from 'react';
 
 const queryClient = new QueryClient();
 
@@ -29,13 +29,13 @@ const App = () => (
         <NavigationWrapper>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
-              {navItems.map(({ to, page: Page }) => (
+              {navItems.map(({ to, component: Component }) => (
                 <Route
                   key={to}
                   path={to}
                   element={
                     <Suspense fallback={<div>Loading...</div>}>
-                      <Page />
+                      <Component />
                     </Suspense>
                   }
                 />
