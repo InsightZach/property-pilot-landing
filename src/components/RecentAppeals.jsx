@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Carousel,
   CarouselContent,
@@ -10,38 +10,22 @@ import { Card, CardContent } from "@/components/ui/card";
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
-// Import all images statically
-import RamseyCountyIndustrial2023 from '../../public/Ramsey County Industrial 2023.png';
-import RamseyCountyIndustrial2024 from '../../public/Ramsey County Industrial 2024.png';
-import RamseyCountyOfficeWarehouse2023 from '../../public/Ramsey County Office-Warehouse 2023.png';
-import RamseyCountyOfficeWarehouse2024 from '../../public/Ramsey County Office-Warehouse 2024.png';
-import StPaulFlex2023 from '../../public/St. Paul Flex 2023.png';
-import StPaulFlex2024 from '../../public/St. Paul Flex 2024.png';
-import StPaulOffice2024 from '../../public/St. Paul Office 2024.png';
-import StPaulOffice2023_2 from '../../public/St. Paul Office 2023 (2).png';
-import StPaulOffice2023 from '../../public/St. Paul Office 2023.png';
-import StPaulOfficeRetail2023 from '../../public/St. Paul Office-Retail 2023.png';
-import StPaulOfficeRetail2024 from '../../public/St. Paul Office-Retail 2024.png';
-import StPaulWarehouse2023 from '../../public/St. Paul Warehouse 2023.png';
-import StPaulWarehouse2024 from '../../public/St. Paul Warehouse 2024.png';
-
-const appeals = [
-  { src: RamseyCountyIndustrial2023, alt: "Ramsey County Industrial 2023" },
-  { src: RamseyCountyIndustrial2024, alt: "Ramsey County Industrial 2024" },
-  { src: RamseyCountyOfficeWarehouse2023, alt: "Ramsey County Office-Warehouse 2023" },
-  { src: RamseyCountyOfficeWarehouse2024, alt: "Ramsey County Office-Warehouse 2024" },
-  { src: StPaulFlex2023, alt: "St. Paul Flex 2023" },
-  { src: StPaulFlex2024, alt: "St. Paul Flex 2024" },
-  { src: StPaulOffice2024, alt: "St. Paul Office 2024" },
-  { src: StPaulOffice2023_2, alt: "St. Paul Office 2023 (2)" },
-  { src: StPaulOffice2023, alt: "St. Paul Office 2023" },
-  { src: StPaulOfficeRetail2023, alt: "St. Paul Office-Retail 2023" },
-  { src: StPaulOfficeRetail2024, alt: "St. Paul Office-Retail 2024" },
-  { src: StPaulWarehouse2023, alt: "St. Paul Warehouse 2023" },
-  { src: StPaulWarehouse2024, alt: "St. Paul Warehouse 2024" }
+const imageNames = [
+  'Ramsey County Industrial 2023.png',
+  'Ramsey County Industrial 2024.png',
+  'Ramsey County Office-Warehouse 2023.png',
+  'Ramsey County Office-Warehouse 2024.png',
+  'St. Paul Flex 2023.png',
+  'St. Paul Flex 2024.png',
+  'St. Paul Office 2024.png',
+  'St. Paul Office 2023 (2).png',
+  'St. Paul Office 2023.png',
+  'St. Paul Office-Retail 2023.png',
+  'St. Paul Office-Retail 2024.png',
+  'St. Paul Warehouse 2023.png',
+  'St. Paul Warehouse 2024.png'
 ];
 
-// Fisher-Yates shuffle algorithm
 const shuffleArray = (array) => {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -52,6 +36,7 @@ const shuffleArray = (array) => {
 };
 
 const RecentAppeals = () => {
+  const [images, setImages] = useState([]);
   const [emblaRef] = useEmblaCarousel(
     {
       align: "center",
@@ -65,8 +50,16 @@ const RecentAppeals = () => {
     ]
   );
 
-  // Memoize the shuffled array to prevent re-shuffling on every render
-  const shuffledAppeals = useMemo(() => shuffleArray(appeals), []);
+  useEffect(() => {
+    const loadImages = async () => {
+      const imageModules = await Promise.all(
+        shuffleArray(imageNames).map(name => import(`../../public/${name}`))
+      );
+      setImages(imageModules.map(module => ({ src: module.default, alt: module.default.split('/').pop().split('.')[0] })));
+    };
+
+    loadImages();
+  }, []);
 
   return (
     <section className="py-16 bg-[#F4F5F7]">
@@ -86,7 +79,7 @@ const RecentAppeals = () => {
           className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent ref={emblaRef}>
-            {shuffledAppeals.map((image, index) => (
+            {images.map((image, index) => (
               <CarouselItem key={index} className="w-full">
                 <Card className="border-0 overflow-hidden">
                   <CardContent className="p-0">
