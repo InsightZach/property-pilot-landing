@@ -24,7 +24,7 @@ const CountyResources = () => {
     {
       name: "Anoka",
       appealGuide: "https://www.anokacountymn.gov/4279/How-to-Appeal-Your-Value",
-      gis: "https://gis.anokacounty.us/propertysearch/",
+      gis: "https://gis.anokacountymn.gov/propertysearch/",
       taxSystem: "https://www.anokacounty.us/1108/Property-Records-Taxation",
       boardAppealType: "https://anokacountymn.gov/DocumentCenter/View/29715/2024-Board-Of-Appeal-Schedule?bidId=",
     },
