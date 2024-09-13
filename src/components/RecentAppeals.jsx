@@ -11,19 +11,19 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
 const appeals = [
-  { src: 'https://insightpropertytax.com/Ramsey County Industrial 2023.png', alt: "Ramsey County Industrial 2023" },
-  { src: 'https://insightpropertytax.com/Ramsey County Industrial 2024.png', alt: "Ramsey County Industrial 2024" },
-  { src: 'https://insightpropertytax.com/Ramsey County Office-Warehouse 2023.png', alt: "Ramsey County Office-Warehouse 2023" },
-  { src: 'https://insightpropertytax.com/Ramsey County Office-Warehouse 2024.png', alt: "Ramsey County Office-Warehouse 2024" },
-  { src: 'https://insightpropertytax.com/St. Paul Flex 2023.png', alt: "St. Paul Flex 2023" },
-  { src: 'https://insightpropertytax.com/St. Paul Flex 2024.png', alt: "St. Paul Flex 2024" },
-  { src: 'https://insightpropertytax.com/St. Paul Office 2024.png', alt: "St. Paul Office 2024" },
-  { src: 'https://insightpropertytax.com/St. Paul Office 2023 (2).png', alt: "St. Paul Office 2023 (2)" },
-  { src: 'https://insightpropertytax.com/St. Paul Office 2023.png', alt: "St. Paul Office 2023" },
-  { src: 'https://insightpropertytax.com/St. Paul Office-Retail 2023.png', alt: "St. Paul Office-Retail 2023" },
-  { src: 'https://insightpropertytax.com/St. Paul Office-Retail 2024.png', alt: "St. Paul Office-Retail 2024" },
-  { src: 'https://insightpropertytax.com/St. Paul Warehouse 2023.png', alt: "St. Paul Warehouse 2023" },
-  { src: 'https://insightpropertytax.com/St. Paul Warehouse 2024.png', alt: "St. Paul Warehouse 2024" }
+  { src: '/Ramsey County Industrial 2023.png', alt: "Ramsey County Industrial 2023" },
+  { src: '/Ramsey County Industrial 2024.png', alt: "Ramsey County Industrial 2024" },
+  { src: '/Ramsey County Office-Warehouse 2023.png', alt: "Ramsey County Office-Warehouse 2023" },
+  { src: '/Ramsey County Office-Warehouse 2024.png', alt: "Ramsey County Office-Warehouse 2024" },
+  { src: '/St. Paul Flex 2023.png', alt: "St. Paul Flex 2023" },
+  { src: '/St. Paul Flex 2024.png', alt: "St. Paul Flex 2024" },
+  { src: '/St. Paul Office 2024.png', alt: "St. Paul Office 2024" },
+  { src: '/St. Paul Office 2023 (2).png', alt: "St. Paul Office 2023 (2)" },
+  { src: '/St. Paul Office 2023.png', alt: "St. Paul Office 2023" },
+  { src: '/St. Paul Office-Retail 2023.png', alt: "St. Paul Office-Retail 2023" },
+  { src: '/St. Paul Office-Retail 2024.png', alt: "St. Paul Office-Retail 2024" },
+  { src: '/St. Paul Warehouse 2023.png', alt: "St. Paul Warehouse 2023" },
+  { src: '/St. Paul Warehouse 2024.png', alt: "St. Paul Warehouse 2024" }
 ];
 
 // Fisher-Yates shuffle algorithm
