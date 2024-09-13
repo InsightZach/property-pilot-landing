@@ -11,19 +11,19 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
 const appeals = [
-  { src: '/Ramsey County Industrial 2023.png', alt: "Ramsey County Industrial 2023" },
-  { src: '/Ramsey County Industrial 2024.png', alt: "Ramsey County Industrial 2024" },
-  { src: '/Ramsey County Office-Warehouse 2023.png', alt: "Ramsey County Office-Warehouse 2023" },
-  { src: '/Ramsey County Office-Warehouse 2024.png', alt: "Ramsey County Office-Warehouse 2024" },
-  { src: '/St. Paul Flex 2023.png', alt: "St. Paul Flex 2023" },
-  { src: '/St. Paul Flex 2024.png', alt: "St. Paul Flex 2024" },
-  { src: '/St. Paul Office 2024.png', alt: "St. Paul Office 2024" },
-  { src: '/St. Paul Office 2023 (2).png', alt: "St. Paul Office 2023 (2)" },
-  { src: '/St. Paul Office 2023.png', alt: "St. Paul Office 2023" },
-  { src: '/St. Paul Office-Retail 2023.png', alt: "St. Paul Office-Retail 2023" },
-  { src: '/St. Paul Office-Retail 2024.png', alt: "St. Paul Office-Retail 2024" },
-  { src: '/St. Paul Warehouse 2023.png', alt: "St. Paul Warehouse 2023" },
-  { src: '/St. Paul Warehouse 2024.png', alt: "St. Paul Warehouse 2024" }
+  { src: 'Ramsey County Industrial 2023.png', alt: "Ramsey County Industrial 2023" },
+  { src: 'Ramsey County Industrial 2024.png', alt: "Ramsey County Industrial 2024" },
+  { src: 'Ramsey County Office-Warehouse 2023.png', alt: "Ramsey County Office-Warehouse 2023" },
+  { src: 'Ramsey County Office-Warehouse 2024.png', alt: "Ramsey County Office-Warehouse 2024" },
+  { src: 'St. Paul Flex 2023.png', alt: "St. Paul Flex 2023" },
+  { src: 'St. Paul Flex 2024.png', alt: "St. Paul Flex 2024" },
+  { src: 'St. Paul Office 2024.png', alt: "St. Paul Office 2024" },
+  { src: 'St. Paul Office 2023 (2).png', alt: "St. Paul Office 2023 (2)" },
+  { src: 'St. Paul Office 2023.png', alt: "St. Paul Office 2023" },
+  { src: 'St. Paul Office-Retail 2023.png', alt: "St. Paul Office-Retail 2023" },
+  { src: 'St. Paul Office-Retail 2024.png', alt: "St. Paul Office-Retail 2024" },
+  { src: 'St. Paul Warehouse 2023.png', alt: "St. Paul Warehouse 2023" },
+  { src: 'St. Paul Warehouse 2024.png', alt: "St. Paul Warehouse 2024" }
 ];
 
 // Fisher-Yates shuffle algorithm
@@ -53,6 +53,15 @@ const RecentAppeals = () => {
   // Memoize the shuffled array to prevent re-shuffling on every render
   const shuffledAppeals = useMemo(() => shuffleArray(appeals), []);
 
+  const getImageUrl = (src) => {
+    // Check if we're in a development environment
+    if (process.env.NODE_ENV === 'development') {
+      return `/${src}`;
+    }
+    // For production, use the full URL
+    return `https://insightpropertytax.com/${src}`;
+  };
+
   return (
     <section className="py-16 bg-[#F4F5F7]">
       <div className="container mx-auto px-4">
@@ -76,7 +85,7 @@ const RecentAppeals = () => {
                 <Card className="border-0 overflow-hidden">
                   <CardContent className="p-0">
                     <img
-                      src={image.src}
+                      src={getImageUrl(image.src)}
                       alt={image.alt}
                       className="w-full h-auto aspect-video object-cover"
                     />
