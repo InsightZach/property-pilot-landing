@@ -6,7 +6,12 @@ const RecentAppeals = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const appealImages = Array.from({ length: 14 }, (_, i) => `Appeal${i + 1}.png`);
+  const appealImages = [
+    'Appeal1.svg', 'Appeal2.svg', 'Appeal3.svg', 'Appeal4.svg',
+    'Appeal5.svg', 'Appeal6.svg', 'Appeal7.svg', 'Appeal8.svg',
+    'Appeal9.svg', 'Appeal10.svg', 'Appeal11.svg', 'Appeal12.svg',
+    'Appeal13.svg', 'Appeal14.svg'
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -39,9 +44,9 @@ const RecentAppeals = () => {
   };
 
   return (
-    <section className="py-8 bg-[#F4F5F7]">
-      <div className="container mx-auto px-4 max-w-2xl">
-        <h2 className="text-xl font-semibold text-center mb-6 text-[#1c1d29]">Recent Property Tax Appeals</h2>
+    <section className="py-6 bg-[#F4F5F7]">
+      <div className="container mx-auto px-4 max-w-xl">
+        <h2 className="text-lg font-semibold text-center mb-4 text-[#1c1d29]">Recent Property Tax Appeals</h2>
         <div className="relative">
           <div className="overflow-hidden">
             <div
@@ -81,7 +86,7 @@ const RecentAppeals = () => {
             <ChevronRight className="h-3 w-3 text-[#0A2647]" />
           </button>
         </div>
-        <div className="flex justify-center mt-3">
+        <div className="flex justify-center mt-2">
           {appealImages.map((_, index) => (
             <button
               key={index}
