@@ -5,10 +5,10 @@ import PropertyTaxCalendar from './PropertyTaxCalendar';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const ExternalLinkButton = ({ href, children }) => (
-  <a href={href} target="_blank" rel="noopener noreferrer">
-    <Button variant="outline" className="flex items-center">
-      {children}
-      <ExternalLink className="ml-2 h-4 w-4" />
+  <a href={href} target="_blank" rel="noopener noreferrer" className="w-full">
+    <Button variant="outline" className="flex items-center w-full justify-between">
+      <span className="text-left">{children}</span>
+      <ExternalLink className="ml-2 h-4 w-4 flex-shrink-0" />
     </Button>
   </a>
 );
