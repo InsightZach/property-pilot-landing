@@ -58,7 +58,7 @@ const ResourcesContent = () => {
         <CardContent>
           <div className="space-y-4">
             <ExternalLinkButton href="https://www.revenue.state.mn.us/appealing-property-value-and-classification">
-              <span className="break-words">Minnesota Department of Revenue - Appealing Property Value</span>
+              <span className="break-words">MN DOR - Appealing Property Value</span>
             </ExternalLinkButton>
             <ExternalLinkButton href="https://mn.gov/tax-court/forms/forms/">
               <span className="break-words">Minnesota Tax Court - Forms</span>
