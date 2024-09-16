@@ -103,31 +103,27 @@ const Index = () => {
       </Section>
 
       <Section title="About Insight Property Tax" bgColor="bg-gray-100">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-          <div>
-            <p className="text-lg mb-4">
-              Insight Property Tax helps Minnesota commercial property owners and tenants reduce their property tax liabilities through expert assessment appeals. We use advanced analytics and industry expertise to identify over-assessed properties and provide end-to-end appeal services to ensure maximum tax savings.
-            </p>
-            <p className="text-lg">
-              With decades of experience on both the assessor's side and as property tax consultants, we offer unparalleled expertise in Minnesota property tax law. Our personalized service and streamlined processes set us apart from large, bureaucratic firms.
-            </p>
-          </div>
-          <div>
-            <ResultsCostSection
-              title="Insight's 2024 Appeal Statistics"
-              items={[
-                "-17.9% reduction average",
-                "$49k tax savings per property",
-                "90-day appeal duration average",
-                "100% appeal success rate"
-              ]}
-              buttonText="Get Started"
-              description="Our clients save tens of thousands on property taxes."
-              linkTo="/contact"
-            />
-          </div>
+        <div className="mb-8">
+          <p className="text-lg mb-4">
+            Insight Property Tax helps Minnesota commercial property owners and tenants reduce their property tax liabilities through expert assessment appeals. We use advanced analytics and industry expertise to identify over-assessed properties and provide end-to-end appeal services to ensure maximum tax savings.
+          </p>
+          <p className="text-lg mb-8">
+            With decades of experience on both the assessor's side and as property tax consultants, we offer unparalleled expertise in Minnesota property tax law. Our personalized service and streamlined processes set us apart from large, bureaucratic firms.
+          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <ResultsCostSection
+            title="Insight's 2024 Appeal Statistics"
+            items={[
+              "-17.9% reduction average",
+              "$49k tax savings per property",
+              "90-day appeal duration average",
+              "100% appeal success rate"
+            ]}
+            buttonText="Get Started"
+            description="Our clients save tens of thousands on property taxes."
+            linkTo="/contact"
+          />
           <ResultsCostSection
             title="Contingency Fee"
             items={[
