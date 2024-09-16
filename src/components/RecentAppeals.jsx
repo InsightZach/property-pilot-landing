@@ -47,7 +47,7 @@ const RecentAppeals = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="py-12 bg-[#F4F5F7]">
+    <section className="py-12 bg-white">
       <div className="container mx-auto px-4 max-w-4xl">
         <h2 className="text-2xl font-semibold text-center mb-8 text-[#1c1d29]">Recent Property Tax Appeals</h2>
         <div className="relative" ref={emblaRef}>
