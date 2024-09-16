@@ -103,16 +103,15 @@ const Index = () => {
       </Section>
 
       <Section title="About Insight Property Tax" bgColor="bg-gray-100">
-        <p className="text-lg mb-4">
-          Insight Property Tax helps Minnesota commercial property owners and tenants reduce their property tax liabilities through expert assessment appeals. We use advanced analytics and industry expertise to identify over-assessed properties and provide end-to-end appeal services to ensure maximum tax savings.
-        </p>
-        <p className="text-lg">
-          With decades of experience on both the assessor's side and as property tax consultants, we offer unparalleled expertise in Minnesota property tax law. Our personalized service and streamlined processes set us apart from large, bureaucratic firms.
-        </p>
-      </Section>
-
-      <Section bgColor="bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <p className="text-lg mb-4">
+              Insight Property Tax helps Minnesota commercial property owners and tenants reduce their property tax liabilities through expert assessment appeals. We use advanced analytics and industry expertise to identify over-assessed properties and provide end-to-end appeal services to ensure maximum tax savings.
+            </p>
+            <p className="text-lg">
+              With decades of experience on both the assessor's side and as property tax consultants, we offer unparalleled expertise in Minnesota property tax law. Our personalized service and streamlined processes set us apart from large, bureaucratic firms.
+            </p>
+          </div>
           <div>
             <ResultsCostSection
               title="Insight's 2024 Appeal Statistics"
@@ -127,20 +126,20 @@ const Index = () => {
               linkTo="/contact"
             />
           </div>
-          <div>
-            <ResultsCostSection
-              title="Contingency Fee"
-              items={[
-                "You pay $0 upfront",
-                "Our fee is 30% of tax savings",
-                "You pocket the rest",
-                "We handle everything"
-              ]}
-              buttonText="Why Choose Insight?"
-              description="Leverage our expertise, maximize your profit and time."
-              linkTo="/why-insight"
-            />
-          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <ResultsCostSection
+            title="Contingency Fee"
+            items={[
+              "You pay $0 upfront",
+              "Our fee is 30% of tax savings",
+              "You pocket the rest",
+              "We handle everything"
+            ]}
+            buttonText="Why Choose Insight?"
+            description="Leverage our expertise, maximize your profit and time."
+            linkTo="/why-insight"
+          />
         </div>
       </Section>
 
