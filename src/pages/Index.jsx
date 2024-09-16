@@ -108,7 +108,7 @@ const Index = () => {
             Insight Property Tax reduces property taxes for Minnesota commercial property owners and tenants through expert assessment appeals. Using analytics and industry expertise, we identify over-assessments and provide full-service appeals for maximum savings.
           </p>
           <p className="text-lg mb-8">
-            With experience on both sides of property tax appeals, we offer our clients a straightforward path to cut through the bureaucracy and provide results --> lower property taxes.
+            With experience on both sides of property tax appeals, we offer our clients a straightforward path to cut through the bureaucracy and provide results <span className="font-bold text-[#0A2647]">→ reduced property taxes</span>.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
