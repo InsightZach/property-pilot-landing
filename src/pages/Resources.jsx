@@ -13,13 +13,13 @@ const Resources = () => {
       <main className="container mx-auto px-4 py-16 relative z-10 space-y-8">
         <h1 className="text-4xl font-bold text-center mb-8 text-white">Minnesota Property Tax Resources</h1>
         
-        <Card className="bg-white/95 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden">
+        <Card className="bg-transparent shadow-none border-none">
           <CardContent className="p-6 md:p-10">
             <ResourcesContent />
           </CardContent>
         </Card>
         
-        <Card className="bg-white/95 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden">
+        <Card className="bg-transparent shadow-none border-none">
           <CardContent className="p-6 md:p-10">
             <CountyResources />
           </CardContent>
