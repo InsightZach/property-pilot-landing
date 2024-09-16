@@ -6,9 +6,9 @@ import Footer from '../components/Footer';
 import { CheckCircle } from 'lucide-react';
 
 const FAQItem = ({ question, answer }) => (
-  <AccordionItem value={question}>
-    <AccordionTrigger>{question}</AccordionTrigger>
-    <AccordionContent>{answer}</AccordionContent>
+  <AccordionItem value={question} className="mb-4">
+    <AccordionTrigger className="text-left px-4 py-2">{question}</AccordionTrigger>
+    <AccordionContent className="px-4 py-2">{answer}</AccordionContent>
   </AccordionItem>
 );
 
@@ -58,7 +58,7 @@ const FAQ = () => {
           <CheckCircle className="text-[#d7b971] w-12 h-12 mx-2" />
           <CheckCircle className="text-[#d7b971] w-12 h-12 mx-2" />
         </div>
-        <Accordion type="single" collapsible className="bg-white rounded-lg">
+        <Accordion type="single" collapsible className="bg-white rounded-lg p-4">
           {faqItems.map((item, index) => (
             <FAQItem key={index} question={item.question} answer={item.answer} />
           ))}
