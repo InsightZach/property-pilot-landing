@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const ExternalLinkButton = ({ href, children }) => (
   <a href={href} target="_blank" rel="noopener noreferrer" className="w-full">
     <Button variant="outline" className="flex items-center w-full justify-between">
-      <span className="text-left">{children}</span>
+      <span className="text-left break-words">{children}</span>
       <ExternalLink className="ml-2 h-4 w-4 flex-shrink-0" />
     </Button>
   </a>
@@ -58,10 +58,10 @@ const ResourcesContent = () => {
         <CardContent>
           <div className="space-y-4">
             <ExternalLinkButton href="https://www.revenue.state.mn.us/appealing-property-value-and-classification">
-              Minnesota Department of Revenue - Appealing Property Value
+              <span className="break-words">Minnesota Department of Revenue - Appealing Property Value</span>
             </ExternalLinkButton>
             <ExternalLinkButton href="https://mn.gov/tax-court/forms/forms/">
-              Minnesota Tax Court - Forms
+              <span className="break-words">Minnesota Tax Court - Forms</span>
             </ExternalLinkButton>
           </div>
         </CardContent>
