@@ -82,8 +82,7 @@ const Index = () => {
               Our clients save <span className="text-[#d7b971]">tens of thousands</span> on property taxes.
             </h1>
             <p className="text-xl mb-8">
-              Get started → We provide you an appeal recommendation.
-              If an appeal benefits you, we'll take care of everything.
+              Get started for Free. We provide you an appeal recommendation. If an appeal benefits you, we'll take care of everything.
             </p>
             <Link to="/contact">
               <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
