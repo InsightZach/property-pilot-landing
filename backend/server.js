@@ -1,9 +1,11 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
-const ExcelJS = require('exceljs');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const sqlite3 = require('sqlite3').verbose();
+const { open } = require('sqlite');
 const path = require('path');
+const async = require('async');
 const { body, validationResult } = require('express-validator');
 require('dotenv').config();
 
@@ -11,28 +13,39 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const workbook = new ExcelJS.Workbook();
-const excelFilePath = path.join(__dirname, 'submissions.xlsx');
-
+// SQLite database setup
+let db;
 (async () => {
-  try {
-    await workbook.xlsx.readFile(excelFilePath);
-    console.log('Excel file loaded.');
-  } catch (err) {
-    console.log('Creating new Excel file.');
-    const worksheet = workbook.addWorksheet('Submissions');
-    worksheet.columns = [
-      { header: 'First Name', key: 'firstName' },
-      { header: 'Last Name', key: 'lastName' },
-      { header: 'Email', key: 'email' },
-      { header: 'Phone', key: 'phone' },
-      { header: 'Property ID', key: 'propertyId' },
-      { header: 'Property Details', key: 'propertyDetails' },
-      { header: 'Date', key: 'date' },
-    ];
-    await workbook.xlsx.writeFile(excelFilePath);
-  }
+  db = await open({
+    filename: path.join(__dirname, 'submissions.db'),
+    driver: sqlite3.Database
+  });
+  await db.run(`CREATE TABLE IF NOT EXISTS submissions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    firstName TEXT,
+    lastName TEXT,
+    email TEXT,
+    phone TEXT,
+    propertyId TEXT,
+    propertyDetails TEXT,
+    date TEXT
+  )`);
 })();
+
+// Create a queue for database operations
+const dbQueue = async.queue(async (task, callback) => {
+  try {
+    await db.run(
+      `INSERT INTO submissions (firstName, lastName, email, phone, propertyId, propertyDetails, date) 
+       VALUES (?, ?, ?, ?, ?, ?, ?)`,
+      [task.firstName, task.lastName, task.email, task.phone, task.propertyId, task.propertyDetails, task.date]
+    );
+    callback();
+  } catch (error) {
+    console.error('Error inserting into database:', error);
+    callback(error);
+  }
+}, 1);  // concurrency of 1 to ensure sequential processing
 
 app.post('/api/contact', [
   body('firstName').notEmpty().trim().escape(),
@@ -85,27 +98,22 @@ app.post('/api/contact', [
     return res.status(500).send({ error: 'Failed to send email' });
   }
 
-  // Record to Excel file
-  const worksheet = workbook.getWorksheet('Submissions');
-  worksheet.addRow({
+  // Add to database queue
+  dbQueue.push({
     firstName,
     lastName,
     email,
     phone,
     propertyId,
     propertyDetails,
-    date: new Date().toLocaleString(),
+    date: new Date().toISOString()
+  }, (err) => {
+    if (err) {
+      console.error('Error adding to database:', err);
+      return res.status(500).send({ error: 'Failed to record submission' });
+    }
+    res.status(200).send({ message: 'Submission received' });
   });
-
-  try {
-    await workbook.xlsx.writeFile(excelFilePath);
-    console.log('Submission recorded to Excel file.');
-  } catch (error) {
-    console.error('Error writing to Excel file:', error);
-    return res.status(500).send({ error: 'Failed to record submission' });
-  }
-
-  res.status(200).send({ message: 'Submission received' });
 });
 
 const PORT = process.env.PORT || 5000;
