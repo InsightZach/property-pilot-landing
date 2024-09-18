@@ -32,11 +32,11 @@ const PrivacyPolicy = () => {
           </ul>
           <h2 className="text-2xl font-semibold mt-8 mb-4">Opting Out</h2>
           <p className="mb-4">
-            To opt out of data collection or marketing communications, please contact us at [Your Contact Email]. We will honor your request promptly.
+            To opt out of data collection or marketing communications, please contact us at zach@insightpropertytax.com. We will honor your request promptly.
           </p>
           <h2 className="text-2xl font-semibold mt-8 mb-4">Contact Us</h2>
           <p>
-            If you have any questions about this Privacy Policy, please contact us at [Your Contact Email].
+            If you have any questions about this Privacy Policy, please contact us at zach@insightpropertytax.com.
           </p>
         </div>
       </main>
