@@ -11,7 +11,6 @@
     <script>
       function acceptCookies() {
         document.getElementById('cookie-banner').style.display = 'none';
-        // Here you would typically set a cookie to remember the user's choice
         localStorage.setItem('cookiesAccepted', 'true');
       }
       window.onload = function() {
@@ -22,21 +21,23 @@
     </script>
   </head>
   <body>
-    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 bg-[#0A2647] text-white p-4 rounded-lg shadow-lg z-50 text-sm flex-col sm:flex-row items-center justify-between hidden">
-      <p class="mb-2 sm:mb-0 sm:mr-4">
-        This website uses cookies to enhance your experience and for marketing purposes.
-      </p>
-      <div class="flex items-center">
-        <button onclick="acceptCookies()" class="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] font-bold py-2 px-4 rounded mr-2">
-          Accept
-        </button>
-        <a href="/privacy-policy" class="text-[#d7b971] hover:underline">
-          Privacy Policy
-        </a>
-      </div>
-    </div>
     <div id="root"></div>
     <script src="/.gpt_engineer/index.js" type="module"></script>
     <script type="module" src="/src/main.jsx"></script>
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-[#0A2647] text-white p-2 z-50 text-sm flex-col sm:flex-row items-center justify-between hidden">
+      <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between">
+        <p class="mb-2 sm:mb-0 sm:mr-4">
+          This website uses cookies to enhance your experience.
+        </p>
+        <div class="flex items-center">
+          <button onclick="acceptCookies()" class="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] font-bold py-1 px-3 rounded mr-2 text-xs">
+            Accept
+          </button>
+          <a href="/privacy-policy" class="text-[#d7b971] hover:underline text-xs">
+            Privacy Policy
+          </a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
