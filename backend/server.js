@@ -4,6 +4,7 @@ const ExcelJS = require('exceljs');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
+const { body, validationResult } = require('express-validator');
 require('dotenv').config();
 
 const app = express();
@@ -33,7 +34,19 @@ const excelFilePath = path.join(__dirname, 'submissions.xlsx');
   }
 })();
 
-app.post('/api/contact', async (req, res) => {
+app.post('/api/contact', [
+  body('firstName').notEmpty().trim().escape(),
+  body('lastName').notEmpty().trim().escape(),
+  body('email').isEmail().normalizeEmail(),
+  body('phone').optional().trim().escape(),
+  body('propertyId').optional().trim().escape(),
+  body('propertyDetails').optional().trim().escape(),
+], async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+
   const { firstName, lastName, email, phone, propertyId, propertyDetails } = req.body;
 
   // Configure nodemailer transporter
