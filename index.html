@@ -12,14 +12,28 @@
       function acceptCookies() {
         document.getElementById('cookie-banner').style.display = 'none';
         // Here you would typically set a cookie to remember the user's choice
+        localStorage.setItem('cookiesAccepted', 'true');
+      }
+      window.onload = function() {
+        if (!localStorage.getItem('cookiesAccepted')) {
+          document.getElementById('cookie-banner').style.display = 'flex';
+        }
       }
     </script>
   </head>
   <body>
-    <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background-color: #f1f1f1; padding: 20px; text-align: center; z-index: 1000;">
-      This website uses cookies and similar technologies to collect information about your visit for marketing purposes and to enhance your experience. By clicking 'Accept,' you consent to our use of these technologies. You can opt-out at any time through our privacy policy.
-      <button onclick="acceptCookies()" style="margin-left: 20px; padding: 5px 10px;">Accept</button>
-      <a href="/privacy-policy" style="margin-left: 20px;">Privacy Policy</a>
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 bg-[#0A2647] text-white p-4 rounded-lg shadow-lg z-50 text-sm flex-col sm:flex-row items-center justify-between hidden">
+      <p class="mb-2 sm:mb-0 sm:mr-4">
+        This website uses cookies to enhance your experience and for marketing purposes.
+      </p>
+      <div class="flex items-center">
+        <button onclick="acceptCookies()" class="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] font-bold py-2 px-4 rounded mr-2">
+          Accept
+        </button>
+        <a href="/privacy-policy" class="text-[#d7b971] hover:underline">
+          Privacy Policy
+        </a>
+      </div>
     </div>
     <div id="root"></div>
     <script src="/.gpt_engineer/index.js" type="module"></script>
