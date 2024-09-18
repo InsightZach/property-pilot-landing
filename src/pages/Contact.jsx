@@ -43,7 +43,7 @@ const Contact = () => {
               <p className="mb-6">Tell me about your property.</p>
               <div className="flex items-center mb-4">
                 <Mail className="mr-2 h-5 w-5 text-[#d7b971]" />
-                <a href="mailto:zach@Insightpropertytax.com" className="hover:text-[#d7b971]">zach@Insightpropertytax.com</a>
+                <a href="mailto:zach@insightpropertytax.com" className="hover:text-[#d7b971]">zach@insightpropertytax.com</a>
               </div>
               <div className="flex items-center mb-4">
                 <Phone className="mr-2 h-5 w-5 text-[#d7b971]" />
