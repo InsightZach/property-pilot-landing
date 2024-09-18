@@ -55,63 +55,67 @@ app.post('/api/contact', [
   body('phone').optional().trim().escape(),
   body('propertyId').optional().trim().escape(),
   body('propertyDetails').optional().trim().escape(),
-], async (req, res) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
-  }
-
-  const { firstName, lastName, email, phone, propertyId, propertyDetails } = req.body;
-
-  // Configure nodemailer transporter
-  const transporter = nodemailer.createTransport({
-    host: process.env.EMAIL_HOST,
-    port: parseInt(process.env.EMAIL_PORT),
-    secure: process.env.EMAIL_SECURE === 'true',
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
-
-  const mailOptions = {
-    from: process.env.EMAIL_FROM,
-    to: 'zach@insightpropertytax.com',
-    subject: 'New Contact Form Submission',
-    text: `
-      First Name: ${firstName}
-      Last Name: ${lastName}
-      Email: ${email}
-      Phone: ${phone}
-      Property ID: ${propertyId}
-      Property Details: ${propertyDetails}
-    `,
-  };
-
+], async (req, res, next) => {
   try {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    const { firstName, lastName, email, phone, propertyId, propertyDetails } = req.body;
+
+    // Configure nodemailer transporter
+    const transporter = nodemailer.createTransport({
+      host: process.env.EMAIL_HOST,
+      port: parseInt(process.env.EMAIL_PORT),
+      secure: process.env.EMAIL_SECURE === 'true',
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    const mailOptions = {
+      from: process.env.EMAIL_FROM,
+      to: 'zach@insightpropertytax.com',
+      subject: 'New Contact Form Submission',
+      text: `
+        First Name: ${firstName}
+        Last Name: ${lastName}
+        Email: ${email}
+        Phone: ${phone}
+        Property ID: ${propertyId}
+        Property Details: ${propertyDetails}
+      `,
+    };
+
     await transporter.sendMail(mailOptions);
     console.log('Email sent successfully.');
-  } catch (error) {
-    console.error('Error sending email:', error);
-    return res.status(500).send({ error: 'Failed to send email' });
-  }
 
-  // Add to database queue
-  dbQueue.push({
-    firstName,
-    lastName,
-    email,
-    phone,
-    propertyId,
-    propertyDetails,
-    date: new Date().toISOString()
-  }, (err) => {
-    if (err) {
-      console.error('Error adding to database:', err);
-      return res.status(500).send({ error: 'Failed to record submission' });
-    }
-    res.status(200).send({ message: 'Submission received' });
-  });
+    // Add to database queue
+    dbQueue.push({
+      firstName,
+      lastName,
+      email,
+      phone,
+      propertyId,
+      propertyDetails,
+      date: new Date().toISOString()
+    }, (err) => {
+      if (err) {
+        throw new Error('Failed to record submission');
+      }
+      res.status(200).send({ message: 'Submission received' });
+    });
+  } catch (error) {
+    next(error);
+  }
+});
+
+// Global error handler
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send({ error: 'Something went wrong!' });
 });
 
 const PORT = process.env.PORT || 5000;
