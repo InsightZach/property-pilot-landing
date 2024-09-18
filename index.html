@@ -8,8 +8,19 @@
     <meta name="author" content="GPT Engineer" />
     <meta property="og:image" content="/og-image.svg" />
     <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="WMCCUaqgcNMos3dQ" data-version="062024"></script>
+    <script>
+      function acceptCookies() {
+        document.getElementById('cookie-banner').style.display = 'none';
+        // Here you would typically set a cookie to remember the user's choice
+      }
+    </script>
   </head>
   <body>
+    <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background-color: #f1f1f1; padding: 20px; text-align: center; z-index: 1000;">
+      This website uses cookies and similar technologies to collect information about your visit for marketing purposes and to enhance your experience. By clicking 'Accept,' you consent to our use of these technologies. You can opt-out at any time through our privacy policy.
+      <button onclick="acceptCookies()" style="margin-left: 20px; padding: 5px 10px;">Accept</button>
+      <a href="/privacy-policy" style="margin-left: 20px;">Privacy Policy</a>
+    </div>
     <div id="root"></div>
     <script src="/.gpt_engineer/index.js" type="module"></script>
     <script type="module" src="/src/main.jsx"></script>
