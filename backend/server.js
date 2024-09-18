@@ -64,7 +64,7 @@ app.post('/api/contact', [
 
     const { firstName, lastName, email, phone, propertyId, propertyDetails } = req.body;
 
-    // Configure nodemailer transporter
+    // Configure nodemailer transporter for Office 365
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
       port: parseInt(process.env.EMAIL_PORT),
@@ -73,6 +73,7 @@ app.post('/api/contact', [
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
+      requireTLS: true, // Ensure STARTTLS is used
     });
 
     const mailOptions = {
