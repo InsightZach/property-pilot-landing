@@ -7,49 +7,10 @@
     <meta name="description" content="GPT Engineer Generated Project" />
     <meta name="author" content="GPT Engineer" />
     <meta property="og:image" content="/og-image.svg" />
-    <script>
-      function acceptCookies() {
-        document.getElementById('cookie-banner').style.display = 'none';
-        localStorage.setItem('cookiesAccepted', 'true');
-        // You can add additional cookie-setting logic here if needed
-      }
-      window.onload = function() {
-        if (!localStorage.getItem('cookiesAccepted')) {
-          document.getElementById('cookie-banner').style.display = 'flex';
-        }
-        // Track pageview
-        fetch('/.netlify/functions/track-pageview', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            url: window.location.href,
-            referrer: document.referrer,
-            userAgent: navigator.userAgent
-          }),
-        }).catch(console.error);
-      }
-    </script>
   </head>
   <body>
     <div id="root"></div>
     <script src="/.gpt_engineer/index.js" type="module"></script>
     <script type="module" src="/src/main.jsx"></script>
-    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-[#0A2647] text-white p-2 z-50 text-sm flex-col sm:flex-row items-center justify-between hidden">
-      <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between">
-        <p class="mb-2 sm:mb-0 sm:mr-4">
-          This website uses cookies to enhance your experience.
-        </p>
-        <div class="flex items-center">
-          <button onclick="acceptCookies()" class="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] font-bold py-1 px-3 rounded mr-2 text-xs">
-            Accept
-          </button>
-          <a href="/privacy-policy" class="text-[#d7b971] hover:underline text-xs">
-            Privacy Policy
-          </a>
-        </div>
-      </div>
-    </div>
   </body>
 </html>
