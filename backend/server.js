@@ -71,9 +71,6 @@ app.post('/api/contact', [
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
     },
-    tls: {
-      ciphers: 'SSLv3',
-    },
   });
 
   const mailOptions = {
