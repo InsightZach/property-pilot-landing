@@ -21,6 +21,8 @@ const NavigationWrapper = ({ children }) => {
   return React.cloneElement(children, { handleNavigation });
 };
 
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -45,6 +47,14 @@ const App = () => (
                 element={
                   <Suspense fallback={<div>Loading...</div>}>
                     <WhyInsight />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/privacy-policy"
+                element={
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <PrivacyPolicy />
                   </Suspense>
                 }
               />
