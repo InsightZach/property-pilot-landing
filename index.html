@@ -12,6 +12,7 @@
       function acceptCookies() {
         document.getElementById('cookie-banner').style.display = 'none';
         localStorage.setItem('cookiesAccepted', 'true');
+        // You can add additional cookie-setting logic here if needed
       }
       window.onload = function() {
         if (!localStorage.getItem('cookiesAccepted')) {
