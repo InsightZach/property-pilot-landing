@@ -7,7 +7,6 @@
     <meta name="description" content="GPT Engineer Generated Project" />
     <meta name="author" content="GPT Engineer" />
     <meta property="og:image" content="/og-image.svg" />
-    <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="WMCCUaqgcNMos3dQ" data-version="062024"></script>
     <script>
       function acceptCookies() {
         document.getElementById('cookie-banner').style.display = 'none';
@@ -18,6 +17,18 @@
         if (!localStorage.getItem('cookiesAccepted')) {
           document.getElementById('cookie-banner').style.display = 'flex';
         }
+        // Track pageview
+        fetch('/.netlify/functions/track-pageview', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            url: window.location.href,
+            referrer: document.referrer,
+            userAgent: navigator.userAgent
+          }),
+        }).catch(console.error);
       }
     </script>
   </head>
