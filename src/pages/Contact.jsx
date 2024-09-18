@@ -7,13 +7,28 @@ import { Label } from "@/components/ui/label";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Linkedin, Mail, Phone } from 'lucide-react';
+import { toast } from 'sonner';
 
 const Contact = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    // Here you would typically send the form data to your server or a service like EmailJS
+  const onSubmit = async (data) => {
+    try {
+      const response = await fetch('/.netlify/functions/submit-form', {
+        method: 'POST',
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        toast.success('Form submitted successfully');
+        reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error('Failed to submit form. Please try again.');
+    }
   };
 
   return (
