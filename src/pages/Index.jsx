@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import HeroSection from '../components/HeroSection';
 import WhyChooseInsight from '../components/WhyChooseInsight';
-import AboutInsightSection from '../components/AboutInsightSection';
 import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import RecentAppeals from '../components/RecentAppeals';
 import ProcessSection from '../components/ProcessSection';
@@ -84,7 +83,6 @@ const Index = () => {
       <main>
         <HeroSection />
         <WhyChooseInsight />
-        <AboutInsightSection />
         <RecentAppeals />
         <WhoWeWorkWith />
         <ProcessSection />
