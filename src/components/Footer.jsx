@@ -7,7 +7,13 @@ const Footer = () => (
     <div className="container mx-auto px-4">
       <div className="flex justify-between items-center">
         <div className="flex items-center">
-          <img src="/logo.svg" alt="Insight Property Tax Logo" className="h-12 w-auto" />
+          <img 
+            src="/logo.svg" 
+            alt="Insight Property Tax Logo" 
+            className="h-12 w-auto" 
+            width="192" 
+            height="48"
+          />
         </div>
         <div className="flex items-center space-x-4">
           <a href="mailto:zach@insightpropertytax.com" className="hover:text-[#d7b971]">
