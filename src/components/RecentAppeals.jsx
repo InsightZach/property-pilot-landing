@@ -70,6 +70,7 @@ const RecentAppeals = () => {
                           alt={`Appeal ${index + 1}`}
                           className="absolute top-0 left-0 w-full h-full object-contain"
                           onError={handleImageError}
+                          loading="lazy"
                         />
                       </div>
                     </CardContent>
