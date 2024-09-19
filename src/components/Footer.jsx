@@ -23,7 +23,7 @@ const Footer = () => (
             variant="outline" 
             size="icon"
             className="rounded-full bg-[#D4AF37] text-[#0A2647] hover:bg-[#D4AF37]/90"
-            onClick={() => window.open('https://www.linkedin.com/in/zach-hepburn', '_blank')}
+            onClick={() => window.open('https://www.linkedin.com/in/zach-hepburn/', '_blank')}
           >
             <Linkedin className="h-4 w-4" />
           </Button>
