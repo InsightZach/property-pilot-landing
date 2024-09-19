@@ -1,5 +1,5 @@
-const nodemailer = require('nodemailer');
 const { MongoClient } = require('mongodb');
+const axios = require('axios');
 
 exports.handler = async (event, context) => {
   if (event.httpMethod !== 'POST') {
@@ -9,30 +9,18 @@ exports.handler = async (event, context) => {
   try {
     const { firstName, lastName, email, phone, propertyId, propertyDetails } = JSON.parse(event.body);
 
-    // Email sending logic
-    const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: parseInt(process.env.EMAIL_PORT),
-      secure: process.env.EMAIL_SECURE === 'true',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-      requireTLS: true,
-    });
+    // Power Automate HTTP trigger URL
+    const powerAutomateUrl = process.env.POWER_AUTOMATE_WEBHOOK_URL;
 
-    await transporter.sendMail({
-      from: process.env.EMAIL_FROM,
-      to: 'zach@insightpropertytax.com',
-      subject: 'New Contact Form Submission',
-      text: `
-        First Name: ${firstName}
-        Last Name: ${lastName}
-        Email: ${email}
-        Phone: ${phone}
-        Property ID: ${propertyId}
-        Property Details: ${propertyDetails}
-      `,
+    // Send data to Power Automate
+    await axios.post(powerAutomateUrl, {
+      firstName,
+      lastName,
+      email,
+      phone,
+      propertyId,
+      propertyDetails,
+      submissionDate: new Date().toISOString()
     });
 
     // Database storage logic
