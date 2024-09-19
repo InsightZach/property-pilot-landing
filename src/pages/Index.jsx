@@ -22,6 +22,58 @@ const StatCard = ({ icon: Icon, title, description }) => (
   </Card>
 );
 
+const AboutInsightSection = () => (
+  <section className="py-16 bg-white">
+    <div className="container mx-auto px-4">
+      <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">About Insight Property Tax</h2>
+      <div className="mb-8">
+        <p className="text-lg mb-4">
+          Insight Property Tax helps Minnesota commercial property owners and tenants reduce their property tax liabilities through expert assessment appeals. We use advanced analytics and industry expertise to identify over-assessed properties and provide end-to-end appeal services to ensure maximum tax savings.
+        </p>
+        <p className="text-lg mb-4">
+          With decades of experience on both the assessor's side and as property tax consultants, we offer unparalleled expertise in Minnesota property tax law. Our personalized service and streamlined processes set us apart from large, bureaucratic firms.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <Card>
+          <CardHeader>
+            <CardTitle>Insight's 2024 Appeal Statistics</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-2">
+              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> -17.9% reduction average</li>
+              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> $49k tax savings per property</li>
+              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> 90-day appeal duration average</li>
+              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> 100% appeal success rate</li>
+            </ul>
+            <p className="mt-4">Our clients save tens of thousands on property taxes.</p>
+            <Link to="/contact">
+              <Button className="mt-4 bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Get Started</Button>
+            </Link>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Contingency Fee</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-2">
+              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> You pay $0 upfront</li>
+              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> Our fee is 30% of tax savings</li>
+              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> You pocket the rest</li>
+              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> We handle everything</li>
+            </ul>
+            <p className="mt-4">Leverage our expertise, maximize your profit and time.</p>
+            <Link to="/why-insight">
+              <Button className="mt-4 bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Why Choose Insight?</Button>
+            </Link>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  </section>
+);
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-gray-100">
@@ -57,6 +109,8 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        <AboutInsightSection />
 
         <RecentAppeals />
 
