@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { navItems } from "./nav-items";
 import WhyInsight from "./pages/WhyInsight";
+import NotFound from "./pages/NotFound";
 import React, { Suspense, useTransition, lazy, useEffect } from 'react';
 
 const queryClient = new QueryClient();
@@ -59,6 +60,7 @@ const App = () => (
                   </Suspense>
                 }
               />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </NavigationWrapper>
