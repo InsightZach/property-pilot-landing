@@ -68,7 +68,9 @@ const WhoWeWorkWith = () => (
     <div className="container mx-auto px-4 relative z-10">
       <h2 className="text-3xl font-semibold text-center mb-8 text-white">Who We Work With</h2>
       <div className="text-left mb-8">
-        <p className="text-lg mb-4">We provide property tax appeal services for property owners and tenants of commercial, industrial, and apartment properties in the Minneapolis-St. Paul metro area.</p>
+        <p className="text-lg mb-4">We provide property tax appeal services for commercial, industrial, and apartment property owners and tenants across the Minneapolis-St. Paul metro area.</p>
+        <p className="text-lg mb-4">If you believe your property is over-assessed, your tax burden is too high, or you're unsure if your property is fairly assessed, we offer free assessment reviews to identify potential savings.</p>
+        <p className="text-lg mb-4">Insight Property Tax makes it easy to reduce costs and maximize your profits with our straightforward appeal process.</p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
