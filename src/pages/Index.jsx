@@ -18,7 +18,7 @@ const StatCard = ({ icon: Icon, title, description }) => (
         {title}
       </CardTitle>
     </CardHeader>
-    <CardContent className="text-center">{description}</CardContent>
+    <CardContent className="text-left">{description}</CardContent>
   </Card>
 );
 
