@@ -16,6 +16,10 @@ const MeetTheOwner = () => {
                 src="/Zach_Hepburn.svg" 
                 alt="Zach Hepburn" 
                 className="w-full h-full object-cover object-center scale-[1.985156]"
+                loading="lazy"
+                decoding="async"
+                width="320"
+                height="320"
               />
             </div>
             <h3 className="text-2xl font-semibold text-white mb-1">Zach Hepburn</h3>
