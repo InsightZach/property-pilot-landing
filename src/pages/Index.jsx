@@ -77,12 +77,73 @@ const AboutInsightSection = () => (
 );
 
 const Index = () => {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Insight Property Tax",
+    "description": "Expert property tax appeal services for commercial, industrial, and apartment properties in Minnesota.",
+    "url": "https://insightpropertytax.com",
+    "logo": "https://insightpropertytax.com/logo.svg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Minnesota",
+      "addressRegion": "MN",
+      "addressCountry": "US"
+    },
+    "telephone": "+16122084419",
+    "email": "zach@insightpropertytax.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/zach-hepburn/"
+    ],
+    "priceRange": "Contingency fee: 30% of tax savings",
+    "openingHours": "Mo-Fr 09:00-17:00",
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.7296,
+        "longitude": -94.6859
+      },
+      "geoRadius": "250"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Property Tax Appeal Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Commercial Property Tax Appeals"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Industrial Property Tax Appeals"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Apartment Property Tax Appeals"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-100">
       <Helmet>
         <title>Insight Property Tax - Expert Minnesota Property Tax Appeals</title>
         <meta name="description" content="Maximize your savings on commercial, industrial, and apartment property taxes in Minnesota with Insight Property Tax. Expert appeals and proven results." />
         <link rel="canonical" href="https://insightpropertytax.com" />
+        <script type="application/ld+json">
+          {JSON.stringify(schemaData)}
+        </script>
       </Helmet>
       <Header />
 
