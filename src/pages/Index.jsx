@@ -33,22 +33,21 @@ const AboutInsightSection = () => (
           Insight Property Tax reduces assessment values for Minnesota commercial property owners and tenants, saving our clients tens of thousands on property taxes.
         </p>
         <p className="text-lg mb-4">
-          Our local expertise gives clients direct access to a proven system that identifies over-assessments and consistently delivers successful property tax appeal settlements. See our 2024 results below.
+          Our local expertise gives clients direct access to a proven system that identifies over-assessments and consistently delivers successful property tax appeal settlements.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
           <CardHeader>
-            <CardTitle className="text-white">Insight's 2024 Appeal Statistics</CardTitle>
+            <CardTitle className="text-white">Insight's Appeal Statistics</CardTitle>
           </CardHeader>
           <CardContent className="text-white">
             <ul className="space-y-2">
-              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> -17.9% reduction average</li>
-              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> $49k tax savings per property</li>
+              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> 15% reduction average</li>
+              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> $40k tax savings per property</li>
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> 90-day appeal duration average</li>
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> 100% appeal success rate</li>
             </ul>
-            <p className="mt-4">Our clients save tens of thousands on property taxes.</p>
             <Link to="/contact">
               <Button className="mt-4 bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Get Started</Button>
             </Link>
@@ -65,7 +64,6 @@ const AboutInsightSection = () => (
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> You pocket the rest</li>
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> We handle everything</li>
             </ul>
-            <p className="mt-4">Leverage our expertise, maximize your profit and time.</p>
             <Link to="/why-insight">
               <Button className="mt-4 bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Why Choose Insight?</Button>
             </Link>
@@ -77,29 +75,20 @@ const AboutInsightSection = () => (
 );
 
 const WhoWeWorkWith = () => (
-  <section className="py-16 bg-white">
+  <section className="py-16 bg-gray-100">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Who We Work With</h2>
-      <p className="text-lg text-center mb-12 max-w-3xl mx-auto">
-        We provide property tax appeal services for property owners and tenants of commercial, industrial, and apartment properties in the Minneapolis-St. Paul metro area.
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div className="text-center">
-          <img src="/Commercial.svg" alt="Commercial" className="w-24 h-24 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold mb-2">COMMERCIAL</h3>
-        </div>
-        <div className="text-center">
-          <img src="/Industrial.svg" alt="Industrial" className="w-24 h-24 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold mb-2">INDUSTRIAL</h3>
-        </div>
-        <div className="text-center">
-          <img src="/Apartments.svg" alt="Apartments" className="w-24 h-24 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold mb-2">APARTMENTS</h3>
-        </div>
-        <div className="text-center">
-          <img src="/Minnesota.svg" alt="Minnesota" className="w-24 h-24 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold mb-2">MINNESOTA</h3>
-        </div>
+      <div className="text-left mb-8">
+        <p className="text-lg mb-4">
+          We provide property tax appeal services for property owners and tenants of commercial,
+          industrial, and apartment properties in the Minneapolis-St. Paul metro area.
+        </p>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img src="/Commercial.svg" alt="Commercial" className="w-full h-48 rounded-lg shadow-lg object-cover" />
+        <img src="/Industrial.svg" alt="Industrial" className="w-full h-48 rounded-lg shadow-lg object-cover" />
+        <img src="/Apartments.svg" alt="Apartments" className="w-full h-48 rounded-lg shadow-lg object-cover" />
+        <img src="/Minnesota.svg" alt="Minnesota" className="w-full h-48 rounded-lg shadow-lg object-cover" />
       </div>
     </div>
   </section>
@@ -175,7 +164,6 @@ const Index = () => {
         </script>
       </Helmet>
       <Header />
-
       <main>
         <section className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
@@ -195,7 +183,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-semibold text-center mb-12 text-[#0A2647]">Why Choose Insight Property Tax?</h2>
@@ -206,20 +193,13 @@ const Index = () => {
             </div>
           </div>
         </section>
-
         <AboutInsightSection />
-
         <RecentAppeals />
-
         <WhoWeWorkWith />
-
         <ProcessSection />
-
         <MeetTheOwner />
-
         <CallToAction />
       </main>
-
       <Footer />
     </div>
   );
