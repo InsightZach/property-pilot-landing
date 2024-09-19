@@ -3,10 +3,13 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const RecentAppeals = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -78,19 +81,13 @@ const RecentAppeals = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <CarouselPrevious className="left-4 h-12 w-12">
+              <ChevronLeft className="h-8 w-8" />
+            </CarouselPrevious>
+            <CarouselNext className="right-4 h-12 w-12">
+              <ChevronRight className="h-8 w-8" />
+            </CarouselNext>
           </Carousel>
-        </div>
-        <div className="flex justify-center mt-4">
-          {appealImages.map((_, index) => (
-            <button
-              key={index}
-              className={`h-2 w-2 rounded-full mx-1 ${
-                index === currentIndex ? 'bg-[#d7b971]' : 'bg-gray-300'
-              }`}
-              onClick={() => emblaApi && emblaApi.scrollTo(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
         </div>
       </div>
     </section>
