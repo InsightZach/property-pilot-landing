@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -10,6 +10,8 @@ import { Menu } from 'lucide-react';
 import { navItems } from '../nav-items';
 
 const Header = () => {
+  const location = useLocation();
+
   return (
     <header className="bg-[#0A2647] text-white py-4">
       <div className="container mx-auto px-4">
@@ -19,7 +21,11 @@ const Header = () => {
           </Link>
           <nav className="hidden md:flex space-x-4">
             {navItems.map((item) => (
-              <Link key={item.to} to={item.to} className="hover:text-[#d7b971]">
+              <Link 
+                key={item.to} 
+                to={item.to} 
+                className={`hover:text-[#d7b971] ${location.pathname === item.to ? 'text-[#d7b971]' : ''}`}
+              >
                 {item.title}
               </Link>
             ))}
@@ -44,7 +50,11 @@ const Header = () => {
                 <SheetContent side="right" className="bg-[#0A2647] text-white">
                   <nav className="flex flex-col space-y-4 mt-8">
                     {navItems.map((item) => (
-                      <Link key={item.to} to={item.to} className="hover:text-[#d7b971]">
+                      <Link 
+                        key={item.to} 
+                        to={item.to} 
+                        className={`hover:text-[#d7b971] ${location.pathname === item.to ? 'text-[#d7b971]' : ''}`}
+                      >
                         {item.title}
                       </Link>
                     ))}
