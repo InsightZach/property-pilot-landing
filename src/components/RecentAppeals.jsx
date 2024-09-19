@@ -90,6 +90,7 @@ const RecentAppeals = () => {
                 index === currentIndex ? 'bg-[#d7b971]' : 'bg-gray-300'
               }`}
               onClick={() => emblaApi && emblaApi.scrollTo(index)}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
