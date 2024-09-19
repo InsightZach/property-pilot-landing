@@ -23,9 +23,10 @@ const StatCard = ({ icon: Icon, title, description }) => (
 );
 
 const AboutInsightSection = () => (
-  <section className="py-16 bg-white">
-    <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">About Insight Property Tax</h2>
+  <section className="py-16 bg-gradient-to-br from-[#0A2647] to-[#2E5077] text-white relative overflow-hidden">
+    <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
+    <div className="container mx-auto px-4 relative z-10">
+      <h2 className="text-3xl font-semibold text-center mb-8 text-white">About Insight Property Tax</h2>
       <div className="mb-8">
         <p className="text-lg mb-4">
           Insight Property Tax helps Minnesota commercial property owners and tenants reduce their property tax liabilities through expert assessment appeals. We use advanced analytics and industry expertise to identify over-assessed properties and provide end-to-end appeal services to ensure maximum tax savings.
@@ -35,11 +36,11 @@ const AboutInsightSection = () => (
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <Card>
+        <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
           <CardHeader>
-            <CardTitle>Insight's 2024 Appeal Statistics</CardTitle>
+            <CardTitle className="text-white">Insight's 2024 Appeal Statistics</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="text-white">
             <ul className="space-y-2">
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> -17.9% reduction average</li>
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> $49k tax savings per property</li>
@@ -52,11 +53,11 @@ const AboutInsightSection = () => (
             </Link>
           </CardContent>
         </Card>
-        <Card>
+        <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
           <CardHeader>
-            <CardTitle>Contingency Fee</CardTitle>
+            <CardTitle className="text-white">Contingency Fee</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="text-white">
             <ul className="space-y-2">
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> You pay $0 upfront</li>
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> Our fee is 30% of tax savings</li>
