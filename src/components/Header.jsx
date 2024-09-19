@@ -12,8 +12,17 @@ import { navItems } from '../nav-items';
 const Header = () => {
   const location = useLocation();
 
+  const NavLink = ({ to, children }) => (
+    <Link 
+      to={to} 
+      className={`hover:text-[#d7b971] ${location.pathname === to ? 'text-[#d7b971]' : 'text-white'}`}
+    >
+      {children}
+    </Link>
+  );
+
   return (
-    <header className="bg-[#0A2647] text-white py-4">
+    <header className="bg-[#0A2647] py-4">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-2xl font-bold">
@@ -21,13 +30,7 @@ const Header = () => {
           </Link>
           <nav className="hidden md:flex space-x-4">
             {navItems.map((item) => (
-              <Link 
-                key={item.to} 
-                to={item.to} 
-                className={`hover:text-[#d7b971] ${location.pathname === item.to ? 'text-[#d7b971]' : ''}`}
-              >
-                {item.title}
-              </Link>
+              <NavLink key={item.to} to={item.to}>{item.title}</NavLink>
             ))}
           </nav>
           <div className="flex items-center space-x-4">
@@ -50,13 +53,7 @@ const Header = () => {
                 <SheetContent side="right" className="bg-[#0A2647] text-white">
                   <nav className="flex flex-col space-y-4 mt-8">
                     {navItems.map((item) => (
-                      <Link 
-                        key={item.to} 
-                        to={item.to} 
-                        className={`hover:text-[#d7b971] ${location.pathname === item.to ? 'text-[#d7b971]' : ''}`}
-                      >
-                        {item.title}
-                      </Link>
+                      <NavLink key={item.to} to={item.to}>{item.title}</NavLink>
                     ))}
                     <Link to="/contact" className="mt-4">
                       <Button className="w-full bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">
