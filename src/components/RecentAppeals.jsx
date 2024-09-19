@@ -5,7 +5,11 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const RecentAppeals = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true,
+    align: 'start',
+    containScroll: 'trimSnaps'
+  }, [Autoplay()]);
 
   const scrollPrev = React.useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -36,28 +40,30 @@ const RecentAppeals = () => {
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {appealImages.map((image, index) => (
-                <div key={index} className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] md:flex-[0_0_33.33%] lg:flex-[0_0_25%] px-2">
-                  <img
-                    src={`/${image}`}
-                    alt={`Appeal ${index + 1}`}
-                    className="w-full h-auto rounded-lg shadow-md object-cover aspect-[4/3]"
-                    onError={handleImageError}
-                    loading="lazy"
-                  />
+                <div key={index} className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] md:flex-[0_0_33.33%] lg:flex-[0_0_25%] pl-4">
+                  <div className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg">
+                    <img
+                      src={`/${image}`}
+                      alt={`Appeal ${index + 1}`}
+                      className="w-full h-full object-cover"
+                      onError={handleImageError}
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
               ))}
             </div>
           </div>
           <Button
             onClick={scrollPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#0A2647] rounded-full p-2 shadow-md"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#0A2647] rounded-full p-2 shadow-md z-10"
             aria-label="Previous slide"
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
           <Button
             onClick={scrollNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#0A2647] rounded-full p-2 shadow-md"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#0A2647] rounded-full p-2 shadow-md z-10"
             aria-label="Next slide"
           >
             <ChevronRight className="h-6 w-6" />
