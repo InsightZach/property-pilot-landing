@@ -29,10 +29,10 @@ const AboutInsightSection = () => (
       <h2 className="text-3xl font-semibold text-center mb-8 text-white">About Insight Property Tax</h2>
       <div className="mb-8">
         <p className="text-lg mb-4">
-          Insight Property Tax helps Minnesota commercial property owners and tenants reduce their property tax liabilities through expert assessment appeals. We use advanced analytics and industry expertise to identify over-assessed properties and provide end-to-end appeal services to ensure maximum tax savings.
+          Insight Property Tax reduces assessment values for Minnesota commercial property owners and tenants, saving our clients tens of thousands on property taxes.
         </p>
         <p className="text-lg mb-4">
-          With decades of experience on both the assessor's side and as property tax consultants, we offer unparalleled expertise in Minnesota property tax law. Our personalized service and streamlined processes set us apart from large, bureaucratic firms.
+          Our local expertise gives clients direct access to a proven system that identifies over-assessments and consistently delivers successful property tax appeal settlements. See our 2024 results below.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
