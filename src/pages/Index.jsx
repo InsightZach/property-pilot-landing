@@ -9,6 +9,7 @@ import Header from '../components/Header';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
 import ProcessSection from '../components/ProcessSection';
+import { Helmet } from 'react-helmet';
 
 const StatCard = ({ icon: Icon, title, description }) => (
   <Card className="border-[#d7b971]">
@@ -78,6 +79,11 @@ const AboutInsightSection = () => (
 const Index = () => {
   return (
     <div className="min-h-screen bg-gray-100">
+      <Helmet>
+        <title>Insight Property Tax - Expert Minnesota Property Tax Appeals</title>
+        <meta name="description" content="Maximize your savings on commercial, industrial, and apartment property taxes in Minnesota with Insight Property Tax. Expert appeals and proven results." />
+        <link rel="canonical" href="https://insightpropertytax.com" />
+      </Helmet>
       <Header />
 
       <main>
