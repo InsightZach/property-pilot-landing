@@ -81,11 +81,11 @@ const RecentAppeals = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-4 h-12 w-12">
-              <ChevronLeft className="h-8 w-8" />
+            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 h-8 w-8 sm:h-12 sm:w-12 bg-white/80 hover:bg-white">
+              <ChevronLeft className="h-4 w-4 sm:h-8 sm:w-8" />
             </CarouselPrevious>
-            <CarouselNext className="right-4 h-12 w-12">
-              <ChevronRight className="h-8 w-8" />
+            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 h-8 w-8 sm:h-12 sm:w-12 bg-white/80 hover:bg-white">
+              <ChevronRight className="h-4 w-4 sm:h-8 sm:w-8" />
             </CarouselNext>
           </Carousel>
         </div>
