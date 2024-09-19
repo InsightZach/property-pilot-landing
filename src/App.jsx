@@ -1,15 +1,16 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { navItems } from "./nav-items";
 import WhyInsight from "./pages/WhyInsight";
-import React, { Suspense, useTransition, lazy } from 'react';
+import React, { Suspense, useTransition, lazy, useEffect } from 'react';
 
 const queryClient = new QueryClient();
 
 const NavigationWrapper = ({ children }) => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isPending, startTransition] = useTransition();
 
   const handleNavigation = (to) => {
@@ -18,10 +19,18 @@ const NavigationWrapper = ({ children }) => {
     });
   };
 
+  useEffect(() => {
+    const currentRoute = navItems.find(item => item.to === location.pathname) || { title: "Insight Property Tax" };
+    document.title = `${currentRoute.title} | Insight Property Tax`;
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", currentRoute.description || "Expert property tax appeal services for commercial, industrial, and apartment properties in Minnesota. Maximize your savings with Insight Property Tax.");
+    }
+  }, [location]);
+
   return React.cloneElement(children, { handleNavigation });
 };
-
-const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -47,14 +56,6 @@ const App = () => (
                 element={
                   <Suspense fallback={<div>Loading...</div>}>
                     <WhyInsight />
-                  </Suspense>
-                }
-              />
-              <Route
-                path="/privacy-policy"
-                element={
-                  <Suspense fallback={<div>Loading...</div>}>
-                    <PrivacyPolicy />
                   </Suspense>
                 }
               />
