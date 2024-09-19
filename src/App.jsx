@@ -8,6 +8,13 @@ import React, { Suspense, useTransition, lazy, useEffect } from 'react';
 
 const queryClient = new QueryClient();
 
+// Lazy load components
+const LazyIndex = lazy(() => import("./pages/Index"));
+const LazyFAQ = lazy(() => import("./pages/FAQ"));
+const LazyContact = lazy(() => import("./pages/Contact"));
+const LazyResources = lazy(() => import("./pages/Resources"));
+const LazyWhyInsight = lazy(() => import("./pages/WhyInsight"));
+
 const NavigationWrapper = ({ children }) => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -38,19 +45,13 @@ const App = () => (
       <Toaster />
       <BrowserRouter>
         <NavigationWrapper>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div className="flex items-center justify-center h-screen">Loading...</div>}>
             <Routes>
-              {navItems.map(({ to, component: Component }) => (
-                <Route
-                  key={to}
-                  path={to}
-                  element={
-                    <Suspense fallback={<div>Loading...</div>}>
-                      <Component />
-                    </Suspense>
-                  }
-                />
-              ))}
+              <Route path="/" element={<LazyIndex />} />
+              <Route path="/why-insight" element={<LazyWhyInsight />} />
+              <Route path="/faq" element={<LazyFAQ />} />
+              <Route path="/resources" element={<LazyResources />} />
+              <Route path="/contact" element={<LazyContact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
