@@ -15,20 +15,20 @@ const Header = () => {
   const NavLink = ({ to, children }) => (
     <Link 
       to={to} 
-      className={`hover:text-[#d7b971] ${location.pathname === to ? 'text-[#d7b971]' : 'text-white'}`}
+      className={`hover:text-[#d7b971] transition-colors ${location.pathname === to ? 'text-[#d7b971]' : 'text-white'}`}
     >
       {children}
     </Link>
   );
 
   return (
-    <header className="bg-[#0A2647] py-4">
+    <header className="bg-[#0A2647] py-4 sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-2xl font-bold">
             <img src="/logo.svg" alt="Insight Property Tax Logo" className="h-12" />
           </Link>
-          <nav className="hidden md:flex space-x-4">
+          <nav className="hidden md:flex space-x-6">
             {navItems.map((item) => (
               <NavLink key={item.to} to={item.to}>{item.title}</NavLink>
             ))}
