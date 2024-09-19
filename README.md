@@ -1,72 +1,57 @@
-# Welcome to your GPT Engineer project
+# Insight Property Tax
 
-## Project info
+## Project Overview
 
-**Project**: property-pilot-landing
+Insight Property Tax is a web application designed to help Minnesota commercial property owners and tenants reduce their property tax assessments. The site showcases the company's services, expertise, and success rates in property tax appeals.
 
-**URL**: https://run.gptengineer.app/projects/657c24a2-7aac-4378-a075-73fdc1e35118/improve
+## Key Features
 
-## How can I edit this code?
+- Responsive design for desktop and mobile devices
+- Interactive sections highlighting company services and benefits
+- FAQ section for common questions about property tax appeals
+- Contact form for potential clients to reach out
+- Resources page with property tax calendar and city/township information
 
-There are several ways of editing your application.
+## Technology Stack
 
-**Use GPT Engineer**
+- React.js for the frontend framework
+- Vite as the build tool
+- Tailwind CSS for styling
+- shadcn/ui for pre-built React components
+- React Router for navigation
+- React Hook Form for form handling
+- Netlify for hosting and serverless functions
 
-Simply visit the GPT Engineer project at [GPT Engineer](https://gptengineer.app/projects/657c24a2-7aac-4378-a075-73fdc1e35118/improve) and start prompting.
+## Project Structure
 
-Changes made via gptengineer.app will be committed automatically to this repo.
+- `src/`: Contains the source code for the React application
+  - `components/`: Reusable React components
+  - `pages/`: Individual page components
+  - `lib/`: Utility functions and helpers
+- `public/`: Static assets like images and icons
+- `netlify/functions/`: Serverless functions for backend logic
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in the GPT Engineer UI.
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
+4. Open `http://localhost:5173` in your browser
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Deployment
 
-Follow these steps:
+The project is set up for continuous deployment with Netlify. Any pushes to the main branch will trigger a new deployment.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Recent Updates
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- Updated the 'About Insight Property Tax' section with new copy highlighting the company's expertise and success rates
+- Left-aligned content in the 'Why Choose Insight Property Tax?' containers while keeping titles centered
+- Ensured all documentation is up to date with recent changes
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Contributing
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Please read our contributing guidelines before submitting any pull requests or issues.
 
-**Edit a file directly in GitHub**
+## License
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-All GPT Engineer projects can be deployed directly via the GPT Engineer app.
-
-Simply visit your project at [GPT Engineer](https://gptengineer.app/projects/657c24a2-7aac-4378-a075-73fdc1e35118/improve) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.gptengineer.app/tips-tricks/custom-domain/)
+This project is proprietary and confidential. All rights reserved.
