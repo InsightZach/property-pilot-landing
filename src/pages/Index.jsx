@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, CheckCircle, DollarSign, LineChart, ArrowRight } from 'lucide-react';
@@ -9,7 +10,6 @@ import Header from '../components/Header';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
 import ProcessSection from '../components/ProcessSection';
-import { Helmet } from 'react-helmet';
 
 const StatCard = ({ icon: Icon, title, description }) => (
   <Card className="border-[#d7b971]">
