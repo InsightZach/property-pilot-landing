@@ -10,6 +10,7 @@ import Header from '../components/Header';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
 import ProcessSection from '../components/ProcessSection';
+import WhoWeWorkWith from '../components/WhoWeWorkWith';
 
 const StatCard = ({ icon: Icon, title, description }) => (
   <Card className="border-[#d7b971]">
@@ -30,10 +31,10 @@ const AboutInsightSection = () => (
       <h2 className="text-3xl font-semibold text-center mb-8 text-white">About Insight Property Tax</h2>
       <div className="mb-8">
         <p className="text-lg mb-4">
-          Insight Property Tax reduces assessment values for Minnesota commercial property owners and tenants, saving our clients tens of thousands on property taxes.
+          Insight Property Tax specializes in Minnesota property tax appeals, including commercial property tax appeals in Minneapolis, MN. We reduce assessment values for property owners and tenants, saving our clients tens of thousands on property taxes.
         </p>
         <p className="text-lg mb-4">
-          Our local expertise gives clients direct access to a proven system that identifies over-assessments and consistently delivers successful property tax appeal settlements. See our 2024 results below.
+          Our local expertise in Minneapolis property tax appeals gives clients direct access to a proven system that identifies over-assessments and consistently delivers successful property tax appeal settlements. See our 2024 results below.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -48,7 +49,7 @@ const AboutInsightSection = () => (
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> 90-day appeal duration average</li>
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> 100% appeal success rate</li>
             </ul>
-            <p className="mt-4">Our clients save tens of thousands on property taxes.</p>
+            <p className="mt-4">Our clients save tens of thousands on property taxes through our expert Minneapolis property tax appeals.</p>
             <Link to="/contact">
               <Button className="mt-4 bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Get Started</Button>
             </Link>
@@ -65,7 +66,7 @@ const AboutInsightSection = () => (
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> You pocket the rest</li>
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> We handle everything</li>
             </ul>
-            <p className="mt-4">Leverage our expertise, maximize your profit and time.</p>
+            <p className="mt-4">Leverage our expertise in Minnesota property tax appeals, maximize your profit and time.</p>
             <Link to="/why-insight">
               <Button className="mt-4 bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Why Choose Insight?</Button>
             </Link>
@@ -139,7 +140,7 @@ const Index = () => {
     <div className="min-h-screen bg-gray-100">
       <Helmet>
         <title>Insight Property Tax - Expert Minnesota Property Tax Appeals</title>
-        <meta name="description" content="Maximize your savings on commercial, industrial, and apartment property taxes in Minnesota with Insight Property Tax. Expert appeals and proven results." />
+        <meta name="description" content="Maximize your savings on commercial, industrial, and apartment property taxes in Minnesota with Insight Property Tax. Expert appeals and proven results for Minneapolis property tax appeals." />
         <link rel="canonical" href="https://insightpropertytax.com" />
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
@@ -156,7 +157,7 @@ const Index = () => {
                 Expert Property Tax Appeals in Minnesota
               </h1>
               <p className="text-xl mb-8">
-                Maximize your savings on commercial, industrial, and apartment property taxes with Insight Property Tax.
+                Maximize your savings on commercial, industrial, and apartment property taxes with Insight Property Tax. Specializing in Minneapolis property tax appeals and serving all of Minnesota.
               </p>
               <Link to="/contact">
                 <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
@@ -171,14 +172,16 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-semibold text-center mb-12 text-[#0A2647]">Why Choose Insight Property Tax?</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <StatCard icon={DollarSign} title="Risk-Free Service" description="You pay only if we successfully reduce your property taxes." />
-              <StatCard icon={CheckCircle} title="Minnesota Expertise" description="Hundreds of settled appeals from local professionals with appraisal and assessment backgrounds." />
-              <StatCard icon={LineChart} title="Advanced Analytics" description="Data-driven strategies to maximize your savings." />
+              <StatCard icon={DollarSign} title="Risk-Free Service" description="You pay only if we successfully reduce your property taxes through our expert Minnesota property tax appeals." />
+              <StatCard icon={CheckCircle} title="Minnesota Expertise" description="Hundreds of settled appeals from local professionals with appraisal and assessment backgrounds, specializing in Minneapolis property tax appeals." />
+              <StatCard icon={LineChart} title="Advanced Analytics" description="Data-driven strategies to maximize your savings on commercial property tax appeals in Minneapolis, MN and beyond." />
             </div>
           </div>
         </section>
 
         <AboutInsightSection />
+
+        <WhoWeWorkWith />
 
         <RecentAppeals />
 
