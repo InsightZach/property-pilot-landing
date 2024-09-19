@@ -75,26 +75,22 @@ const WhoWeWorkWith = () => (
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
           <CardContent className="p-4">
-            <img src="/Commercial.svg" alt="Commercial" className="w-full h-32 object-cover rounded-lg mb-2" />
-            <h3 className="text-lg font-semibold text-center text-[#d7b971]">Commercial</h3>
+            <img src="/Commercial.svg" alt="Commercial" className="w-full h-32 object-cover rounded-lg" />
           </CardContent>
         </Card>
         <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
           <CardContent className="p-4">
-            <img src="/Industrial.svg" alt="Industrial" className="w-full h-32 object-cover rounded-lg mb-2" />
-            <h3 className="text-lg font-semibold text-center text-[#d7b971]">Industrial</h3>
+            <img src="/Industrial.svg" alt="Industrial" className="w-full h-32 object-cover rounded-lg" />
           </CardContent>
         </Card>
         <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
           <CardContent className="p-4">
-            <img src="/Apartments.svg" alt="Apartments" className="w-full h-32 object-cover rounded-lg mb-2" />
-            <h3 className="text-lg font-semibold text-center text-[#d7b971]">Apartments</h3>
+            <img src="/Apartments.svg" alt="Apartments" className="w-full h-32 object-cover rounded-lg" />
           </CardContent>
         </Card>
         <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
           <CardContent className="p-4">
-            <img src="/Minnesota.svg" alt="Minnesota" className="w-full h-32 object-cover rounded-lg mb-2" />
-            <h3 className="text-lg font-semibold text-center text-[#d7b971]">Minnesota</h3>
+            <img src="/Minnesota.svg" alt="Minnesota" className="w-full h-32 object-cover rounded-lg" />
           </CardContent>
         </Card>
       </div>
