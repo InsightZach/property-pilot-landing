@@ -29,18 +29,12 @@ const AboutInsightSection = () => (
     <div className="container mx-auto px-4 relative z-10">
       <h2 className="text-3xl font-semibold text-center mb-8 text-white">About Insight Property Tax</h2>
       <div className="mb-8">
-        <p className="text-lg mb-4">
-          Insight Property Tax reduces assessment values for Minnesota commercial property owners and tenants, saving our clients tens of thousands on property taxes.
-        </p>
-        <p className="text-lg mb-4">
-          Our local expertise gives clients direct access to a proven system that identifies over-assessments and consistently delivers successful property tax appeal settlements.
-        </p>
+        <p className="text-lg mb-4">Insight Property Tax reduces assessment values for Minnesota commercial property owners and tenants, saving our clients tens of thousands on property taxes.</p>
+        <p className="text-lg mb-4">Our local expertise gives clients direct access to a proven system that identifies over-assessments and consistently delivers successful property tax appeal settlements.</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
-          <CardHeader>
-            <CardTitle className="text-white">Insight's Appeal Statistics</CardTitle>
-          </CardHeader>
+          <CardHeader><CardTitle className="text-white">Insight's Appeal Statistics</CardTitle></CardHeader>
           <CardContent className="text-white">
             <ul className="space-y-2">
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> 15% reduction average</li>
@@ -48,15 +42,11 @@ const AboutInsightSection = () => (
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> 90-day appeal duration average</li>
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> 100% appeal success rate</li>
             </ul>
-            <Link to="/contact">
-              <Button className="mt-4 bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Get Started</Button>
-            </Link>
+            <Link to="/contact"><Button className="mt-4 bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Get Started</Button></Link>
           </CardContent>
         </Card>
         <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
-          <CardHeader>
-            <CardTitle className="text-white">Contingency Fee</CardTitle>
-          </CardHeader>
+          <CardHeader><CardTitle className="text-white">Contingency Fee</CardTitle></CardHeader>
           <CardContent className="text-white">
             <ul className="space-y-2">
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> You pay $0 upfront</li>
@@ -64,9 +54,7 @@ const AboutInsightSection = () => (
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> You pocket the rest</li>
               <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> We handle everything</li>
             </ul>
-            <Link to="/why-insight">
-              <Button className="mt-4 bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Why Choose Insight?</Button>
-            </Link>
+            <Link to="/why-insight"><Button className="mt-4 bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Why Choose Insight?</Button></Link>
           </CardContent>
         </Card>
       </div>
@@ -75,20 +63,38 @@ const AboutInsightSection = () => (
 );
 
 const WhoWeWorkWith = () => (
-  <section className="py-16 bg-gray-100">
-    <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Who We Work With</h2>
+  <section className="py-16 bg-gradient-to-br from-[#0A2647] to-[#2E5077] text-white relative overflow-hidden">
+    <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
+    <div className="container mx-auto px-4 relative z-10">
+      <h2 className="text-3xl font-semibold text-center mb-8 text-white">Who We Work With</h2>
       <div className="text-left mb-8">
-        <p className="text-lg mb-4">
-          We provide property tax appeal services for property owners and tenants of commercial,
-          industrial, and apartment properties in the Minneapolis-St. Paul metro area.
-        </p>
+        <p className="text-lg mb-4">We provide property tax appeal services for property owners and tenants of commercial, industrial, and apartment properties in the Minneapolis-St. Paul metro area.</p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <img src="/Commercial.svg" alt="Commercial" className="w-full h-48 rounded-lg shadow-lg object-cover" />
-        <img src="/Industrial.svg" alt="Industrial" className="w-full h-48 rounded-lg shadow-lg object-cover" />
-        <img src="/Apartments.svg" alt="Apartments" className="w-full h-48 rounded-lg shadow-lg object-cover" />
-        <img src="/Minnesota.svg" alt="Minnesota" className="w-full h-48 rounded-lg shadow-lg object-cover" />
+        <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
+          <CardContent className="p-4">
+            <img src="/Commercial.svg" alt="Commercial" className="w-full h-32 object-cover rounded-lg mb-2" />
+            <h3 className="text-lg font-semibold text-center text-[#d7b971]">Commercial</h3>
+          </CardContent>
+        </Card>
+        <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
+          <CardContent className="p-4">
+            <img src="/Industrial.svg" alt="Industrial" className="w-full h-32 object-cover rounded-lg mb-2" />
+            <h3 className="text-lg font-semibold text-center text-[#d7b971]">Industrial</h3>
+          </CardContent>
+        </Card>
+        <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
+          <CardContent className="p-4">
+            <img src="/Apartments.svg" alt="Apartments" className="w-full h-32 object-cover rounded-lg mb-2" />
+            <h3 className="text-lg font-semibold text-center text-[#d7b971]">Apartments</h3>
+          </CardContent>
+        </Card>
+        <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
+          <CardContent className="p-4">
+            <img src="/Minnesota.svg" alt="Minnesota" className="w-full h-32 object-cover rounded-lg mb-2" />
+            <h3 className="text-lg font-semibold text-center text-[#d7b971]">Minnesota</h3>
+          </CardContent>
+        </Card>
       </div>
     </div>
   </section>
@@ -159,9 +165,7 @@ const Index = () => {
         <title>Insight Property Tax - Expert Minnesota Property Tax Appeals</title>
         <meta name="description" content="Maximize your savings on commercial, industrial, and apartment property taxes in Minnesota with Insight Property Tax. Expert appeals and proven results." />
         <link rel="canonical" href="https://insightpropertytax.com" />
-        <script type="application/ld+json">
-          {JSON.stringify(schemaData)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
       <Header />
       <main>
@@ -169,12 +173,8 @@ const Index = () => {
           <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-2xl">
-              <h1 className="text-5xl font-bold mb-6">
-                Expert Property Tax Appeals in Minnesota
-              </h1>
-              <p className="text-xl mb-8">
-                Maximize your savings on commercial, industrial, and apartment property taxes with Insight Property Tax.
-              </p>
+              <h1 className="text-5xl font-bold mb-6">Expert Property Tax Appeals in Minnesota</h1>
+              <p className="text-xl mb-8">Maximize your savings on commercial, industrial, and apartment property taxes with Insight Property Tax.</p>
               <Link to="/contact">
                 <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
                   Get Started <ArrowRight className="ml-2 h-6 w-6" />
