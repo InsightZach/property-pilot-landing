@@ -1,0 +1,17 @@
+# Redirects for Insight Property Tax
+
+# Redirect root to index
+/   /index.html   200
+
+# Redirect main pages
+/why-insight   /why-insight.html   200
+/faq   /faq.html   200
+/resources   /resources.html   200
+/contact   /contact.html   200
+
+# Redirect old URLs to new pages (if applicable)
+/about   /why-insight   301
+/services   /   301
+
+# Handle 404 errors
+/*   /index.html   404
