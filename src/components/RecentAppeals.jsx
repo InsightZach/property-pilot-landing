@@ -22,15 +22,15 @@ const RecentAppeals = () => {
   );
 
   const appealImages = [
-    'Appeal14.svg', 'Appeal1.svg', 'Appeal2.svg', 'Appeal3.svg',
-    'Appeal4.svg', 'Appeal5.svg', 'Appeal6.svg', 'Appeal7.svg',
-    'Appeal8.svg', 'Appeal9.svg', 'Appeal10.svg', 'Appeal11.svg',
-    'Appeal12.svg', 'Appeal13.svg'
+    'Appeal14.png', 'Appeal1.png', 'Appeal2.png', 'Appeal3.png',
+    'Appeal4.png', 'Appeal5.png', 'Appeal6.png', 'Appeal7.png',
+    'Appeal8.png', 'Appeal9.png', 'Appeal10.png', 'Appeal11.png',
+    'Appeal12.png', 'Appeal13.png'
   ];
 
   const handleImageError = (e) => {
     console.error(`Failed to load image: ${e.target.src}`);
-    e.target.src = "/placeholder.svg";
+    e.target.src = "/placeholder.png";
     e.target.alt = 'Placeholder image';
   };
 
@@ -71,6 +71,8 @@ const RecentAppeals = () => {
                           className="absolute top-0 left-0 w-full h-full object-contain"
                           onError={handleImageError}
                           loading="lazy"
+                          width="800"
+                          height="600"
                         />
                       </div>
                     </CardContent>
