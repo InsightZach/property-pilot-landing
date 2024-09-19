@@ -3,8 +3,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import useEmblaCarousel from "embla-carousel-react";
@@ -80,8 +78,6 @@ const RecentAppeals = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-4 top-1/2 transform -translate-y-1/2" />
-            <CarouselNext className="absolute right-4 top-1/2 transform -translate-y-1/2" />
           </Carousel>
         </div>
         <div className="flex justify-center mt-4">
