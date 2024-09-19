@@ -36,7 +36,7 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <Link to="/contact" className="hidden md:block">
               <Button className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">
-                Contact
+                Contact us
               </Button>
             </Link>
             <div className="md:hidden">
@@ -57,7 +57,7 @@ const Header = () => {
                     ))}
                     <Link to="/contact" className="mt-4">
                       <Button className="w-full bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">
-                        Contact
+                        Contact us
                       </Button>
                     </Link>
                   </nav>
