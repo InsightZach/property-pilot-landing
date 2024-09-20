@@ -10,6 +10,8 @@ import Header from '../components/Header';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
 import ProcessSection from '../components/ProcessSection';
+import AppealStatistics from '../components/AppealStatistics';
+import ContingencyFee from '../components/ContingencyFee';
 
 const StatCard = ({ icon: Icon, title, description }) => (
   <Card className="border-[#d7b971]">
@@ -33,30 +35,8 @@ const AboutInsightSection = () => (
         <p className="text-lg mb-4">Our local expertise gives clients direct access to a proven system that identifies over-assessments and consistently delivers successful property tax appeal settlements.</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
-          <CardHeader><CardTitle className="text-white">Insight's Appeal Statistics</CardTitle></CardHeader>
-          <CardContent className="text-white">
-            <ul className="space-y-2">
-              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> 15% reduction average</li>
-              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> $40k tax savings per property</li>
-              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> 90-day appeal duration average</li>
-              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> 100% appeal success rate</li>
-            </ul>
-            <Link to="/contact"><Button className="mt-4 bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Get Started</Button></Link>
-          </CardContent>
-        </Card>
-        <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
-          <CardHeader><CardTitle className="text-white">Contingency Fee</CardTitle></CardHeader>
-          <CardContent className="text-white">
-            <ul className="space-y-2">
-              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> You pay $0 upfront</li>
-              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> Our fee is 30% of tax savings</li>
-              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> You pocket the rest</li>
-              <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> We handle everything</li>
-            </ul>
-            <Link to="/why-insight"><Button className="mt-4 bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Why Choose Insight?</Button></Link>
-          </CardContent>
-        </Card>
+        <AppealStatistics />
+        <ContingencyFee />
       </div>
     </div>
   </section>
@@ -73,26 +53,13 @@ const WhoWeWorkWith = () => (
         <p className="text-lg mb-4">Insight Property Tax makes it easy to reduce costs and maximize your profits with our straightforward appeal process.</p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
-          <CardContent className="p-4">
-            <img src="/Commercial.svg" alt="Commercial" className="w-full h-32 object-cover rounded-lg" />
-          </CardContent>
-        </Card>
-        <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
-          <CardContent className="p-4">
-            <img src="/Industrial.svg" alt="Industrial" className="w-full h-32 object-cover rounded-lg" />
-          </CardContent>
-        </Card>
-        <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
-          <CardContent className="p-4">
-            <img src="/Apartments.svg" alt="Apartments" className="w-full h-32 object-cover rounded-lg" />
-          </CardContent>
-        </Card>
-        <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
-          <CardContent className="p-4">
-            <img src="/Minnesota.svg" alt="Minnesota" className="w-full h-32 object-cover rounded-lg" />
-          </CardContent>
-        </Card>
+        {['Commercial', 'Industrial', 'Apartments', 'Minnesota'].map((type) => (
+          <Card key={type} className="bg-white/10 backdrop-blur-md border-[#d7b971]">
+            <CardContent className="p-4">
+              <img src={`/${type}.svg`} alt={type} className="w-full h-32 object-cover rounded-lg" />
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </div>
   </section>
