@@ -9,11 +9,15 @@ exports.handler = async (event, context) => {
   try {
     const { firstName, lastName, email, phone, propertyId, propertyDetails } = JSON.parse(event.body);
 
-    // Power Automate HTTP trigger URL
+    // Retrieve the Power Automate webhook URL from environment variables
     const powerAutomateUrl = process.env.POWER_AUTOMATE_WEBHOOK_URL;
 
+    if (!powerAutomateUrl) {
+      throw new Error('Power Automate webhook URL is not configured.');
+    }
+
     // Send data to Power Automate
-    await axios.post(powerAutomateUrl, {
+    const powerAutomateResponse = await axios.post(powerAutomateUrl, {
       firstName,
       lastName,
       email,
@@ -22,6 +26,10 @@ exports.handler = async (event, context) => {
       propertyDetails,
       submissionDate: new Date().toISOString()
     });
+
+    if (powerAutomateResponse.status !== 200) {
+      throw new Error(`Failed to send data to Power Automate. Status: ${powerAutomateResponse.status}`);
+    }
 
     // Database storage logic
     const client = new MongoClient(process.env.MONGODB_URI);
