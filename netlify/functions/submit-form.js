@@ -1,4 +1,3 @@
-const { MongoClient } = require('mongodb');
 const axios = require('axios');
 
 exports.handler = async (event, context) => {
@@ -7,7 +6,7 @@ exports.handler = async (event, context) => {
   }
 
   try {
-    const { firstName, lastName, email, phone, propertyId, propertyDetails } = JSON.parse(event.body);
+    const formData = JSON.parse(event.body);
 
     // Retrieve the Power Automate webhook URL from environment variables
     const powerAutomateUrl = process.env.POWER_AUTOMATE_WEBHOOK_URL;
@@ -18,36 +17,13 @@ exports.handler = async (event, context) => {
 
     // Send data to Power Automate
     const powerAutomateResponse = await axios.post(powerAutomateUrl, {
-      firstName,
-      lastName,
-      email,
-      phone,
-      propertyId,
-      propertyDetails,
+      ...formData,
       submissionDate: new Date().toISOString()
     });
 
     if (powerAutomateResponse.status !== 200) {
       throw new Error(`Failed to send data to Power Automate. Status: ${powerAutomateResponse.status}`);
     }
-
-    // Database storage logic
-    const client = new MongoClient(process.env.MONGODB_URI);
-    await client.connect();
-    const db = client.db('insightpropertytax');
-    const collection = db.collection('submissions');
-    
-    await collection.insertOne({
-      firstName,
-      lastName,
-      email,
-      phone,
-      propertyId,
-      propertyDetails,
-      date: new Date().toISOString()
-    });
-
-    await client.close();
 
     return {
       statusCode: 200,
