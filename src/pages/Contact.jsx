@@ -16,6 +16,9 @@ const Contact = () => {
     try {
       const response = await fetch('/.netlify/functions/submit-form', {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify(data),
       });
 
@@ -23,7 +26,8 @@ const Contact = () => {
         toast.success('Form submitted successfully');
         reset();
       } else {
-        throw new Error('Form submission failed');
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Form submission failed');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
