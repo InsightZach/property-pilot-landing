@@ -29,14 +29,15 @@ exports.handler = async (event, context) => {
       submissionDate: new Date().toISOString()
     });
 
-    if (powerAutomateResponse.status !== 200) {
-      throw new Error(`Failed to send data to Power Automate. Status: ${powerAutomateResponse.status}`);
+    // Check for successful response (including 202 Accepted)
+    if (powerAutomateResponse.status === 200 || powerAutomateResponse.status === 202) {
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ message: 'Form submitted successfully' }),
+      };
+    } else {
+      throw new Error(`Unexpected response from Power Automate. Status: ${powerAutomateResponse.status}`);
     }
-
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: 'Form submitted successfully' }),
-    };
   } catch (error) {
     console.error('Error:', error);
     return {
