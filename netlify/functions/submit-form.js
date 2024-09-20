@@ -8,6 +8,14 @@ exports.handler = async (event, context) => {
   try {
     const formData = JSON.parse(event.body);
 
+    // Server-side validation
+    if (!formData.firstName || !formData.lastName || !formData.email) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: 'Missing required fields' }),
+      };
+    }
+
     // Retrieve the Power Automate webhook URL from environment variables
     const powerAutomateUrl = process.env.POWER_AUTOMATE_WEBHOOK_URL;
 
