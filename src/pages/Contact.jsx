@@ -32,7 +32,7 @@ const Contact = () => {
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      toast.error(error.message || 'Failed to submit form. Please try again.');
+      toast.error(`Failed to submit form: ${error.message}. Please try again.`);
     }
   };
 
