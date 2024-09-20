@@ -22,16 +22,17 @@ const Contact = () => {
         body: JSON.stringify(data),
       });
 
+      const result = await response.json();
+
       if (response.ok) {
-        toast.success('Form submitted successfully');
+        toast.success(result.message || 'Form submitted successfully');
         reset();
       } else {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Form submission failed');
+        throw new Error(result.error || 'Form submission failed');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      toast.error('Failed to submit form. Please try again.');
+      toast.error(error.message || 'Failed to submit form. Please try again.');
     }
   };
 
