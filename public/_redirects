@@ -1,16 +1,7 @@
 # Redirects for Insight Property Tax
 
-# Redirect root to index
-/   /index.html   200
-
 # SPA fallback
 /*    /index.html   200
-
-# Redirect main pages
-/why-insight   /index.html   200
-/faq   /index.html   200
-/resources   /index.html   200
-/contact   /index.html   200
 
 # Redirect old URLs to new pages (if applicable)
 /about   /why-insight   301
