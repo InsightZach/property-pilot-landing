@@ -3,6 +3,12 @@
 # SPA fallback
 /*    /index.html   200
 
+# Explicit routes
+/why-insight    /index.html   200
+/faq            /index.html   200
+/resources      /index.html   200
+/contact        /index.html   200
+
 # Redirect old URLs to new pages (if applicable)
 /about   /why-insight   301
 /services   /   301
