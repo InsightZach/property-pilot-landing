@@ -1,4 +1,5 @@
-# Redirects for Insight Property Tax
+# Redirect www to non-www
+https://www.insightpropertytax.com/* https://insightpropertytax.com/:splat 301!
 
 # SPA fallback
 /*    /index.html   200
