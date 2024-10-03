@@ -1,5 +1,6 @@
-# Redirect www to non-www
-https://www.insightpropertytax.com/* https://insightpropertytax.com/:splat 301!
+# Redirect non-www to www
+http://insightpropertytax.com/* https://www.insightpropertytax.com/:splat 301!
+https://insightpropertytax.com/* https://www.insightpropertytax.com/:splat 301!
 
 # SPA fallback
 /*    /index.html   200
