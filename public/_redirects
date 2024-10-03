@@ -1,10 +1,9 @@
+# Redirect HTTP to HTTPS
+http://insightpropertytax.com/* https://insightpropertytax.com/:splat 301!
+http://www.insightpropertytax.com/* https://www.insightpropertytax.com/:splat 301!
+
 # Redirect non-www to www
-http://insightpropertytax.com/* https://www.insightpropertytax.com/:splat 301!
 https://insightpropertytax.com/* https://www.insightpropertytax.com/:splat 301!
 
 # SPA fallback
 /*    /index.html   200
-
-# Redirect old URLs to new pages (if applicable)
-/about   /why-insight   301
-/services   /   301
