@@ -33,11 +33,28 @@ const BlogPost = () => {
     setImageError(true);
   };
 
+  const shareOnLinkedIn = () => {
+    const postUrl = `https://insightpropertytax.com/blog/${post.slug}`;
+    const title = encodeURIComponent(post.title);
+    const summary = encodeURIComponent(post.excerpt);
+    const source = encodeURIComponent('Insight Property Tax');
+    const imageUrl = encodeURIComponent(`https://insightpropertytax.com${post.imageUrl}`);
+
+    const linkedInShareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${postUrl}&title=${title}&summary=${summary}&source=${source}&image=${imageUrl}`;
+
+    window.open(linkedInShareUrl, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] relative">
       <Helmet>
         <title>{post.title} | Insight Property Tax</title>
         <meta name="description" content={post.excerpt} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:image" content={`https://insightpropertytax.com${post.imageUrl}`} />
+        <meta property="og:url" content={`https://insightpropertytax.com/blog/${post.slug}`} />
+        <meta property="og:type" content="article" />
       </Helmet>
       <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
       <Header />
@@ -62,14 +79,12 @@ const BlogPost = () => {
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
           <div className="mt-12 pt-6 border-t border-gray-200">
-            <a
-              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://insightpropertytax.com/blog/${post.slug}`)}`}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={shareOnLinkedIn}
               className="inline-block mt-4 bg-[#0077B5] text-white px-4 py-2 rounded hover:bg-[#006097] transition-colors"
             >
               Share on LinkedIn
-            </a>
+            </button>
           </div>
         </article>
       </main>
