@@ -21,7 +21,6 @@ const BlogPost = () => {
 
   useEffect(() => {
     if (post) {
-      // Log the image URL to console
       console.log('Attempting to load image:', post.imageUrl);
     }
   }, [post]);
@@ -43,22 +42,25 @@ const BlogPost = () => {
       <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
       <Header />
       <main className="container mx-auto px-4 py-16 relative z-10">
-        <article className="bg-white rounded-lg shadow-lg p-8">
-          <h1 className="text-4xl font-bold text-[#0A2647] mb-4">{post.title}</h1>
+        <article className="bg-white rounded-lg shadow-lg p-8 max-w-3xl mx-auto">
+          <h1 className="text-4xl font-bold text-[#0A2647] mb-6">{post.title}</h1>
           {!imageError ? (
             <img 
               src={post.imageUrl} 
               alt={post.title} 
-              className="w-full h-64 object-cover mb-6 rounded-lg" 
+              className="w-full h-64 object-cover mb-8 rounded-lg" 
               onError={handleImageError}
             />
           ) : (
-            <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-6 rounded-lg">
+            <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-8 rounded-lg">
               <p>Image not available</p>
             </div>
           )}
-          <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: post.content }} />
-          <div className="mt-8">
+          <div 
+            className="prose prose-lg max-w-none"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
+          <div className="mt-12 pt-6 border-t border-gray-200">
             <p className="text-sm text-gray-500">Published on {new Date(post.date).toLocaleDateString()}</p>
             <a
               href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://insightpropertytax.com/blog/${post.slug}`)}`}
