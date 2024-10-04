@@ -1,4 +1,4 @@
-import { HomeIcon, HelpCircleIcon, PhoneIcon, BookOpenIcon, InfoIcon } from "lucide-react";
+import { HomeIcon, HelpCircleIcon, PhoneIcon, BookOpenIcon, InfoIcon, NewspaperIcon } from "lucide-react";
 import { lazy } from 'react';
 
 const Index = lazy(() => import("./pages/Index.jsx"));
@@ -6,6 +6,7 @@ const FAQ = lazy(() => import("./pages/FAQ.jsx"));
 const Contact = lazy(() => import("./pages/Contact.jsx"));
 const Resources = lazy(() => import("./pages/Resources.jsx"));
 const WhyInsight = lazy(() => import("./pages/WhyInsight.jsx"));
+const Blog = lazy(() => import("./pages/Blog.jsx"));
 
 /**
  * Central place for defining the navigation items. Used for navigation components and routing.
@@ -40,5 +41,11 @@ export const navItems = [
     to: "/contact",
     icon: <PhoneIcon className="h-4 w-4" />,
     component: Contact,
+  },
+  {
+    title: "Blog",
+    to: "/blog",
+    icon: <NewspaperIcon className="h-4 w-4" />,
+    component: Blog,
   },
 ];

@@ -39,6 +39,9 @@ const NavigationWrapper = ({ children }) => {
   return React.cloneElement(children, { handleNavigation });
 };
 
+
+const LazyBlog = lazy(() => import("./pages/Blog"));
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -52,6 +55,7 @@ const App = () => (
               <Route path="/faq" element={<LazyFAQ />} />
               <Route path="/resources" element={<LazyResources />} />
               <Route path="/contact" element={<LazyContact />} />
+              <Route path="/blog" element={<LazyBlog />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
