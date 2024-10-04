@@ -1,8 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import BlogPosts from '../components/BlogPosts';
+import { Button } from "@/components/ui/button";
 
 const Blog = () => {
   return (
@@ -14,7 +16,14 @@ const Blog = () => {
       <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
       <Header />
       <main className="container mx-auto px-4 py-16 relative z-10">
-        <h1 className="text-4xl font-bold text-center mb-8 text-white">Insight Property Tax Blog</h1>
+        <div className="flex justify-between items-center mb-8">
+          <h1 className="text-4xl font-bold text-white">Insight Property Tax Blog</h1>
+          <Link to="/admin/create-post">
+            <Button className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">
+              Create New Post
+            </Button>
+          </Link>
+        </div>
         <BlogPosts />
       </main>
       <Footer />

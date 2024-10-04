@@ -1,31 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "Understanding Property Tax Appeals in Minnesota",
-    excerpt: "Learn the basics of property tax appeals and how they can benefit commercial property owners.",
-    date: "2024-03-25",
-    slug: "understanding-property-tax-appeals-minnesota"
-  },
-  {
-    id: 2,
-    title: "5 Strategies to Reduce Your Commercial Property Tax",
-    excerpt: "Discover effective strategies to potentially lower your commercial property tax burden in Minnesota.",
-    date: "2024-03-18",
-    slug: "5-strategies-reduce-commercial-property-tax"
-  },
-  // Add more blog post objects as needed
-];
+const fetchBlogPosts = async () => {
+  const response = await axios.get('/blog-posts.json');
+  return response.data;
+};
 
 const BlogPosts = () => {
+  const { data: blogPosts, isLoading, error } = useQuery({
+    queryKey: ['blogPosts'],
+    queryFn: fetchBlogPosts,
+  });
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error loading blog posts</div>;
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {blogPosts.map((post) => (
         <Card key={post.id} className="bg-white">
           <CardHeader>
+            <img src={post.imageUrl} alt={post.title} className="w-full h-48 object-cover mb-4 rounded-t-lg" />
             <CardTitle className="text-xl font-semibold text-[#0A2647]">
               <Link to={`/blog/${post.slug}`} className="hover:text-[#d7b971] transition-colors">
                 {post.title}
@@ -35,6 +33,14 @@ const BlogPosts = () => {
           <CardContent>
             <p className="text-gray-600 mb-4">{post.excerpt}</p>
             <p className="text-sm text-gray-500">{new Date(post.date).toLocaleDateString()}</p>
+            <a
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://insightpropertytax.com/blog/${post.slug}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 bg-[#0077B5] text-white px-4 py-2 rounded hover:bg-[#006097] transition-colors"
+            >
+              Share on LinkedIn
+            </a>
           </CardContent>
         </Card>
       ))}
