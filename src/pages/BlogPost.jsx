@@ -44,6 +44,7 @@ const BlogPost = () => {
       <main className="container mx-auto px-4 py-16 relative z-10">
         <article className="bg-white rounded-lg shadow-lg p-8 max-w-3xl mx-auto">
           <h1 className="text-4xl font-bold text-[#0A2647] mb-6">{post.title}</h1>
+          <p className="text-sm text-gray-500 mb-6">Published on {new Date(post.date).toLocaleDateString()}</p>
           {!imageError ? (
             <img 
               src={post.imageUrl} 
@@ -61,7 +62,6 @@ const BlogPost = () => {
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
           <div className="mt-12 pt-6 border-t border-gray-200">
-            <p className="text-sm text-gray-500">Published on {new Date(post.date).toLocaleDateString()}</p>
             <a
               href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://insightpropertytax.com/blog/${post.slug}`)}`}
               target="_blank"
