@@ -14,6 +14,8 @@ const LazyFAQ = lazy(() => import("./pages/FAQ"));
 const LazyContact = lazy(() => import("./pages/Contact"));
 const LazyResources = lazy(() => import("./pages/Resources"));
 const LazyWhyInsight = lazy(() => import("./pages/WhyInsight"));
+const LazyBlog = lazy(() => import("./pages/Blog"));
+const LazyBlogPost = lazy(() => import("./pages/BlogPost"));
 
 const NavigationWrapper = ({ children }) => {
   const navigate = useNavigate();
@@ -39,9 +41,6 @@ const NavigationWrapper = ({ children }) => {
   return React.cloneElement(children, { handleNavigation });
 };
 
-
-const LazyBlog = lazy(() => import("./pages/Blog"));
-
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -56,6 +55,7 @@ const App = () => (
               <Route path="/resources" element={<LazyResources />} />
               <Route path="/contact" element={<LazyContact />} />
               <Route path="/blog" element={<LazyBlog />} />
+              <Route path="/blog/:slug" element={<LazyBlogPost />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
