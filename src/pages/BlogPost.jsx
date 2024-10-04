@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
@@ -13,6 +13,7 @@ const fetchBlogPost = async (slug) => {
 
 const BlogPost = () => {
   const { slug } = useParams();
+  const [imageError, setImageError] = useState(false);
   const { data: post, isLoading, error } = useQuery({
     queryKey: ['blogPost', slug],
     queryFn: () => fetchBlogPost(slug),
@@ -22,9 +23,8 @@ const BlogPost = () => {
   if (error) return <div>Error loading blog post</div>;
 
   const handleImageError = (e) => {
-    console.error('Failed to load image:', e.target.src);
-    e.target.src = '/placeholder.svg'; // Fallback to a placeholder image
-    e.target.alt = 'Placeholder image';
+    console.error('Failed to load image:', post.imageUrl);
+    setImageError(true);
   };
 
   return (
@@ -38,12 +38,18 @@ const BlogPost = () => {
       <main className="container mx-auto px-4 py-16 relative z-10">
         <article className="bg-white rounded-lg shadow-lg p-8">
           <h1 className="text-4xl font-bold text-[#0A2647] mb-4">{post.title}</h1>
-          <img 
-            src={post.imageUrl} 
-            alt={post.title} 
-            className="w-full h-64 object-cover mb-6 rounded-lg" 
-            onError={handleImageError}
-          />
+          {!imageError ? (
+            <img 
+              src={post.imageUrl} 
+              alt={post.title} 
+              className="w-full h-64 object-cover mb-6 rounded-lg" 
+              onError={handleImageError}
+            />
+          ) : (
+            <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-6 rounded-lg">
+              <p>Image not available</p>
+            </div>
+          )}
           <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: post.content }} />
           <div className="mt-8">
             <p className="text-sm text-gray-500">Published on {new Date(post.date).toLocaleDateString()}</p>
