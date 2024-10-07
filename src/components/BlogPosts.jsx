@@ -18,6 +18,12 @@ const BlogPosts = () => {
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error loading blog posts</div>;
 
+  const shareOnLinkedIn = (slug) => {
+    const postUrl = `https://www.insightpropertytax.com/blog/${slug}`;
+    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`;
+    window.open(linkedInShareUrl, '_blank');
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {blogPosts.map((post) => (
@@ -33,14 +39,12 @@ const BlogPosts = () => {
           <CardContent>
             <p className="text-gray-600 mb-4">{post.excerpt}</p>
             <p className="text-sm text-gray-500">{new Date(post.date).toLocaleDateString()}</p>
-            <a
-              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://www.insightpropertytax.com/blog/${post.slug}`)}`}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => shareOnLinkedIn(post.slug)}
               className="inline-block mt-4 bg-[#0077B5] text-white px-4 py-2 rounded hover:bg-[#006097] transition-colors"
             >
               Share on LinkedIn
-            </a>
+            </button>
           </CardContent>
         </Card>
       ))}
