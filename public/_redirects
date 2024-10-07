@@ -1,12 +1,12 @@
 # Redirect HTTP to HTTPS for both www and non-www domains
-http://insightpropertytax.com/* https://insightpropertytax.com/:splat 301!
-http://www.insightpropertytax.com/* https://insightpropertytax.com/:splat 301!
+http://insightpropertytax.com/* https://www.insightpropertytax.com/:splat 301!
+http://www.insightpropertytax.com/* https://www.insightpropertytax.com/:splat 301!
 
-# Redirect www to non-www
-https://www.insightpropertytax.com/* https://insightpropertytax.com/:splat 301!
+# Redirect non-www to www (since www is the primary domain)
+https://insightpropertytax.com/* https://www.insightpropertytax.com/:splat 301!
 
 # Redirect Netlify subdomain to primary domain
-https://insightpropertytax.netlify.app/* https://insightpropertytax.com/:splat 301!
+https://insightpropertytax.netlify.app/* https://www.insightpropertytax.com/:splat 301!
 
 # SPA fallback
 /*    /index.html   200
