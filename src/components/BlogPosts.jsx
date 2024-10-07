@@ -34,7 +34,7 @@ const BlogPosts = () => {
             <p className="text-gray-600 mb-4">{post.excerpt}</p>
             <p className="text-sm text-gray-500">{new Date(post.date).toLocaleDateString()}</p>
             <a
-              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://insightpropertytax.com/blog/${post.slug}`)}`}
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://www.insightpropertytax.com/blog/${post.slug}`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block mt-4 bg-[#0077B5] text-white px-4 py-2 rounded hover:bg-[#006097] transition-colors"

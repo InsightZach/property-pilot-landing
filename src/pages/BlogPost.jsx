@@ -34,7 +34,7 @@ const BlogPost = () => {
   };
 
   const shareOnLinkedIn = () => {
-    const postUrl = `https://insightpropertytax.com/blog/${slug}`;
+    const postUrl = `https://www.insightpropertytax.com/blog/${slug}`;
     const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`;
     window.open(linkedInShareUrl, '_blank');
   };
@@ -46,8 +46,8 @@ const BlogPost = () => {
         <meta name="description" content={post.excerpt} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={`https://insightpropertytax.com${post.imageUrl}`} />
-        <meta property="og:url" content={`https://insightpropertytax.com/blog/${slug}`} />
+        <meta property="og:image" content={`https://www.insightpropertytax.com${post.imageUrl}`} />
+        <meta property="og:url" content={`https://www.insightpropertytax.com/blog/${slug}`} />
         <meta property="og:type" content="article" />
       </Helmet>
       <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
