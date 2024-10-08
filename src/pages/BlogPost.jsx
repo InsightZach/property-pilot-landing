@@ -31,13 +31,15 @@ const BlogPost = () => {
   if (error) return <div>Error loading blog post</div>;
 
   const handleImageError = (e) => {
-    console.error('Failed to load image:', post.imageUrl);
+    console.log('Failed to load image:', post.imageUrl);
     setImageError(true);
   };
 
   const shareOnLinkedIn = () => {
     const postUrl = `${window.location.origin}/blog/${slug}`;
-    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`;
+    const title = encodeURIComponent(post.title);
+    const summary = encodeURIComponent(post.excerpt);
+    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}&title=${title}&summary=${summary}`;
     window.open(linkedInShareUrl, '_blank');
   };
 
