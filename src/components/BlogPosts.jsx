@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
+import { Linkedin } from 'lucide-react';
 
 const fetchBlogPosts = async () => {
   const response = await axios.get('/blog-posts.json');
@@ -39,12 +41,12 @@ const BlogPosts = () => {
           <CardContent>
             <p className="text-gray-600 mb-4">{post.excerpt}</p>
             <p className="text-sm text-gray-500">{new Date(post.date).toLocaleDateString()}</p>
-            <button
+            <Button
               onClick={() => shareOnLinkedIn(post.slug)}
-              className="inline-block mt-4 bg-[#0077B5] text-white px-4 py-2 rounded hover:bg-[#006097] transition-colors"
+              className="inline-flex items-center mt-4 bg-[#0077B5] text-white px-4 py-2 rounded hover:bg-[#006097] transition-colors"
             >
-              Share on LinkedIn
-            </button>
+              <Linkedin className="mr-2 h-4 w-4" /> Share on LinkedIn
+            </Button>
           </CardContent>
         </Card>
       ))}

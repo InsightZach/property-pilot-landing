@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Helmet } from 'react-helmet';
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, Linkedin } from 'lucide-react';
 
 const fetchBlogPost = async (slug) => {
   const response = await axios.get(`/blog-posts/${slug}.json`);
@@ -53,6 +55,9 @@ const BlogPost = () => {
       <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
       <Header />
       <main className="container mx-auto px-4 py-16 relative z-10">
+        <Link to="/blog" className="inline-flex items-center text-white hover:text-[#d7b971] mb-6">
+          <ArrowLeft className="mr-2" /> Back to Blog
+        </Link>
         <article className="bg-white rounded-lg shadow-lg p-8 max-w-3xl mx-auto">
           <h1 className="text-4xl font-bold text-[#0A2647] mb-6">{post.title}</h1>
           <p className="text-sm text-gray-500 mb-6">Published on {new Date(post.date).toLocaleDateString()}</p>
@@ -73,12 +78,12 @@ const BlogPost = () => {
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
           <div className="mt-12 pt-6 border-t border-gray-200">
-            <button
+            <Button
               onClick={shareOnLinkedIn}
-              className="inline-block mt-4 bg-[#0077B5] text-white px-4 py-2 rounded hover:bg-[#006097] transition-colors"
+              className="inline-flex items-center bg-[#0077B5] text-white px-4 py-2 rounded hover:bg-[#006097] transition-colors"
             >
-              Share on LinkedIn
-            </button>
+              <Linkedin className="mr-2 h-4 w-4" /> Share on LinkedIn
+            </Button>
           </div>
         </article>
       </main>
