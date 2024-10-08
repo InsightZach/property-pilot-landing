@@ -37,12 +37,11 @@ const BlogPost = () => {
 
   const shareOnLinkedIn = () => {
     const postUrl = `${window.location.origin}/blog/${slug}`;
-    const title = encodeURIComponent(post.title);
-    const summary = encodeURIComponent(post.excerpt);
-    const source = encodeURIComponent('Insight Property Tax');
-    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}&title=${title}&summary=${summary}&source=${source}`;
+    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`;
     window.open(linkedInShareUrl, '_blank');
   };
+
+  const fullImageUrl = `${window.location.origin}${post.imageUrl}`;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] relative">
@@ -51,9 +50,13 @@ const BlogPost = () => {
         <meta name="description" content={post.excerpt} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={`${window.location.origin}${post.imageUrl}`} />
+        <meta property="og:image" content={fullImageUrl} />
         <meta property="og:url" content={`${window.location.origin}/blog/${slug}`} />
         <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.excerpt} />
+        <meta name="twitter:image" content={fullImageUrl} />
       </Helmet>
       <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
       <Header />
