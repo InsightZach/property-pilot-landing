@@ -128,7 +128,7 @@ const Index = () => {
     <div className="min-h-screen bg-gray-100">
       <Helmet>
         <title>Minnesota Property Tax Appeals | Insight Property Tax</title>
-        <meta name="description" content="Maximize your savings on commercial, industrial, and apartment property taxes in Minnesota with Insight Property Tax. Expert appeals and proven results for tax reduction across the Twin Cities and Greater Minnesota." />
+        <meta name="description" content="Maximize your commercial, industrial, and apartment property profits in Minnesota through our proven assessment appeal system. Serving the Twin Cities metro area and Greater Minnesota." />
         <link rel="canonical" href="https://insightpropertytax.com" />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
@@ -139,7 +139,7 @@ const Index = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-2xl">
               <h1 className="text-5xl font-bold mb-6">Minnesota Property Tax Appeal Experts</h1>
-              <p className="text-xl mb-8">Maximize your savings on commercial, industrial, and apartment property taxes in Minnesota with our expert appeal services. Serving the Twin Cities metro area and Greater Minnesota.</p>
+              <p className="text-xl mb-8">Maximize your commercial, industrial, and apartment property profits in Minnesota through our proven assessment appeal system. Serving the Twin Cities metro area and Greater Minnesota.</p>
               <Link to="/contact">
                 <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
                   Start Your Minnesota Property Tax Appeal <ArrowRight className="ml-2 h-6 w-6" />
