@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
@@ -21,19 +21,10 @@ const BlogPost = () => {
     queryFn: () => fetchBlogPost(slug),
   });
 
-  useEffect(() => {
-    if (post) {
-      console.log('Attempting to load image:', post.imageUrl);
-    }
-  }, [post]);
-
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error loading blog post</div>;
 
-  const handleImageError = (e) => {
-    console.log('Failed to load image:', post.imageUrl);
-    setImageError(true);
-  };
+  const handleImageError = () => setImageError(true);
 
   const shareOnLinkedIn = () => {
     const postUrl = `${window.location.origin}/blog/${slug}`;
@@ -46,8 +37,11 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] relative">
       <Helmet>
-        <title>{post.title} | Insight Property Tax</title>
+        <title>{`${post.title} | Insight Property Tax`}</title>
         <meta name="description" content={post.excerpt} />
+        <meta name="author" content="Zach Hepburn" />
+        <meta name="keywords" content="property tax appeals, Minnesota, commercial property, industrial property, apartment property, tax reduction, Insight Property Tax" />
+        <meta name="robots" content="index, follow" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={fullImageUrl} />
@@ -57,6 +51,7 @@ const BlogPost = () => {
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.excerpt} />
         <meta name="twitter:image" content={fullImageUrl} />
+        <link rel="canonical" href={`${window.location.origin}/blog/${slug}`} />
       </Helmet>
       <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
       <Header />
