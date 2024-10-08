@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 import { CheckCircle } from 'lucide-react';
 
 const FAQItem = ({ question, answer }) => (
-const FAQItem = ({ question, answer }) => (
   <AccordionItem value={question} className="mb-4">
     <AccordionTrigger className="text-left px-4 py-2">{question}</AccordionTrigger>
     <AccordionContent className="px-4 py-2">{answer}</AccordionContent>
@@ -14,12 +13,10 @@ const FAQItem = ({ question, answer }) => (
 );
 
 const StatItem = ({ value, label }) => (
-const StatItem = ({ value, label }) => (
   <div className="bg-white p-4 rounded-lg text-center">
     <p className="text-2xl font-bold text-[#0A2647]">{value}</p>
     <p className="text-sm text-gray-600">{label}</p>
   </div>
-);
 );
 
 const FAQ = () => {
