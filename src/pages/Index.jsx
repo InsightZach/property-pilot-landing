@@ -29,10 +29,10 @@ const AboutInsightSection = () => (
   <section className="py-16 bg-gradient-to-br from-[#0A2647] to-[#2E5077] text-white relative overflow-hidden">
     <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
     <div className="container mx-auto px-4 relative z-10">
-      <h2 className="text-3xl font-semibold text-center mb-8 text-white">About Insight Property Tax</h2>
+      <h2 className="text-3xl font-semibold text-center mb-8 text-white">Expert Minnesota Property Tax Appeals</h2>
       <div className="mb-8">
-        <p className="text-lg mb-4">Insight Property Tax reduces assessment values for Minnesota commercial property owners and tenants, saving our clients tens of thousands on property taxes.</p>
-        <p className="text-lg mb-4">Our local expertise gives clients direct access to a proven system that identifies over-assessments and consistently delivers successful property tax appeal settlements.</p>
+        <p className="text-lg mb-4">Insight Property Tax specializes in reducing assessment values for Minnesota commercial, industrial, and apartment property owners and tenants, saving our clients significant amounts on property taxes.</p>
+        <p className="text-lg mb-4">Our local expertise in Minnesota property tax laws gives clients direct access to a proven system that identifies over-assessments and consistently delivers successful property tax appeal settlements.</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <AppealStatistics />
@@ -46,11 +46,11 @@ const WhoWeWorkWith = () => (
   <section className="py-16 bg-gradient-to-br from-[#0A2647] to-[#2E5077] text-white relative overflow-hidden">
     <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
     <div className="container mx-auto px-4 relative z-10">
-      <h2 className="text-3xl font-semibold text-center mb-8 text-white">Who We Work With</h2>
+      <h2 className="text-3xl font-semibold text-center mb-8 text-white">Minnesota Property Tax Appeal Services</h2>
       <div className="text-left mb-8">
-        <p className="text-lg mb-4">We provide property tax appeal services for commercial, industrial, and apartment property owners and tenants across the Minneapolis-St. Paul metro area.</p>
-        <p className="text-lg mb-4">If you believe your property is over-assessed, your tax burden is too high, or you're unsure if your property is fairly assessed, we offer free assessment reviews to identify potential savings.</p>
-        <p className="text-lg mb-4">Insight Property Tax makes it easy to reduce costs and maximize your profits with our straightforward appeal process.</p>
+        <p className="text-lg mb-4">We provide expert property tax appeal services for commercial, industrial, and apartment property owners and tenants across the Minneapolis-St. Paul metro area and throughout Minnesota.</p>
+        <p className="text-lg mb-4">If you believe your property is over-assessed, your tax burden is too high, or you're unsure if your property is fairly assessed, we offer free assessment reviews to identify potential property tax savings.</p>
+        <p className="text-lg mb-4">Insight Property Tax makes it easy to reduce property tax costs and maximize your profits with our straightforward Minnesota property tax appeal process.</p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {['Commercial', 'Industrial', 'Apartments', 'Minnesota'].map((type) => (
@@ -128,7 +128,7 @@ const Index = () => {
     <div className="min-h-screen bg-gray-100">
       <Helmet>
         <title>Insight Property Tax - Expert Minnesota Property Tax Appeals</title>
-        <meta name="description" content="Maximize your savings on commercial, industrial, and apartment property taxes in Minnesota with Insight Property Tax. Expert appeals and proven results." />
+        <meta name="description" content="Maximize your savings on commercial, industrial, and apartment property taxes in Minnesota with Insight Property Tax. Expert property tax appeals and proven results for tax reduction." />
         <link rel="canonical" href="https://insightpropertytax.com" />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
@@ -138,11 +138,11 @@ const Index = () => {
           <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-2xl">
-              <h1 className="text-5xl font-bold mb-6">Expert Property Tax Appeals in Minnesota</h1>
-              <p className="text-xl mb-8">Maximize your savings on commercial, industrial, and apartment property taxes with Insight Property Tax.</p>
+              <h1 className="text-5xl font-bold mb-6">Minnesota Property Tax Appeals Experts</h1>
+              <p className="text-xl mb-8">Maximize your savings on commercial, industrial, and apartment property taxes with Insight Property Tax's expert appeal services in Minnesota.</p>
               <Link to="/contact">
                 <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
-                  Get Started <ArrowRight className="ml-2 h-6 w-6" />
+                  Start Your Property Tax Appeal <ArrowRight className="ml-2 h-6 w-6" />
                 </Button>
               </Link>
             </div>
@@ -150,11 +150,11 @@ const Index = () => {
         </section>
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-semibold text-center mb-12 text-[#0A2647]">Why Choose Insight Property Tax?</h2>
+            <h2 className="text-3xl font-semibold text-center mb-12 text-[#0A2647]">Why Choose Insight Property Tax for Your Minnesota Appeal?</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <StatCard icon={DollarSign} title="Risk-Free Service" description="You pay only if we successfully reduce your property taxes." />
-              <StatCard icon={CheckCircle} title="Minnesota Expertise" description="Hundreds of settled appeals from local professionals with appraisal and assessment backgrounds." />
-              <StatCard icon={LineChart} title="Advanced Analytics" description="Data-driven strategies to maximize your savings." />
+              <StatCard icon={DollarSign} title="Risk-Free Property Tax Appeals" description="You pay only if we successfully reduce your Minnesota property taxes." />
+              <StatCard icon={CheckCircle} title="Minnesota Property Tax Expertise" description="Hundreds of settled appeals from local professionals with appraisal and assessment backgrounds." />
+              <StatCard icon={LineChart} title="Advanced Tax Appeal Analytics" description="Data-driven strategies to maximize your property tax savings in Minnesota." />
             </div>
           </div>
         </section>
