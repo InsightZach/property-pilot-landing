@@ -21,7 +21,7 @@ const BlogPosts = () => {
   if (error) return <div>Error loading blog posts</div>;
 
   const shareOnLinkedIn = (slug) => {
-    const postUrl = `${window.location.origin}/blog/${slug}`;
+    const postUrl = `https://www.insightpropertytax.com/blog/${slug}`;
     const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`;
     window.open(linkedInShareUrl, '_blank');
   };
