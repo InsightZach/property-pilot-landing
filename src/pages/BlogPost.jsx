@@ -39,7 +39,8 @@ const BlogPost = () => {
     const postUrl = `${window.location.origin}/blog/${slug}`;
     const title = encodeURIComponent(post.title);
     const summary = encodeURIComponent(post.excerpt);
-    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}&title=${title}&summary=${summary}`;
+    const source = encodeURIComponent('Insight Property Tax');
+    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}&title=${title}&summary=${summary}&source=${source}`;
     window.open(linkedInShareUrl, '_blank');
   };
 
