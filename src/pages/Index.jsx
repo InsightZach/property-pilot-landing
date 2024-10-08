@@ -138,7 +138,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-2xl">
-              <h1 className="text-5xl font-bold mb-6">Minnesota Property Tax Appeals Experts</h1>
+              <h1 className="text-5xl font-bold mb-6">Minnesota Property Tax Appeal Experts</h1>
               <p className="text-xl mb-8">Maximize your savings on commercial, industrial, and apartment property taxes in Minnesota with our expert appeal services. Serving the Twin Cities metro area and Greater Minnesota.</p>
               <Link to="/contact">
                 <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
