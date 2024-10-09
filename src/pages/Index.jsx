@@ -11,6 +11,7 @@ import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import ProcessSection from '../components/ProcessSection';
 import MeetTheOwner from '../components/MeetTheOwner';
 import CallToAction from '../components/CallToAction';
+import AppealStatsInfographic from '../components/AppealStatsInfographic';
 
 const Index = () => {
   const schemaData = {
@@ -99,36 +100,44 @@ const HeroSection = () => (
   <section className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white py-20 relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A2647] opacity-70"></div>
     <div className="container mx-auto px-4 relative z-10">
-      <div className="max-w-2xl">
-        <h1 className="text-5xl font-bold mb-6 text-white">
-          Save <span className="text-[#d7b971]">Tens of Thousands</span> on Your Minnesota Property Taxes
-        </h1>
-        <p className="text-xl mb-4 text-white">
-          Expert commercial, industrial, and apartment property tax appeals.
-        </p>
-        <ul className="mb-8 space-y-2">
-          <li className="flex items-center">
-            <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
-            <span>You pay $0 upfront</span>
-          </li>
-          <li className="flex items-center">
-            <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
-            <span>Our fee is 30% of tax savings</span>
-          </li>
-          <li className="flex items-center">
-            <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
-            <span>You pocket the rest</span>
-          </li>
-          <li className="flex items-center">
-            <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
-            <span>We handle everything</span>
-          </li>
-        </ul>
-        <Link to="/contact">
-          <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300">
-            Start My Free Assessment Review <ArrowRight className="ml-2 h-6 w-6" />
-          </Button>
-        </Link>
+      <div className="flex flex-col md:flex-row items-center justify-between">
+        <div className="md:w-1/2 mb-8 md:mb-0">
+          <h1 className="text-5xl font-bold mb-6 text-white">
+            Save <span className="text-[#d7b971]">Tens of Thousands</span> on Your Minnesota Property Taxes
+          </h1>
+          <p className="text-xl mb-4 text-white">
+            Expert commercial, industrial, and apartment property tax appeals.
+          </p>
+          <ul className="mb-8 space-y-2">
+            <li className="flex items-center">
+              <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
+              <span>You pay $0 upfront</span>
+            </li>
+            <li className="flex items-center">
+              <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
+              <span>Our fee is 30% of tax savings</span>
+            </li>
+            <li className="flex items-center">
+              <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
+              <span>You pocket the rest</span>
+            </li>
+            <li className="flex items-center">
+              <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
+              <span>We handle everything</span>
+            </li>
+          </ul>
+          <Link to="/contact">
+            <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300">
+              Start My Free Assessment Review <ArrowRight className="ml-2 h-6 w-6" />
+            </Button>
+          </Link>
+        </div>
+        <div className="md:w-1/2 md:pl-8">
+          <div className="bg-white/5 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+            <h2 className="text-2xl font-semibold mb-4 text-center text-[#d7b971]">Insight's 2024 Appeal Statistics</h2>
+            <AppealStatsInfographic />
+          </div>
+        </div>
       </div>
     </div>
   </section>
