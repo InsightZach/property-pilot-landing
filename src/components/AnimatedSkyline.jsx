@@ -14,7 +14,7 @@ const AnimatedSkyline = () => {
       <rect width="100%" height="100%" fill="url(#skyGradient)" />
       
       {/* Stars */}
-      {[...Array(50)].map((_, i) => (
+      {[...Array(100)].map((_, i) => (
         <circle
           key={i}
           cx={Math.random() * 1440}
@@ -33,30 +33,44 @@ const AnimatedSkyline = () => {
         </circle>
       ))}
       
-      {/* Buildings */}
+      {/* Minneapolis Skyline */}
       <g className="buildings">
-        <rect x="100" y="300" width="100" height="500" fill="#0E3A5D" />
-        <rect x="220" y="400" width="80" height="400" fill="#0C2D4A" />
-        <rect x="320" y="350" width="120" height="450" fill="#0E3A5D" />
-        <rect x="460" y="450" width="90" height="350" fill="#0C2D4A" />
-        <rect x="570" y="380" width="110" height="420" fill="#0E3A5D" />
-        <rect x="700" y="420" width="70" height="380" fill="#0C2D4A" />
-        <rect x="790" y="350" width="130" height="450" fill="#0E3A5D" />
-        <rect x="940" y="400" width="100" height="400" fill="#0C2D4A" />
-        <rect x="1060" y="380" width="90" height="420" fill="#0E3A5D" />
-        <rect x="1170" y="450" width="120" height="350" fill="#0C2D4A" />
-        <rect x="1310" y="400" width="80" height="400" fill="#0E3A5D" />
+        {/* IDS Center */}
+        <rect x="400" y="200" width="80" height="600" fill="#0E3A5D" />
+        <polygon points="400,200 440,100 480,200" fill="#0E3A5D" />
+        
+        {/* Capella Tower */}
+        <rect x="520" y="250" width="70" height="550" fill="#0C2D4A" />
+        <polygon points="520,250 555,180 590,250" fill="#0C2D4A" />
+        
+        {/* Wells Fargo Center */}
+        <rect x="640" y="280" width="90" height="520" fill="#0E3A5D" />
+        <polygon points="640,280 685,220 730,280" fill="#0E3A5D" />
+        
+        {/* 225 South Sixth */}
+        <rect x="780" y="300" width="100" height="500" fill="#0C2D4A" />
+        <rect x="805" y="250" width="50" height="50" fill="#0C2D4A" />
+        
+        {/* US Bank Plaza */}
+        <rect x="930" y="350" width="70" height="450" fill="#0E3A5D" />
+        
+        {/* Campbell Mithun Tower */}
+        <rect x="1050" y="380" width="60" height="420" fill="#0C2D4A" />
+        
+        {/* Foshay Tower */}
+        <rect x="1160" y="400" width="40" height="400" fill="#0E3A5D" />
+        <polygon points="1160,400 1180,380 1200,400" fill="#0E3A5D" />
       </g>
       
       {/* Animated windows */}
       <g className="windows">
-        {[...Array(50)].map((_, i) => (
+        {[...Array(100)].map((_, i) => (
           <rect
             key={i}
-            x={100 + Math.random() * 1240}
-            y={350 + Math.random() * 400}
-            width="10"
-            height="10"
+            x={350 + Math.random() * 900}
+            y={250 + Math.random() * 500}
+            width="5"
+            height="5"
             fill="#D4AF37"
             opacity="0"
           >
@@ -73,13 +87,13 @@ const AnimatedSkyline = () => {
       
       {/* Animated car */}
       <g className="car">
-        <rect x="-50" y="750" width="40" height="20" fill="#D4AF37">
+        <rect x="-50" y="750" width="30" height="15" fill="#D4AF37">
           <animateTransform
             attributeName="transform"
             type="translate"
             from="-50 0"
             to="1490 0"
-            dur="10s"
+            dur="15s"
             repeatCount="indefinite"
           />
         </rect>

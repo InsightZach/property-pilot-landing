@@ -97,10 +97,10 @@ const Index = () => {
 };
 
 const HeroSection = () => (
-  <section className="relative h-screen overflow-hidden">
+  <section className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white py-20 relative overflow-hidden">
     <AnimatedSkyline />
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A2647] opacity-70"></div>
-    <div className="container mx-auto px-4 h-full flex items-center relative z-10">
+    <div className="container mx-auto px-4 relative z-10">
       <div className="max-w-2xl">
         <h1 className="text-5xl font-bold mb-6 text-white">
           Maximize Your Savings on Minnesota Commercial Property Taxes
