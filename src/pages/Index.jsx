@@ -97,18 +97,18 @@ const Index = () => {
 };
 
 const HeroSection = () => (
-  <section className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white py-20 relative overflow-hidden">
+  <section className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white py-12 md:py-20 relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A2647] opacity-70"></div>
     <div className="container mx-auto px-4 relative z-10">
       <div className="flex flex-col md:flex-row items-center justify-between">
-        <div className="md:w-1/2 mb-8 md:mb-0">
-          <h1 className="text-5xl font-bold mb-6 text-white">
+        <div className="w-full md:w-1/2 mb-8 md:mb-0">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-white">
             Save <span className="text-[#d7b971]">Tens of Thousands</span> on Your Minnesota Property Taxes
           </h1>
-          <p className="text-xl mb-4 text-white">
+          <p className="text-lg md:text-xl mb-4 text-white">
             Expert commercial, industrial, and apartment property tax appeals.
           </p>
-          <ul className="mb-8 space-y-2">
+          <ul className="mb-6 md:mb-8 space-y-2">
             <li className="flex items-center">
               <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
               <span>You pay $0 upfront</span>
@@ -126,15 +126,15 @@ const HeroSection = () => (
               <span>We handle everything</span>
             </li>
           </ul>
-          <Link to="/contact">
-            <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300">
+          <Link to="/contact" className="block w-full md:w-auto">
+            <Button size="lg" className="w-full md:w-auto bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300">
               Start My Free Assessment Review <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
           </Link>
         </div>
-        <div className="md:w-1/2 md:pl-8">
-          <div className="bg-white/5 backdrop-blur-sm p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold mb-4 text-center text-[#d7b971]">Insight's 2024 Appeal Statistics</h2>
+        <div className="w-full md:w-1/2 md:pl-8 mt-8 md:mt-0">
+          <div className="bg-white/5 backdrop-blur-sm p-4 md:p-6 rounded-lg shadow-lg">
+            <h2 className="text-xl md:text-2xl font-semibold mb-4 text-center text-[#d7b971]">Insight's 2024 Appeal Statistics</h2>
             <AppealStatsInfographic />
           </div>
         </div>
@@ -144,10 +144,10 @@ const HeroSection = () => (
 );
 
 const ExpertiseSection = () => (
-  <section className="py-16 bg-white">
+  <section className="py-12 md:py-16 bg-white">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Expert Minnesota Property Tax Appeals for Commercial, Industrial, and Apartment Properties</h2>
-      <div className="text-lg text-gray-700 space-y-4">
+      <h2 className="text-2xl md:text-3xl font-semibold text-center mb-6 md:mb-8 text-[#0A2647]">Expert Minnesota Property Tax Appeals for Commercial, Industrial, and Apartment Properties</h2>
+      <div className="text-base md:text-lg text-gray-700 space-y-4">
         <p>At Insight Property Tax, we help commercial, industrial, and apartment property owners and tenants across Minnesota reduce their property tax burden through strategic appeals. Our proven methods focus on lowering over-assessed property values, resulting in substantial tax savings for our clients.</p>
         <p>With deep knowledge of Minnesota property tax laws and decades of experience, we provide clients with a streamlined, results-driven process. From identifying tax over-assessments to negotiating successful appeal outcomes, we deliver consistent results and maximize savings for properties throughout the state.</p>
       </div>
