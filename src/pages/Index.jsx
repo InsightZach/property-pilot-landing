@@ -101,7 +101,7 @@ const HeroSection = () => (
     <div className="container mx-auto px-4 relative z-10">
       <div className="max-w-2xl">
         <h1 className="text-5xl font-bold mb-6 text-white">
-          Save Tens of Thousands on Your Minnesota Property Taxes
+          Save <span className="text-[#d7b971]">Tens of Thousands</span> on Your Minnesota Property Taxes
         </h1>
         <p className="text-xl mb-8 text-white">
           Pay nothing upfront – expert tax appeals for commercial, industrial, and apartment properties. Results-based fees only.
