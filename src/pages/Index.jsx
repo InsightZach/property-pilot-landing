@@ -154,12 +154,10 @@ const ExpertiseSection = () => (
           <Building className="text-[#d7b971] mr-2" />
           <span className="text-lg font-medium">Commercial</span>
         </div>
-        <span className="text-[#d7b971] text-2xl">•</span>
         <div className="flex items-center">
           <Factory className="text-[#d7b971] mr-2" />
           <span className="text-lg font-medium">Industrial</span>
         </div>
-        <span className="text-[#d7b971] text-2xl">•</span>
         <div className="flex items-center">
           <Home className="text-[#d7b971] mr-2" />
           <span className="text-lg font-medium">Apartment</span>
