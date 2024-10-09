@@ -104,7 +104,7 @@ const HeroSection = () => (
           Save <span className="text-[#d7b971]">Tens of Thousands</span> on Your Minnesota Property Taxes
         </h1>
         <p className="text-xl mb-8 text-white">
-          Pay nothing upfront – expert tax appeals for commercial, industrial, and apartment properties. Results-based fees only.
+          Expert property tax appeals for commercial, industrial, and apartment properties. Pay nothing unless your assessment value is reduced.
         </p>
         <Link to="/contact">
           <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300">
