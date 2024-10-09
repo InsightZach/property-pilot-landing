@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -103,9 +103,27 @@ const HeroSection = () => (
         <h1 className="text-5xl font-bold mb-6 text-white">
           Save <span className="text-[#d7b971]">Tens of Thousands</span> on Your Minnesota Property Taxes
         </h1>
-        <p className="text-xl mb-8 text-white">
-          Expert property tax appeals for commercial, industrial, and apartment properties. Pay nothing unless your assessment value is reduced.
+        <p className="text-xl mb-4 text-white">
+          Expert commercial, industrial, and apartment property tax appeals.
         </p>
+        <ul className="mb-8 space-y-2">
+          <li className="flex items-center">
+            <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
+            <span>You pay $0 upfront</span>
+          </li>
+          <li className="flex items-center">
+            <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
+            <span>Our fee is 30% of tax savings</span>
+          </li>
+          <li className="flex items-center">
+            <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
+            <span>You pocket the rest</span>
+          </li>
+          <li className="flex items-center">
+            <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
+            <span>We handle everything</span>
+          </li>
+        </ul>
         <Link to="/contact">
           <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300">
             Start My Free Assessment Review <ArrowRight className="ml-2 h-6 w-6" />
