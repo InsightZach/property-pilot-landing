@@ -11,7 +11,6 @@ import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import ProcessSection from '../components/ProcessSection';
 import MeetTheOwner from '../components/MeetTheOwner';
 import CallToAction from '../components/CallToAction';
-import AnimatedSkyline from '../components/AnimatedSkyline';
 
 const Index = () => {
   const schemaData = {
@@ -98,19 +97,18 @@ const Index = () => {
 
 const HeroSection = () => (
   <section className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white py-20 relative overflow-hidden">
-    <AnimatedSkyline />
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A2647] opacity-70"></div>
     <div className="container mx-auto px-4 relative z-10">
       <div className="max-w-2xl">
         <h1 className="text-5xl font-bold mb-6 text-white">
-          Maximize Your Savings on Minnesota Commercial Property Taxes
+          Save Tens of Thousands on Your Minnesota Property Taxes
         </h1>
         <p className="text-xl mb-8 text-white">
-          Expert tax appeals for commercial, industrial, and apartment properties. No upfront fees – we only get paid when you save.
+          Pay nothing upfront – expert tax appeals for commercial, industrial, and apartment properties. Results-based fees only.
         </p>
         <Link to="/contact">
           <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300">
-            Start Your Free Assessment <ArrowRight className="ml-2 h-6 w-6" />
+            Start My Free Assessment Review <ArrowRight className="ml-2 h-6 w-6" />
           </Button>
         </Link>
       </div>
