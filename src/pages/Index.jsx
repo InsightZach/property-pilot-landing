@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, Building, Factory, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -146,10 +146,32 @@ const HeroSection = () => (
 const ExpertiseSection = () => (
   <section className="py-12 md:py-16 bg-white">
     <div className="container mx-auto px-4">
-      <h2 className="text-2xl md:text-3xl font-semibold text-center mb-6 md:mb-8 text-[#0A2647]">Expert Minnesota Property Tax Appeals for Commercial, Industrial, and Apartment Properties</h2>
-      <div className="text-base md:text-lg text-gray-700 space-y-4">
-        <p>At Insight Property Tax, we help commercial, industrial, and apartment property owners and tenants across Minnesota reduce their property tax burden through strategic appeals. Our proven methods focus on lowering over-assessed property values, resulting in substantial tax savings for our clients.</p>
-        <p>With deep knowledge of Minnesota property tax laws and decades of experience, we provide clients with a streamlined, results-driven process. From identifying tax over-assessments to negotiating successful appeal outcomes, we deliver consistent results and maximize savings for properties throughout the state.</p>
+      <h2 className="text-2xl md:text-3xl font-semibold text-center mb-2 text-[#0A2647]">
+        Expert Minnesota Property Tax Appeals
+      </h2>
+      <div className="flex justify-center items-center space-x-4 mb-8">
+        <div className="flex items-center">
+          <Building className="text-[#d7b971] mr-2" />
+          <span className="text-lg font-medium">Commercial</span>
+        </div>
+        <span className="text-[#d7b971] text-2xl">•</span>
+        <div className="flex items-center">
+          <Factory className="text-[#d7b971] mr-2" />
+          <span className="text-lg font-medium">Industrial</span>
+        </div>
+        <span className="text-[#d7b971] text-2xl">•</span>
+        <div className="flex items-center">
+          <Home className="text-[#d7b971] mr-2" />
+          <span className="text-lg font-medium">Apartment</span>
+        </div>
+      </div>
+      <div className="md:flex md:space-x-8">
+        <div className="md:w-1/2 text-base md:text-lg text-gray-700 space-y-4 mb-4 md:mb-0">
+          <p>At Insight Property Tax, we help commercial, industrial, and apartment property owners and tenants across Minnesota reduce their property tax burden through strategic appeals. Our proven methods focus on lowering over-assessed property values, resulting in substantial tax savings for our clients.</p>
+        </div>
+        <div className="md:w-1/2 text-base md:text-lg text-gray-700 space-y-4">
+          <p>With deep knowledge of Minnesota property tax laws and decades of experience, we provide clients with a streamlined, results-driven process. From identifying tax over-assessments to negotiating successful appeal outcomes, we deliver consistent results and maximize savings for properties throughout the state.</p>
+        </div>
       </div>
     </div>
   </section>
