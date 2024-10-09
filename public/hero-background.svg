@@ -1,17 +1,25 @@
 <svg width="1440" height="800" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="1440" height="800" fill="#0A2647"/>
-  <rect width="1440" height="800" fill="url(#paint0_radial)" fill-opacity="0.4"/>
-  <path d="M0 400C0 179.086 179.086 0 400 0H1440V800H400C179.086 800 0 620.914 0 400Z" fill="#091E38"/>
-  <circle cx="720" cy="400" r="300" fill="#0D2F5A"/>
-  <path d="M1440 0H1040C819.086 0 640 179.086 640 400C640 620.914 819.086 800 1040 800H1440V0Z" fill="#061425" fill-opacity="0.5"/>
+  <g transform="translate(920, 400) scale(1.5)">
+    <circle cx="0" cy="0" r="4" fill="#D4AF37"/>
+    <circle cx="70" cy="0" r="8" fill="#D4AF37"/>
+    <circle cx="130" cy="30" r="12" fill="#D4AF37"/>
+    <circle cx="170" cy="90" r="16" fill="#D4AF37"/>
+    <circle cx="190" cy="160" r="20" fill="#D4AF37"/>
+    <circle cx="170" cy="230" r="16" fill="#D4AF37"/>
+    <circle cx="130" cy="290" r="12" fill="#D4AF37"/>
+    <circle cx="70" cy="320" r="8" fill="#D4AF37"/>
+    <circle cx="0" cy="320" r="4" fill="#D4AF37"/>
+    <circle cx="-70" cy="320" r="8" fill="#D4AF37"/>
+    <circle cx="-130" cy="290" r="12" fill="#D4AF37"/>
+    <circle cx="-170" cy="230" r="16" fill="#D4AF37"/>
+    <circle cx="-190" cy="160" r="20" fill="#D4AF37"/>
+    <circle cx="-170" cy="90" r="16" fill="#D4AF37"/>
+    <circle cx="-130" cy="30" r="12" fill="#D4AF37"/>
+    <circle cx="-70" cy="0" r="8" fill="#D4AF37"/>
+  </g>
   <rect x="100" y="100" width="200" height="3" rx="1.5" fill="#D4AF37" fill-opacity="0.6"/>
   <rect x="100" y="120" width="150" height="3" rx="1.5" fill="#D4AF37" fill-opacity="0.6"/>
-  <rect x="1140" y="680" width="200" height="3" rx="1.5" fill="#D4AF37" fill-opacity="0.6"/>
-  <rect x="1190" y="700" width="150" height="3" rx="1.5" fill="#D4AF37" fill-opacity="0.6"/>
-  <defs>
-    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(720 400) rotate(90) scale(400 720)">
-      <stop stop-color="#D4AF37" stop-opacity="0.2"/>
-      <stop offset="1" stop-color="#0A2647" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
+  <rect x="100" y="680" width="200" height="3" rx="1.5" fill="#D4AF37" fill-opacity="0.6"/>
+  <rect x="100" y="700" width="150" height="3" rx="1.5" fill="#D4AF37" fill-opacity="0.6"/>
 </svg>
