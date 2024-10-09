@@ -12,7 +12,6 @@ import ProcessSection from '../components/ProcessSection';
 import MeetTheOwner from '../components/MeetTheOwner';
 import CallToAction from '../components/CallToAction';
 import AnimatedSkyline from '../components/AnimatedSkyline';
-import ImageMosaic from '../components/ImageMosaic';
 
 const Index = () => {
   const schemaData = {
@@ -100,7 +99,6 @@ const Index = () => {
 const HeroSection = () => (
   <section className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white py-20 relative overflow-hidden">
     <AnimatedSkyline />
-    <ImageMosaic />
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A2647] opacity-70"></div>
     <div className="container mx-auto px-4 relative z-10">
       <div className="max-w-2xl">
