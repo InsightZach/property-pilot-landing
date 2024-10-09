@@ -8,18 +8,26 @@ const AnimatedSkyline = () => {
           <stop offset="0%" stopColor="#0A2647" />
           <stop offset="100%" stopColor="#1E3A5F" />
         </linearGradient>
+        <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+          <stop offset="0%" stopColor="#D4AF37" stopOpacity="0.8" />
+          <stop offset="100%" stopColor="#D4AF37" stopOpacity="0" />
+        </radialGradient>
       </defs>
       
       {/* Sky background */}
       <rect width="100%" height="100%" fill="url(#skyGradient)" />
       
+      {/* Moon */}
+      <circle cx="1200" cy="150" r="60" fill="#D4AF37" />
+      <circle cx="1200" cy="150" r="100" fill="url(#moonGlow)" />
+      
       {/* Stars */}
-      {[...Array(100)].map((_, i) => (
+      {[...Array(150)].map((_, i) => (
         <circle
           key={i}
           cx={Math.random() * 1440}
           cy={Math.random() * 400}
-          r={Math.random() * 2}
+          r={Math.random() * 1.5 + 0.5}
           fill="#ffffff"
           opacity={Math.random() * 0.8 + 0.2}
         >
@@ -64,13 +72,13 @@ const AnimatedSkyline = () => {
       
       {/* Animated windows */}
       <g className="windows">
-        {[...Array(100)].map((_, i) => (
+        {[...Array(200)].map((_, i) => (
           <rect
             key={i}
             x={350 + Math.random() * 900}
             y={250 + Math.random() * 500}
-            width="5"
-            height="5"
+            width="4"
+            height="4"
             fill="#D4AF37"
             opacity="0"
           >
@@ -85,18 +93,64 @@ const AnimatedSkyline = () => {
         ))}
       </g>
       
-      {/* Animated car */}
-      <g className="car">
-        <rect x="-50" y="750" width="30" height="15" fill="#D4AF37">
+      {/* Animated cars */}
+      <g className="cars">
+        {[...Array(3)].map((_, i) => (
+          <g key={i}>
+            <rect
+              x="-50"
+              y={740 + i * 20}
+              width="30"
+              height="10"
+              fill={i % 2 === 0 ? "#D4AF37" : "#FFFFFF"}
+            >
+              <animateTransform
+                attributeName="transform"
+                type="translate"
+                from="-50 0"
+                to="1490 0"
+                dur={`${15 + i * 2}s`}
+                repeatCount="indefinite"
+              />
+            </rect>
+            <rect
+              x="1490"
+              y={750 + i * 20}
+              width="30"
+              height="10"
+              fill={i % 2 === 0 ? "#FFFFFF" : "#D4AF37"}
+            >
+              <animateTransform
+                attributeName="transform"
+                type="translate"
+                from="0 0"
+                to="-1540 0"
+                dur={`${18 + i * 2}s`}
+                repeatCount="indefinite"
+              />
+            </rect>
+          </g>
+        ))}
+      </g>
+      
+      {/* Shooting star */}
+      <g>
+        <line x1="-100" y1="100" x2="0" y2="200" stroke="#FFFFFF" strokeWidth="2">
           <animateTransform
             attributeName="transform"
             type="translate"
-            from="-50 0"
-            to="1490 0"
-            dur="15s"
+            from="0 0"
+            to="1600 800"
+            dur="7s"
             repeatCount="indefinite"
           />
-        </rect>
+          <animate
+            attributeName="opacity"
+            values="0;1;0"
+            dur="7s"
+            repeatCount="indefinite"
+          />
+        </line>
       </g>
     </svg>
   );
