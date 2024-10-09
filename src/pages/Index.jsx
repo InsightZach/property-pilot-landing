@@ -1,69 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building2, CheckCircle, DollarSign, LineChart, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import MeetTheOwner from '../components/MeetTheOwner';
-import RecentAppeals from '../components/RecentAppeals';
 import Header from '../components/Header';
-import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
+import AboutInsightSection from '../components/AboutInsightSection';
+import RecentAppeals from '../components/RecentAppeals';
+import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import ProcessSection from '../components/ProcessSection';
-import AppealStatistics from '../components/AppealStatistics';
-import ContingencyFee from '../components/ContingencyFee';
-
-const StatCard = ({ icon: Icon, title, description }) => (
-  <Card className="border-[#d7b971]">
-    <CardHeader>
-      <CardTitle className="flex items-center justify-center text-[#0A2647]">
-        <Icon className="mr-2 h-6 w-6 text-[#d7b971]" />
-        {title}
-      </CardTitle>
-    </CardHeader>
-    <CardContent className="text-left">{description}</CardContent>
-  </Card>
-);
-
-const AboutInsightSection = () => (
-  <section className="py-16 bg-gradient-to-br from-[#0A2647] to-[#2E5077] text-white relative overflow-hidden">
-    <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
-    <div className="container mx-auto px-4 relative z-10">
-      <h2 className="text-3xl font-semibold text-center mb-8 text-white">About Insight Property Tax</h2>
-      <div className="mb-8">
-        <p className="text-lg mb-4">Insight Property Tax reduces assessment values for Minnesota commercial property owners and tenants, saving our clients tens of thousands on property taxes.</p>
-        <p className="text-lg mb-4">Our local expertise gives clients direct access to a proven system that identifies over-assessments and consistently delivers successful property tax appeal settlements.</p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <AppealStatistics />
-        <ContingencyFee />
-      </div>
-    </div>
-  </section>
-);
-
-const WhoWeWorkWith = () => (
-  <section className="py-16 bg-gradient-to-br from-[#0A2647] to-[#2E5077] text-white relative overflow-hidden">
-    <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
-    <div className="container mx-auto px-4 relative z-10">
-      <h2 className="text-3xl font-semibold text-center mb-8 text-white">Who We Work With</h2>
-      <div className="text-left mb-8">
-        <p className="text-lg mb-4">We provide property tax appeal services for commercial, industrial, and apartment property owners and tenants across the Minneapolis-St. Paul metro area.</p>
-        <p className="text-lg mb-4">If you believe your property is over-assessed, your tax burden is too high, or you're unsure if your property is fairly assessed, we offer free assessment reviews to identify potential savings.</p>
-        <p className="text-lg mb-4">Insight Property Tax makes it easy to reduce costs and maximize your profits with our straightforward appeal process.</p>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {['Commercial', 'Industrial', 'Apartments', 'Minnesota'].map((type) => (
-          <Card key={type} className="bg-white/10 backdrop-blur-md border-[#d7b971]">
-            <CardContent className="p-4">
-              <img src={`/${type}.svg`} alt={type} className="w-full h-32 object-cover rounded-lg" />
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    </div>
-  </section>
-);
+import MeetTheOwner from '../components/MeetTheOwner';
+import CallToAction from '../components/CallToAction';
 
 const Index = () => {
   const schemaData = {
@@ -127,37 +74,15 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Helmet>
-        <title>Insight Property Tax - Expert Minnesota Property Tax Appeals</title>
-        <meta name="description" content="Maximize your savings on commercial, industrial, and apartment property taxes in Minnesota with Insight Property Tax. Expert appeals and proven results." />
+        <title>Minnesota Property Tax Appeals | Insight Property Tax</title>
+        <meta name="description" content="Expert Minnesota property tax appeals for commercial, industrial, and apartment properties. Maximize your savings with Insight Property Tax." />
         <link rel="canonical" href="https://insightpropertytax.com" />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
       <Header />
       <main>
-        <section className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white py-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-2xl">
-              <h1 className="text-5xl font-bold mb-6">Expert Property Tax Appeals in Minnesota</h1>
-              <p className="text-xl mb-8">Maximize your savings on commercial, industrial, and apartment property taxes with Insight Property Tax.</p>
-              <Link to="/contact">
-                <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
-                  Get Started <ArrowRight className="ml-2 h-6 w-6" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-semibold text-center mb-12 text-[#0A2647]">Why Choose Insight Property Tax?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <StatCard icon={DollarSign} title="Risk-Free Service" description="You pay only if we successfully reduce your property taxes." />
-              <StatCard icon={CheckCircle} title="Minnesota Expertise" description="Hundreds of settled appeals from local professionals with appraisal and assessment backgrounds." />
-              <StatCard icon={LineChart} title="Advanced Analytics" description="Data-driven strategies to maximize your savings." />
-            </div>
-          </div>
-        </section>
+        <HeroSection />
+        <ExpertiseSection />
         <AboutInsightSection />
         <RecentAppeals />
         <WhoWeWorkWith />
@@ -169,5 +94,34 @@ const Index = () => {
     </div>
   );
 };
+
+const HeroSection = () => (
+  <section className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white py-20 relative overflow-hidden">
+    <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
+    <div className="container mx-auto px-4 relative z-10">
+      <div className="max-w-2xl">
+        <h1 className="text-5xl font-bold mb-6">Save Tens of Thousands on Your Minnesota Property Taxes</h1>
+        <p className="text-xl mb-8">Pay nothing upfront – expert tax appeals for commercial, industrial, and apartment properties. Results-based fees only.</p>
+        <Link to="/contact">
+          <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
+            Start My Free Assessment Review <ArrowRight className="ml-2 h-6 w-6" />
+          </Button>
+        </Link>
+      </div>
+    </div>
+  </section>
+);
+
+const ExpertiseSection = () => (
+  <section className="py-16 bg-white">
+    <div className="container mx-auto px-4">
+      <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Expert Minnesota Property Tax Appeals for Commercial, Industrial, and Apartment Properties</h2>
+      <div className="text-lg text-gray-700 space-y-4">
+        <p>At Insight Property Tax, we help commercial, industrial, and apartment property owners and tenants across Minnesota reduce their property tax burden through strategic appeals. Our proven methods focus on lowering over-assessed property values, resulting in substantial tax savings for our clients.</p>
+        <p>With deep knowledge of Minnesota property tax laws and decades of experience, we provide clients with a streamlined, results-driven process. From identifying tax over-assessments to negotiating successful appeal outcomes, we deliver consistent results and maximize savings for properties throughout the state.</p>
+      </div>
+    </div>
+  </section>
+);
 
 export default Index;
