@@ -15,7 +15,7 @@ const StatCard = ({ icon: Icon, title, description }) => (
   <div className="flex flex-col h-full">
     <Icon className="text-[#d7b971] w-16 h-16 mx-auto mb-4" />
     <h4 className="font-bold text-xl mb-2 text-center">{title}</h4>
-    <p className="text-base text-center flex-grow">{description}</p>
+    <p className="text-base">{description}</p>
   </div>
 );
 
@@ -75,13 +75,13 @@ const ExpertiseSection = () => (
           <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
             <CardContent className="p-6">
               <h4 className="font-bold text-xl mb-4 text-center underline">Contingency Fee</h4>
-              <p className="text-lg text-center">Pay $0 upfront—our fee is 30% of your tax savings, and you keep the rest.</p>
+              <p className="text-lg text-left">Pay $0 upfront—our fee is 30% of your tax savings, and you keep the rest.</p>
             </CardContent>
           </Card>
           <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
             <CardContent className="p-6">
               <h4 className="font-bold text-xl mb-4 text-center underline">Full Service</h4>
-              <p className="text-center text-lg">We handle the entire appeal process, from identifying over-assessments to negotiating successful outcomes.</p>
+              <p className="text-lg text-left">We handle the entire appeal process, from identifying over-assessments to negotiating successful outcomes.</p>
             </CardContent>
           </Card>
         </div>
