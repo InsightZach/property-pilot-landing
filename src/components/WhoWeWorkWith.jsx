@@ -18,8 +18,9 @@ const WhoWeWorkWith = () => (
       
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
-          <p className="text-lg mb-4">At Insight Property Tax, we specialize in helping commercial, industrial, and apartment property owners and tenants across Minnesota, including the Twin Cities metro area and Greater Minnesota, reduce their property tax burden. Our expert team provides tailored solutions to ensure your property is fairly assessed.</p>
+          <h3 className="text-2xl font-semibold mb-4">Is Your Property Over-Assessed?</h3>
           <p className="text-lg mb-4">If you believe your property is over-assessed, paying too much in taxes, or you're unsure whether it's being fairly valued, we offer free assessment reviews to uncover potential savings. Our process identifies areas where you could benefit from a tax reduction, saving you money year after year.</p>
+          <p className="text-lg mb-4">At Insight Property Tax, we specialize in helping commercial, industrial, and apartment property owners and tenants across Minnesota, including the Twin Cities metro area and Greater Minnesota, reduce their property tax burden. Our expert team provides tailored solutions to ensure your property is fairly assessed.</p>
         </div>
         <div>
           <h3 className="text-2xl font-semibold mb-4">Maximize Your Savings</h3>
