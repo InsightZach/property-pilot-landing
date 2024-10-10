@@ -152,13 +152,13 @@ const HowWeWorkSection = () => (
         <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
           <CardContent className="p-6">
             <h3 className="font-bold text-xl mb-4 text-center underline">Contingency Fee</h3>
-            <p className="text-lg">Pay $0 upfront—our fee is 30% of your tax savings, and you keep the rest.</p>
+            <p className="text-lg text-center">Pay $0 upfront—our fee is 30% of your tax savings, and you keep the rest.</p>
           </CardContent>
         </Card>
         <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
           <CardContent className="p-6">
             <h3 className="font-bold text-xl mb-4 text-center underline">Full Service</h3>
-            <p className="text-lg">We handle the entire appeal process, from identifying over-assessments to negotiating successful outcomes.</p>
+            <p className="text-lg text-center">We handle the entire appeal process, from identifying over-assessments to negotiating successful outcomes.</p>
           </CardContent>
         </Card>
       </div>
