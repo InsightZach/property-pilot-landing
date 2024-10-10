@@ -20,9 +20,9 @@ const StatCard = ({ icon: Icon, title, description }) => (
 );
 
 const ExpertiseSection = () => (
-  <section className="py-16 md:py-24 bg-gradient-to-br from-white to-gray-100">
+  <section className="py-16 md:py-24 bg-gradient-to-br from-[#0A2647] to-[#2E5077] text-white">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-[#0A2647]">
+      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-white">
         Expert Minnesota Property Tax Appeals
       </h2>
       <div className="flex flex-wrap justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-12">
@@ -31,15 +31,15 @@ const ExpertiseSection = () => (
         <IconText icon={Home} text="Apartment" />
       </div>
       <div className="mb-16">
-        <p className="text-lg md:text-xl text-left max-w-4xl mx-auto leading-relaxed text-gray-700">
-          At <span className="font-bold text-[#0A2647]">Insight Property Tax</span>, we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota. By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
+        <p className="text-lg md:text-xl text-left max-w-4xl mx-auto leading-relaxed">
+          At <span className="font-bold">Insight Property Tax</span>, we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota. By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
         </p>
       </div>
       
       <div className="mb-16">
-        <h3 className="text-2xl md:text-3xl font-semibold text-center text-[#0A2647] mb-8">Why Choose Insight Property Tax?</h3>
+        <h3 className="text-2xl md:text-3xl font-semibold text-center mb-8">Why Choose Insight Property Tax?</h3>
         <div className="grid md:grid-cols-3 gap-8">
-          <Card className="bg-[#1E3A5F] text-white border-[#d7b971] border-2">
+          <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
             <CardContent className="p-6">
               <StatCard 
                 icon={Percent}
@@ -48,7 +48,7 @@ const ExpertiseSection = () => (
               />
             </CardContent>
           </Card>
-          <Card className="bg-[#1E3A5F] text-white border-[#d7b971] border-2">
+          <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
             <CardContent className="p-6">
               <StatCard 
                 icon={Clock}
@@ -57,7 +57,7 @@ const ExpertiseSection = () => (
               />
             </CardContent>
           </Card>
-          <Card className="bg-[#1E3A5F] text-white border-[#d7b971] border-2">
+          <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
             <CardContent className="p-6">
               <StatCard 
                 icon={CheckCircle}
@@ -70,8 +70,8 @@ const ExpertiseSection = () => (
       </div>
       
       <div className="max-w-4xl mx-auto">
-        <h3 className="text-2xl md:text-3xl font-semibold text-center text-[#0A2647] mb-8">How We Work</h3>
-        <Card className="bg-[#1E3A5F] text-white border-[#d7b971] border-2">
+        <h3 className="text-2xl md:text-3xl font-semibold text-center mb-8">How We Work</h3>
+        <Card className="bg-white/10 backdrop-blur-md border-[#d7b971]">
           <CardContent className="grid md:grid-cols-2 gap-8 p-8">
             <div>
               <h4 className="font-bold text-xl mb-2">Contingency Fee</h4>
