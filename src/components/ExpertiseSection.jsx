@@ -32,7 +32,7 @@ const ExpertiseSection = () => (
         <IconText icon={Factory} text="Industrial" />
         <IconText icon={Home} text="Apartment" />
       </div>
-      <p className="text-base text-gray-700 text-center max-w-2xl mx-auto mb-12">
+      <p className="text-base text-gray-700 text-left max-w-2xl mx-auto mb-12">
         At <span className="font-bold">Insight Property Tax</span>, we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota. By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
       </p>
       
