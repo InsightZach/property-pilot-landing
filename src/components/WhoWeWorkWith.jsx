@@ -14,7 +14,7 @@ import GreaterMinnesota from './counties/GreaterMinnesota';
 const ServiceIcon = ({ icon: Icon, text }) => (
   <div className="flex items-center space-x-2 mb-2">
     <Icon className="text-[#d7b971] w-6 h-6" />
-    <span className="text-lg font-medium">{text}</span>
+    <span className="text-lg">{text}</span>
   </div>
 );
 
