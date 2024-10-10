@@ -34,17 +34,14 @@ const WhoWeWorkWith = () => (
             <li>Not being fairly valued</li>
           </ul>
           <p className="text-lg mb-4">We offer free assessment reviews to uncover potential savings. Our process identifies areas where you could benefit from a tax reduction, saving you money year after year.</p>
-          
-          <h3 className="text-2xl font-semibold mb-4 mt-8">Property Types We Service</h3>
-          <div className="space-y-4">
+        </div>
+        <div>
+          <h3 className="text-2xl font-semibold mb-4">Property Types We Service</h3>
+          <div className="space-y-4 mb-8">
             <ServiceIcon icon={Building2} text="Commercial Property Tax Appeals" />
             <ServiceIcon icon={Factory} text="Industrial Property Tax Appeals" />
             <ServiceIcon icon={Home} text="Apartment Property Tax Appeals" />
           </div>
-        </div>
-        <div>
-          <h3 className="text-2xl font-semibold mb-4">Maximize Your Savings</h3>
-          <p className="text-lg mb-4">We simplify the property tax appeal process with a results-driven approach designed for Minnesota property owners. Whether you own commercial real estate, an industrial facility, or an apartment building, our proven methods help you reduce tax costs and increase your profits.</p>
           <div className="grid grid-cols-2 gap-4 mt-6">
             {['Commercial', 'Industrial', 'Apartments', 'Minnesota'].map((type) => (
               <Card key={type} className="bg-white/80 backdrop-blur-sm border-[#d7b971]">
