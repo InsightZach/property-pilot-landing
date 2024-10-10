@@ -105,7 +105,6 @@ const Index = () => {
 };
 
 const HeroSection = () => (
-const HeroSection = () => (
   <section className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white py-12 md:py-20 relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A2647] opacity-70"></div>
     <div className="container mx-auto px-4 relative z-10">
@@ -150,7 +149,6 @@ const HeroSection = () => (
       </div>
     </div>
   </section>
-);
 );
 
 export default Index;
