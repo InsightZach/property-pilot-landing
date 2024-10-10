@@ -26,33 +26,33 @@ const MobileArrow = () => (
 const ProcessSection = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-semibold text-center mb-12 text-[#0A2647]">Our Process</h2>
+      <h2 className="text-3xl font-semibold text-center mb-12 text-[#0A2647]">Our Proven Property Tax Appeal Process</h2>
       <div className="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-4">
         <ProcessStep
           icon={Building2}
-          title="Property Review"
-          description="We analyze your property details and assessment history."
+          title="Comprehensive Property Review"
+          description="We analyze your property details, assessment history, and local tax data to identify savings opportunities."
         />
         <MobileArrow />
         <DesktopArrow />
         <ProcessStep
           icon={LineChart}
-          title="Value Analysis"
-          description="Our experts determine if your property is over-assessed."
+          title="In-Depth Value Analysis"
+          description="Our experts evaluate if your property is over-assessed, comparing it to similar properties for fairness."
         />
         <MobileArrow />
         <DesktopArrow />
         <ProcessStep
           icon={FileText}
-          title="Appeal Strategy"
-          description="We develop a customized strategy for your appeal."
+          title="Customized Appeal Strategy"
+          description="We craft a tailored strategy leveraging our expertise in Minnesota property tax laws to maximize savings."
         />
         <MobileArrow />
         <DesktopArrow />
         <ProcessStep
           icon={Handshake}
-          title="Negotiation & Resolution"
-          description="We represent you throughout the appeal process."
+          title="Expert Negotiation & Resolution"
+          description="We handle all negotiations with tax authorities, representing you from start to finish for a successful outcome."
         />
       </div>
     </div>
