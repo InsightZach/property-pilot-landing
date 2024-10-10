@@ -29,11 +29,11 @@ const WhoWeWorkWith = () => (
           <h3 className="text-2xl font-semibold mb-4">Is Your Property Over-Assessed?</h3>
           <p className="text-lg mb-4">If you believe your property is:</p>
           <ul className="list-disc pl-6 mb-4 text-lg">
-            <li>over-assessed</li>
-            <li>You are paying too much in taxes</li>
-            <li>or you're unsure whether it's being fairly valued</li>
+            <li>Over-assessed</li>
+            <li>Causing you to pay too much in taxes</li>
+            <li>Not being fairly valued</li>
           </ul>
-          <p className="text-lg mb-4">we offer free assessment reviews to uncover potential savings. Our process identifies areas where you could benefit from a tax reduction, saving you money year after year.</p>
+          <p className="text-lg mb-4">We offer free assessment reviews to uncover potential savings. Our process identifies areas where you could benefit from a tax reduction, saving you money year after year.</p>
           
           <h3 className="text-2xl font-semibold mb-4 mt-8">Our Specialized Services Include</h3>
           <div className="space-y-4">
