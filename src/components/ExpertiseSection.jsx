@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, Factory, Home, CheckCircle, Percent, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Button } from "@/components/ui/button";
 
 const IconText = ({ icon: Icon, text }) => (
   <div className="flex items-center space-x-2">
@@ -10,15 +12,11 @@ const IconText = ({ icon: Icon, text }) => (
 );
 
 const StatCard = ({ icon: Icon, title, description }) => (
-  <Card className="h-full bg-[#1E3A5F] text-white">
-    <CardHeader>
-      <Icon className="text-[#d7b971] w-16 h-16 mx-auto" />
-    </CardHeader>
-    <CardContent className="text-center">
-      <h4 className="font-bold text-xl mb-2">{title}</h4>
-      <p className="text-base">{description}</p>
-    </CardContent>
-  </Card>
+  <div className="flex flex-col h-full">
+    <Icon className="text-[#d7b971] w-16 h-16 mx-auto mb-4" />
+    <h4 className="font-bold text-xl mb-2 text-center">{title}</h4>
+    <p className="text-base text-center flex-grow">{description}</p>
+  </div>
 );
 
 const ExpertiseSection = () => (
@@ -38,30 +36,42 @@ const ExpertiseSection = () => (
         </p>
       </div>
       
-      <div className="border-t border-b border-gray-200 py-16 my-16">
-        <h3 className="text-2xl md:text-3xl font-semibold text-center text-[#0A2647] mb-12">Why Choose Insight Property Tax?</h3>
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <StatCard 
-            icon={Percent}
-            title="17.9% Average Reduction"
-            description="In 2024, we've achieved significant reductions in assessed values."
-          />
-          <StatCard 
-            icon={Clock}
-            title="90-Day Resolution"
-            description="Most appeals are resolved quickly, saving you time and resources."
-          />
-          <StatCard 
-            icon={CheckCircle}
-            title="100% Success Rate"
-            description="We've successfully reduced taxes for every client we've worked with."
-          />
+      <div className="mb-16">
+        <h3 className="text-2xl md:text-3xl font-semibold text-center text-[#0A2647] mb-8">Why Choose Insight Property Tax?</h3>
+        <div className="grid md:grid-cols-3 gap-8">
+          <Card className="bg-[#1E3A5F] text-white border-[#d7b971] border-2">
+            <CardContent className="p-6">
+              <StatCard 
+                icon={Percent}
+                title="17.9% Average Reduction"
+                description="In 2024, we've achieved significant reductions in assessed values."
+              />
+            </CardContent>
+          </Card>
+          <Card className="bg-[#1E3A5F] text-white border-[#d7b971] border-2">
+            <CardContent className="p-6">
+              <StatCard 
+                icon={Clock}
+                title="90-Day Resolution"
+                description="Most appeals are resolved quickly, saving you time and resources."
+              />
+            </CardContent>
+          </Card>
+          <Card className="bg-[#1E3A5F] text-white border-[#d7b971] border-2">
+            <CardContent className="p-6">
+              <StatCard 
+                icon={CheckCircle}
+                title="100% Success Rate"
+                description="We've successfully reduced taxes for every client we've worked with."
+              />
+            </CardContent>
+          </Card>
         </div>
       </div>
       
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl md:text-3xl font-semibold text-center text-[#0A2647] mb-8">How We Work</h3>
-        <Card className="bg-[#1E3A5F] text-white">
+        <Card className="bg-[#1E3A5F] text-white border-[#d7b971] border-2">
           <CardContent className="grid md:grid-cols-2 gap-8 p-8">
             <div>
               <h4 className="font-bold text-xl mb-2">Contingency Fee</h4>
@@ -75,9 +85,13 @@ const ExpertiseSection = () => (
         </Card>
       </div>
       
-      <p className="text-lg md:text-xl text-center max-w-3xl mx-auto mt-16 text-gray-700">
-        Whether you own commercial real estate, an industrial site, or an apartment building, trust our expertise to lower your tax burden and maximize savings.
-      </p>
+      <div className="text-center mt-12">
+        <Link to="/contact">
+          <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-xl px-8 py-4">
+            Get Started
+          </Button>
+        </Link>
+      </div>
     </div>
   </section>
 );
