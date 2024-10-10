@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Building, Factory, Home } from 'lucide-react';
+import { ArrowRight, CheckCircle, Building, Factory, Home, Percent, Clock, Award, DollarSign, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -163,12 +163,44 @@ const ExpertiseSection = () => (
           <span className="text-lg font-medium">Apartment</span>
         </div>
       </div>
-      <div className="md:flex md:space-x-8">
-        <div className="md:w-1/2 text-base md:text-lg text-gray-700 space-y-4 mb-4 md:mb-0">
-          <p>At Insight Property Tax, we help commercial, industrial, and apartment property owners and tenants across Minnesota reduce their property tax burden through strategic appeals. Our proven methods focus on lowering over-assessed property values, resulting in substantial tax savings for our clients.</p>
+      <div className="grid md:grid-cols-3 gap-8">
+        <div className="space-y-4">
+          <p className="text-base text-gray-700">
+            At <span className="font-bold">Insight Property Tax</span>, we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota. Our strategic appeals process targets over-assessed property values, leading to significant tax savings.
+          </p>
         </div>
-        <div className="md:w-1/2 text-base md:text-lg text-gray-700 space-y-4">
-          <p>With deep knowledge of Minnesota property tax laws and decades of experience, we provide clients with a streamlined, results-driven process. From identifying tax over-assessments to negotiating successful appeal outcomes, we deliver consistent results and maximize savings for properties throughout the state.</p>
+        <div className="space-y-4">
+          <h3 className="text-xl font-semibold text-[#0A2647]">Why Choose Insight Property Tax?</h3>
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <Percent className="text-[#d7b971] mr-2 mt-1 flex-shrink-0" />
+              <span><span className="font-bold">2024 Appeal Success:</span> On average, we've achieved a 17.9% reduction in assessed values, with clients saving $49k per property.</span>
+            </li>
+            <li className="flex items-start">
+              <Clock className="text-[#d7b971] mr-2 mt-1 flex-shrink-0" />
+              <span><span className="font-bold">Fast Results:</span> Most appeals are resolved within 90 days.</span>
+            </li>
+            <li className="flex items-start">
+              <Award className="text-[#d7b971] mr-2 mt-1 flex-shrink-0" />
+              <span><span className="font-bold">100% Appeal Success Rate:</span> We've successfully reduced taxes for every client.</span>
+            </li>
+          </ul>
+        </div>
+        <div className="space-y-4">
+          <h3 className="text-xl font-semibold text-[#0A2647]">How We Work:</h3>
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <DollarSign className="text-[#d7b971] mr-2 mt-1 flex-shrink-0" />
+              <span><span className="font-bold">Contingency Fee:</span> Pay $0 upfront—our fee is 30% of your tax savings, and you keep the rest.</span>
+            </li>
+            <li className="flex items-start">
+              <FileText className="text-[#d7b971] mr-2 mt-1 flex-shrink-0" />
+              <span><span className="font-bold">Full Service:</span> We handle the entire appeal process, from identifying over-assessments to negotiating successful outcomes.</span>
+            </li>
+          </ul>
+          <p className="text-base text-gray-700 mt-4">
+            Whether you own commercial real estate, an industrial site, or an apartment building, trust our expertise to lower your tax burden and maximize savings.
+          </p>
         </div>
       </div>
     </div>
