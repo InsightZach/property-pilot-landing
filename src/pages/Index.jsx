@@ -5,7 +5,6 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import AboutInsightSection from '../components/AboutInsightSection';
 import RecentAppeals from '../components/RecentAppeals';
 import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import ProcessSection from '../components/ProcessSection';
@@ -85,7 +84,6 @@ const Index = () => {
       <main>
         <HeroSection />
         <ExpertiseSection />
-        <AboutInsightSection />
         <RecentAppeals />
         <WhoWeWorkWith />
         <ProcessSection />
