@@ -132,13 +132,21 @@ const WhyInsight = () => {
         </section>
 
         <section className="bg-white rounded-lg p-8 text-center">
-          <h2 className="text-3xl font-bold text-[#0A2647] mb-4">We save our clients <span className="text-[#d7b971]">tens of thousands</span> on property taxes, without the hassle.</h2>
-          <p className="text-lg text-[#0A2647] mb-8">Get started. We'll provide you an appeal recommendation. If an appeal benefits you, we'll take care of everything.</p>
-          <Link to="/contact">
-            <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
-              Get Started
-            </Button>
-          </Link>
+          <h2 className="text-3xl font-bold text-[#0A2647] mb-8">How We Work</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
+              <CardContent className="p-6">
+                <h3 className="font-bold text-xl mb-4 text-center underline">Contingency Fee</h3>
+                <p className="text-lg">Pay $0 upfront—our fee is 30% of your tax savings, and you keep the rest.</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
+              <CardContent className="p-6">
+                <h3 className="font-bold text-xl mb-4 text-center underline">Full Service</h3>
+                <p className="text-lg">We handle the entire appeal process, from identifying over-assessments to negotiating successful outcomes.</p>
+              </CardContent>
+            </Card>
+          </div>
         </section>
 
         <section className="mt-16 text-center">
