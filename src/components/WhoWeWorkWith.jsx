@@ -26,6 +26,13 @@ const WhoWeWorkWith = () => (
             <li>or you're unsure whether it's being fairly valued</li>
           </ul>
           <p className="text-lg mb-4">we offer free assessment reviews to uncover potential savings. Our process identifies areas where you could benefit from a tax reduction, saving you money year after year.</p>
+          
+          <h3 className="text-2xl font-semibold mb-4 mt-8">Our Specialized Services Include</h3>
+          <div className="space-y-4">
+            <ServiceIcon icon={Building2} text="Commercial Property Tax Appeals in Minnesota" />
+            <ServiceIcon icon={Factory} text="Industrial Property Tax Appeals in Minnesota" />
+            <ServiceIcon icon={Home} text="Apartment Property Tax Appeals in Minnesota" />
+          </div>
         </div>
         <div>
           <h3 className="text-2xl font-semibold mb-4">Maximize Your Savings</h3>
@@ -39,15 +46,6 @@ const WhoWeWorkWith = () => (
               </Card>
             ))}
           </div>
-        </div>
-      </div>
-      
-      <div className="mb-8">
-        <h3 className="text-2xl font-semibold mb-4">Our Specialized Services Include</h3>
-        <div className="space-y-4 bg-[#0A2647] p-6 rounded-lg">
-          <ServiceIcon icon={Building2} text="Commercial Property Tax Appeals in Minnesota" />
-          <ServiceIcon icon={Factory} text="Industrial Property Tax Appeals in Minnesota" />
-          <ServiceIcon icon={Home} text="Apartment Property Tax Appeals in Minnesota" />
         </div>
       </div>
       
