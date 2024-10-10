@@ -24,7 +24,7 @@ const WhoWeWorkWith = () => (
     <div className="container mx-auto px-4 relative z-10">
       <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Minnesota Property Tax Appeal Services</h2>
       
-      <div className="grid md:grid-cols-2 gap-8 mb-8">
+      <div className="grid md:grid-cols-2 gap-8 mb-12">
         <div>
           <h3 className="text-2xl font-semibold mb-4">Is Your Property Over-Assessed?</h3>
           <p className="text-lg mb-4">If you believe your property is:</p>
@@ -42,16 +42,17 @@ const WhoWeWorkWith = () => (
             <ServiceIcon icon={Factory} text="Industrial Property Tax Appeals" />
             <ServiceIcon icon={Home} text="Apartment Property Tax Appeals" />
           </div>
-          <div className="grid grid-cols-2 gap-4 mt-6">
-            {['Commercial', 'Industrial', 'Apartments', 'Minnesota'].map((type) => (
-              <Card key={type} className="bg-white/80 backdrop-blur-sm border-[#d7b971]">
-                <CardContent className="p-4">
-                  <img src={`/${type}.svg`} alt={`${type} Property Tax Appeals in Minnesota`} className="w-full h-24 object-contain" />
-                </CardContent>
-              </Card>
-            ))}
-          </div>
         </div>
+      </div>
+      
+      <div className="flex justify-center space-x-4 mb-16">
+        {['Commercial', 'Industrial', 'Apartments', 'Minnesota'].map((type) => (
+          <Card key={type} className="bg-white/80 backdrop-blur-sm border-[#d7b971] flex-1">
+            <CardContent className="p-4">
+              <img src={`/${type}.svg`} alt={`${type} Property Tax Appeals in Minnesota`} className="w-full h-24 object-contain" />
+            </CardContent>
+          </Card>
+        ))}
       </div>
       
       <div className="mt-16">
