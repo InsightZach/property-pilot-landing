@@ -19,7 +19,7 @@ const ServiceIcon = ({ icon: Icon, text }) => (
 );
 
 const WhoWeWorkWith = () => (
-  <section className="py-16 bg-gradient-to-b from-white via-[#f0f4f8] to-white text-[#0A2647] relative overflow-hidden">
+  <section className="py-16 bg-white text-[#0A2647] relative overflow-hidden">
     <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-5"></div>
     <div className="container mx-auto px-4 relative z-10">
       <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Minnesota Property Tax Appeal Services</h2>
