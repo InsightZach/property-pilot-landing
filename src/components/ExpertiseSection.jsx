@@ -25,15 +25,10 @@ const ExpertiseSection = () => (
       <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-[#0A2647]">
         Expert Minnesota Property Tax Appeals
       </h2>
-      <div className="mb-12">
-        <h3 className="text-2xl md:text-3xl font-semibold text-center text-[#0A2647] mb-6">
-          Property Types We Service
-        </h3>
-        <div className="flex flex-wrap justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
-          <IconText icon={Building2} text="Commercial Property Tax Appeals" />
-          <IconText icon={Factory} text="Industrial Property Tax Appeals" />
-          <IconText icon={Home} text="Apartment Property Tax Appeals" />
-        </div>
+      <div className="flex flex-wrap justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-12">
+        <IconText icon={Building2} text="Commercial" />
+        <IconText icon={Factory} text="Industrial" />
+        <IconText icon={Home} text="Apartment" />
       </div>
       <div className="mb-16">
         <p className="text-lg md:text-xl text-left max-w-4xl mx-auto leading-relaxed text-gray-700">
