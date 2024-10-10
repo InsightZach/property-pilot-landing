@@ -1,5 +1,4 @@
 import React from 'react';
-import { Building, Factory, Home } from 'lucide-react';
 
 const ExpertiseSection = () => (
   <section className="py-12 md:py-16 bg-white">
@@ -9,25 +8,22 @@ const ExpertiseSection = () => (
       </h2>
       <div className="flex justify-center items-center space-x-4 mb-8">
         <div className="flex items-center">
-          <Building className="text-[#d7b971] mr-2" />
-          <span className="text-lg font-medium">Commercial</span>
+          <span className="text-lg font-medium">• Commercial</span>
         </div>
         <div className="flex items-center">
-          <Factory className="text-[#d7b971] mr-2" />
-          <span className="text-lg font-medium">Industrial</span>
+          <span className="text-lg font-medium">• Industrial</span>
         </div>
         <div className="flex items-center">
-          <Home className="text-[#d7b971] mr-2" />
-          <span className="text-lg font-medium">Apartment</span>
+          <span className="text-lg font-medium">• Apartment</span>
         </div>
       </div>
       <p className="text-base text-gray-700 text-center max-w-2xl mx-auto mb-12">
         At <span className="font-bold">Insight Property Tax</span>, we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota. By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
       </p>
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <div className="space-y-6">
           <h3 className="text-xl font-semibold text-[#0A2647] h-8">Why Choose Insight Property Tax?</h3>
-          <ul className="space-y-6 list-disc pl-5">
+          <ul className="space-y-4 list-disc pl-5">
             <li>
               <span><span className="font-bold">2024 Appeal Success:</span> On average, we've achieved a 17.9% reduction in assessed values, with clients saving $49k per property.</span>
             </li>
@@ -41,7 +37,7 @@ const ExpertiseSection = () => (
         </div>
         <div className="space-y-6">
           <h3 className="text-xl font-semibold text-[#0A2647] h-8">How We Work:</h3>
-          <ul className="space-y-6 list-disc pl-5">
+          <ul className="space-y-4 list-disc pl-5">
             <li>
               <span><span className="font-bold">Contingency Fee:</span> Pay $0 upfront—our fee is 30% of your tax savings, and you keep the rest.</span>
             </li>
