@@ -90,13 +90,11 @@ const Index = () => {
         <div className="bg-white">
           <RecentAppeals />
         </div>
+        <WhoWeWorkWith />
         <div className="bg-gradient-to-b from-white to-gray-100">
-          <WhoWeWorkWith />
-        </div>
-        <div className="bg-gradient-to-b from-gray-100 to-white">
           <ProcessSection />
         </div>
-        <div className="bg-gradient-to-b from-white to-[#1E3A5F]">
+        <div className="bg-gradient-to-b from-gray-100 to-[#1E3A5F]">
           <MeetTheOwner />
         </div>
         <CallToAction />
@@ -106,6 +104,7 @@ const Index = () => {
   );
 };
 
+const HeroSection = () => (
 const HeroSection = () => (
   <section className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white py-12 md:py-20 relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A2647] opacity-70"></div>
@@ -151,6 +150,7 @@ const HeroSection = () => (
       </div>
     </div>
   </section>
+);
 );
 
 export default Index;

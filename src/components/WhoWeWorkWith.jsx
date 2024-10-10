@@ -19,10 +19,10 @@ const ServiceIcon = ({ icon: Icon, text }) => (
 );
 
 const WhoWeWorkWith = () => (
-  <section className="py-16 bg-gradient-to-br from-[#0A2647] to-[#2E5077] text-white relative overflow-hidden">
-    <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
+  <section className="py-16 bg-gradient-to-b from-white via-[#f0f4f8] to-white text-[#0A2647] relative overflow-hidden">
+    <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-5"></div>
     <div className="container mx-auto px-4 relative z-10">
-      <h2 className="text-3xl font-semibold text-center mb-8 text-white">Minnesota Property Tax Appeal Services</h2>
+      <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Minnesota Property Tax Appeal Services</h2>
       
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
@@ -47,7 +47,7 @@ const WhoWeWorkWith = () => (
           <p className="text-lg mb-4">We simplify the property tax appeal process with a results-driven approach designed for Minnesota property owners. Whether you own commercial real estate, an industrial facility, or an apartment building, our proven methods help you reduce tax costs and increase your profits.</p>
           <div className="grid grid-cols-2 gap-4 mt-6">
             {['Commercial', 'Industrial', 'Apartments', 'Minnesota'].map((type) => (
-              <Card key={type} className="bg-white/10 backdrop-blur-md border-[#d7b971]">
+              <Card key={type} className="bg-white/80 backdrop-blur-sm border-[#d7b971]">
                 <CardContent className="p-4">
                   <img src={`/${type}.svg`} alt={`${type} Property Tax Appeals in Minnesota`} className="w-full h-24 object-contain" />
                 </CardContent>
