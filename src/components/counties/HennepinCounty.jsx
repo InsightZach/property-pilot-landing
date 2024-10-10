@@ -3,8 +3,8 @@ import { AccordionItem, AccordionTrigger, AccordionContent } from "@/components/
 
 const HennepinCounty = () => (
   <AccordionItem value="hennepin">
-    <AccordionTrigger>Hennepin County</AccordionTrigger>
-    <AccordionContent>
+    <AccordionTrigger className="text-white">Hennepin County</AccordionTrigger>
+    <AccordionContent className="text-white">
       <div className="grid grid-cols-2 gap-4">
         <ul className="list-disc pl-6">
           <li>Minneapolis</li>
