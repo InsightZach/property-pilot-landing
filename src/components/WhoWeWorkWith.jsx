@@ -55,120 +55,162 @@ const WhoWeWorkWith = () => (
           <AccordionItem value="hennepin">
             <AccordionTrigger>Hennepin County</AccordionTrigger>
             <AccordionContent>
-              <ul className="list-disc pl-6">
-                <li>Minneapolis</li>
-                <li>Bloomington</li>
-                <li>Brooklyn Park</li>
-                <li>Plymouth</li>
-                <li>Maple Grove</li>
-                <li>Minnetonka</li>
-                <li>Eden Prairie</li>
-                <li>Coon Rapids</li>
-                <li>Blaine</li>
-                <li>Edina</li>
-              </ul>
+              <div className="grid grid-cols-2 gap-4">
+                <ul className="list-disc pl-6">
+                  <li>Minneapolis</li>
+                  <li>Bloomington</li>
+                  <li>Brooklyn Park</li>
+                  <li>Plymouth</li>
+                  <li>Maple Grove</li>
+                  <li>Minnetonka</li>
+                  <li>Eden Prairie</li>
+                  <li>Edina</li>
+                </ul>
+                <ul className="list-disc pl-6">
+                  <li>St. Louis Park</li>
+                  <li>Richfield</li>
+                  <li>Brooklyn Center</li>
+                  <li>Champlin</li>
+                  <li>Crystal</li>
+                  <li>Golden Valley</li>
+                  <li>New Hope</li>
+                  <li>Hopkins</li>
+                </ul>
+              </div>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="ramsey">
             <AccordionTrigger>Ramsey County</AccordionTrigger>
             <AccordionContent>
-              <ul className="list-disc pl-6">
-                <li>St. Paul</li>
-                <li>Roseville</li>
-                <li>Maplewood</li>
-                <li>White Bear Lake</li>
-                <li>Shoreview</li>
-                <li>New Brighton</li>
-                <li>Mounds View</li>
-                <li>Vadnais Heights</li>
-                <li>North St. Paul</li>
-                <li>Arden Hills</li>
-              </ul>
+              <div className="grid grid-cols-2 gap-4">
+                <ul className="list-disc pl-6">
+                  <li>St. Paul</li>
+                  <li>Roseville</li>
+                  <li>Maplewood</li>
+                  <li>White Bear Lake</li>
+                  <li>Shoreview</li>
+                  <li>New Brighton</li>
+                </ul>
+                <ul className="list-disc pl-6">
+                  <li>Mounds View</li>
+                  <li>Vadnais Heights</li>
+                  <li>North St. Paul</li>
+                  <li>Arden Hills</li>
+                  <li>Little Canada</li>
+                  <li>Falcon Heights</li>
+                </ul>
+              </div>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="dakota">
             <AccordionTrigger>Dakota County</AccordionTrigger>
             <AccordionContent>
-              <ul className="list-disc pl-6">
-                <li>Burnsville</li>
-                <li>Eagan</li>
-                <li>Apple Valley</li>
-                <li>Lakeville</li>
-                <li>Inver Grove Heights</li>
-                <li>Rosemount</li>
-                <li>Farmington</li>
-                <li>Hastings</li>
-                <li>South St. Paul</li>
-                <li>West St. Paul</li>
-              </ul>
+              <div className="grid grid-cols-2 gap-4">
+                <ul className="list-disc pl-6">
+                  <li>Burnsville</li>
+                  <li>Eagan</li>
+                  <li>Apple Valley</li>
+                  <li>Lakeville</li>
+                  <li>Inver Grove Heights</li>
+                  <li>Rosemount</li>
+                </ul>
+                <ul className="list-disc pl-6">
+                  <li>Farmington</li>
+                  <li>Hastings</li>
+                  <li>South St. Paul</li>
+                  <li>West St. Paul</li>
+                  <li>Mendota Heights</li>
+                  <li>Savage (partially)</li>
+                </ul>
+              </div>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="anoka">
             <AccordionTrigger>Anoka County</AccordionTrigger>
             <AccordionContent>
-              <ul className="list-disc pl-6">
-                <li>Blaine</li>
-                <li>Coon Rapids</li>
-                <li>Andover</li>
-                <li>Fridley</li>
-                <li>Columbia Heights</li>
-                <li>Anoka</li>
-                <li>Ramsey</li>
-                <li>Ham Lake</li>
-                <li>Oak Grove</li>
-                <li>Lino Lakes</li>
-              </ul>
+              <div className="grid grid-cols-2 gap-4">
+                <ul className="list-disc pl-6">
+                  <li>Blaine</li>
+                  <li>Coon Rapids</li>
+                  <li>Andover</li>
+                  <li>Fridley</li>
+                  <li>Columbia Heights</li>
+                  <li>Anoka</li>
+                </ul>
+                <ul className="list-disc pl-6">
+                  <li>Ramsey</li>
+                  <li>Ham Lake</li>
+                  <li>Oak Grove</li>
+                  <li>Lino Lakes</li>
+                  <li>Spring Lake Park</li>
+                  <li>East Bethel</li>
+                </ul>
+              </div>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="washington">
             <AccordionTrigger>Washington County</AccordionTrigger>
             <AccordionContent>
-              <ul className="list-disc pl-6">
-                <li>Woodbury</li>
-                <li>Cottage Grove</li>
-                <li>Oakdale</li>
-                <li>Stillwater</li>
-                <li>Forest Lake</li>
-                <li>Hugo</li>
-                <li>Mahtomedi</li>
-                <li>Lake Elmo</li>
-                <li>Newport</li>
-                <li>St. Paul Park</li>
-              </ul>
+              <div className="grid grid-cols-2 gap-4">
+                <ul className="list-disc pl-6">
+                  <li>Woodbury</li>
+                  <li>Cottage Grove</li>
+                  <li>Oakdale</li>
+                  <li>Stillwater</li>
+                  <li>Forest Lake</li>
+                  <li>Hugo</li>
+                </ul>
+                <ul className="list-disc pl-6">
+                  <li>Mahtomedi</li>
+                  <li>Lake Elmo</li>
+                  <li>Newport</li>
+                  <li>St. Paul Park</li>
+                  <li>Bayport</li>
+                  <li>Scandia</li>
+                </ul>
+              </div>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="scott">
             <AccordionTrigger>Scott County</AccordionTrigger>
             <AccordionContent>
-              <ul className="list-disc pl-6">
-                <li>Shakopee</li>
-                <li>Savage</li>
-                <li>Prior Lake</li>
-                <li>Jordan</li>
-                <li>Belle Plaine</li>
-                <li>New Prague</li>
-                <li>Elko New Market</li>
-                <li>Credit River</li>
-                <li>Spring Lake</li>
-                <li>Sand Creek</li>
-              </ul>
+              <div className="grid grid-cols-2 gap-4">
+                <ul className="list-disc pl-6">
+                  <li>Shakopee</li>
+                  <li>Savage</li>
+                  <li>Prior Lake</li>
+                  <li>Jordan</li>
+                  <li>Belle Plaine</li>
+                </ul>
+                <ul className="list-disc pl-6">
+                  <li>New Prague (partially)</li>
+                  <li>Elko New Market</li>
+                  <li>Credit River</li>
+                  <li>Spring Lake</li>
+                  <li>Sand Creek</li>
+                </ul>
+              </div>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="carver">
             <AccordionTrigger>Carver County</AccordionTrigger>
             <AccordionContent>
-              <ul className="list-disc pl-6">
-                <li>Chaska</li>
-                <li>Chanhassen</li>
-                <li>Victoria</li>
-                <li>Waconia</li>
-                <li>Carver</li>
-                <li>Watertown</li>
-                <li>Mayer</li>
-                <li>Norwood Young America</li>
-                <li>Cologne</li>
-                <li>Hamburg</li>
-              </ul>
+              <div className="grid grid-cols-2 gap-4">
+                <ul className="list-disc pl-6">
+                  <li>Chaska</li>
+                  <li>Chanhassen</li>
+                  <li>Victoria</li>
+                  <li>Waconia</li>
+                  <li>Carver</li>
+                </ul>
+                <ul className="list-disc pl-6">
+                  <li>Watertown</li>
+                  <li>Mayer</li>
+                  <li>Norwood Young America</li>
+                  <li>Cologne</li>
+                  <li>Hamburg</li>
+                </ul>
+              </div>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
