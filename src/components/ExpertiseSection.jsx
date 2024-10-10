@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building2, Factory, Home, CheckCircle, Percent, Clock } from 'lucide-react';
+import { Building2, Factory, Home, CheckCircle, Clock, TrendingDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 
@@ -42,7 +42,7 @@ const ExpertiseSection = () => (
           <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
             <CardContent className="p-6">
               <StatCard 
-                icon={Percent}
+                icon={TrendingDown}
                 title="17.9% Average Reduction"
                 description="In 2024, we've achieved significant reductions in assessed values."
               />
