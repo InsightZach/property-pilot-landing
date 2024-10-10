@@ -74,7 +74,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gradient-to-b from-[#0A2647] to-[#1E3A5F]">
       <Helmet>
         <title>Minnesota Property Tax Appeals | Insight Property Tax</title>
         <meta name="description" content="Expert Minnesota property tax appeals for commercial, industrial, and apartment properties. Maximize your savings with Insight Property Tax." />
@@ -84,11 +84,21 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <ExpertiseSection />
-        <RecentAppeals />
-        <WhoWeWorkWith />
-        <ProcessSection />
-        <MeetTheOwner />
+        <div className="bg-gradient-to-b from-[#1E3A5F] to-white py-16">
+          <ExpertiseSection />
+        </div>
+        <div className="bg-white">
+          <RecentAppeals />
+        </div>
+        <div className="bg-gradient-to-b from-white to-gray-100">
+          <WhoWeWorkWith />
+        </div>
+        <div className="bg-gradient-to-b from-gray-100 to-white">
+          <ProcessSection />
+        </div>
+        <div className="bg-gradient-to-b from-white to-[#1E3A5F]">
+          <MeetTheOwner />
+        </div>
         <CallToAction />
       </main>
       <Footer />
