@@ -9,6 +9,7 @@ import AnokaCounty from './counties/AnokaCounty';
 import WashingtonCounty from './counties/WashingtonCounty';
 import ScottCounty from './counties/ScottCounty';
 import CarverCounty from './counties/CarverCounty';
+import GreaterMinnesota from './counties/GreaterMinnesota';
 
 const ServiceIcon = ({ icon: Icon, text }) => (
   <div className="flex items-center space-x-2 mb-2">
@@ -66,6 +67,7 @@ const WhoWeWorkWith = () => (
           <WashingtonCounty />
           <ScottCounty />
           <CarverCounty />
+          <GreaterMinnesota />
         </Accordion>
       </div>
     </div>
