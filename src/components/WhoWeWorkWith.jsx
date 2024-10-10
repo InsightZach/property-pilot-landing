@@ -26,7 +26,7 @@ const WhoWeWorkWith = () => (
       
       <div className="grid md:grid-cols-2 gap-8 mb-12">
         <div>
-          <h3 className="text-2xl font-semibold mb-4">Is Your Property Over-Assessed?</h3>
+          <h3 className="text-2xl font-semibold mb-4 text-center">Is Your Property Over-Assessed?</h3>
           <p className="text-lg mb-4">If you believe your property is:</p>
           <ul className="list-disc pl-6 mb-4 text-lg">
             <li>Over-assessed</li>
@@ -36,7 +36,7 @@ const WhoWeWorkWith = () => (
           <p className="text-lg mb-4">We offer free assessment reviews to uncover potential savings. Our process identifies areas where you could benefit from a tax reduction, saving you money year after year.</p>
         </div>
         <div>
-          <h3 className="text-2xl font-semibold mb-4">Property Types We Service</h3>
+          <h3 className="text-2xl font-semibold mb-4 text-center">Property Types We Service</h3>
           <div className="space-y-4 mb-8">
             <ServiceIcon icon={Building2} text="Commercial Property Tax Appeals" />
             <ServiceIcon icon={Factory} text="Industrial Property Tax Appeals" />
