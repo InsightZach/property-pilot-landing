@@ -44,7 +44,7 @@ const ExpertiseSection = () => (
               <StatCard 
                 icon={TrendingDown}
                 title="17.9% Average Reduction"
-                description="In 2024, we've achieved significant reductions in assessed values."
+                description="In 2024, we've achieved significant assessment reductions, saving our clients $49k per property."
               />
             </CardContent>
           </Card>
