@@ -71,18 +71,20 @@ const ExpertiseSection = () => (
       
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl md:text-3xl font-semibold text-center text-[#0A2647] mb-8">How We Work</h3>
-        <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
-          <CardContent className="grid md:grid-cols-2 gap-8 p-8">
-            <div>
-              <h4 className="font-bold text-xl mb-2">Contingency Fee</h4>
-              <p className="text-lg">Pay $0 upfront—our fee is 30% of your tax savings, and you keep the rest.</p>
-            </div>
-            <div>
-              <h4 className="font-bold text-xl mb-2">Full Service</h4>
-              <p className="text-lg">We handle the entire appeal process, from identifying over-assessments to negotiating successful outcomes.</p>
-            </div>
-          </CardContent>
-        </Card>
+        <div className="grid md:grid-cols-2 gap-8">
+          <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
+            <CardContent className="p-6">
+              <h4 className="font-bold text-xl mb-4 text-center underline">Contingency Fee</h4>
+              <p className="text-lg text-center">Pay $0 upfront—our fee is 30% of your tax savings, and you keep the rest.</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
+            <CardContent className="p-6">
+              <h4 className="font-bold text-xl mb-4 text-center underline">Full Service</h4>
+              <p className="text-center text-lg">We handle the entire appeal process, from identifying over-assessments to negotiating successful outcomes.</p>
+            </CardContent>
+          </Card>
+        </div>
       </div>
       
       <div className="text-center mt-12">
