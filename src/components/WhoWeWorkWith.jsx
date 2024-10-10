@@ -55,8 +55,8 @@ const WhoWeWorkWith = () => (
         ))}
       </div>
       
-      <div className="mt-16">
-        <h3 className="text-2xl font-semibold mb-8 text-center">Minnesota Property Tax Appeal Service by Location | Insight Property Tax</h3>
+      <div className="mt-16 bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-8">
+        <h3 className="text-2xl font-semibold mb-8 text-center text-white">Minnesota Property Tax Appeal Service by Location | Insight Property Tax</h3>
         <Accordion type="single" collapsible className="w-full">
           <HennepinCounty />
           <RamseyCounty />
