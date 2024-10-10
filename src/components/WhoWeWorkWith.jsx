@@ -26,7 +26,6 @@ const WhoWeWorkWith = () => (
             <li>or you're unsure whether it's being fairly valued</li>
           </ul>
           <p className="text-lg mb-4">we offer free assessment reviews to uncover potential savings. Our process identifies areas where you could benefit from a tax reduction, saving you money year after year.</p>
-          <p className="text-lg mb-4">At Insight Property Tax, we specialize in helping commercial, industrial, and apartment property owners and tenants across Minnesota, including the Twin Cities metro area and Greater Minnesota, reduce their property tax burden. Our expert team provides tailored solutions to ensure your property is fairly assessed.</p>
         </div>
         <div>
           <h3 className="text-2xl font-semibold mb-4">Maximize Your Savings</h3>
