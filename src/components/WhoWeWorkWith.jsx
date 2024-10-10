@@ -50,7 +50,7 @@ const WhoWeWorkWith = () => (
       </div>
       
       <div>
-        <h3 className="text-2xl font-semibold mb-4">Service Areas</h3>
+        <h3 className="text-2xl font-semibold mb-4">Minnesota Property Tax Appeal Services by Location | Insight Property Tax</h3>
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="hennepin">
             <AccordionTrigger>Hennepin County</AccordionTrigger>
