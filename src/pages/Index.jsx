@@ -84,19 +84,11 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <div className="bg-gradient-to-b from-white via-gray-200 to-[#324E6E]">
-          <div className="bg-gradient-to-b from-white to-gray-100 py-16">
-            <ExpertiseSection />
-          </div>
-          <div className="bg-gradient-to-b from-gray-100 to-gray-200 py-16">
-            <RecentAppeals />
-          </div>
-          <div className="bg-gradient-to-b from-gray-200 to-[#1E3A5F] py-16">
-            <WhoWeWorkWith />
-          </div>
-          <div className="bg-gradient-to-b from-[#1E3A5F] to-[#324E6E] py-16">
-            <ProcessSection />
-          </div>
+        <div className="bg-white">
+          <ExpertiseSection />
+          <RecentAppeals />
+          <WhoWeWorkWith />
+          <ProcessSection />
         </div>
         <div className="bg-gradient-to-b from-[#324E6E] to-[#1E3A5F]">
           <MeetTheOwner />
