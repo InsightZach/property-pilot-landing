@@ -12,6 +12,7 @@ import MeetTheOwner from '../components/MeetTheOwner';
 import CallToAction from '../components/CallToAction';
 import AppealStatsInfographic from '../components/AppealStatsInfographic';
 import ExpertiseSection from '../components/ExpertiseSection';
+import { Card, CardContent } from "@/components/ui/card";
 
 const Index = () => {
   const schemaData = {
@@ -87,6 +88,7 @@ const Index = () => {
         <RecentAppeals />
         <WhoWeWorkWith />
         <ProcessSection />
+        <HowWeWorkSection />
         <MeetTheOwner />
         <CallToAction />
       </main>
@@ -137,6 +139,28 @@ const HeroSection = () => (
             <AppealStatsInfographic />
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+);
+
+const HowWeWorkSection = () => (
+  <section className="py-16 md:py-24 bg-white">
+    <div className="container mx-auto px-4">
+      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-[#0A2647]">How We Work</h2>
+      <div className="grid md:grid-cols-2 gap-8">
+        <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
+          <CardContent className="p-6">
+            <h3 className="font-bold text-xl mb-4 text-center underline">Contingency Fee</h3>
+            <p className="text-lg">Pay $0 upfront—our fee is 30% of your tax savings, and you keep the rest.</p>
+          </CardContent>
+        </Card>
+        <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
+          <CardContent className="p-6">
+            <h3 className="font-bold text-xl mb-4 text-center underline">Full Service</h3>
+            <p className="text-lg">We handle the entire appeal process, from identifying over-assessments to negotiating successful outcomes.</p>
+          </CardContent>
+        </Card>
       </div>
     </div>
   </section>
