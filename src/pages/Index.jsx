@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -135,8 +135,8 @@ const HeroSection = () => (
             </li>
           </ul>
           <Link to="/contact" className="block w-full md:w-auto">
-            <Button size="lg" className="w-full md:w-auto bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300">
-              Start My Free Assessment Review <ArrowRight className="ml-2 h-6 w-6" />
+            <Button size="lg" className="w-full md:w-auto bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              Start My Free Assessment Review
             </Button>
           </Link>
         </div>
