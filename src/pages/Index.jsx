@@ -84,7 +84,7 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <div className="bg-gradient-to-b from-[#1E3A5F] to-white py-16">
+        <div className="bg-white py-16">
           <ExpertiseSection />
         </div>
         <div className="bg-white">
