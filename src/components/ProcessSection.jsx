@@ -2,32 +2,32 @@ import React from 'react';
 import { Building2, LineChart, FileText, Handshake, ArrowRight, ArrowDown } from 'lucide-react';
 
 const ProcessStep = ({ icon: Icon, title, description }) => (
-  <div className="flex flex-col items-center bg-[#0A2647] text-white p-6 rounded-full w-48 h-48 justify-center relative">
-    <div className="absolute -top-8 bg-[#D4AF37] p-4 rounded-full">
-      <Icon className="w-8 h-8 text-[#0A2647]" />
+  <div className="flex flex-col items-center bg-[#0A2647] text-white p-6 rounded-2xl w-64 h-64 justify-center relative">
+    <div className="absolute -top-10 bg-[#D4AF37] p-4 rounded-full">
+      <Icon className="w-10 h-10 text-[#0A2647]" />
     </div>
-    <h3 className="text-lg font-semibold mb-2 text-center mt-4">{title}</h3>
-    <p className="text-xs text-center">{description}</p>
+    <h3 className="text-xl font-semibold mb-3 text-center mt-6">{title}</h3>
+    <p className="text-sm text-center">{description}</p>
   </div>
 );
 
 const DesktopArrow = () => (
   <div className="hidden md:flex flex-1 items-center justify-center">
-    <ArrowRight className="w-8 h-8 text-[#D4AF37]" />
+    <ArrowRight className="w-10 h-10 text-[#D4AF37]" />
   </div>
 );
 
 const MobileArrow = () => (
-  <div className="flex md:hidden items-center justify-center my-4">
-    <ArrowDown className="w-8 h-8 text-[#D4AF37]" />
+  <div className="flex md:hidden items-center justify-center my-6">
+    <ArrowDown className="w-10 h-10 text-[#D4AF37]" />
   </div>
 );
 
 const ProcessSection = () => (
-  <section className="py-16 bg-white">
+  <section className="py-20 bg-white">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-semibold text-center mb-12 text-[#0A2647]">Our Proven Property Tax Appeal Process</h2>
-      <div className="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-4">
+      <h2 className="text-4xl font-semibold text-center mb-16 text-[#0A2647]">Our Proven Property Tax Appeal Process</h2>
+      <div className="flex flex-col md:flex-row items-center justify-between space-y-12 md:space-y-0 md:space-x-6">
         <ProcessStep
           icon={Building2}
           title="Comprehensive Property Review"
