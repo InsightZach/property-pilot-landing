@@ -1,15 +1,13 @@
 import React from 'react';
-import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from 'lucide-react';
 
 const HowWeWork = () => (
-  <section className="py-16 md:py-24 bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] relative">
-    <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
+  <section className="py-16 md:py-24 bg-white relative">
     <div className="container mx-auto px-4 relative z-10">
-      <h2 className="text-3xl md:text-4xl font-semibold text-center text-white mb-12">How We Work</h2>
-      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
+      <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#0A2647] mb-12">How We Work</h2>
+      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200">
         <div className="md:flex">
-          <div className="md:w-1/2 bg-[#0A2647] p-8 text-white">
+          <div className="md:w-1/2 p-8 text-[#0A2647]">
             <h3 className="text-2xl font-bold mb-4">Contingency Fee</h3>
             <ul className="space-y-2">
               <li className="flex items-center">
@@ -26,12 +24,12 @@ const HowWeWork = () => (
               </li>
             </ul>
           </div>
-          <div className="md:w-1/2 p-8">
-            <h3 className="text-2xl font-bold mb-4 text-[#0A2647]">Full Service</h3>
-            <p className="text-lg text-[#0A2647] mb-4">
+          <div className="md:w-1/2 p-8 bg-[#324E6E] text-white">
+            <h3 className="text-2xl font-bold mb-4">Full Service</h3>
+            <p className="text-lg mb-4">
               We handle the entire appeal process, from identifying over-assessments to negotiating successful outcomes.
             </p>
-            <ul className="space-y-2 text-[#0A2647]">
+            <ul className="space-y-2">
               <li className="flex items-center">
                 <CheckCircle className="mr-2 text-[#d7b971]" /> Property assessment review
               </li>
