@@ -66,25 +66,30 @@ const WhoWeWorkWith = () => (
       <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Minnesota Property Tax Appeal Services</h2>
       
       <div className="grid md:grid-cols-2 gap-12 mb-12">
-        <div className="bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-4">
-          <h3 className="text-2xl font-semibold mb-4 text-center text-white">Minnesota Assessment Appeals<br />Property Types</h3>
-          <PropertyTypeAccordion />
+        <div className="max-w-md mx-auto">
+          <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Assessment Appeals<br />Property Types</h3>
+          <div className="bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-4">
+            <PropertyTypeAccordion />
+          </div>
         </div>
-        <div className="bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-4">
-          <h3 className="text-2xl font-semibold mb-4 text-center text-white">Minnesota Assessment Appeals<br />Service Locations</h3>
-          <Accordion type="single" collapsible className="w-full text-white">
-            <HennepinCounty />
-            <RamseyCounty />
-            <DakotaCounty />
-            <AnokaCounty />
-            <WashingtonCounty />
-            <ScottCounty />
-            <CarverCounty />
-            <GreaterMinnesota />
-          </Accordion>
+        <div className="max-w-md mx-auto">
+          <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Assessment Appeals<br />Service Locations</h3>
+          <div className="bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-4">
+            <Accordion type="single" collapsible className="w-full text-white">
+              <HennepinCounty />
+              <RamseyCounty />
+              <DakotaCounty />
+              <AnokaCounty />
+              <WashingtonCounty />
+              <ScottCounty />
+              <CarverCounty />
+              <GreaterMinnesota />
+            </Accordion>
+          </div>
         </div>
       </div>
       
+      <h3 className="text-2xl font-semibold mb-6 text-center">Property Types We Serve</h3>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {['Commercial', 'Industrial', 'Apartments', 'Minnesota'].map((type) => (
           <Card key={type} className="bg-white/80 backdrop-blur-sm border-[#d7b971]">
