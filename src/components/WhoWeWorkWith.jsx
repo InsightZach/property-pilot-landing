@@ -62,7 +62,7 @@ const WhoWeWorkWith = () => (
   <section className="py-16 bg-white text-[#0A2647] relative overflow-hidden">
     <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-5"></div>
     <div className="container mx-auto px-4 relative z-10">
-      <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Minnesota Property Tax Appeal Services</h2>
+      <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Who We Work With</h2>
       
       <div className="grid md:grid-cols-2 gap-12 mb-12">
         <div className="max-w-md mx-auto">

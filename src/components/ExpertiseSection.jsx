@@ -1,73 +1,33 @@
 import React from 'react';
-import { Card, CardContent } from "@/components/ui/card";
-import { TrendingDown, Clock, CheckCircle, Building2, Factory, Home } from 'lucide-react';
-import Sticker from './Sticker';
-
-const StatCard = ({ icon: Icon, title, description, showSticker }) => (
-  <div className="flex flex-col h-full relative">
-    {showSticker && <Sticker color="blue" />}
-    <Icon className="text-[#d7b971] w-16 h-16 mx-auto mb-4" />
-    <h4 className="font-bold text-xl mb-2 text-center">{title}</h4>
-    <p className="text-base">{description}</p>
-  </div>
-);
-
-const PropertyTypeIcon = ({ icon: Icon, label }) => (
-  <div className="flex items-center">
-    <Icon className="text-[#d7b971] w-6 h-6 mr-2" />
-    <span className="text-[#0A2647] text-lg">{label}</span>
-  </div>
-);
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const ExpertiseSection = () => (
-  <section className="py-16 md:py-24 bg-white">
+  <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4 text-[#0A2647]">
-        Expert Minnesota Property Tax Appeals
-      </h2>
-      <div className="flex justify-center items-center space-x-6 mb-8">
-        <PropertyTypeIcon icon={Building2} label="Commercial" />
-        <PropertyTypeIcon icon={Factory} label="Industrial" />
-        <PropertyTypeIcon icon={Home} label="Apartment" />
-      </div>
-      <div className="max-w-4xl mx-auto">
-        <p className="text-lg mb-4 text-left text-[#0A2647]">
-          At <strong>Insight Property Tax</strong> we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota.
-        </p>
-        <p className="text-lg mb-8 text-left text-[#0A2647]">
-          By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
-        </p>
-        <p className="text-2xl font-bold mb-8 text-left text-[#0A2647]">
-          What our clients receive:
-        </p>
-      </div>
-      <div className="grid md:grid-cols-3 gap-8">
-        <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
-          <CardContent className="p-6">
-            <StatCard 
-              icon={TrendingDown}
-              title="17.9% Average Reduction"
-              description="In 2024, we've achieved significant assessment reductions, saving our clients $49k per property."
-              showSticker={true}
-            />
+      <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Our Expertise</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Card className="bg-[#d7b971] text-white">
+          <CardHeader>
+            <CardTitle className="text-center">Commercial Property Tax Appeals</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p>Expertise in navigating complex commercial property tax assessments.</p>
           </CardContent>
         </Card>
-        <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
-          <CardContent className="p-6">
-            <StatCard 
-              icon={Clock}
-              title="90-Day Resolution"
-              description="Most appeals are resolved quickly, saving you time and resources."
-            />
+        <Card className="bg-[#d7b971] text-white">
+          <CardHeader>
+            <CardTitle className="text-center">Industrial Property Tax Appeals</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p>Specialized knowledge in industrial property tax regulations and appeals.</p>
           </CardContent>
         </Card>
-        <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
-          <CardContent className="p-6">
-            <StatCard 
-              icon={CheckCircle}
-              title="100% Success Rate"
-              description="We've successfully reduced taxes for every client we've worked with."
-            />
+        <Card className="bg-[#d7b971] text-white">
+          <CardHeader>
+            <CardTitle className="text-center">Apartment Property Tax Appeals</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p>Focused on maximizing savings for apartment property owners.</p>
           </CardContent>
         </Card>
       </div>
