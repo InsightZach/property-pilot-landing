@@ -2,18 +2,18 @@ import React, { useEffect, useRef, useState } from 'react';
 import { FileSearch, BarChart3, FileText, HandshakeIcon } from 'lucide-react';
 
 const ProcessStep = ({ number, icon: Icon, title, description, isActive, isLast }) => (
-  <div className="flex items-start mb-32 relative">
-    <div className="relative flex items-center self-center mr-8">
+  <div className="flex flex-col md:flex-row items-start mb-12 md:mb-32 relative">
+    <div className="relative flex items-center self-start md:self-center mr-4 md:mr-8 mb-4 md:mb-0">
       <div className={`flex-shrink-0 w-8 h-8 rounded-full ${isActive ? 'bg-[#d7b971]' : 'bg-white'} border-2 border-[#d7b971] flex items-center justify-center text-[#0A2647] font-bold text-lg z-20 transition-colors duration-300`}>
         {number}
       </div>
     </div>
     <div className="flex-grow">
-      <div className="flex items-center mb-3">
-        <Icon className="w-20 h-20 text-[#d7b971] mr-6 flex-shrink-0" />
+      <div className="flex flex-col md:flex-row items-start md:items-center mb-3">
+        <Icon className="w-16 h-16 md:w-20 md:h-20 text-[#d7b971] mb-4 md:mb-0 md:mr-6 flex-shrink-0" />
         <div>
-          <h3 className="text-2xl font-semibold mb-2 text-[#0A2647]">{title}</h3>
-          <p className="text-gray-700 text-lg">{description}</p>
+          <h3 className="text-xl md:text-2xl font-semibold mb-2 text-[#0A2647]">{title}</h3>
+          <p className="text-gray-700 text-base md:text-lg">{description}</p>
         </div>
       </div>
     </div>
@@ -65,10 +65,10 @@ const ProcessSection = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-semibold text-center mb-24 text-[#0A2647]">Our Property Tax Appeal Process</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-16 md:mb-24 text-[#0A2647]">Our Property Tax Appeal Process</h2>
         <div className="max-w-4xl mx-auto relative">
           {/* Vertical line */}
-          <div className="absolute left-4 top-10 h-[calc(100%-6rem)] w-0.5 bg-[#d7b971]"></div>
+          <div className="absolute left-4 top-10 h-[calc(100%-6rem)] w-0.5 bg-[#d7b971] hidden md:block"></div>
           {steps.map((step, index) => (
             <div key={index} ref={el => stepsRef.current[index] = el}>
               <ProcessStep
