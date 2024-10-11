@@ -5,7 +5,6 @@ import { CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import RecentAppeals from '../components/RecentAppeals';
 import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import ProcessSection from '../components/ProcessSection';
 import MeetTheOwner from '../components/MeetTheOwner';
@@ -86,7 +85,6 @@ const Index = () => {
         <HeroSection />
         <div className="bg-white">
           <ExpertiseSection />
-          <RecentAppeals />
           <HowWeWork />
           <WhoWeWorkWith />
           <ProcessSection />
