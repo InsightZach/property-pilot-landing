@@ -31,7 +31,7 @@ const MeetTheOwner = () => {
               <p className="mb-4 text-[#0A2647]">I started Insight Property Tax to offer Minnesota tax payers the same expertise the national players use to maximize their profits, without the tiresome corporate process.</p>
               <p className="mb-4 text-[#0A2647]">In my first year as an owner-operator, my clients received just that: market-high success without the hassle.</p>
               <p className="mb-4 text-[#0A2647]">Property tax appeals don't have to be costly, long-term, attorney-driven sagas. The vast majority of over-assessed properties can be promptly settled with significant financial benefits.</p>
-              <p className="mb-4 text-[#0A2647]">Want to increase your profits? Let's connect.</p>
+              <p className="mb-4 text-[#0A2647]">Let's connect and increase your profits.</p>
               <Button 
                 variant="outline" 
                 className="mt-4 bg-[#d7b971] text-[#0A2647] hover:bg-[#c7a961]"
