@@ -26,7 +26,7 @@ const ExpertiseSection = () => (
           By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
         </p>
         <p className="text-xl font-bold mb-8 text-left">
-          We stand behind our appeal results:
+          What our clients receive:
         </p>
       </div>
       <div className="grid md:grid-cols-3 gap-8">
