@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { CheckCircle, Percent, Clock, Wrench, DollarSign, HelpingHand, Building, MapPin } from 'lucide-react';
-import WhoWeWorkWith from '../components/WhoWeWorkWith';
 
 const FeatureCard = ({ icon: Icon, title, description, tagline }) => (
   <Card className="h-full">
@@ -137,12 +136,10 @@ const WhyInsight = () => {
           <p className="text-lg text-[#0A2647] mb-8">Get started. We'll provide you an appeal recommendation. If an appeal benefits you, we'll take care of everything.</p>
           <Link to="/contact">
             <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
-              Get Started
+              Start My Free Assessment Review
             </Button>
           </Link>
         </section>
-
-        <WhoWeWorkWith />
       </main>
       <Footer />
     </div>
