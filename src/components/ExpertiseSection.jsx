@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Building2, Factory, Home, TrendingDown, Clock, CheckCircle } from 'lucide-react';
+import Sticker from './Sticker';
 
 const IconText = ({ icon: Icon, text }) => (
   <div className="flex items-center space-x-2">
@@ -9,8 +10,9 @@ const IconText = ({ icon: Icon, text }) => (
   </div>
 );
 
-const StatCard = ({ icon: Icon, title, description }) => (
-  <div className="flex flex-col h-full">
+const StatCard = ({ icon: Icon, title, description, sticker }) => (
+  <div className="flex flex-col h-full relative">
+    {sticker && <Sticker text={sticker} />}
     <Icon className="text-[#d7b971] w-16 h-16 mx-auto mb-4" />
     <h4 className="font-bold text-xl mb-2 text-center">{title}</h4>
     <p className="text-base">{description}</p>
@@ -46,6 +48,7 @@ const ExpertiseSection = () => (
                 icon={TrendingDown}
                 title="17.9% Average Reduction"
                 description="In 2024, we've achieved significant assessment reductions, saving our clients $49k per property."
+                sticker="Market Best"
               />
             </CardContent>
           </Card>
