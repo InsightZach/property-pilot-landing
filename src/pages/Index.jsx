@@ -8,7 +8,6 @@ import Footer from '../components/Footer';
 import ProcessSection from '../components/ProcessSection';
 import MeetTheOwner from '../components/MeetTheOwner';
 import AppealStatsInfographic from '../components/AppealStatsInfographic';
-import ExpertiseSection from '../components/ExpertiseSection';
 import HowWeWork from '../components/HowWeWork';
 import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import AboutInsightSection from '../components/AboutInsightSection';
@@ -85,7 +84,6 @@ const Index = () => {
         <HeroSection />
         <div className="bg-white">
           <AboutInsightSection />
-          <ExpertiseSection />
           <HowWeWork />
           <WhoWeWorkWith />
           <ProcessSection />
