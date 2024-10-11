@@ -67,13 +67,13 @@ const WhoWeWorkWith = () => (
       
       <div className="grid md:grid-cols-2 gap-12 mb-12">
         <div className="max-w-md mx-auto">
-          <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Assessment Appeals<br />Property Types</h3>
+          <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Assessment Appeal<br />Property Types</h3>
           <div className="bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-4">
             <PropertyTypeAccordion />
           </div>
         </div>
         <div className="max-w-md mx-auto">
-          <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Assessment Appeals<br />Service Locations</h3>
+          <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Assessment Appeal<br />Service Locations</h3>
           <div className="bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-4">
             <Accordion type="single" collapsible className="w-full text-white">
               <HennepinCounty />
