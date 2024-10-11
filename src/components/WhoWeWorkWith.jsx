@@ -26,6 +26,14 @@ const WhoWeWorkWith = () => (
       
       <div className="grid md:grid-cols-2 gap-12 mb-12">
         <div className="max-w-md mx-auto">
+          <h3 className="text-2xl font-semibold mb-4 text-center">Property Types We Service</h3>
+          <div className="space-y-4 mb-8">
+            <ServiceIcon icon={Building2} text="Commercial Property Tax Appeals" />
+            <ServiceIcon icon={Factory} text="Industrial Property Tax Appeals" />
+            <ServiceIcon icon={Home} text="Apartment Property Tax Appeals" />
+          </div>
+        </div>
+        <div className="max-w-md mx-auto">
           <h3 className="text-2xl font-semibold mb-4 text-center">Is Your Property Over-Assessed?</h3>
           <p className="text-lg mb-4">If you believe your property is:</p>
           <ul className="list-disc pl-6 mb-4 text-lg">
@@ -34,14 +42,6 @@ const WhoWeWorkWith = () => (
             <li>Not being fairly valued</li>
           </ul>
           <p className="text-lg mb-4">We offer free assessment reviews to uncover potential savings. Our process identifies areas where you could benefit from a tax reduction, saving you money year after year.</p>
-        </div>
-        <div className="max-w-md mx-auto">
-          <h3 className="text-2xl font-semibold mb-4 text-center">Property Types We Service</h3>
-          <div className="space-y-4 mb-8">
-            <ServiceIcon icon={Building2} text="Commercial Property Tax Appeals" />
-            <ServiceIcon icon={Factory} text="Industrial Property Tax Appeals" />
-            <ServiceIcon icon={Home} text="Apartment Property Tax Appeals" />
-          </div>
         </div>
       </div>
       
