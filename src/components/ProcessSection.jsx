@@ -1,56 +1,86 @@
-import React from 'react';
-import { CheckCircle, FileSearch, BarChart3, FileText, HandshakeIcon } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { FileSearch, BarChart3, FileText, HandshakeIcon } from 'lucide-react';
 
-const ProcessStep = ({ number, icon: Icon, title, description }) => (
-  <div className="flex items-start mb-12 relative">
-    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#d7b971] flex items-center justify-center text-[#0A2647] font-bold text-xl mr-4 z-10">
+const ProcessStep = ({ number, icon: Icon, title, description, isActive }) => (
+  <div className="flex items-start mb-24 relative">
+    <div className={`flex-shrink-0 w-10 h-10 rounded-full ${isActive ? 'bg-[#d7b971]' : 'bg-white border-2 border-[#d7b971]'} flex items-center justify-center text-[#0A2647] font-bold text-lg mr-6 z-10 transition-colors duration-300`}>
       {number}
     </div>
     <div className="flex-grow">
       <div className="flex items-center mb-2">
-        <Icon className="w-6 h-6 text-[#d7b971] mr-2" />
-        <h3 className="text-xl font-semibold">{title}</h3>
+        <Icon className="w-10 h-10 text-[#d7b971] mr-4" />
+        <h3 className="text-2xl font-semibold">{title}</h3>
       </div>
       <p className="text-gray-700">{description}</p>
     </div>
     {number < 4 && (
-      <div className="absolute left-6 top-12 bottom-0 w-0.5 bg-[#d7b971] -z-10"></div>
+      <div className="absolute left-5 top-10 bottom-0 w-0.5 bg-[#d7b971] -z-10 h-24"></div>
     )}
   </div>
 );
 
-const ProcessSection = () => (
-  <section className="py-16 bg-white">
-    <div className="container mx-auto px-4">
-      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-[#0A2647]">Our Property Tax Appeal Process</h2>
-      <div className="max-w-3xl mx-auto">
-        <ProcessStep
-          number={1}
-          icon={FileSearch}
-          title="Assessment Review"
-          description="We thoroughly review your property's assessed value and identify potential over-assessments."
-        />
-        <ProcessStep
-          number={2}
-          icon={BarChart3}
-          title="Appeal Strategy"
-          description="We develop a tailored appeal strategy based on your property's unique circumstances and market conditions."
-        />
-        <ProcessStep
-          number={3}
-          icon={FileText}
-          title="Documentation"
-          description="We prepare all necessary documentation and evidence to support your appeal, ensuring a strong case."
-        />
-        <ProcessStep
-          number={4}
-          icon={HandshakeIcon}
-          title="Negotiation"
-          description="We negotiate with tax authorities on your behalf to achieve the best possible outcome for your property tax appeal."
-        />
+const ProcessSection = () => {
+  const [activeStep, setActiveStep] = useState(1);
+  const stepsRef = useRef([]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      
+      stepsRef.current.forEach((step, index) => {
+        if (step && scrollPosition >= step.offsetTop) {
+          setActiveStep(index + 1);
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const steps = [
+    {
+      icon: FileSearch,
+      title: "Assessment Review",
+      description: "We thoroughly review your property's assessed value and identify potential over-assessments."
+    },
+    {
+      icon: BarChart3,
+      title: "Appeal Strategy",
+      description: "We develop a tailored appeal strategy based on your property's unique circumstances and market conditions."
+    },
+    {
+      icon: FileText,
+      title: "Documentation",
+      description: "We prepare all necessary documentation and evidence to support your appeal, ensuring a strong case."
+    },
+    {
+      icon: HandshakeIcon,
+      title: "Negotiation",
+      description: "We negotiate with tax authorities on your behalf to achieve the best possible outcome for your property tax appeal."
+    }
+  ];
+
+  return (
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16 text-[#0A2647]">Our Property Tax Appeal Process</h2>
+        <div className="max-w-3xl mx-auto">
+          {steps.map((step, index) => (
+            <div key={index} ref={el => stepsRef.current[index] = el}>
+              <ProcessStep
+                number={index + 1}
+                icon={step.icon}
+                title={step.title}
+                description={step.description}
+                isActive={activeStep === index + 1}
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default ProcessSection;
