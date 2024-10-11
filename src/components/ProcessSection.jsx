@@ -4,7 +4,7 @@ import { FileSearch, BarChart3, FileText, HandshakeIcon } from 'lucide-react';
 const ProcessStep = ({ number, icon: Icon, title, description, isActive, isLast }) => (
   <div className="flex items-start mb-32 relative">
     <div className="relative">
-      <div className={`flex-shrink-0 w-6 h-6 rounded-full ${isActive ? 'bg-[#d7b971]' : 'bg-white'} border-2 border-[#d7b971] flex items-center justify-center text-[#0A2647] font-bold text-xs mr-8 z-20 transition-colors duration-300`}>
+      <div className={`flex-shrink-0 w-6 h-6 rounded-full ${isActive ? 'bg-[#d7b971]' : 'bg-white'} border border-[#d7b971] flex items-center justify-center text-[#0A2647] font-bold text-xs mr-8 z-20 transition-colors duration-300`}>
         {number}
       </div>
     </div>
