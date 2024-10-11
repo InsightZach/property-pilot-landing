@@ -34,14 +34,19 @@ const WhoWeWorkWith = () => (
           </div>
         </div>
         <div className="max-w-md mx-auto">
-          <h3 className="text-2xl font-semibold mb-4 text-center">Is Your Property Over-Assessed?</h3>
-          <p className="text-lg mb-4">If you believe your property is:</p>
-          <ul className="list-disc pl-6 mb-4 text-lg">
-            <li>Over-assessed</li>
-            <li>Causing you to pay too much in taxes</li>
-            <li>Not being fairly valued</li>
-          </ul>
-          <p className="text-lg mb-4">We offer free assessment reviews to uncover potential savings. Our process identifies areas where you could benefit from a tax reduction, saving you money year after year.</p>
+          <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Property Tax Appeal Service by Location</h3>
+          <div className="bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-4">
+            <Accordion type="single" collapsible className="w-full text-white">
+              <HennepinCounty />
+              <RamseyCounty />
+              <DakotaCounty />
+              <AnokaCounty />
+              <WashingtonCounty />
+              <ScottCounty />
+              <CarverCounty />
+              <GreaterMinnesota />
+            </Accordion>
+          </div>
         </div>
       </div>
       
@@ -53,20 +58,6 @@ const WhoWeWorkWith = () => (
             </CardContent>
           </Card>
         ))}
-      </div>
-      
-      <div className="mt-16 bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-8">
-        <h3 className="text-2xl font-semibold mb-8 text-center text-white">Minnesota Property Tax Appeal Service by Location | Insight Property Tax</h3>
-        <Accordion type="single" collapsible className="w-full text-white">
-          <HennepinCounty />
-          <RamseyCounty />
-          <DakotaCounty />
-          <AnokaCounty />
-          <WashingtonCounty />
-          <ScottCounty />
-          <CarverCounty />
-          <GreaterMinnesota />
-        </Accordion>
       </div>
     </div>
   </section>
