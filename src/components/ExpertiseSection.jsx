@@ -12,7 +12,7 @@ const IconText = ({ icon: Icon, text }) => (
 
 const StatCard = ({ icon: Icon, title, description, sticker }) => (
   <div className="flex flex-col h-full relative">
-    {sticker && <Sticker text={sticker} />}
+    {sticker && <Sticker text={sticker} color="blue" />}
     <Icon className="text-[#d7b971] w-16 h-16 mx-auto mb-4" />
     <h4 className="font-bold text-xl mb-2 text-center">{title}</h4>
     <p className="text-base">{description}</p>
