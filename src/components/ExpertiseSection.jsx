@@ -18,6 +18,12 @@ const ExpertiseSection = () => (
       <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-[#0A2647]">
         Expert Minnesota Property Tax Appeals
       </h2>
+      <p className="text-lg mb-8 text-center">
+        At <strong>Insight Property Tax</strong> we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota. By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
+      </p>
+      <p className="text-xl font-bold mb-8 text-left">
+        We stand behind our appeal results:
+      </p>
       <div className="grid md:grid-cols-3 gap-8">
         <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
           <CardContent className="p-6">
