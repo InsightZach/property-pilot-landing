@@ -7,7 +7,7 @@ const HowWeWork = () => (
       <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#0A2647] mb-12">How We Work</h2>
       <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200">
         <div className="md:flex">
-          <div className="md:w-1/2 p-8 text-[#0A2647]">
+          <div className="md:w-1/2 p-8 bg-[#0A2647] text-white">
             <h3 className="text-2xl font-bold mb-4">Contingency Fee</h3>
             <ul className="space-y-2">
               <li className="flex items-center">
