@@ -159,7 +159,7 @@ const ReadyToReduce = () => (
       <p className="text-xl text-white mb-8">Let's get started with a free analysis of your property.</p>
       <Link to="/contact">
         <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-          Get Started
+          Start My Free Assessment Review
         </Button>
       </Link>
     </div>
