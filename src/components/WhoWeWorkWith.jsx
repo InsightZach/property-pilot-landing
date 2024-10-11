@@ -89,11 +89,12 @@ const WhoWeWorkWith = () => (
         </div>
       </div>
       
-      <div className="flex justify-center space-x-4 mb-16">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
         {['Commercial', 'Industrial', 'Apartments', 'Minnesota'].map((type) => (
-          <Card key={type} className="bg-white/80 backdrop-blur-sm border-[#d7b971] flex-1">
-            <CardContent className="p-4">
-              <img src={`/${type}.svg`} alt={`${type} Property Tax Appeals in Minnesota`} className="w-full h-24 object-contain" />
+          <Card key={type} className="bg-white/80 backdrop-blur-sm border-[#d7b971]">
+            <CardContent className="p-4 flex flex-col items-center justify-center">
+              <img src={`/${type}.svg`} alt={`${type} Property Tax Appeals in Minnesota`} className="w-full h-24 object-contain mb-2" />
+              <p className="text-center font-semibold">{type}</p>
             </CardContent>
           </Card>
         ))}
