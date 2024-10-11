@@ -47,23 +47,23 @@ const ProcessSection = () => {
     {
       icon: FileSearch,
       title: "Assessment Review",
-      description: "Contact us. We'll thoroughly review your property's assessed value and identify potential over-assessments. We'll provide you an appeal recommendation — If an appeal benefits you, we'll take care of the rest.",
+      description: "Contact us for a free review of your property's assessed value. We'll identify potential over-assessments and provide a detailed recommendation. If appealing is in your best interest, we'll handle everything from start to finish.",
       showSticker: true
     },
     {
       icon: BarChart3,
       title: "Appeal Strategy",
-      description: "We develop a tailored appeal strategy based on your property's unique circumstances and market conditions."
+      description: "We create a customized appeal strategy that accounts for your property's specific circumstances, market conditions, and assessment history, ensuring the strongest possible case."
     },
     {
       icon: FileText,
       title: "Documentation",
-      description: "We prepare all necessary documentation and evidence to support your appeal, ensuring a strong case."
+      description: "Our team prepares all the necessary documentation and evidence to support your appeal. We gather the facts, data, and expert analysis needed to back your case."
     },
     {
       icon: HandshakeIcon,
-      title: "Negotiation",
-      description: "We negotiate with tax authorities on your behalf to achieve the best possible outcome for your property tax appeal."
+      title: "Negotiation & Resolution",
+      description: "We handle all negotiations with tax authorities, representing you from start to finish for a successful outcome."
     }
   ];
 
