@@ -34,7 +34,7 @@ const WhoWeWorkWith = () => (
           </div>
         </div>
         <div className="max-w-md mx-auto">
-          <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Property Tax Appeal Service by Location</h3>
+          <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Assessment Appeals<br />Service Locations</h3>
           <div className="bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-4">
             <Accordion type="single" collapsible className="w-full text-white">
               <HennepinCounty />
