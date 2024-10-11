@@ -89,7 +89,8 @@ const WhoWeWorkWith = () => (
         </div>
       </div>
       
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+      <h3 className="text-2xl font-semibold mb-6 text-center">Property Types We Serve</h3>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {['Commercial', 'Industrial', 'Apartments', 'Minnesota'].map((type) => (
           <Card key={type} className="bg-white/80 backdrop-blur-sm border-[#d7b971]">
             <CardContent className="p-4 flex flex-col items-center justify-center">
