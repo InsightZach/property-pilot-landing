@@ -103,14 +103,3 @@
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
 }
-
-.process-step-line::before {
-  content: '';
-  position: absolute;
-  left: 15px;
-  top: 32px;
-  bottom: -128px;
-  width: 2px;
-  background-color: #d7b971;
-  z-index: -1;
-}
