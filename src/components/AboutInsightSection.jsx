@@ -5,9 +5,14 @@ const AboutInsightSection = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Expert Minnesota Property Tax Appeals</h2>
-      <p className="text-lg mb-8 text-center">
-        At <span className="font-bold">Insight Property Tax</span> we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota. By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
-      </p>
+      <div className="max-w-3xl mx-auto mb-12 text-left">
+        <p className="text-lg mb-4">
+          At <span className="font-bold">Insight Property Tax</span>, we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota.
+        </p>
+        <p className="text-lg mb-8">
+          By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
+        </p>
+      </div>
       <h3 className="text-2xl font-semibold mb-6 text-center">We stand behind our appeal results:</h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <StatCard
