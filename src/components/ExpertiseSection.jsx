@@ -41,7 +41,6 @@ const ExpertiseSection = () => (
       </div>
       
       <div className="mb-16">
-        <h3 className="text-2xl md:text-3xl font-semibold text-center text-[#0A2647] mb-8">Why Choose Insight Property Tax?</h3>
         <div className="grid md:grid-cols-3 gap-8">
           <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
             <CardContent className="p-6">
