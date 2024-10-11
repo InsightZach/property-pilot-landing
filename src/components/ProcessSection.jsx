@@ -1,18 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { FileSearch, BarChart3, FileText, HandshakeIcon } from 'lucide-react';
+import Sticker from './Sticker';
 
-const ProcessStep = ({ number, icon: Icon, title, description, isActive, isLast }) => (
+const ProcessStep = ({ number, icon: Icon, title, description, isActive, isLast, showSticker }) => (
   <div className="flex flex-col md:flex-row items-start mb-12 md:mb-32 relative">
     <div className="relative flex items-center self-start md:self-center mr-4 md:mr-8 mb-4 md:mb-0">
       <div className={`flex-shrink-0 w-8 h-8 rounded-full ${isActive ? 'bg-[#d7b971]' : 'bg-white'} border-2 border-[#d7b971] flex items-center justify-center text-[#0A2647] font-bold text-lg z-20 transition-colors duration-300`}>
         {number}
       </div>
     </div>
-    <div className="flex-grow">
+    <div className="flex-grow relative">
       <div className="flex flex-col md:flex-row items-start md:items-center mb-3">
         <Icon className="w-16 h-16 md:w-20 md:h-20 text-[#d7b971] mb-4 md:mb-0 md:mr-6 flex-shrink-0" />
         <div>
-          <h3 className="text-xl md:text-2xl font-semibold mb-2 text-[#0A2647]">{title}</h3>
+          <h3 className="text-xl md:text-2xl font-semibold mb-2 text-[#0A2647]">
+            {title}
+            {showSticker && <Sticker color="red" text="Free!" />}
+          </h3>
           <p className="text-gray-700 text-base md:text-lg">{description}</p>
         </div>
       </div>
@@ -43,7 +47,8 @@ const ProcessSection = () => {
     {
       icon: FileSearch,
       title: "Assessment Review",
-      description: "We thoroughly review your property's assessed value and identify potential over-assessments."
+      description: "We thoroughly review your property's assessed value and identify potential over-assessments.",
+      showSticker: true
     },
     {
       icon: BarChart3,
@@ -78,6 +83,7 @@ const ProcessSection = () => {
                 description={step.description}
                 isActive={activeStep === index + 1}
                 isLast={index === steps.length - 1}
+                showSticker={step.showSticker}
               />
             </div>
           ))}
