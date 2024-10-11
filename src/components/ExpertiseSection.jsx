@@ -1,8 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Building2, Factory, Home, TrendingDown, Clock, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Button } from "@/components/ui/button";
 
 const IconText = ({ icon: Icon, text }) => (
   <div className="flex items-center space-x-2">
@@ -70,14 +68,6 @@ const ExpertiseSection = () => (
             </CardContent>
           </Card>
         </div>
-      </div>
-      
-      <div className="text-center mt-12">
-        <Link to="/contact">
-          <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-xl px-8 py-4">
-            Get Started
-          </Button>
-        </Link>
       </div>
     </div>
   </section>
