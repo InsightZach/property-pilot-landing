@@ -11,7 +11,6 @@ import MeetTheOwner from '../components/MeetTheOwner';
 import AppealStatsInfographic from '../components/AppealStatsInfographic';
 import ExpertiseSection from '../components/ExpertiseSection';
 import HowWeWork from '../components/HowWeWork';
-import { Card, CardContent } from "@/components/ui/card";
 
 const Index = () => {
   const schemaData = {

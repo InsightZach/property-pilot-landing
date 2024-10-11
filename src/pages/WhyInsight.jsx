@@ -137,6 +137,20 @@ const WhyInsight = () => {
           ))}
         </section>
 
+        <section className="bg-white rounded-lg p-8 mb-16">
+          <h2 className="text-3xl font-semibold mb-6 text-center text-[#0A2647]">Property Types We Serve</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {['Commercial', 'Industrial', 'Apartments', 'Minnesota'].map((type) => (
+              <Card key={type} className="bg-white/80 backdrop-blur-sm border-[#d7b971]">
+                <CardContent className="p-4 flex flex-col items-center justify-center">
+                  <img src={`/${type}.svg`} alt={`${type} Property Tax Appeals in Minnesota`} className="w-full h-24 object-contain mb-2" />
+                  <p className="text-center font-semibold">{type}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
         <section className="bg-white rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold text-[#0A2647] mb-4">We save our clients <span className="text-[#d7b971]">tens of thousands</span> on property taxes, without the hassle.</h2>
           <p className="text-lg text-[#0A2647] mb-8">Get started. We'll provide you an appeal recommendation. If an appeal benefits you, we'll take care of everything.</p>
