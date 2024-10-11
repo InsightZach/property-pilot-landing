@@ -39,7 +39,6 @@ const RecentAppeals = () => {
   return (
     <section className="py-12 bg-white">
       <div className="container mx-auto px-4 max-w-6xl">
-        <h2 className="text-3xl font-semibold text-center mb-8 text-[#1c1d29]">Recent Property Tax Appeals</h2>
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
