@@ -12,8 +12,8 @@ const AboutInsightSection = () => (
         <p className="text-lg mb-8">
           By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
         </p>
+        <h3 className="text-lg font-semibold mb-6">We stand behind our appeal results:</h3>
       </div>
-      <h3 className="text-2xl font-semibold mb-6 text-center">We stand behind our appeal results:</h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <StatCard
           icon={TrendingDown}
