@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import RecentAppeals from '../components/RecentAppeals';
 import { CheckCircle, Percent, Clock, Wrench, DollarSign, HelpingHand, Building, MapPin } from 'lucide-react';
 
 const FeatureCard = ({ icon: Icon, title, description, tagline }) => (
@@ -123,6 +124,11 @@ const WhyInsight = () => {
               </CardContent>
             </Card>
           </div>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-3xl font-semibold text-white mb-8 text-center">Recent Appeals</h2>
+          <RecentAppeals />
         </section>
 
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
