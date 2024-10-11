@@ -89,9 +89,7 @@ const Index = () => {
           <WhoWeWorkWith />
           <ProcessSection />
         </div>
-        <div className="bg-gradient-to-b from-[#324E6E] to-[#1E3A5F]">
-          <MeetTheOwner />
-        </div>
+        <MeetTheOwner />
         <ReadyToReduce />
       </main>
       <Footer />
