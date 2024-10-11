@@ -22,7 +22,7 @@ const PropertyTypeIcon = ({ icon: Icon, label }) => (
 const ExpertiseSection = () => (
   <section className="py-16 md:py-24 bg-white">
     <div className="container mx-auto px-4">
-      <h2 className="text-4xl md:text-5xl font-semibold text-center mb-4 text-[#0A2647]">
+      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4 text-[#0A2647]">
         Expert Minnesota Property Tax Appeals
       </h2>
       <div className="flex justify-center items-center space-x-6 mb-8">
