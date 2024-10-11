@@ -3,7 +3,7 @@ import { Building2, LineChart, FileText, Handshake, ArrowRight, ArrowDown } from
 
 const ProcessStep = ({ icon: Icon, title, description }) => (
   <div className="flex flex-col items-center bg-white/10 backdrop-blur-md text-white p-6 rounded-2xl w-64 h-64 justify-center relative">
-    <div className="absolute -top-10 bg-[#D4AF37] p-4 rounded-full">
+    <div className="absolute -top-10 bg-[#d7b971] p-4 rounded-full">
       <Icon className="w-10 h-10 text-[#0A2647]" />
     </div>
     <h3 className="text-xl font-semibold mb-3 text-center mt-6">{title}</h3>
@@ -13,13 +13,13 @@ const ProcessStep = ({ icon: Icon, title, description }) => (
 
 const DesktopArrow = () => (
   <div className="hidden md:flex flex-1 items-center justify-center">
-    <ArrowRight className="w-10 h-10 text-[#D4AF37]" />
+    <ArrowRight className="w-10 h-10 text-[#d7b971]" />
   </div>
 );
 
 const MobileArrow = () => (
   <div className="flex md:hidden items-center justify-center my-6">
-    <ArrowDown className="w-10 h-10 text-[#D4AF37]" />
+    <ArrowDown className="w-10 h-10 text-[#d7b971]" />
   </div>
 );
 
