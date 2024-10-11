@@ -68,7 +68,7 @@ const ProcessSection = () => {
         <h2 className="text-4xl md:text-5xl font-semibold text-center mb-24 text-[#0A2647]">Our Property Tax Appeal Process</h2>
         <div className="max-w-4xl mx-auto relative">
           {/* Vertical line */}
-          <div className="absolute left-4 top-10 h-[calc(100%-8rem)] w-0.5 bg-[#d7b971]"></div>
+          <div className="absolute left-4 top-10 h-[calc(100%-4rem)] w-0.5 bg-[#d7b971]"></div>
           {steps.map((step, index) => (
             <div key={index} ref={el => stepsRef.current[index] = el}>
               <ProcessStep
