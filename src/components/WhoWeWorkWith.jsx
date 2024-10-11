@@ -21,8 +21,8 @@ const ServiceIcon = ({ icon: Icon, text }) => (
 const PropertyTypeAccordion = () => (
   <Accordion type="single" collapsible className="w-full">
     <AccordionItem value="commercial">
-      <AccordionTrigger className="text-white">
-        <ServiceIcon icon={Building2} text="Commercial Appeals" />
+      <AccordionTrigger className="text-white text-lg">
+        <ServiceIcon icon={Building2} text="Commercial Appeal" />
       </AccordionTrigger>
       <AccordionContent className="text-white">
         <ul className="list-disc pl-6">
@@ -33,8 +33,8 @@ const PropertyTypeAccordion = () => (
       </AccordionContent>
     </AccordionItem>
     <AccordionItem value="industrial">
-      <AccordionTrigger className="text-white">
-        <ServiceIcon icon={Factory} text="Industrial Appeals" />
+      <AccordionTrigger className="text-white text-lg">
+        <ServiceIcon icon={Factory} text="Industrial Appeal" />
       </AccordionTrigger>
       <AccordionContent className="text-white">
         <ul className="list-disc pl-6">
@@ -45,8 +45,8 @@ const PropertyTypeAccordion = () => (
       </AccordionContent>
     </AccordionItem>
     <AccordionItem value="apartments">
-      <AccordionTrigger className="text-white">
-        <ServiceIcon icon={Home} text="Apartment Appeals" />
+      <AccordionTrigger className="text-white text-lg">
+        <ServiceIcon icon={Home} text="Apartment Appeal" />
       </AccordionTrigger>
       <AccordionContent className="text-white">
         <ul className="list-disc pl-6">
