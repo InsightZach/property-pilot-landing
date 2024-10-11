@@ -89,7 +89,7 @@ const Index = () => {
           <WhoWeWorkWith />
           <ProcessSection />
         </div>
-        <div className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077]">
+        <div className="bg-gradient-to-b from-[#0A2647] to-[#2E5077]">
           <MeetTheOwner />
           <ReadyToReduce />
         </div>
@@ -147,7 +147,7 @@ const HeroSection = () => (
 );
 
 const ReadyToReduce = () => (
-  <section className="mt-16 text-center py-16 relative overflow-hidden bg-gradient-to-bl from-[#2E5077] via-[#1E3A5F] to-[#0A2647]">
+  <section className="py-16 relative overflow-hidden">
     <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
     <div className="container mx-auto px-4 relative z-10">
       <div className="flex justify-center mb-8">

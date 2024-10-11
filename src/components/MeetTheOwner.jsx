@@ -5,7 +5,7 @@ import { Linkedin } from 'lucide-react';
 
 const MeetTheOwner = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white relative overflow-hidden">
+    <section className="py-16 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-3xl font-semibold text-center mb-12 text-white">Meet the Owner</h2>
