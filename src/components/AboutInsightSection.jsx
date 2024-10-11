@@ -4,7 +4,7 @@ import { TrendingDown, Clock, CheckCircle } from 'lucide-react';
 const AboutInsightSection = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-semibold text-center mb-8 text-[#0A2647]">Expert Minnesota Property Tax Appeals</h2>
+      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-[#0A2647]">Expert Minnesota Property Tax Appeals</h2>
       <div className="max-w-3xl mx-auto mb-12 text-left">
         <p className="text-lg mb-4">
           At <span className="font-bold">Insight Property Tax</span>, we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota.
