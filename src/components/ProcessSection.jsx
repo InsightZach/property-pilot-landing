@@ -47,7 +47,7 @@ const ProcessSection = () => {
     {
       icon: FileSearch,
       title: "Assessment Review",
-      description: "Contact us. We'll thoroughly review your property's assessed value and identify potential over-assessments. We'll provide you an appeal recommendation -- If an appeal benefits you, we'll take care of the rest.",
+      description: "Contact us. We'll thoroughly review your property's assessed value and identify potential over-assessments. We'll provide you an appeal recommendation — If an appeal benefits you, we'll take care of the rest.",
       showSticker: true
     },
     {
