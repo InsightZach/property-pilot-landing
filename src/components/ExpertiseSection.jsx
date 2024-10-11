@@ -15,14 +15,14 @@ const StatCard = ({ icon: Icon, title, description, showSticker }) => (
 const PropertyTypeIcon = ({ icon: Icon, label }) => (
   <div className="flex items-center">
     <Icon className="text-[#d7b971] w-6 h-6 mr-2" />
-    <span>{label}</span>
+    <span className="text-blue-600 text-lg">{label}</span>
   </div>
 );
 
 const ExpertiseSection = () => (
   <section className="py-16 md:py-24 bg-white">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4 text-[#0A2647]">
+      <h2 className="text-4xl md:text-5xl font-semibold text-center mb-4 text-blue-600">
         Expert Minnesota Property Tax Appeals
       </h2>
       <div className="flex justify-center items-center space-x-6 mb-8">
@@ -31,13 +31,13 @@ const ExpertiseSection = () => (
         <PropertyTypeIcon icon={Home} label="Apartment" />
       </div>
       <div className="max-w-4xl mx-auto">
-        <p className="text-lg mb-4 text-left">
+        <p className="text-lg mb-4 text-left text-blue-600">
           At <strong>Insight Property Tax</strong> we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota.
         </p>
-        <p className="text-lg mb-8 text-left">
+        <p className="text-lg mb-8 text-left text-blue-600">
           By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
         </p>
-        <p className="text-xl font-bold mb-8 text-left">
+        <p className="text-2xl font-bold mb-8 text-left text-blue-600">
           What our clients receive:
         </p>
       </div>
