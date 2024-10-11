@@ -2,14 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { FileSearch, BarChart3, FileText, HandshakeIcon } from 'lucide-react';
 
 const ProcessStep = ({ number, icon: Icon, title, description, isActive, isLast }) => (
-  <div className="flex items-start mb-32 relative">
+  <div className={`flex items-start mb-32 relative ${!isLast ? 'process-step-line' : ''}`}>
     <div className="relative">
       <div className={`flex-shrink-0 w-8 h-8 rounded-full ${isActive ? 'bg-[#d7b971]' : 'bg-white'} border-2 border-[#d7b971] flex items-center justify-center text-[#0A2647] font-bold text-sm mr-8 z-20 transition-colors duration-300`}>
         {number}
       </div>
-      {!isLast && number === 1 && (
-        <div className="absolute left-4 top-8 w-0.5 bg-[#d7b971] h-[calc(100%+128px)] -z-10"></div>
-      )}
     </div>
     <div className="flex-grow">
       <div className="flex items-center mb-3">
