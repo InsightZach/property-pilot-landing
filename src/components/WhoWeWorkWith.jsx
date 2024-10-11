@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Building2, Factory, Home } from 'lucide-react';
 import HennepinCounty from './counties/HennepinCounty';
@@ -87,18 +86,6 @@ const WhoWeWorkWith = () => (
             </Accordion>
           </div>
         </div>
-      </div>
-      
-      <h3 className="text-2xl font-semibold mb-6 text-center">Property Types We Serve</h3>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-        {['Commercial', 'Industrial', 'Apartments', 'Minnesota'].map((type) => (
-          <Card key={type} className="bg-white/80 backdrop-blur-sm border-[#d7b971]">
-            <CardContent className="p-4 flex flex-col items-center justify-center">
-              <img src={`/${type}.svg`} alt={`${type} Property Tax Appeals in Minnesota`} className="w-full h-24 object-contain mb-2" />
-              <p className="text-center font-semibold">{type}</p>
-            </CardContent>
-          </Card>
-        ))}
       </div>
     </div>
   </section>

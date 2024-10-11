@@ -10,6 +10,7 @@ import MeetTheOwner from '../components/MeetTheOwner';
 import AppealStatsInfographic from '../components/AppealStatsInfographic';
 import ExpertiseSection from '../components/ExpertiseSection';
 import HowWeWork from '../components/HowWeWork';
+import WhoWeWorkWith from '../components/WhoWeWorkWith';
 
 const Index = () => {
   const schemaData = {
@@ -84,7 +85,7 @@ const Index = () => {
         <div className="bg-white">
           <ExpertiseSection />
           <HowWeWork />
-          <ProcessSection />
+          <WhoWeWorkWith />
         </div>
         <div className="bg-gradient-to-b from-[#0A2647] to-[#2E5077]">
           <MeetTheOwner />
