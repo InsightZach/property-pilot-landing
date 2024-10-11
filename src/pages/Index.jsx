@@ -5,7 +5,6 @@ import { CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import ProcessSection from '../components/ProcessSection';
 import MeetTheOwner from '../components/MeetTheOwner';
 import AppealStatsInfographic from '../components/AppealStatsInfographic';
@@ -85,7 +84,6 @@ const Index = () => {
         <div className="bg-white">
           <ExpertiseSection />
           <HowWeWork />
-          <WhoWeWorkWith />
           <ProcessSection />
         </div>
         <div className="bg-gradient-to-b from-[#0A2647] to-[#2E5077]">
