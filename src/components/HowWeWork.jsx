@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, FileSearch, BarChart3, FileText, HandshakeIcon } from 'lucide-react';
 
 const HowWeWork = () => (
   <section className="py-16 md:py-24 relative">
@@ -29,22 +29,22 @@ const HowWeWork = () => (
             </ul>
           </div>
           <div className="md:w-1/2 p-8 bg-[#324E6E]/90 text-white">
-            <h3 className="text-2xl font-bold mb-4">Full Service</h3>
+            <h3 className="text-2xl font-bold mb-4">Full Service Assessment Appeals</h3>
             <p className="text-lg mb-4">
               We handle the entire appeal process, from identifying over-assessments to negotiating successful outcomes.
             </p>
             <ul className="space-y-2">
               <li className="flex items-center">
-                <CheckCircle className="mr-2 text-[#d7b971]" /> Property assessment review
+                <FileSearch className="mr-2 text-[#d7b971] w-5 h-5" /> Assessment Review
               </li>
               <li className="flex items-center">
-                <CheckCircle className="mr-2 text-[#d7b971]" /> Appeal strategy development
+                <BarChart3 className="mr-2 text-[#d7b971] w-5 h-5" /> Appeal Strategy
               </li>
               <li className="flex items-center">
-                <CheckCircle className="mr-2 text-[#d7b971]" /> Documentation preparation
+                <FileText className="mr-2 text-[#d7b971] w-5 h-5" /> Documentation
               </li>
               <li className="flex items-center">
-                <CheckCircle className="mr-2 text-[#d7b971]" /> Negotiation with tax authorities
+                <HandshakeIcon className="mr-2 text-[#d7b971] w-5 h-5" /> Negotiation & Resolution
               </li>
             </ul>
           </div>
