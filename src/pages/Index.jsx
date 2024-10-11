@@ -11,66 +11,67 @@ import AppealStatsInfographic from '../components/AppealStatsInfographic';
 import ExpertiseSection from '../components/ExpertiseSection';
 import HowWeWork from '../components/HowWeWork';
 import WhoWeWorkWith from '../components/WhoWeWorkWith';
+import AboutInsightSection from '../components/AboutInsightSection';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Insight Property Tax",
+  "description": "Expert property tax appeal services for commercial, industrial, and apartment properties in Minnesota.",
+  "url": "https://insightpropertytax.com",
+  "logo": "https://insightpropertytax.com/logo.svg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Minnesota",
+    "addressRegion": "MN",
+    "addressCountry": "US"
+  },
+  "telephone": "+16122084419",
+  "email": "zach@insightpropertytax.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/zach-hepburn/"
+  ],
+  "priceRange": "Contingency fee: 30% of tax savings",
+  "openingHours": "Mo-Fr 09:00-17:00",
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 46.7296,
+      "longitude": -94.6859
+    },
+    "geoRadius": "250"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Property Tax Appeal Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Commercial Property Tax Appeals"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Industrial Property Tax Appeals"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Apartment Property Tax Appeals"
+        }
+      }
+    ]
+  }
+};
 
 const Index = () => {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Insight Property Tax",
-    "description": "Expert property tax appeal services for commercial, industrial, and apartment properties in Minnesota.",
-    "url": "https://insightpropertytax.com",
-    "logo": "https://insightpropertytax.com/logo.svg",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Minnesota",
-      "addressRegion": "MN",
-      "addressCountry": "US"
-    },
-    "telephone": "+16122084419",
-    "email": "zach@insightpropertytax.com",
-    "sameAs": [
-      "https://www.linkedin.com/in/zach-hepburn/"
-    ],
-    "priceRange": "Contingency fee: 30% of tax savings",
-    "openingHours": "Mo-Fr 09:00-17:00",
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 46.7296,
-        "longitude": -94.6859
-      },
-      "geoRadius": "250"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Property Tax Appeal Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Commercial Property Tax Appeals"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Industrial Property Tax Appeals"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Apartment Property Tax Appeals"
-          }
-        }
-      ]
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0A2647] to-[#1E3A5F]">
       <Helmet>
@@ -83,6 +84,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <div className="bg-white">
+          <AboutInsightSection />
           <ExpertiseSection />
           <HowWeWork />
           <WhoWeWorkWith />
