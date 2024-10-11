@@ -9,7 +9,6 @@ import RecentAppeals from '../components/RecentAppeals';
 import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import ProcessSection from '../components/ProcessSection';
 import MeetTheOwner from '../components/MeetTheOwner';
-import CallToAction from '../components/CallToAction';
 import AppealStatsInfographic from '../components/AppealStatsInfographic';
 import ExpertiseSection from '../components/ExpertiseSection';
 import { Card, CardContent } from "@/components/ui/card";
@@ -93,7 +92,7 @@ const Index = () => {
         <div className="bg-gradient-to-b from-[#324E6E] to-[#1E3A5F]">
           <MeetTheOwner />
         </div>
-        <CallToAction />
+        <ReadyToReduce />
       </main>
       <Footer />
     </div>
@@ -143,6 +142,26 @@ const HeroSection = () => (
           </div>
         </div>
       </div>
+    </div>
+  </section>
+);
+
+const ReadyToReduce = () => (
+  <section className="mt-16 text-center py-16 bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] relative overflow-hidden">
+    <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
+    <div className="container mx-auto px-4 relative z-10">
+      <div className="flex justify-center mb-8">
+        <CheckCircle className="text-[#d7b971] w-12 h-12 mx-2" />
+        <CheckCircle className="text-[#d7b971] w-12 h-12 mx-2" />
+        <CheckCircle className="text-[#d7b971] w-12 h-12 mx-2" />
+      </div>
+      <h2 className="text-3xl font-bold text-white mb-4">Ready to reduce your property taxes?</h2>
+      <p className="text-xl text-white mb-8">Let's get started with a free analysis of your property.</p>
+      <Link to="/contact">
+        <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4">
+          Get Started
+        </Button>
+      </Link>
     </div>
   </section>
 );
