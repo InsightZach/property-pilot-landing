@@ -1,6 +1,6 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building2, Factory, Home, CheckCircle, Clock, TrendingDown } from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card";
+import { Building2, Factory, Home, TrendingDown, Clock, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 
@@ -67,24 +67,6 @@ const ExpertiseSection = () => (
                 title="100% Success Rate"
                 description="We've successfully reduced taxes for every client we've worked with."
               />
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-      
-      <div className="max-w-4xl mx-auto">
-        <h3 className="text-2xl md:text-3xl font-semibold text-center text-[#0A2647] mb-8">How We Work</h3>
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
-            <CardContent className="p-6">
-              <h4 className="font-bold text-xl mb-4 text-center underline">Contingency Fee</h4>
-              <p className="text-lg text-left">Pay $0 upfront—our fee is 30% of your tax savings, and you keep the rest.</p>
-            </CardContent>
-          </Card>
-          <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
-            <CardContent className="p-6">
-              <h4 className="font-bold text-xl mb-4 text-center underline">Full Service</h4>
-              <p className="text-lg text-left">We handle the entire appeal process, from identifying over-assessments to negotiating successful outcomes.</p>
             </CardContent>
           </Card>
         </div>

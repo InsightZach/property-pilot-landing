@@ -11,6 +11,7 @@ import ProcessSection from '../components/ProcessSection';
 import MeetTheOwner from '../components/MeetTheOwner';
 import AppealStatsInfographic from '../components/AppealStatsInfographic';
 import ExpertiseSection from '../components/ExpertiseSection';
+import HowWeWork from '../components/HowWeWork';
 import { Card, CardContent } from "@/components/ui/card";
 
 const Index = () => {
@@ -86,6 +87,7 @@ const Index = () => {
         <div className="bg-white">
           <ExpertiseSection />
           <RecentAppeals />
+          <HowWeWork />
           <WhoWeWorkWith />
           <ProcessSection />
         </div>
