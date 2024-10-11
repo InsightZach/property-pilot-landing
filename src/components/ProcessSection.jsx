@@ -3,8 +3,8 @@ import { FileSearch, BarChart3, FileText, HandshakeIcon } from 'lucide-react';
 
 const ProcessStep = ({ number, icon: Icon, title, description, isActive, isLast }) => (
   <div className="flex items-start mb-32 relative">
-    <div className="relative flex items-center">
-      <div className={`flex-shrink-0 w-8 h-8 rounded-full ${isActive ? 'bg-[#d7b971]' : 'bg-white'} border-2 border-[#d7b971] flex items-center justify-center text-[#0A2647] font-bold text-lg mr-8 z-20 transition-colors duration-300`}>
+    <div className="relative flex items-center self-center mr-8">
+      <div className={`flex-shrink-0 w-8 h-8 rounded-full ${isActive ? 'bg-[#d7b971]' : 'bg-white'} border-2 border-[#d7b971] flex items-center justify-center text-[#0A2647] font-bold text-lg z-20 transition-colors duration-300`}>
         {number}
       </div>
     </div>
@@ -68,7 +68,7 @@ const ProcessSection = () => {
         <h2 className="text-4xl md:text-5xl font-semibold text-center mb-24 text-[#0A2647]">Our Property Tax Appeal Process</h2>
         <div className="max-w-4xl mx-auto relative">
           {/* Vertical line */}
-          <div className="absolute left-4 top-4 h-[calc(100%-8rem)] w-0.5 bg-[#d7b971]"></div>
+          <div className="absolute left-4 top-10 h-[calc(100%-8rem)] w-0.5 bg-[#d7b971]"></div>
           {steps.map((step, index) => (
             <div key={index} ref={el => stepsRef.current[index] = el}>
               <ProcessStep
