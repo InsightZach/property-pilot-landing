@@ -2,7 +2,7 @@ import React from 'react';
 import { Building2, LineChart, FileText, Handshake, ArrowRight, ArrowDown } from 'lucide-react';
 
 const ProcessStep = ({ icon: Icon, title, description }) => (
-  <div className="flex flex-col items-center bg-[#0A2647] text-white p-6 rounded-2xl w-64 h-64 justify-center relative">
+  <div className="flex flex-col items-center bg-white/10 backdrop-blur-md text-white p-6 rounded-2xl w-64 h-64 justify-center relative">
     <div className="absolute -top-10 bg-[#D4AF37] p-4 rounded-full">
       <Icon className="w-10 h-10 text-[#0A2647]" />
     </div>
@@ -24,9 +24,10 @@ const MobileArrow = () => (
 );
 
 const ProcessSection = () => (
-  <section className="py-20 bg-white">
-    <div className="container mx-auto px-4">
-      <h2 className="text-4xl font-semibold text-center mb-16 text-[#0A2647]">Our Proven Property Tax Appeal Process</h2>
+  <section className="py-20 bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] relative overflow-hidden">
+    <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
+    <div className="container mx-auto px-4 relative z-10">
+      <h2 className="text-4xl font-semibold text-center mb-16 text-white">Our Proven Property Tax Appeal Process</h2>
       <div className="flex flex-col md:flex-row items-center justify-between space-y-12 md:space-y-0 md:space-x-6">
         <ProcessStep
           icon={Building2}
