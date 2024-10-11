@@ -3,9 +3,13 @@ import { CheckCircle } from 'lucide-react';
 
 const HowWeWork = () => (
   <section className="py-16 md:py-24 bg-white relative">
+    <div 
+      className="absolute inset-0 bg-cover bg-center z-0 opacity-20"
+      style={{ backgroundImage: "url('/Property-Tax-Consultant-working.png')" }}
+    ></div>
     <div className="container mx-auto px-4 relative z-10">
       <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#0A2647] mb-12">How We Work</h2>
-      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200">
+      <div className="max-w-3xl mx-auto bg-white/80 backdrop-blur-sm rounded-lg shadow-xl overflow-hidden border border-gray-200">
         <div className="md:flex">
           <div className="md:w-1/2 p-8 bg-[#0A2647] text-white">
             <h3 className="text-2xl font-bold mb-4">Contingency Fee</h3>
