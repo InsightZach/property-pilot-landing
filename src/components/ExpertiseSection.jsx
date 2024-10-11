@@ -3,9 +3,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { TrendingDown, Clock, CheckCircle } from 'lucide-react';
 import Sticker from './Sticker';
 
-const StatCard = ({ icon: Icon, title, description, sticker }) => (
+const StatCard = ({ icon: Icon, title, description, showSticker }) => (
   <div className="flex flex-col h-full relative">
-    {sticker && <Sticker text={sticker} color="blue" />}
+    {showSticker && <Sticker color="blue" />}
     <Icon className="text-[#d7b971] w-16 h-16 mx-auto mb-4" />
     <h4 className="font-bold text-xl mb-2 text-center">{title}</h4>
     <p className="text-base">{description}</p>
@@ -25,7 +25,7 @@ const ExpertiseSection = () => (
               icon={TrendingDown}
               title="17.9% Average Reduction"
               description="In 2024, we've achieved significant assessment reductions, saving our clients $49k per property."
-              sticker="Market Best"
+              showSticker={true}
             />
           </CardContent>
         </Card>
