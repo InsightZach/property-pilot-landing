@@ -61,7 +61,7 @@ const PropertyTypeAccordion = () => (
 const WhoWeWorkWith = () => (
   <section className="py-16 bg-gradient-to-br from-[#0A2647] to-[#1E3A5F] text-white relative overflow-hidden">
     <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-5"></div>
-    <div className="container mx-auto px-4 relative z-10">
+    <div className="container mx-auto px-8 md:px-16 relative z-10">
       <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-white">Minnesota Property Tax Appeal Services</h2>
       
       <div className="grid md:grid-cols-2 gap-12 mb-12">
