@@ -79,7 +79,7 @@ const Index = () => {
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
       <Header />
-      <main className="max-w-[1280px] mx-auto">
+      <main>
         <HeroSection />
         <div className="bg-white">
           <AboutInsightSection />
@@ -98,9 +98,9 @@ const Index = () => {
 };
 
 const HeroSection = () => (
-  <section className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white py-12 md:py-20 px-8 relative overflow-hidden">
+  <section className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white py-12 md:py-20 relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A2647] opacity-70"></div>
-    <div className="container mx-auto relative z-10">
+    <div className="container mx-auto px-4 relative z-10">
       <div className="text-left">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-white leading-tight">
           Save <span className="text-[#d7b971]">Tens of Thousands</span> on<br />
@@ -141,7 +141,7 @@ const HeroSection = () => (
 const ReadyToReduce = () => (
   <section className="py-16 relative overflow-hidden">
     <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
-    <div className="container mx-auto px-8 relative z-10 text-center">
+    <div className="container mx-auto px-4 relative z-10 text-center">
       <div className="flex justify-center mb-8">
         <CheckCircle className="text-[#d7b971] w-12 h-12 mx-2" />
         <CheckCircle className="text-[#d7b971] w-12 h-12 mx-2" />
