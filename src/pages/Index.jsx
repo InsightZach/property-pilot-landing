@@ -79,7 +79,7 @@ const Index = () => {
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
       <Header />
-      <main className="max-w-[1280px] mx-auto">
+      <main>
         <HeroSection />
         <div className="bg-white">
           <AboutInsightSection />
