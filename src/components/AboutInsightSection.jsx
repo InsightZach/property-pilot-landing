@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingDown, Clock, CheckCircle } from 'lucide-react';
+import { TrendingDown, Clock, CheckCircle, Building2, Factory, Home } from 'lucide-react';
 
 const AboutInsightSection = () => (
   <section className="py-16 bg-white">
@@ -12,9 +12,20 @@ const AboutInsightSection = () => (
         <p className="text-lg mb-8">
           By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
         </p>
-        <p className="text-lg mb-6">
-          <span className="font-bold">What our clients receive:</span>
-        </p>
+        <div className="flex flex-col md:flex-row justify-between mb-6">
+          <div className="flex items-center mb-2 md:mb-0">
+            <Building2 className="text-[#d7b971] w-6 h-6 mr-2" />
+            <span className="text-lg">Commercial</span>
+          </div>
+          <div className="flex items-center mb-2 md:mb-0">
+            <Factory className="text-[#d7b971] w-6 h-6 mr-2" />
+            <span className="text-lg">Industrial</span>
+          </div>
+          <div className="flex items-center">
+            <Home className="text-[#d7b971] w-6 h-6 mr-2" />
+            <span className="text-lg">Apartments</span>
+          </div>
+        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <StatCard
