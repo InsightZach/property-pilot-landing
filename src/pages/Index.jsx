@@ -103,34 +103,34 @@ const HeroSection = () => (
     <div className="container mx-auto px-4 relative z-10">
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="w-full md:w-1/2 mb-8 md:mb-0">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-white">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 text-white leading-tight">
             Save <span className="text-[#d7b971]">Tens of Thousands</span> on<br />
             Minnesota Property<br />
             Taxes
           </h1>
-          <p className="text-lg md:text-xl mb-4 text-white">
+          <p className="text-xl md:text-2xl mb-6 text-white">
             Expert commercial, industrial, and apartment property tax appeals.
           </p>
-          <ul className="mb-6 md:mb-8 space-y-2">
+          <ul className="mb-8 md:mb-10 space-y-3 text-lg md:text-xl">
             <li className="flex items-center">
-              <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
+              <CheckCircle className="mr-3 text-[#d7b971] h-6 w-6" />
               <span>You pay $0 upfront</span>
             </li>
             <li className="flex items-center">
-              <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
+              <CheckCircle className="mr-3 text-[#d7b971] h-6 w-6" />
               <span>Our fee is 30% of tax savings</span>
             </li>
             <li className="flex items-center">
-              <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
+              <CheckCircle className="mr-3 text-[#d7b971] h-6 w-6" />
               <span>You pocket the rest</span>
             </li>
             <li className="flex items-center">
-              <CheckCircle className="mr-2 text-[#d7b971] h-5 w-5" />
+              <CheckCircle className="mr-3 text-[#d7b971] h-6 w-6" />
               <span>We handle everything</span>
             </li>
           </ul>
           <Link to="/contact" className="block w-full md:w-auto">
-            <Button size="lg" className="w-full md:w-auto bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <Button size="lg" className="w-full md:w-auto bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-xl px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               Start My Free Assessment Review
             </Button>
           </Link>
