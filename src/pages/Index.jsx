@@ -104,7 +104,9 @@ const HeroSection = () => (
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="w-full md:w-1/2 mb-8 md:mb-0">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-white">
-            Save <span className="text-[#d7b971]">Tens of Thousands</span> on Your Minnesota Property Taxes
+            Save <span className="text-[#d7b971]">Tens of Thousands</span> on<br />
+            Minnesota Property<br />
+            Taxes
           </h1>
           <p className="text-lg md:text-xl mb-4 text-white">
             Expert commercial, industrial, and apartment property tax appeals.
