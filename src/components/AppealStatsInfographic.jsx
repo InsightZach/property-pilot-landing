@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { CircleDollarSign, TrendingDown, Clock, CheckCircle } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const stats = [
   { icon: TrendingDown, value: "17.9%", label: "Reduction Average" },
@@ -10,35 +9,19 @@ const stats = [
 ];
 
 const StatItem = ({ icon: Icon, value, label }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    exit={{ opacity: 0, y: -20 }}
-    transition={{ duration: 0.8 }}
-    className="flex flex-col items-center justify-center h-full w-full"
-  >
+  <div className="flex flex-col items-center justify-center p-4">
     <Icon className="text-[#d7b971] mb-4 h-16 w-16" />
     <span className="text-4xl font-bold text-white mb-2">{value}</span>
     <span className="text-lg text-white/80 text-center px-4">{label}</span>
-  </motion.div>
+  </div>
 );
 
 const AppealStatsInfographic = () => {
-  const [currentStatIndex, setCurrentStatIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentStatIndex((prevIndex) => (prevIndex + 1) % stats.length);
-    }, 7000); // Change stat every 7 seconds
-
-    return () => clearInterval(timer);
-  }, []);
-
   return (
-    <div className="h-full w-full flex items-center justify-center bg-transparent">
-      <AnimatePresence mode="wait">
-        <StatItem key={currentStatIndex} {...stats[currentStatIndex]} />
-      </AnimatePresence>
+    <div className="grid grid-cols-2 gap-4 bg-transparent">
+      {stats.map((stat, index) => (
+        <StatItem key={index} {...stat} />
+      ))}
     </div>
   );
 };
