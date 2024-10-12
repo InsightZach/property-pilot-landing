@@ -4,7 +4,21 @@ import { TrendingDown, Clock, CheckCircle, Building2, Factory, Home } from 'luci
 const AboutInsightSection = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-[#0A2647]">Expert Minnesota Property Tax Appeals</h2>
+      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4 text-[#0A2647]">Expert Minnesota Property Tax Appeals</h2>
+      <div className="flex flex-col md:flex-row justify-center items-center mb-8">
+        <div className="flex items-center mb-2 md:mb-0 md:mr-6">
+          <Building2 className="text-[#d7b971] w-6 h-6 mr-2" />
+          <span className="text-lg">Commercial</span>
+        </div>
+        <div className="flex items-center mb-2 md:mb-0 md:mr-6">
+          <Factory className="text-[#d7b971] w-6 h-6 mr-2" />
+          <span className="text-lg">Industrial</span>
+        </div>
+        <div className="flex items-center">
+          <Home className="text-[#d7b971] w-6 h-6 mr-2" />
+          <span className="text-lg">Apartments</span>
+        </div>
+      </div>
       <div className="max-w-3xl mx-auto mb-12 text-left">
         <p className="text-lg mb-4">
           At <span className="font-bold">Insight Property Tax</span>, we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota.
@@ -12,20 +26,6 @@ const AboutInsightSection = () => (
         <p className="text-lg mb-8">
           By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
         </p>
-        <div className="flex flex-col md:flex-row justify-between mb-6">
-          <div className="flex items-center mb-2 md:mb-0">
-            <Building2 className="text-[#d7b971] w-6 h-6 mr-2" />
-            <span className="text-lg">Commercial</span>
-          </div>
-          <div className="flex items-center mb-2 md:mb-0">
-            <Factory className="text-[#d7b971] w-6 h-6 mr-2" />
-            <span className="text-lg">Industrial</span>
-          </div>
-          <div className="flex items-center">
-            <Home className="text-[#d7b971] w-6 h-6 mr-2" />
-            <span className="text-lg">Apartments</span>
-          </div>
-        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <StatCard
