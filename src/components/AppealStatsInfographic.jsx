@@ -14,7 +14,7 @@ const StatItem = ({ icon: Icon, value, label }) => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: -20 }}
-    transition={{ duration: 0.5 }}
+    transition={{ duration: 0.8 }}
     className="flex flex-col items-center justify-center h-full w-full"
   >
     <Icon className="text-[#d7b971] mb-4 h-16 w-16" />
@@ -35,7 +35,7 @@ const AppealStatsInfographic = () => {
   }, []);
 
   return (
-    <div className="bg-[#0A2647] p-8 rounded-lg h-full w-full flex items-center justify-center">
+    <div className="h-full w-full flex items-center justify-center bg-transparent">
       <AnimatePresence mode="wait">
         <StatItem key={currentStatIndex} {...stats[currentStatIndex]} />
       </AnimatePresence>
