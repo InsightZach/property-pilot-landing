@@ -4,19 +4,13 @@ import { Button } from "@/components/ui/button";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { CheckCircle } from 'lucide-react';
+import AppealStatsInfographic from '../components/AppealStatsInfographic';
 
 const FAQItem = ({ question, answer }) => (
   <AccordionItem value={question} className="mb-4">
     <AccordionTrigger className="text-left px-4 py-2">{question}</AccordionTrigger>
     <AccordionContent className="px-4 py-2">{answer}</AccordionContent>
   </AccordionItem>
-);
-
-const StatItem = ({ value, label }) => (
-  <div className="bg-white p-4 rounded-lg text-center">
-    <p className="text-2xl font-bold text-[#0A2647]">{value}</p>
-    <p className="text-sm text-gray-600">{label}</p>
-  </div>
 );
 
 const FAQ = () => {
@@ -67,11 +61,8 @@ const FAQ = () => {
           <h2 className="text-2xl font-semibold text-center text-white mb-8">
             Join our clients who benefited from Insight's 2024 appeal stats.
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <StatItem value="-17.9%" label="Appeal Reduction Average" />
-            <StatItem value="24 K+ ($)" label="Net Savings Average" />
-            <StatItem value="100%" label="Appeal Success" />
-            <StatItem value="90 Day" label="Average Appeal Length" />
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-8">
+            <AppealStatsInfographic />
           </div>
           <div className="bg-white p-8 rounded-lg flex flex-col md:flex-row justify-between items-center">
             <div className="md:w-2/3">

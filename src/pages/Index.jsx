@@ -7,7 +7,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProcessSection from '../components/ProcessSection';
 import MeetTheOwner from '../components/MeetTheOwner';
-import AppealStatsInfographic from '../components/AppealStatsInfographic';
 import HowWeWork from '../components/HowWeWork';
 import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import AboutInsightSection from '../components/AboutInsightSection';
@@ -133,12 +132,6 @@ const HeroSection = () => (
               Start My Free Assessment Review
             </Button>
           </Link>
-        </div>
-        <div className="w-full md:w-1/2 md:pl-8 mt-8 md:mt-0">
-          <div className="bg-white/5 backdrop-blur-sm p-4 md:p-6 rounded-lg shadow-lg">
-            <h2 className="text-xl md:text-2xl font-semibold mb-4 text-center text-[#d7b971]">Insight's 2024 Appeal Statistics</h2>
-            <AppealStatsInfographic />
-          </div>
         </div>
       </div>
     </div>
