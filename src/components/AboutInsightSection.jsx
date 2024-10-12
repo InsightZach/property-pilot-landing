@@ -5,7 +5,7 @@ const AboutInsightSection = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4 text-[#0A2647]">Expert Minnesota Property Tax Appeals</h2>
-      <div className="flex flex-col md:flex-row justify-center md:items-center mb-8">
+      <div className="flex flex-col md:flex-row justify-start md:justify-center md:items-center mb-8">
         <div className="flex items-center mb-2 md:mb-0 md:mr-6">
           <Building2 className="text-[#d7b971] w-6 h-6 mr-2" />
           <span className="text-lg">Commercial</span>
