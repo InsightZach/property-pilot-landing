@@ -85,8 +85,8 @@ const Index = () => {
         <div className="bg-white">
           <AboutInsightSection />
           <HowWeWork />
-          <WhoWeWorkWith />
           <ProcessSection />
+          <WhoWeWorkWith />
         </div>
         <div className="bg-gradient-to-b from-[#0A2647] to-[#2E5077]">
           <MeetTheOwner />
