@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import { Building2, Factory, Home, ChevronDown, MapPin } from 'lucide-react';
+import { Building2, Factory, Home, ChevronDown, MapPin, BookOpen, GavelIcon, ScaleIcon } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import HennepinCounty from './counties/HennepinCounty';
 import RamseyCounty from './counties/RamseyCounty';
@@ -30,6 +30,20 @@ const PropertyTypeCard = ({ icon: Icon, text, children }) => (
       <ul className="list-disc pl-6">
         {children}
       </ul>
+    </CardContent>
+  </Card>
+);
+
+const AppealServiceCard = ({ icon: Icon, title, description }) => (
+  <Card className="bg-[#0A2647] bg-opacity-80 text-white border-0">
+    <CardHeader>
+      <CardTitle className="flex items-center space-x-2">
+        <Icon className="text-[#d7b971] w-6 h-6" />
+        <span>{title}</span>
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p className="text-left">{description}</p>
     </CardContent>
   </Card>
 );
@@ -93,6 +107,26 @@ const WhoWeWorkWith = () => (
       <div className="w-full">
         <div className="bg-[#0A2647] bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg">
           <div className="space-y-12">
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Appeal Service Types</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <AppealServiceCard 
+                  icon={BookOpen}
+                  title="Open Book Appeals"
+                  description="During an Open Book Appeal, we work directly with assessors to resolve disputes over your property's assessed value. We present compelling evidence and negotiate on your behalf, ensuring that your property is fairly assessed without needing a formal hearing."
+                />
+                <AppealServiceCard 
+                  icon={GavelIcon}
+                  title="Local Board Appeals"
+                  description="We represent you before your Local Board of Appeal and Equalization. Our team prepares a detailed case, utilizing property data, market conditions, and comparable assessments to advocate for a tax reduction."
+                />
+                <AppealServiceCard 
+                  icon={ScaleIcon}
+                  title="Tax Court Petitions"
+                  description="If your appeal cannot be resolved through informal processes, we escalate the case to Minnesota Tax Court. Our expert attorneys manage the entire process, from filing the petition to presenting a strong legal argument aimed at securing a favorable decision."
+                />
+              </div>
+            </div>
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Property Types</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
