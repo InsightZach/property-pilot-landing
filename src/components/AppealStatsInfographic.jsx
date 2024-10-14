@@ -9,18 +9,20 @@ const stats = [
 ];
 
 const StatItem = ({ icon: Icon, value, label }) => (
-  <div className="flex flex-col items-center justify-center p-4">
-    <Icon className="text-[#d7b971] mb-2 h-8 w-8" />
-    <span className="text-2xl font-bold text-white mb-1">{value}</span>
-    <span className="text-sm text-white/80 text-center">{label}</span>
+  <div className="flex items-center justify-between mb-4">
+    <div className="flex items-center">
+      <Icon className="text-[#d7b971] mr-3 h-10 w-10" />
+      <span className="text-3xl font-bold text-white">{value}</span>
+    </div>
+    <span className="text-lg text-white/80">{label}</span>
   </div>
 );
 
 const AppealStatsInfographic = () => {
   return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-      <h3 className="text-xl font-semibold text-white text-center mb-4">Insight's YTD Appeal Statistics</h3>
-      <div className="grid grid-cols-2 gap-4">
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+      <h3 className="text-2xl font-semibold text-white text-center mb-6">Insight's YTD Appeal Statistics</h3>
+      <div className="space-y-6">
         {stats.map((stat, index) => (
           <StatItem key={index} {...stat} />
         ))}
