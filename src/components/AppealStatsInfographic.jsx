@@ -18,10 +18,13 @@ const StatItem = ({ icon: Icon, value, label }) => (
 
 const AppealStatsInfographic = () => {
   return (
-    <div className="grid grid-cols-2 gap-4 bg-white/10 backdrop-blur-sm rounded-lg p-4">
-      {stats.map((stat, index) => (
-        <StatItem key={index} {...stat} />
-      ))}
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+      <h3 className="text-xl font-semibold text-white text-center mb-4">Insight's YTD Appeal Statistics</h3>
+      <div className="grid grid-cols-2 gap-4">
+        {stats.map((stat, index) => (
+          <StatItem key={index} {...stat} />
+        ))}
+      </div>
     </div>
   );
 };
