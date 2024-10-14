@@ -22,14 +22,14 @@ const HorizontalAccordionItem = ({ icon: Icon, text, children, isOpen, onClick }
     <button
       onClick={onClick}
       className={`w-full text-left p-4 flex items-center justify-between ${
-        isOpen ? 'bg-white/30' : 'bg-white/20'
+        isOpen ? 'bg-white/40' : 'bg-white/30'
       } rounded-t-lg transition-colors duration-200`}
     >
       <ServiceIcon icon={Icon} text={text} />
       <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'transform rotate-180' : ''}`} />
     </button>
     {isOpen && (
-      <div className="bg-white/30 p-4 rounded-b-lg">
+      <div className="bg-white/40 p-4 rounded-b-lg">
         {children}
       </div>
     )}
@@ -110,7 +110,7 @@ const HorizontalServiceLocationsAccordion = () => {
           <button
             onClick={() => toggleItem(name)}
             className={`w-full text-left p-4 flex items-center justify-between ${
-              openItem === name ? 'bg-white/30' : 'bg-white/20'
+              openItem === name ? 'bg-white/40' : 'bg-white/30'
             } rounded-t-lg transition-colors duration-200`}
           >
             <div className="flex items-center space-x-2">
@@ -120,7 +120,7 @@ const HorizontalServiceLocationsAccordion = () => {
             <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${openItem === name ? 'transform rotate-180' : ''}`} />
           </button>
           {openItem === name && (
-            <div className="bg-white/30 p-4 rounded-b-lg">
+            <div className="bg-white/40 p-4 rounded-b-lg">
               <CountyComponent />
             </div>
           )}
@@ -131,21 +131,21 @@ const HorizontalServiceLocationsAccordion = () => {
 };
 
 const WhoWeWorkWith = () => (
-  <section className="py-16 bg-gradient-to-br from-[#1E3A5F]/80 via-[#2E5077]/80 to-[#3A6095]/80 text-white relative overflow-hidden">
-    <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-20"></div>
+  <section className="py-16 bg-gradient-to-br from-[#1E3A5F]/60 via-[#2E5077]/60 to-[#3A6095]/60 text-white relative overflow-hidden">
+    <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-30"></div>
     <div className="container mx-auto px-4 relative z-10">
       <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-white">Property Tax Appeal Services</h2>
       
       <div className="space-y-12">
         <div className="w-full">
           <h3 className="text-2xl font-semibold mb-4 text-left">Property Types</h3>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 shadow-lg">
+          <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 shadow-lg">
             <HorizontalPropertyTypeAccordion />
           </div>
         </div>
         <div className="w-full">
           <h3 className="text-2xl font-semibold mb-4 text-left">Minnesota Service Locations</h3>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 shadow-lg">
+          <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 shadow-lg">
             <HorizontalServiceLocationsAccordion />
           </div>
         </div>
