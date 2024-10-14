@@ -21,13 +21,15 @@ const AboutInsightSection = () => (
           </div>
         </div>
       </div>
-      <div className="max-w-3xl md:ml-4 mb-12 text-left">
-        <p className="text-lg mb-4 text-[#0A2647]">
-          At <span className="font-bold">Insight Property Tax</span>, we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota.
-        </p>
-        <p className="text-lg mb-8 text-[#0A2647]">
-          By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
-        </p>
+      <div className="max-w-3xl mx-auto mb-12 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <p className="text-lg text-[#0A2647]">
+            At <span className="font-bold">Insight Property Tax</span>, we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota.
+          </p>
+          <p className="text-lg text-[#0A2647]">
+            By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
+          </p>
+        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <StatCard
