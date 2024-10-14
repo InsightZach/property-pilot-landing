@@ -8,12 +8,10 @@ const HeroCard = () => {
       <div className="absolute top-2 right-2">
         <Sticker color="blue" text="Best in Market" />
       </div>
-      <div className="flex items-center">
-        <TrendingDown className="text-[#d7b971] w-20 h-20 mr-4 flex-shrink-0" />
-        <div className="flex flex-col">
-          <p className="text-6xl font-bold text-white leading-none mb-1">17.9%</p>
-          <p className="text-lg text-white/80">Average Reduction</p>
-        </div>
+      <div className="flex flex-col items-center">
+        <TrendingDown className="text-[#d7b971] w-20 h-20 mb-4" />
+        <p className="text-6xl font-bold text-white leading-none mb-2">17.9%</p>
+        <p className="text-lg text-white/80 text-center">2024 Average Appeal Reduction</p>
       </div>
     </div>
   );
