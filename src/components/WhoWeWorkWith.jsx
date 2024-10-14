@@ -121,10 +121,11 @@ const WhoWeWorkWith = () => (
             <AppealServiceCard 
               icon={ScaleIcon}
               title="Tax Court Petitions"
-              description="If your appeal cannot be resolved through informal processes, we escalate the case to Minnesota Tax Court. Our expert attorneys manage the entire process, from filing the petition to presenting a strong legal argument aimed at securing a favorable decision."
+              description="If your appeal cannot be resolved through informal processes, we escalate the case to Minnesota Tax Court. We manage the entire process, from filing the petition to settlement."
             />
           </div>
         </div>
+        
         <div>
           <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Property Types</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
