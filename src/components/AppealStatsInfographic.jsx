@@ -17,7 +17,7 @@ const StatItem = ({ icon: Icon, value, label, isFirst }) => (
       </div>
     )}
     <div className="flex items-start">
-      <Icon className="text-[#d7b971] mr-4 h-12 w-12 mt-1" />
+      <Icon className="text-[#d7b971] mr-4 h-12 w-12 mt-1 flex-shrink-0" />
       <div>
         <span className="text-4xl font-bold text-white">{value}</span>
         <p className="text-sm text-white/80 mt-1">{label}</p>
@@ -29,7 +29,7 @@ const StatItem = ({ icon: Icon, value, label, isFirst }) => (
 const AppealStatsInfographic = () => {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-      <h3 className="text-2xl font-semibold text-white text-center mb-6">Insight's YTD Appeal Statistics</h3>
+      <h3 className="text-2xl font-semibold text-white mb-6">Insight's YTD Appeal Statistics</h3>
       <div className="space-y-2">
         {stats.map((stat, index) => (
           <StatItem key={index} {...stat} isFirst={index === 0} />
