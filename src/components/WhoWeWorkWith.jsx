@@ -111,7 +111,7 @@ const WhoWeWorkWith = () => (
             <AppealServiceCard 
               icon={BookOpen}
               title="Open Book Appeals"
-              description="During an Open Book Appeal, we work directly with assessors to resolve disputes over your property's assessed value. We present compelling evidence and negotiate on your behalf, ensuring that your property is fairly assessed without needing a formal hearing."
+              description="During an Open Book Appeal, we work directly with assessors to resolve disputes over your property's assessed value. We present compelling evidence and negotiate on your behalf, ensuring that your property is fairly assessed."
             />
             <AppealServiceCard 
               icon={GavelIcon}
