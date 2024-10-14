@@ -131,21 +131,25 @@ const HorizontalServiceLocationsAccordion = () => {
 };
 
 const WhoWeWorkWith = () => (
-  <section className="py-16 bg-gradient-to-br from-[#4A5A6F] via-[#5A6A87] to-[#6A7AA5] relative overflow-hidden">
-    <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-50"></div>
+  <section className="py-16 relative overflow-hidden">
+    <div 
+      className="absolute inset-0 bg-cover bg-center"
+      style={{ backgroundImage: "url('/Property-Tax-Consultant-working2.png')" }}
+    ></div>
+    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
     <div className="container mx-auto px-4 relative z-10">
       <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-white">Property Tax Appeal Services</h2>
       
       <div className="space-y-12">
         <div className="w-full">
           <h3 className="text-2xl font-semibold mb-4 text-left text-white">Property Types</h3>
-          <div className="bg-[#0A2647] backdrop-blur-sm rounded-lg p-4 shadow-lg">
+          <div className="bg-[#0A2647] bg-opacity-80 backdrop-blur-sm rounded-lg p-4 shadow-lg">
             <HorizontalPropertyTypeAccordion />
           </div>
         </div>
         <div className="w-full">
           <h3 className="text-2xl font-semibold mb-4 text-left text-white">Minnesota Service Locations</h3>
-          <div className="bg-[#0A2647] backdrop-blur-sm rounded-lg p-4 shadow-lg">
+          <div className="bg-[#0A2647] bg-opacity-80 backdrop-blur-sm rounded-lg p-4 shadow-lg">
             <HorizontalServiceLocationsAccordion />
           </div>
         </div>
