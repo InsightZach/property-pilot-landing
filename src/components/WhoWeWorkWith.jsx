@@ -107,7 +107,6 @@ const HorizontalServiceLocationsAccordion = () => {
                 <span>{name}</span>
                 <span className="text-xs">{name !== 'Greater Minnesota' ? 'County' : ''}</span>
               </span>
-              <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
             </AccordionTrigger>
             <AccordionContent className="text-white">
               <CountyComponent />
