@@ -149,7 +149,7 @@ const ReadyToReduce = () => (
         <CheckCircle className="text-[#d7b971] w-12 h-12 mx-2" />
       </div>
       <h2 className="text-3xl font-bold text-white mb-4">Ready to Reduce Your Property Taxes?</h2>
-      <p className="text-xl text-white mb-8">Let's get started with a free analysis of your property.</p>
+      <p className="text-xl text-white mb-8">Get started with a free analysis of your property.</p>
       <Link to="/contact">
         <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
           Start My Free Assessment Review
