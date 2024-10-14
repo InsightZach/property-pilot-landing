@@ -22,14 +22,14 @@ const HorizontalAccordionItem = ({ icon: Icon, text, children, isOpen, onClick }
     <button
       onClick={onClick}
       className={`w-full text-left p-4 flex items-center justify-between ${
-        isOpen ? 'bg-[#0A2647]' : 'bg-[#324E6E]'
-      } rounded-t-lg transition-colors duration-200`}
+        isOpen ? 'bg-[#0A2647] bg-opacity-80' : 'bg-[#324E6E] bg-opacity-80'
+      } rounded-t-lg transition-colors duration-200 hover:bg-opacity-100`}
     >
       <ServiceIcon icon={Icon} text={text} />
       <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'transform rotate-180' : ''} text-[#d7b971]`} />
     </button>
     {isOpen && (
-      <div className="bg-[#324E6E] p-4 rounded-b-lg">
+      <div className="bg-[#324E6E] bg-opacity-80 p-4 rounded-b-lg">
         {children}
       </div>
     )}
@@ -110,8 +110,8 @@ const HorizontalServiceLocationsAccordion = () => {
           <button
             onClick={() => toggleItem(name)}
             className={`w-full text-left p-4 flex items-center justify-between ${
-              openItem === name ? 'bg-[#0A2647]' : 'bg-[#324E6E]'
-            } rounded-t-lg transition-colors duration-200`}
+              openItem === name ? 'bg-[#0A2647] bg-opacity-80' : 'bg-[#324E6E] bg-opacity-80'
+            } rounded-t-lg transition-colors duration-200 hover:bg-opacity-100`}
           >
             <div className="flex items-center space-x-2">
               <MapPin className="text-[#d7b971] w-6 h-6" />
@@ -120,7 +120,7 @@ const HorizontalServiceLocationsAccordion = () => {
             <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${openItem === name ? 'transform rotate-180' : ''} text-[#d7b971]`} />
           </button>
           {openItem === name && (
-            <div className="bg-[#324E6E] p-4 rounded-b-lg">
+            <div className="bg-[#324E6E] bg-opacity-80 p-4 rounded-b-lg">
               <CountyComponent />
             </div>
           )}
@@ -136,19 +136,20 @@ const WhoWeWorkWith = () => (
       className="absolute inset-0 bg-cover bg-center"
       style={{ backgroundImage: "url('/Property-Tax-Consultant-working2.png')" }}
     ></div>
+    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
     <div className="container mx-auto px-4 relative z-10">
-      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-white">Property Tax Appeal Services</h2>
+      <h2 className="text-4xl font-semibold text-center mb-12 text-white shadow-text">Property Tax Appeal Services</h2>
       
-      <div className="space-y-12">
+      <div className="space-y-16">
         <div className="w-full">
-          <h3 className="text-2xl font-semibold mb-4 text-left text-white">Property Types</h3>
-          <div className="bg-white rounded-lg p-4 shadow-lg">
+          <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Property Types</h3>
+          <div className="bg-[#0A2647] bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg">
             <HorizontalPropertyTypeAccordion />
           </div>
         </div>
         <div className="w-full">
-          <h3 className="text-2xl font-semibold mb-4 text-left text-white">Minnesota Service Locations</h3>
-          <div className="bg-white rounded-lg p-4 shadow-lg">
+          <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Minnesota Service Locations</h3>
+          <div className="bg-[#0A2647] bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg">
             <HorizontalServiceLocationsAccordion />
           </div>
         </div>
