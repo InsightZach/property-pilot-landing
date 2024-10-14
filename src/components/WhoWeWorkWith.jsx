@@ -145,14 +145,14 @@ const WhoWeWorkWith = () => (
       
       <div className="space-y-16">
         <div className="w-full">
-          <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Property Types</h3>
           <div className="bg-[#0A2647] bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+            <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Property Types</h3>
             <HorizontalPropertyTypeAccordion />
           </div>
         </div>
         <div className="w-full">
-          <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Minnesota Service Locations</h3>
           <div className="bg-[#0A2647] bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+            <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Minnesota Service Locations</h3>
             <HorizontalServiceLocationsAccordion />
           </div>
         </div>
