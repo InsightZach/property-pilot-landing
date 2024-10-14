@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import { Building2, Factory, Home, ChevronDown } from 'lucide-react';
+import { Building2, Factory, Home, ChevronDown, MapPin } from 'lucide-react';
 import HennepinCounty from './counties/HennepinCounty';
 import RamseyCounty from './counties/RamseyCounty';
 import DakotaCounty from './counties/DakotaCounty';
@@ -86,6 +86,12 @@ const HorizontalPropertyTypeAccordion = () => {
 };
 
 const HorizontalServiceLocationsAccordion = () => {
+  const [openItem, setOpenItem] = useState(null);
+
+  const toggleItem = (item) => {
+    setOpenItem(openItem === item ? null : item);
+  };
+
   const counties = [
     { name: 'Hennepin', component: HennepinCounty },
     { name: 'Ramsey', component: RamseyCounty },
@@ -98,23 +104,29 @@ const HorizontalServiceLocationsAccordion = () => {
   ];
 
   return (
-    <Accordion type="single" collapsible className="w-full">
-      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2">
-        {counties.map(({ name, component: CountyComponent }) => (
-          <AccordionItem key={name} value={name} className="min-w-[150px] border-none">
-            <AccordionTrigger className="text-white text-sm px-2 py-1 flex justify-between items-center hover:no-underline">
-              <span className="flex flex-col items-start mr-2">
-                <span>{name}</span>
-                <span className="text-xs">{name !== 'Greater Minnesota' ? 'County' : ''}</span>
-              </span>
-            </AccordionTrigger>
-            <AccordionContent className="text-white">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {counties.map(({ name, component: CountyComponent }) => (
+        <div key={name} className="flex-1">
+          <button
+            onClick={() => toggleItem(name)}
+            className={`w-full text-left p-4 flex items-center justify-between ${
+              openItem === name ? 'bg-[#4A6D8C]' : 'bg-[#324E6E]'
+            } rounded-t-lg transition-colors duration-200`}
+          >
+            <div className="flex items-center space-x-2">
+              <MapPin className="text-[#d7b971] w-6 h-6" />
+              <span className="text-lg">{name}</span>
+            </div>
+            <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${openItem === name ? 'transform rotate-180' : ''}`} />
+          </button>
+          {openItem === name && (
+            <div className="bg-[#4A6D8C] p-4 rounded-b-lg">
               <CountyComponent />
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </div>
-    </Accordion>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
   );
 };
 
