@@ -19,7 +19,7 @@ const ServiceIcon = ({ icon: Icon, text }) => (
 
 const HorizontalAccordionItem = ({ icon: Icon, text, children, isOpen, onClick }) => (
   <div className="flex-1">
-    <div className="bg-[#0A2647] bg-opacity-80 rounded-lg border border-white overflow-hidden">
+    <div className="bg-[#0A2647] bg-opacity-80 rounded-lg overflow-hidden">
       <button
         onClick={onClick}
         className={`w-full text-left p-4 flex items-center justify-between ${
@@ -109,7 +109,7 @@ const HorizontalServiceLocationsAccordion = () => {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {counties.map(({ name, component: CountyComponent }) => (
         <div key={name} className="flex-1">
-          <div className="bg-[#0A2647] bg-opacity-80 rounded-lg border border-white overflow-hidden">
+          <div className="bg-[#0A2647] bg-opacity-80 rounded-lg overflow-hidden">
             <button
               onClick={() => toggleItem(name)}
               className={`w-full text-left p-4 flex items-center justify-between ${
@@ -145,7 +145,7 @@ const WhoWeWorkWith = () => (
       
       <div className="w-full">
         <div className="bg-[#0A2647] bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg">
-          <div className="space-y-12"> {/* Increased space between accordions */}
+          <div className="space-y-12">
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Property Types</h3>
               <HorizontalPropertyTypeAccordion />
