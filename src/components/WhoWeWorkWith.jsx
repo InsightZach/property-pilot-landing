@@ -102,8 +102,11 @@ const HorizontalServiceLocationsAccordion = () => {
       <div className="flex flex-wrap">
         {counties.map(({ name, component: CountyComponent }) => (
           <AccordionItem key={name} value={name} className="flex-1 min-w-[150px]">
-            <AccordionTrigger className="text-white text-lg px-2 py-1">
-              {name}
+            <AccordionTrigger className="text-white text-lg px-2 py-1 justify-between">
+              <span className="flex flex-col items-start">
+                <span>{name}</span>
+                <span>{name !== 'Greater Minnesota' ? 'County' : ''}</span>
+              </span>
             </AccordionTrigger>
             <AccordionContent className="text-white">
               <CountyComponent />
