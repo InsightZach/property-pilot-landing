@@ -71,7 +71,6 @@ const schemaData = {
 };
 
 const Index = () => {
-const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0A2647] to-[#1E3A5F]">
       <Helmet>
@@ -97,7 +96,6 @@ const Index = () => {
       <Footer />
     </div>
   );
-};
 };
 
 const HeroSection = () => (
