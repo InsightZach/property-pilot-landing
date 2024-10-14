@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { CheckCircle } from 'lucide-react';
-import AppealStatsInfographic from '../components/AppealStatsInfographic';
 
 const FAQItem = ({ question, answer }) => (
   <AccordionItem value={question} className="mb-4">
@@ -59,11 +58,8 @@ const FAQ = () => {
         </Accordion>
         <div className="mt-16">
           <h2 className="text-2xl font-semibold text-center text-white mb-8">
-            Join our clients who benefited from Insight's 2024 appeal stats.
+            Ready to reduce your property taxes?
           </h2>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-8">
-            <AppealStatsInfographic />
-          </div>
           <div className="bg-white p-8 rounded-lg flex flex-col md:flex-row justify-between items-center">
             <div className="md:w-2/3">
               <h3 className="text-4xl font-bold text-[#0A2647] mb-4">Get Started</h3>
