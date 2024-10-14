@@ -141,17 +141,19 @@ const WhoWeWorkWith = () => (
       style={{ backgroundImage: "url('/Property-Tax-Consultant-working2.png')" }}
     ></div>
     <div className="container mx-auto px-4 relative z-10">
-      <div className="bg-[#0A2647] bg-opacity-70 backdrop-blur-sm rounded-lg p-8 shadow-lg">
-        <h2 className="text-4xl font-semibold text-center mb-12 text-white shadow-text">Property Tax Appeal Services</h2>
-        
-        <div className="space-y-12">
-          <div>
-            <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Property Types</h3>
-            <HorizontalPropertyTypeAccordion />
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Minnesota Service Locations</h3>
-            <HorizontalServiceLocationsAccordion />
+      <h2 className="text-4xl font-semibold text-center mb-12 text-white shadow-text">Property Tax Appeal Services</h2>
+      
+      <div className="w-full">
+        <div className="bg-[#0A2647] bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+          <div className="space-y-12"> {/* Increased space between accordions */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Property Types</h3>
+              <HorizontalPropertyTypeAccordion />
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Minnesota Service Locations</h3>
+              <HorizontalServiceLocationsAccordion />
+            </div>
           </div>
         </div>
       </div>
