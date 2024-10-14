@@ -103,12 +103,11 @@ const HeroSection = () => (
     <div className="container mx-auto px-8 md:px-16 relative z-10">
       <div className="text-left">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-white leading-tight">
-          Save <span className="text-[#d7b971]">Tens of Thousands</span> on<br />
           Minnesota Property<br />
-          Taxes
+          Tax Appeals
         </h1>
         <p className="text-lg md:text-xl mb-6 text-white">
-          Expert commercial, industrial, and apartment property tax appeals.
+          We save our clients tens of thousands on commercial, industrial, and apartment property taxes.
         </p>
         <ul className="mb-8 md:mb-10 space-y-3 text-base md:text-lg">
           <li className="flex items-center">
