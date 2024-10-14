@@ -84,7 +84,7 @@ const HorizontalServiceLocationsAccordion = () => {
               <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${openItem === name ? 'transform rotate-180' : ''} text-[#d7b971]`} />
             </button>
             {openItem === name && (
-              <div className="p-4">
+              <div className="p-4 text-white">
                 <CountyComponent />
               </div>
             )}
