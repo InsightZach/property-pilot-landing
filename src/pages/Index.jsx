@@ -10,6 +10,7 @@ import MeetTheOwner from '../components/MeetTheOwner';
 import HowWeWork from '../components/HowWeWork';
 import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import AboutInsightSection from '../components/AboutInsightSection';
+import HeroImage from '../components/HeroImage';
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -135,6 +136,9 @@ const HeroSection = () => (
               Start My Free Assessment Review
             </Button>
           </Link>
+        </div>
+        <div className="md:w-1/2 mt-8 md:mt-0 h-64 md:h-96 relative">
+          <HeroImage />
         </div>
       </div>
     </div>
