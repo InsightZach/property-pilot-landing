@@ -81,7 +81,7 @@ const ProcessSection = () => {
                 icon={step.icon}
                 title={step.title}
                 description={step.description}
-                isActive={index <= activeStep}
+                isActive={index === activeStep}
                 isLast={index === steps.length - 1}
                 showSticker={step.showSticker}
               />
