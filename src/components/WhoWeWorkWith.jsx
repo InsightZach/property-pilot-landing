@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Building2, Factory, Home, ChevronDown, MapPin } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import HennepinCounty from './counties/HennepinCounty';
 import RamseyCounty from './counties/RamseyCounty';
 import DakotaCounty from './counties/DakotaCounty';
@@ -17,75 +18,21 @@ const ServiceIcon = ({ icon: Icon, text }) => (
   </div>
 );
 
-const HorizontalAccordionItem = ({ icon: Icon, text, children, isOpen, onClick }) => (
-  <div className="flex-1">
-    <div className="bg-[#0A2647] bg-opacity-80 rounded-lg overflow-hidden">
-      <button
-        onClick={onClick}
-        className={`w-full text-left p-4 flex items-center justify-between ${
-          isOpen ? 'bg-opacity-100' : ''
-        } transition-colors duration-200 hover:bg-opacity-100`}
-      >
-        <ServiceIcon icon={Icon} text={text} />
-        <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'transform rotate-180' : ''} text-[#d7b971]`} />
-      </button>
-      {isOpen && (
-        <div className="p-4">
-          {children}
-        </div>
-      )}
-    </div>
-  </div>
+const PropertyTypeCard = ({ icon: Icon, text, children }) => (
+  <Card className="bg-[#0A2647] bg-opacity-80 text-white">
+    <CardHeader>
+      <CardTitle className="flex items-center space-x-2">
+        <Icon className="text-[#d7b971] w-6 h-6" />
+        <span>{text}</span>
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <ul className="list-disc pl-6">
+        {children}
+      </ul>
+    </CardContent>
+  </Card>
 );
-
-const HorizontalPropertyTypeAccordion = () => {
-  const [openItem, setOpenItem] = useState(null);
-
-  const toggleItem = (item) => {
-    setOpenItem(openItem === item ? null : item);
-  };
-
-  return (
-    <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-      <HorizontalAccordionItem
-        icon={Building2}
-        text="Commercial Appeal"
-        isOpen={openItem === 'commercial'}
-        onClick={() => toggleItem('commercial')}
-      >
-        <ul className="list-disc pl-6 text-white">
-          <li>Office</li>
-          <li>Retail</li>
-          <li>Hotel</li>
-        </ul>
-      </HorizontalAccordionItem>
-      <HorizontalAccordionItem
-        icon={Factory}
-        text="Industrial Appeal"
-        isOpen={openItem === 'industrial'}
-        onClick={() => toggleItem('industrial')}
-      >
-        <ul className="list-disc pl-6 text-white">
-          <li>Manufacturing</li>
-          <li>Warehouse</li>
-          <li>Flex</li>
-        </ul>
-      </HorizontalAccordionItem>
-      <HorizontalAccordionItem
-        icon={Home}
-        text="Apartment Appeal"
-        isOpen={openItem === 'apartments'}
-        onClick={() => toggleItem('apartments')}
-      >
-        <ul className="list-disc pl-6 text-white">
-          <li>Portfolios</li>
-          <li>50+ units</li>
-          <li>Mixed Use</li>
-        </ul>
-      </HorizontalAccordionItem>
-    </div>
-  );
-};
 
 const HorizontalServiceLocationsAccordion = () => {
   const [openItem, setOpenItem] = useState(null);
@@ -148,7 +95,23 @@ const WhoWeWorkWith = () => (
           <div className="space-y-12">
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Property Types</h3>
-              <HorizontalPropertyTypeAccordion />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <PropertyTypeCard icon={Building2} text="Commercial Appeal">
+                  <li>Office</li>
+                  <li>Retail</li>
+                  <li>Hotel</li>
+                </PropertyTypeCard>
+                <PropertyTypeCard icon={Factory} text="Industrial Appeal">
+                  <li>Manufacturing</li>
+                  <li>Warehouse</li>
+                  <li>Flex</li>
+                </PropertyTypeCard>
+                <PropertyTypeCard icon={Home} text="Apartment Appeal">
+                  <li>Portfolios</li>
+                  <li>50+ units</li>
+                  <li>Mixed Use</li>
+                </PropertyTypeCard>
+              </div>
             </div>
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Minnesota Service Locations</h3>
