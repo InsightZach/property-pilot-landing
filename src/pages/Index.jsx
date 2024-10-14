@@ -103,7 +103,7 @@ const HeroSection = () => (
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A2647] opacity-70"></div>
     <div className="container mx-auto px-8 md:px-16 relative z-10">
       <div className="flex flex-col md:flex-row items-center justify-between">
-        <div className="text-left md:w-2/3">
+        <div className="text-left md:w-1/2">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-white leading-tight">
             Minnesota Property<br />
             Tax Appeals
@@ -137,7 +137,7 @@ const HeroSection = () => (
             </Button>
           </Link>
         </div>
-        <div className="md:w-1/3 mt-8 md:mt-0 flex justify-end">
+        <div className="md:w-1/2 mt-8 md:mt-0">
           <AnimatedHeroIcons />
         </div>
       </div>
