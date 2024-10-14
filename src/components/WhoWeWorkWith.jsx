@@ -13,7 +13,7 @@ import GreaterMinnesota from './counties/GreaterMinnesota';
 const ServiceIcon = ({ icon: Icon, text }) => (
   <div className="flex items-center space-x-2 mb-2">
     <Icon className="text-[#d7b971] w-6 h-6" />
-    <span className="text-lg">{text}</span>
+    <span className="text-lg text-[#0A2647]">{text}</span>
   </div>
 );
 
@@ -22,14 +22,14 @@ const HorizontalAccordionItem = ({ icon: Icon, text, children, isOpen, onClick }
     <button
       onClick={onClick}
       className={`w-full text-left p-4 flex items-center justify-between ${
-        isOpen ? 'bg-white/40' : 'bg-white/30'
+        isOpen ? 'bg-white/60' : 'bg-white/50'
       } rounded-t-lg transition-colors duration-200`}
     >
       <ServiceIcon icon={Icon} text={text} />
-      <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'transform rotate-180' : ''}`} />
+      <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'transform rotate-180' : ''} text-[#0A2647]`} />
     </button>
     {isOpen && (
-      <div className="bg-white/40 p-4 rounded-b-lg">
+      <div className="bg-white/60 p-4 rounded-b-lg">
         {children}
       </div>
     )}
@@ -110,17 +110,17 @@ const HorizontalServiceLocationsAccordion = () => {
           <button
             onClick={() => toggleItem(name)}
             className={`w-full text-left p-4 flex items-center justify-between ${
-              openItem === name ? 'bg-white/40' : 'bg-white/30'
+              openItem === name ? 'bg-white/60' : 'bg-white/50'
             } rounded-t-lg transition-colors duration-200`}
           >
             <div className="flex items-center space-x-2">
               <MapPin className="text-[#d7b971] w-6 h-6" />
-              <span className="text-lg">{name === 'Greater Minnesota' ? name : `${name} County`}</span>
+              <span className="text-lg text-[#0A2647]">{name === 'Greater Minnesota' ? name : `${name} County`}</span>
             </div>
-            <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${openItem === name ? 'transform rotate-180' : ''}`} />
+            <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${openItem === name ? 'transform rotate-180' : ''} text-[#0A2647]`} />
           </button>
           {openItem === name && (
-            <div className="bg-white/40 p-4 rounded-b-lg">
+            <div className="bg-white/60 p-4 rounded-b-lg">
               <CountyComponent />
             </div>
           )}
@@ -131,21 +131,21 @@ const HorizontalServiceLocationsAccordion = () => {
 };
 
 const WhoWeWorkWith = () => (
-  <section className="py-16 bg-gradient-to-br from-[#1E3A5F]/60 via-[#2E5077]/60 to-[#3A6095]/60 text-white relative overflow-hidden">
+  <section className="py-16 bg-gradient-to-br from-[#1E3A5F]/40 via-[#2E5077]/40 to-[#3A6095]/40 relative overflow-hidden">
     <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-30"></div>
     <div className="container mx-auto px-4 relative z-10">
-      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-white">Property Tax Appeal Services</h2>
+      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-[#0A2647]">Property Tax Appeal Services</h2>
       
       <div className="space-y-12">
         <div className="w-full">
-          <h3 className="text-2xl font-semibold mb-4 text-left">Property Types</h3>
-          <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 shadow-lg">
+          <h3 className="text-2xl font-semibold mb-4 text-left text-[#0A2647]">Property Types</h3>
+          <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 shadow-lg">
             <HorizontalPropertyTypeAccordion />
           </div>
         </div>
         <div className="w-full">
-          <h3 className="text-2xl font-semibold mb-4 text-left">Minnesota Service Locations</h3>
-          <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 shadow-lg">
+          <h3 className="text-2xl font-semibold mb-4 text-left text-[#0A2647]">Minnesota Service Locations</h3>
+          <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 shadow-lg">
             <HorizontalServiceLocationsAccordion />
           </div>
         </div>
