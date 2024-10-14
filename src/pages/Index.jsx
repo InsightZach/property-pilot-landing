@@ -101,14 +101,15 @@ const HeroSection = () => (
   <section className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white py-12 md:py-20 relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A2647] opacity-70"></div>
     <div className="container mx-auto px-8 md:px-16 relative z-10">
-      <div className="max-w-2xl">
+      <div className="text-left">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-white leading-tight">
-          <span className="block">Minnesota Property Tax</span>
-          <span className="block">Assessment Appeals</span>
+          Minnesota Property Tax<br />
+          Assessment Appeals
         </h1>
         <p className="text-lg md:text-xl mb-6 text-white">
-          We save our clients tens of thousands on
-          commercial, industrial, and apartment property taxes.
+          We save our clients tens of thousands on<br />
+          commercial, industrial, and apartment<br />
+          property taxes.
         </p>
         <ul className="mb-8 md:mb-10 space-y-3 text-base md:text-lg">
           <li className="flex items-center">
