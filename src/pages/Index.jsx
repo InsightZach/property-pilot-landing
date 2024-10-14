@@ -103,8 +103,7 @@ const HeroSection = () => (
     <div className="container mx-auto px-8 md:px-16 relative z-10">
       <div className="max-w-2xl">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-white leading-tight">
-          Minnesota Property Tax<br />
-          Assessment Appeals
+          Minnesota Property Tax Assessment Appeals
         </h1>
         <p className="text-lg md:text-xl mb-6 text-white">
           We save our clients tens of thousands on
