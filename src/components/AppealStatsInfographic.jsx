@@ -9,8 +9,13 @@ const stats = [
   { icon: CheckCircle, value: "100%", label: "Appeal Success Rate" }
 ];
 
-const StatItem = ({ icon: Icon, value, label }) => (
+const StatItem = ({ icon: Icon, value, label, isFirst }) => (
   <div className="mb-6 relative">
+    {isFirst && (
+      <div className="absolute top-0 right-0">
+        <Sticker color="blue" text="Best in Market" />
+      </div>
+    )}
     <div className="flex items-start">
       <Icon className="text-[#d7b971] mr-4 h-12 w-12 mt-1 flex-shrink-0" />
       <div>
@@ -24,13 +29,15 @@ const StatItem = ({ icon: Icon, value, label }) => (
 const AppealStatsInfographic = () => {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-      <div className="flex justify-between items-start mb-6">
-        <h3 className="text-2xl font-semibold text-white">Insight's YTD Appeal Statistics</h3>
-        <Sticker color="blue" text="Best in Market" />
-      </div>
+      <h3 className="text-2xl font-semibold text-white mb-6 relative">
+        Insight's YTD Appeal Statistics
+        <div className="absolute top-0 right-0">
+          <Sticker color="blue" text="Best in Market" />
+        </div>
+      </h3>
       <div className="space-y-2">
         {stats.map((stat, index) => (
-          <StatItem key={index} {...stat} />
+          <StatItem key={index} {...stat} isFirst={index === 0} />
         ))}
       </div>
     </div>
