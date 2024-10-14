@@ -1,5 +1,5 @@
 import React from 'react';
-import { CircleDollarSign, TrendingDown, Clock, CheckCircle } from 'lucide-react';
+import { TrendingDown, CircleDollarSign, Clock, CheckCircle } from 'lucide-react';
 
 const stats = [
   { icon: TrendingDown, value: "17.9%", label: "Reduction Average" },
@@ -10,15 +10,15 @@ const stats = [
 
 const StatItem = ({ icon: Icon, value, label }) => (
   <div className="flex flex-col items-center justify-center p-4">
-    <Icon className="text-[#d7b971] mb-4 h-16 w-16" />
-    <span className="text-4xl font-bold text-white mb-2">{value}</span>
-    <span className="text-lg text-white/80 text-center px-4">{label}</span>
+    <Icon className="text-[#d7b971] mb-2 h-8 w-8" />
+    <span className="text-2xl font-bold text-white mb-1">{value}</span>
+    <span className="text-sm text-white/80 text-center">{label}</span>
   </div>
 );
 
 const AppealStatsInfographic = () => {
   return (
-    <div className="grid grid-cols-2 gap-4 bg-transparent">
+    <div className="grid grid-cols-2 gap-4 bg-white/10 backdrop-blur-sm rounded-lg p-4">
       {stats.map((stat, index) => (
         <StatItem key={index} {...stat} />
       ))}
