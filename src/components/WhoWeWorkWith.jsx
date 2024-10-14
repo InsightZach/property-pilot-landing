@@ -131,7 +131,7 @@ const HorizontalServiceLocationsAccordion = () => {
 };
 
 const WhoWeWorkWith = () => (
-  <section className="py-16 bg-gradient-to-br from-[#3A4A5F] via-[#4A5A77] to-[#5A6A95] relative overflow-hidden">
+  <section className="py-16 bg-gradient-to-br from-[#4A5A6F] via-[#5A6A87] to-[#6A7AA5] relative overflow-hidden">
     <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-50"></div>
     <div className="container mx-auto px-4 relative z-10">
       <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-white">Property Tax Appeal Services</h2>
