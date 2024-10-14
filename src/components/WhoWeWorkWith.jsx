@@ -99,14 +99,15 @@ const HorizontalServiceLocationsAccordion = () => {
 
   return (
     <Accordion type="single" collapsible className="w-full">
-      <div className="flex flex-wrap">
+      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2">
         {counties.map(({ name, component: CountyComponent }) => (
-          <AccordionItem key={name} value={name} className="flex-1 min-w-[150px]">
-            <AccordionTrigger className="text-white text-lg px-2 py-1 justify-between">
-              <span className="flex flex-col items-start">
+          <AccordionItem key={name} value={name} className="min-w-[150px]">
+            <AccordionTrigger className="text-white text-sm px-2 py-1 flex justify-between items-center">
+              <span className="flex flex-col items-start mr-2">
                 <span>{name}</span>
-                <span>{name !== 'Greater Minnesota' ? 'County' : ''}</span>
+                <span className="text-xs">{name !== 'Greater Minnesota' ? 'County' : ''}</span>
               </span>
+              <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
             </AccordionTrigger>
             <AccordionContent className="text-white">
               <CountyComponent />
