@@ -19,7 +19,7 @@ const ServiceIcon = ({ icon: Icon, text }) => (
 );
 
 const PropertyTypeCard = ({ icon: Icon, text, children }) => (
-  <Card className="bg-[#0A2647] bg-opacity-80 text-white">
+  <Card className="bg-[#0A2647] bg-opacity-80 text-white border-0">
     <CardHeader>
       <CardTitle className="flex items-center space-x-2">
         <Icon className="text-[#d7b971] w-6 h-6" />
