@@ -145,7 +145,7 @@ const WhoWeWorkWith = () => (
       
       <div className="w-full">
         <div className="bg-[#0A2647] bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg">
-          <div className="space-y-8">
+          <div className="space-y-12"> {/* Increased space between accordions */}
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Property Types</h3>
               <HorizontalPropertyTypeAccordion />
