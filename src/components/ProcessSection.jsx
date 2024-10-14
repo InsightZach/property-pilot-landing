@@ -25,7 +25,7 @@ const ProcessStep = ({ number, icon: Icon, title, description, isActive, isLast,
 );
 
 const ProcessSection = () => {
-  const [activeStep, setActiveStep] = useState(1);
+  const [activeStep, setActiveStep] = useState(0);
   const stepsRef = useRef([]);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const ProcessSection = () => {
       
       stepsRef.current.forEach((step, index) => {
         if (step && scrollPosition >= step.offsetTop) {
-          setActiveStep(index + 1);
+          setActiveStep(index);
         }
       });
     };
@@ -81,7 +81,7 @@ const ProcessSection = () => {
                 icon={step.icon}
                 title={step.title}
                 description={step.description}
-                isActive={activeStep === index + 1}
+                isActive={activeStep >= index}
                 isLast={index === steps.length - 1}
                 showSticker={step.showSticker}
               />
