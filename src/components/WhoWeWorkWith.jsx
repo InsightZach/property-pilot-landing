@@ -115,7 +115,7 @@ const HorizontalServiceLocationsAccordion = () => {
           >
             <div className="flex items-center space-x-2">
               <MapPin className="text-[#d7b971] w-6 h-6" />
-              <span className="text-lg">{name}</span>
+              <span className="text-lg">{name === 'Greater Minnesota' ? name : `${name} County`}</span>
             </div>
             <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${openItem === name ? 'transform rotate-180' : ''}`} />
           </button>
