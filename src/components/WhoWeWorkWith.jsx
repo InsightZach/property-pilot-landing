@@ -17,47 +17,6 @@ const ServiceIcon = ({ icon: Icon, text }) => (
   </div>
 );
 
-const PropertyTypeAccordion = () => (
-  <Accordion type="single" collapsible className="w-full">
-    <AccordionItem value="commercial">
-      <AccordionTrigger className="text-white text-lg">
-        <ServiceIcon icon={Building2} text="Commercial Appeal" />
-      </AccordionTrigger>
-      <AccordionContent className="text-white">
-        <ul className="list-disc pl-6">
-          <li>Office</li>
-          <li>Retail</li>
-          <li>Hotel</li>
-        </ul>
-      </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="industrial">
-      <AccordionTrigger className="text-white text-lg">
-        <ServiceIcon icon={Factory} text="Industrial Appeal" />
-      </AccordionTrigger>
-      <AccordionContent className="text-white">
-        <ul className="list-disc pl-6">
-          <li>Manufacturing</li>
-          <li>Warehouse</li>
-          <li>Flex</li>
-        </ul>
-      </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="apartments">
-      <AccordionTrigger className="text-white text-lg">
-        <ServiceIcon icon={Home} text="Apartment Appeal" />
-      </AccordionTrigger>
-      <AccordionContent className="text-white">
-        <ul className="list-disc pl-6">
-          <li>Portfolios</li>
-          <li>50+ units</li>
-          <li>Mixed Use</li>
-        </ul>
-      </AccordionContent>
-    </AccordionItem>
-  </Accordion>
-);
-
 const HorizontalAccordionItem = ({ icon: Icon, text, children, isOpen, onClick }) => (
   <div className="flex-1">
     <button
@@ -85,7 +44,7 @@ const HorizontalPropertyTypeAccordion = () => {
   };
 
   return (
-    <div className="flex space-x-4">
+    <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
       <HorizontalAccordionItem
         icon={Building2}
         text="Commercial Appeal"
@@ -126,37 +85,59 @@ const HorizontalPropertyTypeAccordion = () => {
   );
 };
 
+const HorizontalServiceLocationsAccordion = () => {
+  const [openItem, setOpenItem] = useState(null);
+
+  const toggleItem = (item) => {
+    setOpenItem(openItem === item ? null : item);
+  };
+
+  const counties = [
+    { name: 'Hennepin', component: HennepinCounty },
+    { name: 'Ramsey', component: RamseyCounty },
+    { name: 'Dakota', component: DakotaCounty },
+    { name: 'Anoka', component: AnokaCounty },
+    { name: 'Washington', component: WashingtonCounty },
+    { name: 'Scott', component: ScottCounty },
+    { name: 'Carver', component: CarverCounty },
+    { name: 'Greater Minnesota', component: GreaterMinnesota },
+  ];
+
+  return (
+    <div className="flex flex-col md:flex-row flex-wrap">
+      {counties.map(({ name, component: CountyComponent }) => (
+        <div key={name} className="flex-1 min-w-[200px] mb-4 md:mr-4">
+          <HorizontalAccordionItem
+            icon={ChevronDown}
+            text={name}
+            isOpen={openItem === name}
+            onClick={() => toggleItem(name)}
+          >
+            <CountyComponent />
+          </HorizontalAccordionItem>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const WhoWeWorkWith = () => (
   <section className="py-16 bg-gradient-to-br from-[#0A2647] to-[#1E3A5F] text-white relative overflow-hidden">
     <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-5"></div>
     <div className="container mx-auto px-4 relative z-10">
       <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-white">Minnesota Property Tax Appeal Services</h2>
       
-      <div className="grid md:grid-cols-2 gap-12 mb-12">
-        <div className="max-w-md mx-auto w-full">
-          <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Assessment Appeal<br />Property Types</h3>
+      <div className="space-y-12">
+        <div className="w-full">
+          <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Assessment Appeal Property Types</h3>
           <div className="bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-4 shadow-lg">
-            <div className="hidden md:block">
-              <HorizontalPropertyTypeAccordion />
-            </div>
-            <div className="md:hidden">
-              <PropertyTypeAccordion />
-            </div>
+            <HorizontalPropertyTypeAccordion />
           </div>
         </div>
-        <div className="max-w-md mx-auto w-full">
-          <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Assessment Appeal<br />Service Locations</h3>
+        <div className="w-full">
+          <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Assessment Appeal Service Locations</h3>
           <div className="bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-4 shadow-lg">
-            <Accordion type="single" collapsible className="w-full text-white">
-              <HennepinCounty />
-              <RamseyCounty />
-              <DakotaCounty />
-              <AnokaCounty />
-              <WashingtonCounty />
-              <ScottCounty />
-              <CarverCounty />
-              <GreaterMinnesota />
-            </Accordion>
+            <HorizontalServiceLocationsAccordion />
           </div>
         </div>
       </div>
