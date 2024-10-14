@@ -86,12 +86,6 @@ const HorizontalPropertyTypeAccordion = () => {
 };
 
 const HorizontalServiceLocationsAccordion = () => {
-  const [openItem, setOpenItem] = useState(null);
-
-  const toggleItem = (item) => {
-    setOpenItem(openItem === item ? null : item);
-  };
-
   const counties = [
     { name: 'Hennepin', component: HennepinCounty },
     { name: 'Ramsey', component: RamseyCounty },
@@ -104,20 +98,20 @@ const HorizontalServiceLocationsAccordion = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row flex-wrap">
-      {counties.map(({ name, component: CountyComponent }) => (
-        <div key={name} className="flex-1 min-w-[200px] mb-4 md:mr-4">
-          <HorizontalAccordionItem
-            icon={ChevronDown}
-            text={name}
-            isOpen={openItem === name}
-            onClick={() => toggleItem(name)}
-          >
-            <CountyComponent />
-          </HorizontalAccordionItem>
-        </div>
-      ))}
-    </div>
+    <Accordion type="single" collapsible className="w-full">
+      <div className="flex flex-wrap">
+        {counties.map(({ name, component: CountyComponent }) => (
+          <AccordionItem key={name} value={name} className="flex-1 min-w-[150px]">
+            <AccordionTrigger className="text-white text-lg px-2 py-1">
+              {name}
+            </AccordionTrigger>
+            <AccordionContent className="text-white">
+              <CountyComponent />
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </div>
+    </Accordion>
   );
 };
 
