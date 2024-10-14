@@ -138,13 +138,13 @@ const WhoWeWorkWith = () => (
       
       <div className="space-y-12">
         <div className="w-full">
-          <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Assessment Appeal Property Types</h3>
+          <h3 className="text-2xl font-semibold mb-4 text-center">Property Types</h3>
           <div className="bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-4 shadow-lg">
             <HorizontalPropertyTypeAccordion />
           </div>
         </div>
         <div className="w-full">
-          <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Assessment Appeal Service Locations</h3>
+          <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Service Locations</h3>
           <div className="bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-4 shadow-lg">
             <HorizontalServiceLocationsAccordion />
           </div>
