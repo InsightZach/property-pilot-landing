@@ -22,14 +22,14 @@ const HorizontalAccordionItem = ({ icon: Icon, text, children, isOpen, onClick }
     <button
       onClick={onClick}
       className={`w-full text-left p-4 flex items-center justify-between ${
-        isOpen ? 'bg-white/60' : 'bg-white/50'
+        isOpen ? 'bg-[#0A2647]/90' : 'bg-[#324E6E]/90'
       } rounded-t-lg transition-colors duration-200`}
     >
       <ServiceIcon icon={Icon} text={text} />
-      <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'transform rotate-180' : ''} text-[#0A2647]`} />
+      <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'transform rotate-180' : ''} text-[#d7b971]`} />
     </button>
     {isOpen && (
-      <div className="bg-white/60 p-4 rounded-b-lg">
+      <div className="bg-[#324E6E]/90 p-4 rounded-b-lg">
         {children}
       </div>
     )}
@@ -110,17 +110,17 @@ const HorizontalServiceLocationsAccordion = () => {
           <button
             onClick={() => toggleItem(name)}
             className={`w-full text-left p-4 flex items-center justify-between ${
-              openItem === name ? 'bg-white/60' : 'bg-white/50'
+              openItem === name ? 'bg-[#0A2647]/90' : 'bg-[#324E6E]/90'
             } rounded-t-lg transition-colors duration-200`}
           >
             <div className="flex items-center space-x-2">
               <MapPin className="text-[#d7b971] w-6 h-6" />
-              <span className="text-lg text-[#0A2647]">{name === 'Greater Minnesota' ? name : `${name} County`}</span>
+              <span className="text-lg text-white">{name === 'Greater Minnesota' ? name : `${name} County`}</span>
             </div>
-            <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${openItem === name ? 'transform rotate-180' : ''} text-[#0A2647]`} />
+            <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${openItem === name ? 'transform rotate-180' : ''} text-[#d7b971]`} />
           </button>
           {openItem === name && (
-            <div className="bg-white/60 p-4 rounded-b-lg">
+            <div className="bg-[#324E6E]/90 p-4 rounded-b-lg">
               <CountyComponent />
             </div>
           )}
