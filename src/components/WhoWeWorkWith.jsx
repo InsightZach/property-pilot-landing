@@ -136,7 +136,6 @@ const WhoWeWorkWith = () => (
       className="absolute inset-0 bg-cover bg-center"
       style={{ backgroundImage: "url('/Property-Tax-Consultant-working2.png')" }}
     ></div>
-    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
     <div className="container mx-auto px-4 relative z-10">
       <h2 className="text-4xl font-semibold text-center mb-12 text-white shadow-text">Property Tax Appeal Services</h2>
       
