@@ -141,7 +141,7 @@ const WhoWeWorkWith = () => (
       style={{ backgroundImage: "url('/Property-Tax-Consultant-working2.png')" }}
     ></div>
     <div className="container mx-auto px-4 relative z-10">
-      <h2 className="text-4xl font-semibold text-center mb-12 text-white shadow-text">Property Tax Appeal Services</h2>
+      <h1 className="text-4xl font-semibold text-center mb-12 text-white shadow-text">Minnesota Property Tax Assessment Appeals</h1>
       
       <div className="w-full">
         <div className="bg-[#0A2647] bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg">
