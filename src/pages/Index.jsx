@@ -10,6 +10,7 @@ import MeetTheOwner from '../components/MeetTheOwner';
 import HowWeWork from '../components/HowWeWork';
 import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import AboutInsightSection from '../components/AboutInsightSection';
+import HeroCard from '../components/HeroCard';
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -101,39 +102,44 @@ const HeroSection = () => (
   <section className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white py-12 md:py-20 relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A2647] opacity-70"></div>
     <div className="container mx-auto px-8 md:px-16 relative z-10">
-      <div className="text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-white leading-tight">
-          Minnesota Property Tax<br />
-          Assessment Appeals
-        </h1>
-        <p className="text-lg md:text-xl mb-6 text-white">
-          We save our clients tens of thousands on<br />
-          commercial, industrial, and apartment<br />
-          property taxes.
-        </p>
-        <ul className="mb-8 md:mb-10 space-y-3 text-base md:text-lg inline-block text-left">
-          <li className="flex items-center">
-            <CheckCircle className="mr-3 text-[#d7b971] h-5 w-5" />
-            <span>You pay $0 upfront</span>
-          </li>
-          <li className="flex items-center">
-            <CheckCircle className="mr-3 text-[#d7b971] h-5 w-5" />
-            <span>Our fee is 30% of tax savings</span>
-          </li>
-          <li className="flex items-center">
-            <CheckCircle className="mr-3 text-[#d7b971] h-5 w-5" />
-            <span>You pocket the rest</span>
-          </li>
-          <li className="flex items-center">
-            <CheckCircle className="mr-3 text-[#d7b971] h-5 w-5" />
-            <span>We handle everything</span>
-          </li>
-        </ul>
-        <Link to="/contact" className="inline-block">
-          <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-            Start My Free Assessment Review
-          </Button>
-        </Link>
+      <div className="flex flex-col md:flex-row items-center justify-between">
+        <div className="text-left md:w-1/2">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-white leading-tight">
+            Minnesota Property Tax<br />
+            Assessment Appeals
+          </h1>
+          <p className="text-lg md:text-xl mb-6 text-white">
+            We save our clients tens of thousands on<br />
+            commercial, industrial, and apartment<br />
+            property taxes.
+          </p>
+          <ul className="mb-8 md:mb-10 space-y-3 text-base md:text-lg">
+            <li className="flex items-center">
+              <CheckCircle className="mr-3 text-[#d7b971] h-5 w-5" />
+              <span>You pay $0 upfront</span>
+            </li>
+            <li className="flex items-center">
+              <CheckCircle className="mr-3 text-[#d7b971] h-5 w-5" />
+              <span>Our fee is 30% of tax savings</span>
+            </li>
+            <li className="flex items-center">
+              <CheckCircle className="mr-3 text-[#d7b971] h-5 w-5" />
+              <span>You pocket the rest</span>
+            </li>
+            <li className="flex items-center">
+              <CheckCircle className="mr-3 text-[#d7b971] h-5 w-5" />
+              <span>We handle everything</span>
+            </li>
+          </ul>
+          <Link to="/contact" className="inline-block">
+            <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              Start My Free Assessment Review
+            </Button>
+          </Link>
+        </div>
+        <div className="md:w-1/2 mt-8 md:mt-0">
+          <HeroCard />
+        </div>
       </div>
     </div>
   </section>
