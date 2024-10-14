@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import { Building2, Factory, Home } from 'lucide-react';
+import { Building2, Factory, Home, ChevronDown } from 'lucide-react';
 import HennepinCounty from './counties/HennepinCounty';
 import RamseyCounty from './counties/RamseyCounty';
 import DakotaCounty from './counties/DakotaCounty';
@@ -58,6 +58,74 @@ const PropertyTypeAccordion = () => (
   </Accordion>
 );
 
+const HorizontalAccordionItem = ({ icon: Icon, text, children, isOpen, onClick }) => (
+  <div className="flex-1">
+    <button
+      onClick={onClick}
+      className={`w-full text-left p-4 flex items-center justify-between ${
+        isOpen ? 'bg-[#4A6D8C]' : 'bg-[#324E6E]'
+      } rounded-t-lg transition-colors duration-200`}
+    >
+      <ServiceIcon icon={Icon} text={text} />
+      <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'transform rotate-180' : ''}`} />
+    </button>
+    {isOpen && (
+      <div className="bg-[#4A6D8C] p-4 rounded-b-lg">
+        {children}
+      </div>
+    )}
+  </div>
+);
+
+const HorizontalPropertyTypeAccordion = () => {
+  const [openItem, setOpenItem] = useState(null);
+
+  const toggleItem = (item) => {
+    setOpenItem(openItem === item ? null : item);
+  };
+
+  return (
+    <div className="flex space-x-4">
+      <HorizontalAccordionItem
+        icon={Building2}
+        text="Commercial Appeal"
+        isOpen={openItem === 'commercial'}
+        onClick={() => toggleItem('commercial')}
+      >
+        <ul className="list-disc pl-6 text-white">
+          <li>Office</li>
+          <li>Retail</li>
+          <li>Hotel</li>
+        </ul>
+      </HorizontalAccordionItem>
+      <HorizontalAccordionItem
+        icon={Factory}
+        text="Industrial Appeal"
+        isOpen={openItem === 'industrial'}
+        onClick={() => toggleItem('industrial')}
+      >
+        <ul className="list-disc pl-6 text-white">
+          <li>Manufacturing</li>
+          <li>Warehouse</li>
+          <li>Flex</li>
+        </ul>
+      </HorizontalAccordionItem>
+      <HorizontalAccordionItem
+        icon={Home}
+        text="Apartment Appeal"
+        isOpen={openItem === 'apartments'}
+        onClick={() => toggleItem('apartments')}
+      >
+        <ul className="list-disc pl-6 text-white">
+          <li>Portfolios</li>
+          <li>50+ units</li>
+          <li>Mixed Use</li>
+        </ul>
+      </HorizontalAccordionItem>
+    </div>
+  );
+};
+
 const WhoWeWorkWith = () => (
   <section className="py-16 bg-gradient-to-br from-[#0A2647] to-[#1E3A5F] text-white relative overflow-hidden">
     <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-5"></div>
@@ -65,13 +133,18 @@ const WhoWeWorkWith = () => (
       <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-white">Minnesota Property Tax Appeal Services</h2>
       
       <div className="grid md:grid-cols-2 gap-12 mb-12">
-        <div className="max-w-md mx-auto">
+        <div className="max-w-md mx-auto w-full">
           <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Assessment Appeal<br />Property Types</h3>
           <div className="bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-4 shadow-lg">
-            <PropertyTypeAccordion />
+            <div className="hidden md:block">
+              <HorizontalPropertyTypeAccordion />
+            </div>
+            <div className="md:hidden">
+              <PropertyTypeAccordion />
+            </div>
           </div>
         </div>
-        <div className="max-w-md mx-auto">
+        <div className="max-w-md mx-auto w-full">
           <h3 className="text-2xl font-semibold mb-4 text-center">Minnesota Assessment Appeal<br />Service Locations</h3>
           <div className="bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-4 shadow-lg">
             <Accordion type="single" collapsible className="w-full text-white">
