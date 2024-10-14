@@ -19,20 +19,22 @@ const ServiceIcon = ({ icon: Icon, text }) => (
 
 const HorizontalAccordionItem = ({ icon: Icon, text, children, isOpen, onClick }) => (
   <div className="flex-1">
-    <button
-      onClick={onClick}
-      className={`w-full text-left p-4 flex items-center justify-between ${
-        isOpen ? 'bg-[#0A2647] bg-opacity-80' : 'bg-[#324E6E] bg-opacity-80'
-      } rounded-t-lg transition-colors duration-200 hover:bg-opacity-100`}
-    >
-      <ServiceIcon icon={Icon} text={text} />
-      <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'transform rotate-180' : ''} text-[#d7b971]`} />
-    </button>
-    {isOpen && (
-      <div className="bg-[#324E6E] bg-opacity-80 p-4 rounded-b-lg">
-        {children}
-      </div>
-    )}
+    <div className="bg-[#0A2647] bg-opacity-80 rounded-lg border border-white overflow-hidden">
+      <button
+        onClick={onClick}
+        className={`w-full text-left p-4 flex items-center justify-between ${
+          isOpen ? 'bg-opacity-100' : ''
+        } transition-colors duration-200 hover:bg-opacity-100`}
+      >
+        <ServiceIcon icon={Icon} text={text} />
+        <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'transform rotate-180' : ''} text-[#d7b971]`} />
+      </button>
+      {isOpen && (
+        <div className="p-4">
+          {children}
+        </div>
+      )}
+    </div>
   </div>
 );
 
@@ -107,23 +109,25 @@ const HorizontalServiceLocationsAccordion = () => {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {counties.map(({ name, component: CountyComponent }) => (
         <div key={name} className="flex-1">
-          <button
-            onClick={() => toggleItem(name)}
-            className={`w-full text-left p-4 flex items-center justify-between ${
-              openItem === name ? 'bg-[#0A2647] bg-opacity-80' : 'bg-[#324E6E] bg-opacity-80'
-            } rounded-t-lg transition-colors duration-200 hover:bg-opacity-100`}
-          >
-            <div className="flex items-center space-x-2">
-              <MapPin className="text-[#d7b971] w-6 h-6" />
-              <span className="text-lg text-white">{name === 'Greater Minnesota' ? name : `${name} County`}</span>
-            </div>
-            <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${openItem === name ? 'transform rotate-180' : ''} text-[#d7b971]`} />
-          </button>
-          {openItem === name && (
-            <div className="bg-[#324E6E] bg-opacity-80 p-4 rounded-b-lg">
-              <CountyComponent />
-            </div>
-          )}
+          <div className="bg-[#0A2647] bg-opacity-80 rounded-lg border border-white overflow-hidden">
+            <button
+              onClick={() => toggleItem(name)}
+              className={`w-full text-left p-4 flex items-center justify-between ${
+                openItem === name ? 'bg-opacity-100' : ''
+              } transition-colors duration-200 hover:bg-opacity-100`}
+            >
+              <div className="flex items-center space-x-2">
+                <MapPin className="text-[#d7b971] w-6 h-6" />
+                <span className="text-lg text-white">{name === 'Greater Minnesota' ? name : `${name} County`}</span>
+              </div>
+              <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${openItem === name ? 'transform rotate-180' : ''} text-[#d7b971]`} />
+            </button>
+            {openItem === name && (
+              <div className="p-4">
+                <CountyComponent />
+              </div>
+            )}
+          </div>
         </div>
       ))}
     </div>
@@ -142,13 +146,13 @@ const WhoWeWorkWith = () => (
       <div className="space-y-16">
         <div className="w-full">
           <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Property Types</h3>
-          <div className="bg-[#0A2647] bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+          <div className="bg-[#0A2647] bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-white">
             <HorizontalPropertyTypeAccordion />
           </div>
         </div>
         <div className="w-full">
           <h3 className="text-2xl font-semibold mb-6 text-left text-white shadow-text">Minnesota Service Locations</h3>
-          <div className="bg-[#0A2647] bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+          <div className="bg-[#0A2647] bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-white">
             <HorizontalServiceLocationsAccordion />
           </div>
         </div>
