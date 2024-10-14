@@ -137,7 +137,7 @@ const HeroSection = () => (
             </Button>
           </Link>
         </div>
-        <div className="md:w-1/3 mt-8 md:mt-0">
+        <div className="md:w-1/3 mt-8 md:mt-0 flex justify-end">
           <AnimatedHeroIcons />
         </div>
       </div>
