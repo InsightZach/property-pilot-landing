@@ -116,7 +116,7 @@ const WhoWeWorkWith = () => (
             <AppealServiceCard 
               icon={GavelIcon}
               title="Local Board Appeals"
-              description="We represent you before your Local Board of Appeal and Equalization. Our team prepares a detailed case, utilizing property data, market conditions, and comparable assessments to advocate for a tax reduction."
+              description="We represent you before your Local Board of Appeal and Equalization. Our team prepares a detailed case, utilizing property data, market conditions, and comparable assessments to advocate for a reduction."
             />
             <AppealServiceCard 
               icon={ScaleIcon}
