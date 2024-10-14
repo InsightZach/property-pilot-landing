@@ -137,7 +137,7 @@ const HeroSection = () => (
             </Button>
           </Link>
         </div>
-        <div className="md:w-1/2 mt-8 md:mt-0">
+        <div className="md:w-1/2 mt-8 md:mt-0 h-64 md:h-96 relative">
           <AnimatedHeroIcons />
         </div>
       </div>

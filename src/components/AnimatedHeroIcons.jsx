@@ -11,10 +11,10 @@ const AnimatedHeroIcons = () => {
   ];
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
+    <div className="absolute inset-0">
       <svg
         viewBox="0 0 100 100"
-        className="absolute top-0 left-0 w-full h-full"
+        className="w-full h-full"
         preserveAspectRatio="xMidYMid slice"
       >
         {circles.map((circle, index) => (
