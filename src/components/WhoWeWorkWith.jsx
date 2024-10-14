@@ -22,14 +22,14 @@ const HorizontalAccordionItem = ({ icon: Icon, text, children, isOpen, onClick }
     <button
       onClick={onClick}
       className={`w-full text-left p-4 flex items-center justify-between ${
-        isOpen ? 'bg-gray-200' : 'bg-gray-100'
+        isOpen ? 'bg-[#4A6D8C]' : 'bg-[#324E6E]'
       } rounded-t-lg transition-colors duration-200`}
     >
       <ServiceIcon icon={Icon} text={text} />
       <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'transform rotate-180' : ''}`} />
     </button>
     {isOpen && (
-      <div className="bg-gray-200 p-4 rounded-b-lg">
+      <div className="bg-[#4A6D8C] p-4 rounded-b-lg">
         {children}
       </div>
     )}
@@ -51,7 +51,7 @@ const HorizontalPropertyTypeAccordion = () => {
         isOpen={openItem === 'commercial'}
         onClick={() => toggleItem('commercial')}
       >
-        <ul className="list-disc pl-6 text-gray-700">
+        <ul className="list-disc pl-6 text-white">
           <li>Office</li>
           <li>Retail</li>
           <li>Hotel</li>
@@ -63,7 +63,7 @@ const HorizontalPropertyTypeAccordion = () => {
         isOpen={openItem === 'industrial'}
         onClick={() => toggleItem('industrial')}
       >
-        <ul className="list-disc pl-6 text-gray-700">
+        <ul className="list-disc pl-6 text-white">
           <li>Manufacturing</li>
           <li>Warehouse</li>
           <li>Flex</li>
@@ -75,7 +75,7 @@ const HorizontalPropertyTypeAccordion = () => {
         isOpen={openItem === 'apartments'}
         onClick={() => toggleItem('apartments')}
       >
-        <ul className="list-disc pl-6 text-gray-700">
+        <ul className="list-disc pl-6 text-white">
           <li>Portfolios</li>
           <li>50+ units</li>
           <li>Mixed Use</li>
@@ -110,7 +110,7 @@ const HorizontalServiceLocationsAccordion = () => {
           <button
             onClick={() => toggleItem(name)}
             className={`w-full text-left p-4 flex items-center justify-between ${
-              openItem === name ? 'bg-gray-200' : 'bg-gray-100'
+              openItem === name ? 'bg-[#4A6D8C]' : 'bg-[#324E6E]'
             } rounded-t-lg transition-colors duration-200`}
           >
             <div className="flex items-center space-x-2">
@@ -120,7 +120,7 @@ const HorizontalServiceLocationsAccordion = () => {
             <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${openItem === name ? 'transform rotate-180' : ''}`} />
           </button>
           {openItem === name && (
-            <div className="bg-gray-200 p-4 rounded-b-lg">
+            <div className="bg-[#4A6D8C] p-4 rounded-b-lg">
               <CountyComponent />
             </div>
           )}
@@ -131,20 +131,21 @@ const HorizontalServiceLocationsAccordion = () => {
 };
 
 const WhoWeWorkWith = () => (
-  <section className="py-16 bg-gray-100 text-gray-800 relative overflow-hidden">
+  <section className="py-16 bg-gradient-to-br from-[#0A2647] to-[#1E3A5F] text-white relative overflow-hidden">
+    <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-5"></div>
     <div className="container mx-auto px-4 relative z-10">
-      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-[#0A2647]">Property Tax Appeal Services</h2>
+      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-white">Property Tax Appeal Services</h2>
       
       <div className="space-y-12">
         <div className="w-full">
           <h3 className="text-2xl font-semibold mb-4 text-left">Property Types</h3>
-          <div className="bg-white rounded-lg p-4 shadow-lg">
+          <div className="bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-4 shadow-lg">
             <HorizontalPropertyTypeAccordion />
           </div>
         </div>
         <div className="w-full">
           <h3 className="text-2xl font-semibold mb-4 text-left">Minnesota Service Locations</h3>
-          <div className="bg-white rounded-lg p-4 shadow-lg">
+          <div className="bg-gradient-to-br from-[#324E6E] to-[#4A6D8C] rounded-lg p-4 shadow-lg">
             <HorizontalServiceLocationsAccordion />
           </div>
         </div>
