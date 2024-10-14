@@ -9,23 +9,23 @@ const AboutInsightSection = () => (
         <div className="flex flex-col md:flex-row justify-center items-center mb-4">
           <div className="flex items-center mb-2 md:mb-0 md:mr-6">
             <Building2 className="text-[#d7b971] w-6 h-6 mr-2" />
-            <span className="text-lg">Commercial</span>
+            <span className="text-lg text-[#0A2647]">Commercial</span>
           </div>
           <div className="flex items-center mb-2 md:mb-0 md:mr-6">
             <Factory className="text-[#d7b971] w-6 h-6 mr-2" />
-            <span className="text-lg">Industrial</span>
+            <span className="text-lg text-[#0A2647]">Industrial</span>
           </div>
           <div className="flex items-center">
             <Home className="text-[#d7b971] w-6 h-6 mr-2" />
-            <span className="text-lg">Apartments</span>
+            <span className="text-lg text-[#0A2647]">Apartments</span>
           </div>
         </div>
       </div>
       <div className="max-w-3xl md:ml-4 mb-12 text-left">
-        <p className="text-lg mb-4">
+        <p className="text-lg mb-4 text-[#0A2647]">
           At <span className="font-bold">Insight Property Tax</span>, we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota.
         </p>
-        <p className="text-lg mb-8">
+        <p className="text-lg mb-8 text-[#0A2647]">
           By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
         </p>
       </div>
