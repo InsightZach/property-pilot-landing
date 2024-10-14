@@ -105,8 +105,8 @@ const HeroSection = () => (
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="text-left md:w-1/2">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-white leading-tight">
-            Minnesota Property<br />
-            Tax Appeals
+            Minnesota Property Tax<br />
+            Assessment Appeals
           </h1>
           <p className="text-lg md:text-xl mb-6 text-white">
             We save our clients tens of thousands on<br />
