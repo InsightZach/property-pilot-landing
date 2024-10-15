@@ -13,6 +13,7 @@ const HowWeWork = () => (
         <div className="md:flex">
           <div className="md:w-1/2 p-8 bg-[#0A2647]/90 text-white">
             <h3 className="text-2xl font-bold mb-4">Contingency Fee</h3>
+            <p className="mb-4">Our contingency fee model ensures zero risk for you: you only pay if we successfully reduce your property taxes.</p>
             <ul className="space-y-2">
               <li className="flex items-center">
                 <CheckCircle className="mr-2 text-[#d7b971]" /> Pay $0 upfront
