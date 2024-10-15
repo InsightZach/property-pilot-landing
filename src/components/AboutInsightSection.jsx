@@ -3,19 +3,19 @@ import { TrendingDown, Clock, CheckCircle, DollarSign, Building2, Factory, Home 
 
 const AboutInsightSection = () => (
   <section className="py-16 bg-white">
-    <div className="container mx-auto px-8 md:px-16">
+    <div className="container mx-auto px-4 md:px-8 lg:px-16">
       <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-[#0A2647]">Expert Minnesota Property Tax Appeals</h2>
       <div className="flex flex-col items-center justify-center mb-8">
-        <div className="flex flex-row justify-center items-center mb-4">
-          <div className="flex items-center mr-6">
+        <div className="flex flex-wrap justify-center items-center mb-4">
+          <div className="flex items-center mr-4 mb-2">
             <Building2 className="text-[#d7b971] w-6 h-6 mr-2" />
             <span className="text-lg text-[#0A2647]">Commercial</span>
           </div>
-          <div className="flex items-center mr-6">
+          <div className="flex items-center mr-4 mb-2">
             <Factory className="text-[#d7b971] w-6 h-6 mr-2" />
             <span className="text-lg text-[#0A2647]">Industrial</span>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center mb-2">
             <Home className="text-[#d7b971] w-6 h-6 mr-2" />
             <span className="text-lg text-[#0A2647]">Apartments</span>
           </div>
@@ -31,7 +31,7 @@ const AboutInsightSection = () => (
           </p>
         </div>
         <div className="md:w-2/3">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <StatCard
               icon={TrendingDown}
               title="-17.9% Average Reduction"
@@ -60,11 +60,11 @@ const AboutInsightSection = () => (
 );
 
 const StatCard = ({ icon: Icon, title, description }) => (
-  <div className="bg-[#324E6E] text-white p-6 rounded-lg flex items-center">
-    <Icon className="text-[#d7b971] h-16 w-16 mr-4 flex-shrink-0" />
+  <div className="bg-[#324E6E] text-white p-6 rounded-lg flex items-center shadow-lg">
+    <Icon className="text-[#d7b971] h-12 w-12 mr-4 flex-shrink-0" />
     <div className="flex-grow">
-      <h4 className="text-xl font-bold mb-2 whitespace-nowrap">{title}</h4>
-      <p className="text-base">{description}</p>
+      <h4 className="text-lg sm:text-xl font-bold mb-2">{title}</h4>
+      <p className="text-sm sm:text-base">{description}</p>
     </div>
   </div>
 );
