@@ -5,8 +5,8 @@ import Sticker from './Sticker';
 const ProcessStep = ({ number, icon: Icon, title, description, isActive, isLast, showSticker }) => (
   <div className="flex flex-col md:flex-row items-start mb-12 md:mb-32 relative">
     <div className="relative flex items-center self-start md:self-center mr-4 md:mr-8 mb-4 md:mb-0">
-      <div className={`flex-shrink-0 w-8 h-8 rounded-full bg-white border-2 border-[#d7b971] flex items-center justify-center text-[#0A2647] font-bold text-lg z-20 transition-colors duration-300 ${isActive ? 'bg-[#d7b971]' : ''}`}>
-        <span className={`transition-colors duration-300 ${isActive ? 'text-white' : ''}`}>{number}</span>
+      <div className={`flex-shrink-0 w-8 h-8 rounded-full border-2 border-[#d7b971] flex items-center justify-center font-bold text-lg z-20 transition-all duration-300 ${isActive ? 'bg-[#d7b971] text-white' : 'bg-white text-[#0A2647]'}`}>
+        {number}
       </div>
     </div>
     <div className="flex-grow relative">
@@ -89,7 +89,7 @@ const ProcessSection = () => {
                 icon={step.icon}
                 title={step.title}
                 description={step.description}
-                isActive={index === activeStep}
+                isActive={index <= activeStep}
                 isLast={index === steps.length - 1}
                 showSticker={step.showSticker}
               />
