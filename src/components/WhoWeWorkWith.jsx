@@ -106,7 +106,7 @@ const WhoWeWorkWith = () => (
       <h2 className="text-4xl md:text-5xl font-semibold text-center mb-12 text-[#0A2647]">Property Tax Appeal Services</h2>
       
       <div className="w-full space-y-12">
-        <div>
+        <div className="bg-white rounded-lg p-8 mb-16">
           <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-left text-[#0A2647]">Appeal Service Types</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <AppealServiceCard 
