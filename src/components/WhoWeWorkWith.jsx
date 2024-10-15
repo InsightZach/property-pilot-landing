@@ -98,7 +98,7 @@ const HorizontalServiceLocationsAccordion = () => {
 const WhoWeWorkWith = () => (
   <section className="py-16 relative overflow-hidden">
     <div 
-      className="absolute inset-0 bg-cover bg-center opacity-0"
+      className="absolute inset-0 bg-cover bg-center opacity-100"
       style={{ backgroundImage: "url('/Property-Tax-Consultant-working2.png')" }}
     ></div>
     <div className="absolute inset-0 bg-white bg-opacity-30"></div>
