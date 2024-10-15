@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Card, CardContent } from "@/components/ui/card";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProcessSection from '../components/ProcessSection';
@@ -10,6 +11,7 @@ import MeetTheOwner from '../components/MeetTheOwner';
 import HowWeWork from '../components/HowWeWork';
 import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import AboutInsightSection from '../components/AboutInsightSection';
+import RecentAppeals from '../components/RecentAppeals';
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -146,7 +148,7 @@ const RecentAppealsSection = () => (
     <div className="container mx-auto px-8 md:px-16">
       <h2 className="text-3xl font-semibold text-center text-[#0A2647] mb-8">Recent Appeals</h2>
       <h3 className="text-2xl font-semibold text-center text-[#0A2647] mb-6">Success Stories</h3>
-      {/* Add your RecentAppeals component here */}
+      <RecentAppeals />
     </div>
   </section>
 );
