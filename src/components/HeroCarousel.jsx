@@ -4,7 +4,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import AppealOverlay from './AppealOverlay';
 
 const HeroCarousel = () => {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 10000 })]);  // Increased delay to 10000ms (10 seconds)
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 10000 })]);
 
   const appealData = [
     { fileName: 'Appeal1', propertyType: 'Warehouse', location: 'St. Paul', assessmentYear: 2024, assessment: 4156500, settlement: 2700000, reduction: '-35%' },
@@ -34,7 +34,7 @@ const HeroCarousel = () => {
               className="w-full h-full object-cover"
               loading="lazy"
             />
-            <div className="absolute top-0 right-0 bottom-0 w-1/2 bg-[#0A2647] bg-opacity-20">
+            <div className="absolute top-0 right-0 bottom-0 w-1/3 bg-[#0A2647] bg-opacity-20">
               <AppealOverlay data={data} />
             </div>
           </div>
