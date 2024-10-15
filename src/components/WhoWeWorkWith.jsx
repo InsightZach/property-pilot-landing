@@ -96,14 +96,14 @@ const HorizontalServiceLocationsAccordion = () => {
 };
 
 const WhoWeWorkWith = () => (
-  <section className="py-16 bg-gray-100">
+  <section className="py-8 bg-gray-100">
     <div className="container mx-auto px-4 relative z-10">
       <div className="text-center">
         <h2 className="text-4xl md:text-5xl font-semibold mb-12 text-[#0A2647] bg-white rounded-lg py-4 px-6 inline-flex mx-auto shadow-md">Property Tax Appeal Services</h2>
       </div>
       
-      <div className="w-full space-y-12">
-        <div className="bg-white rounded-lg p-8 mb-16 shadow-lg">
+      <div className="w-full space-y-8">
+        <div className="bg-white rounded-lg p-8 shadow-lg">
           <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-left text-[#0A2647]">Appeal Service Types</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <AppealServiceCard 
@@ -124,7 +124,7 @@ const WhoWeWorkWith = () => (
           </div>
         </div>
         
-        <div className="bg-white rounded-lg p-8 mb-16 shadow-lg">
+        <div className="bg-white rounded-lg p-8 shadow-lg">
           <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-left text-[#0A2647]">Property Types</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <PropertyTypeCard icon={Building2} text="Commercial Appeal">
@@ -144,7 +144,7 @@ const WhoWeWorkWith = () => (
             </PropertyTypeCard>
           </div>
         </div>
-        <div className="bg-white rounded-lg p-8 mb-16 shadow-lg">
+        <div className="bg-white rounded-lg p-8 shadow-lg">
           <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-left text-[#0A2647]">Minnesota Service Locations</h3>
           <HorizontalServiceLocationsAccordion />
         </div>
