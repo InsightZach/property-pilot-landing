@@ -63,7 +63,7 @@ const StatCard = ({ icon: Icon, title, description }) => (
   <div className="bg-[#324E6E] text-white p-4 rounded-lg flex items-center">
     <Icon className="text-[#d7b971] h-12 w-12 mr-4 flex-shrink-0" />
     <div>
-      <h4 className="text-lg font-semibold mb-1">{title}</h4>
+      <h4 className="text-lg font-bold mb-1">{title}</h4>
       <p className="text-sm">{description}</p>
     </div>
   </div>
