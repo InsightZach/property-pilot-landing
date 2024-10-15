@@ -7,7 +7,7 @@ const ProcessStep = ({ number, icon: Icon, title, description, progress, showSti
     <div className="relative flex items-center self-start md:self-center mr-4 md:mr-8 mb-4 md:mb-0">
       <div className={`flex-shrink-0 w-8 h-8 rounded-full border-2 border-[#d7b971] flex items-center justify-center font-bold text-lg z-20 transition-all duration-300`}
            style={{
-             backgroundColor: `rgba(215, 185, 113, ${progress})`,
+             backgroundColor: progress > 0 ? `rgba(215, 185, 113, ${progress})` : 'white',
              color: progress > 0.5 ? 'white' : '#0A2647',
            }}>
         {number}
