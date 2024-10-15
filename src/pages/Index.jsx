@@ -145,7 +145,6 @@ const RecentAppealsSection = () => (
   <section className="py-16">
     <div className="container mx-auto px-8 md:px-16">
       <h2 className="text-3xl font-semibold text-center text-[#0A2647] mb-8">Recent Appeals</h2>
-      <h3 className="text-2xl font-semibold text-center text-[#0A2647] mb-6">Success Stories</h3>
       <RecentAppeals />
     </div>
   </section>
