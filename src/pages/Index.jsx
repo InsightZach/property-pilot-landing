@@ -86,10 +86,12 @@ const Index = () => {
           <HowWeWork />
           <ProcessSection />
           <WhoWeWorkWith />
+          <RecentAppealsSection />
+          <PropertyTypesSection />
         </div>
         <div className="bg-gradient-to-b from-[#0A2647] to-[#2E5077]">
           <MeetTheOwner />
-          <ReadyToReduce />
+          <GetStartedSection />
         </div>
       </main>
       <Footer />
@@ -139,7 +141,36 @@ const HeroSection = () => (
   </section>
 );
 
-const ReadyToReduce = () => (
+const RecentAppealsSection = () => (
+  <section className="py-16">
+    <div className="container mx-auto px-8 md:px-16">
+      <h2 className="text-3xl font-semibold text-center text-[#0A2647] mb-8">Recent Appeals</h2>
+      <h3 className="text-2xl font-semibold text-center text-[#0A2647] mb-6">Success Stories</h3>
+      {/* Add your RecentAppeals component here */}
+    </div>
+  </section>
+);
+
+const PropertyTypesSection = () => (
+  <section className="py-16 bg-white">
+    <div className="container mx-auto px-8 md:px-16">
+      <h2 className="text-3xl font-semibold text-center text-[#0A2647] mb-8">Property Types We Serve</h2>
+      <h3 className="text-2xl font-semibold text-center text-[#0A2647] mb-6">Specialized Expertise</h3>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {['Commercial', 'Industrial', 'Apartments', 'Minnesota'].map((type) => (
+          <Card key={type} className="bg-white/80 backdrop-blur-sm border-[#d7b971]">
+            <CardContent className="p-4 flex flex-col items-center justify-center">
+              <img src={`/${type}.svg`} alt={`${type} Property Tax Appeals in Minnesota`} className="w-full h-24 object-contain mb-2" />
+              <p className="text-center font-semibold">{type}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const GetStartedSection = () => (
   <section className="py-16 relative overflow-hidden">
     <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
     <div className="container mx-auto px-8 md:px-16 relative z-10 text-center">
@@ -149,6 +180,7 @@ const ReadyToReduce = () => (
         <CheckCircle className="text-[#d7b971] w-12 h-12 mx-2" />
       </div>
       <h2 className="text-3xl font-bold text-white mb-4">Ready to Reduce Your Property Taxes?</h2>
+      <h3 className="text-2xl font-semibold text-white mb-4">Start Your Free Assessment Review</h3>
       <p className="text-xl text-white mb-8">Get started with a free analysis of your property.</p>
       <Link to="/contact">
         <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
