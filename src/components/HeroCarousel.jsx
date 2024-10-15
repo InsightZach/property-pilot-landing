@@ -39,7 +39,7 @@ const HeroCarousel = () => {
               <AppealOverlay data={data} />
             </div>
             <div className="absolute top-4 left-4">
-              <Sticker color="red" text="YTD Appeals Results" />
+              <Sticker color="blue" text="YTD Appeal Results" />
             </div>
           </div>
         ))}
