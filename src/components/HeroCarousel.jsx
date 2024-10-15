@@ -2,6 +2,7 @@ import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import AppealOverlay from './AppealOverlay';
+import Sticker from './Sticker';
 
 const HeroCarousel = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 10000 })]);
@@ -36,6 +37,9 @@ const HeroCarousel = () => {
             />
             <div className="absolute top-0 right-0 bottom-0 w-[45%] bg-[#0A2647] bg-opacity-60">
               <AppealOverlay data={data} />
+            </div>
+            <div className="absolute top-4 left-4">
+              <Sticker color="red" text="YTD Appeals Results" />
             </div>
           </div>
         ))}
