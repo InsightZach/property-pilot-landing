@@ -31,7 +31,7 @@ const AboutInsightSection = () => (
           </p>
         </div>
         <div className="md:w-2/3">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-6">
             <StatCard
               icon={TrendingDown}
               title="17.9% Average Reduction"
@@ -60,11 +60,11 @@ const AboutInsightSection = () => (
 );
 
 const StatCard = ({ icon: Icon, title, description }) => (
-  <div className="bg-[#324E6E] text-white p-4 rounded-lg flex items-center">
-    <Icon className="text-[#d7b971] h-12 w-12 mr-4 flex-shrink-0" />
+  <div className="bg-[#324E6E] text-white p-6 rounded-lg flex items-center">
+    <Icon className="text-[#d7b971] h-16 w-16 mr-6 flex-shrink-0" />
     <div>
-      <h4 className="text-lg font-bold mb-1">{title}</h4>
-      <p className="text-sm">{description}</p>
+      <h4 className="text-xl font-bold mb-2">{title}</h4>
+      <p className="text-base">{description}</p>
     </div>
   </div>
 );
