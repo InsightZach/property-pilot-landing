@@ -22,8 +22,8 @@ const PropertyTypeCard = ({ icon: Icon, text, children }) => (
   <Card className="bg-[#0A2647] bg-opacity-80 text-white border-0">
     <CardHeader>
       <CardTitle className="flex items-center space-x-2">
-        <Icon className="text-[#d7b971] w-6 h-6" />
-        <span>{text}</span>
+        <Icon className="text-[#d7b971] w-6 h-6 flex-shrink-0" />
+        <span className="text-lg sm:text-xl md:text-2xl font-bold whitespace-nowrap overflow-hidden text-ellipsis">{text}</span>
       </CardTitle>
     </CardHeader>
     <CardContent>
@@ -123,7 +123,7 @@ const WhoWeWorkWith = () => (
         </div>
         
         <div className="bg-white rounded-lg p-8 shadow-lg">
-          <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-center md:text-left text-[#0A2647]">Property Types</h3>
+          <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-center text-[#0A2647]">Property Types</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <PropertyTypeCard icon={Building2} text="Commercial Appeal">
               <li>Office</li>
