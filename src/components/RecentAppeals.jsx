@@ -13,7 +13,7 @@ const RecentAppeals = () => {
     breakpoints: {
       '(min-width: 768px)': { slidesToScroll: 2 }
     }
-  }, [Autoplay({ delay: 5000 })]);  // Increased delay to 5000ms (5 seconds)
+  }, [Autoplay({ delay: 10000 })]);  // Increased delay to 10000ms (10 seconds)
 
   const scrollPrev = React.useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -37,7 +37,7 @@ const RecentAppeals = () => {
   };
 
   return (
-    <section className="py-6 bg-white"> {/* Reduced vertical padding from py-12 to py-6 */}
+    <section className="py-6 bg-white">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
