@@ -112,9 +112,8 @@ const HeroSection = () => (
         <div className="flex-1 text-left flex flex-col justify-between">
           <div>
             <p className="text-lg md:text-xl mb-6 text-white">
-              We save our clients tens of thousands on<br />
-              commercial, industrial, and apartment<br />
-              property taxes.
+              We save our clients tens of thousands on commercial,
+              industrial, and apartment property taxes.
             </p>
             <ul className="mb-8 md:mb-10 space-y-3 text-base md:text-lg">
               <li className="flex items-center">
