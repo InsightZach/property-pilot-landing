@@ -36,18 +36,26 @@ const ProcessSection = () => {
     };
 
     const callback = (entries) => {
-      let maxIntersectionRatio = 0;
-      let mostVisibleIndex = -1;
+      const windowHeight = window.innerHeight;
+      const centerY = windowHeight / 2;
 
-      entries.forEach((entry, index) => {
-        if (entry.intersectionRatio > maxIntersectionRatio) {
-          maxIntersectionRatio = entry.intersectionRatio;
-          mostVisibleIndex = index;
+      let closestToCenter = null;
+      let minDistance = Infinity;
+
+      entries.forEach((entry) => {
+        const { top, bottom } = entry.boundingClientRect;
+        const elementCenterY = (top + bottom) / 2;
+        const distance = Math.abs(elementCenterY - centerY);
+
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestToCenter = entry;
         }
       });
 
-      if (mostVisibleIndex !== -1) {
-        setActiveStep(mostVisibleIndex);
+      if (closestToCenter) {
+        const index = stepsRef.current.findIndex(el => el === closestToCenter.target);
+        setActiveStep(index);
       }
     };
 
