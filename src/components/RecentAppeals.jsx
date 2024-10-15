@@ -11,9 +11,9 @@ const RecentAppeals = () => {
     containScroll: 'trimSnaps',
     slidesToScroll: 1,
     breakpoints: {
-      '(min-width: 768px)': { slidesToScroll: 3 }
+      '(min-width: 768px)': { slidesToScroll: 2 }
     }
-  }, [Autoplay()]);
+  }, [Autoplay({ delay: 5000 })]);  // Increased delay to 5000ms (5 seconds)
 
   const scrollPrev = React.useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -43,7 +43,7 @@ const RecentAppeals = () => {
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {appealImages.map((image, index) => (
-                <div key={index} className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] md:flex-[0_0_33.33%] pl-4">
+                <div key={index} className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] pl-4">
                   <div className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg">
                     <img
                       src={`/${image}`}
