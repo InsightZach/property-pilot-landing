@@ -22,7 +22,7 @@ const AboutInsightSection = () => (
         </div>
       </div>
       <div className="flex flex-col md:flex-row gap-8">
-        <div className="md:w-1/2">
+        <div className="md:w-1/3">
           <p className="text-xl text-[#0A2647] mb-6">
             At <span className="font-bold">Insight Property Tax</span>, we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota.
           </p>
@@ -30,7 +30,7 @@ const AboutInsightSection = () => (
             By targeting over-assessed property values through our strategic appeals process, we consistently secure significant tax reductions, allowing our clients to maximize savings and reinvest in their properties.
           </p>
         </div>
-        <div className="md:w-1/2">
+        <div className="md:w-2/3">
           <div className="grid grid-cols-2 gap-4">
             <StatCard
               icon={TrendingDown}
