@@ -38,8 +38,8 @@ const AppealServiceCard = ({ icon: Icon, title, description }) => (
   <Card className="bg-[#0A2647] bg-opacity-80 text-white border-0">
     <CardHeader>
       <CardTitle className="flex items-center space-x-2">
-        <Icon className="text-[#d7b971] w-6 h-6" />
-        <span>{title}</span>
+        <Icon className="text-[#d7b971] w-6 h-6 flex-shrink-0" />
+        <span className="text-base sm:text-lg md:text-xl font-bold whitespace-nowrap overflow-hidden text-ellipsis">{title}</span>
       </CardTitle>
     </CardHeader>
     <CardContent>
