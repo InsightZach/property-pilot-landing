@@ -67,7 +67,7 @@ const HorizontalServiceLocationsAccordion = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       {counties.map(({ name, component: CountyComponent }) => (
         <div key={name} className="flex-1">
           <div className="bg-[#0A2647] bg-opacity-80 rounded-lg overflow-hidden">
@@ -142,6 +142,7 @@ const WhoWeWorkWith = () => (
             </PropertyTypeCard>
           </div>
         </div>
+        
         <div className="bg-white rounded-lg p-8 shadow-lg">
           <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-left text-[#0A2647]">Minnesota Service Locations</h3>
           <HorizontalServiceLocationsAccordion />
