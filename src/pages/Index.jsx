@@ -10,7 +10,6 @@ import MeetTheOwner from '../components/MeetTheOwner';
 import HowWeWork from '../components/HowWeWork';
 import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import AboutInsightSection from '../components/AboutInsightSection';
-import RecentAppeals from '../components/RecentAppeals';
 import HeroCarousel from '../components/HeroCarousel';
 
 const schemaData = {
@@ -88,7 +87,6 @@ const Index = () => {
           <HowWeWork />
           <ProcessSection />
           <WhoWeWorkWith />
-          <RecentAppealsSection />
         </div>
         <div className="bg-gradient-to-b from-[#0A2647] to-[#2E5077]">
           <MeetTheOwner />
@@ -148,14 +146,7 @@ const HeroSection = () => (
   </section>
 );
 
-const RecentAppealsSection = () => (
-  <section className="py-16">
-    <div className="container mx-auto px-8 md:px-16">
-      <h2 className="text-3xl font-semibold text-center text-[#0A2647] mb-8">Recent Appeals</h2>
-      <RecentAppeals />
-    </div>
-  </section>
-);
+// Remove the RecentAppealsSection component
 
 const GetStartedSection = () => (
   <section className="py-16 relative overflow-hidden">
