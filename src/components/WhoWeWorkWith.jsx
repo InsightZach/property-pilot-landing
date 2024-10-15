@@ -96,12 +96,7 @@ const HorizontalServiceLocationsAccordion = () => {
 };
 
 const WhoWeWorkWith = () => (
-  <section className="py-16 relative overflow-hidden">
-    <div 
-      className="absolute inset-0 bg-cover bg-center opacity-100"
-      style={{ backgroundImage: "url('/Property-Tax-Consultant-working2.png')" }}
-    ></div>
-    <div className="absolute inset-0 bg-white bg-opacity-30"></div>
+  <section className="py-16 bg-gray-100">
     <div className="container mx-auto px-4 relative z-10">
       <div className="text-center">
         <h2 className="text-4xl md:text-5xl font-semibold mb-12 text-[#0A2647] bg-white rounded-lg py-4 px-6 inline-flex mx-auto">Property Tax Appeal Services</h2>
