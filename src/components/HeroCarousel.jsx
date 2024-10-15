@@ -66,7 +66,7 @@ const HeroCarousel = () => {
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-[#0A2647] bg-opacity-60">
+              <div className="absolute inset-0 bg-[#0A2647] bg-opacity-40">
                 <AppealOverlay data={data} />
               </div>
               <div className="absolute top-4 left-4">
