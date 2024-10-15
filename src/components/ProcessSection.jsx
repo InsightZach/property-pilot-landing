@@ -70,7 +70,7 @@ const ProcessSection = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-16 md:mb-24 text-[#0A2647]">Our Property Tax Appeal Process</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-16 md:mb-24 text-[#0A2647]">Our Appeal Process</h2>
         <div className="max-w-4xl mx-auto relative">
           {/* Vertical line */}
           <div className="absolute left-4 top-14 h-[calc(100%-7rem)] w-0.5 bg-[#d7b971] hidden md:block"></div>
