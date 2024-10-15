@@ -7,7 +7,7 @@ const formatToMillions = (value) => {
 
 const AppealOverlay = ({ data }) => {
   return (
-    <div className="p-4 text-white flex flex-col justify-between h-full bg-[#1E3A5F] bg-opacity-20">
+    <div className="pl-2 pr-4 py-4 text-white flex flex-col justify-between h-full bg-[#1E3A5F] bg-opacity-20">
       <div className="flex flex-col items-end">
         <div className="flex items-center mb-2">
           <p className="text-5xl font-bold text-[#d7b971] mr-2">{data.reduction}</p>
