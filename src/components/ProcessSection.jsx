@@ -5,9 +5,11 @@ import Sticker from './Sticker';
 const ProcessStep = ({ number, icon: Icon, title, description, progress, showSticker }) => (
   <div className="flex flex-col md:flex-row items-start mb-12 md:mb-32 relative">
     <div className="relative flex items-center self-start md:self-center mr-4 md:mr-8 mb-4 md:mb-0">
-      <div className={`flex-shrink-0 w-8 h-8 rounded-full border-2 border-[#d7b971] flex items-center justify-center font-bold text-lg z-20 transition-all duration-300 ${
-        progress > 0 ? 'bg-[#d7b971] text-white' : 'bg-white text-[#0A2647]'
-      }`} style={{ opacity: Math.max(0.3, progress) }}>
+      <div className={`flex-shrink-0 w-8 h-8 rounded-full border-2 border-[#d7b971] flex items-center justify-center font-bold text-lg z-20 transition-all duration-300`}
+           style={{
+             backgroundColor: `rgba(215, 185, 113, ${progress})`,
+             color: progress > 0.5 ? 'white' : '#0A2647',
+           }}>
         {number}
       </div>
     </div>
@@ -27,12 +29,12 @@ const ProcessStep = ({ number, icon: Icon, title, description, progress, showSti
 );
 
 const ProcessSection = () => {
-  const [stepProgresses, setStepProgresses] = useState([]);
+  const [activeStepIndex, setActiveStepIndex] = useState(0);
   const sectionRef = useRef(null);
   const stepsRef = useRef([]);
 
   useEffect(() => {
-    const calculateStepProgresses = () => {
+    const handleScroll = () => {
       if (!sectionRef.current) return;
 
       const sectionRect = sectionRef.current.getBoundingClientRect();
@@ -40,21 +42,16 @@ const ProcessSection = () => {
       const sectionHeight = sectionRect.height;
       const windowHeight = window.innerHeight;
 
-      const newProgresses = stepsRef.current.map((step) => {
-        if (!step) return 0;
-        const stepRect = step.getBoundingClientRect();
-        const stepCenter = (stepRect.top + stepRect.bottom) / 2 - sectionTop;
-        const progress = 1 - Math.abs((stepCenter - windowHeight / 2) / (sectionHeight / 2));
-        return Math.max(0, Math.min(1, progress));
-      });
-
-      setStepProgresses(newProgresses);
+      const stepHeight = sectionHeight / stepsRef.current.length;
+      const currentStepIndex = Math.floor((windowHeight / 2 - sectionTop) / stepHeight);
+      
+      setActiveStepIndex(Math.max(0, Math.min(currentStepIndex, stepsRef.current.length - 1)));
     };
 
-    window.addEventListener('scroll', calculateStepProgresses);
-    calculateStepProgresses();
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
 
-    return () => window.removeEventListener('scroll', calculateStepProgresses);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const steps = [
@@ -95,7 +92,7 @@ const ProcessSection = () => {
                 icon={step.icon}
                 title={step.title}
                 description={step.description}
-                progress={stepProgresses[index] || 0}
+                progress={Math.max(0, 1 - Math.abs(activeStepIndex - index))}
                 showSticker={step.showSticker}
               />
             </div>
