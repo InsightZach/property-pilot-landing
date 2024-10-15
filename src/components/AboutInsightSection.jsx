@@ -21,8 +21,8 @@ const AboutInsightSection = () => (
           </div>
         </div>
       </div>
-      <div className="max-w-4xl mx-auto mb-12 text-left">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="max-w-5xl mx-auto mb-12 text-left">
+        <div className="grid grid-cols-1 gap-12">
           <p className="text-xl text-[#0A2647]">
             At <span className="font-bold">Insight Property Tax</span>, we specialize in reducing property taxes for commercial, industrial, and apartment property owners in Minnesota.
           </p>
