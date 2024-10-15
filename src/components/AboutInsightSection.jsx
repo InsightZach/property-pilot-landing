@@ -12,7 +12,7 @@ const AboutInsightSection = () => (
             <span className="text-lg text-[#0A2647]">Commercial</span>
           </div>
           <div className="flex items-center mr-6">
-            <Factory className="text-[#d7b971] w-6 h-6 mr-2" />
+            <Factory className="text-[#d7971] w-6 h-6 mr-2" />
             <span className="text-lg text-[#0A2647]">Industrial</span>
           </div>
           <div className="flex items-center">
@@ -34,7 +34,7 @@ const AboutInsightSection = () => (
           <div className="grid grid-cols-2 gap-6">
             <StatCard
               icon={TrendingDown}
-              title="17.9% Average Reduction"
+              title="-17.9% Average Reduction"
               description="In 2024, we've achieved significant assessment reductions."
             />
             <StatCard
