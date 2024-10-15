@@ -4,7 +4,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import AppealOverlay from './AppealOverlay';
 
 const HeroCarousel = () => {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })]);
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 7000 })]);
 
   const appealData = [
     { fileName: 'Appeal1', propertyType: 'Warehouse', location: 'St. Paul', assessmentYear: 2024, assessment: 4156500, settlement: 2700000, reduction: '-35%' },
