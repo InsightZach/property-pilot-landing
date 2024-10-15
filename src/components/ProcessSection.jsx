@@ -2,10 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import { FileSearch, BarChart3, FileText, HandshakeIcon } from 'lucide-react';
 import Sticker from './Sticker';
 
-const ProcessStep = ({ number, icon: Icon, title, description, isActive, showSticker }) => (
+const ProcessStep = ({ number, icon: Icon, title, description, progress, showSticker }) => (
   <div className="flex flex-col md:flex-row items-start mb-12 md:mb-32 relative">
     <div className="relative flex items-center self-start md:self-center mr-4 md:mr-8 mb-4 md:mb-0">
-      <div className={`flex-shrink-0 w-8 h-8 rounded-full border-2 border-[#d7b971] flex items-center justify-center font-bold text-lg z-20 transition-all duration-300 ${isActive ? 'bg-[#d7b971] text-white' : 'bg-white text-[#0A2647]'}`}>
+      <div className={`flex-shrink-0 w-8 h-8 rounded-full border-2 border-[#d7b971] flex items-center justify-center font-bold text-lg z-20 transition-all duration-300 ${
+        progress > 0 ? 'bg-[#d7b971] text-white' : 'bg-white text-[#0A2647]'
+      }`} style={{ opacity: Math.max(0.3, progress) }}>
         {number}
       </div>
     </div>
@@ -25,51 +27,34 @@ const ProcessStep = ({ number, icon: Icon, title, description, isActive, showSti
 );
 
 const ProcessSection = () => {
-  const [activeStep, setActiveStep] = useState(-1);
+  const [stepProgresses, setStepProgresses] = useState([]);
+  const sectionRef = useRef(null);
   const stepsRef = useRef([]);
 
   useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5,
-    };
+    const calculateStepProgresses = () => {
+      if (!sectionRef.current) return;
 
-    const callback = (entries) => {
+      const sectionRect = sectionRef.current.getBoundingClientRect();
+      const sectionTop = sectionRect.top;
+      const sectionHeight = sectionRect.height;
       const windowHeight = window.innerHeight;
-      const centerY = windowHeight / 2;
 
-      let closestToCenter = null;
-      let minDistance = Infinity;
-
-      entries.forEach((entry) => {
-        const { top, bottom } = entry.boundingClientRect;
-        const elementCenterY = (top + bottom) / 2;
-        const distance = Math.abs(elementCenterY - centerY);
-
-        if (distance < minDistance) {
-          minDistance = distance;
-          closestToCenter = entry;
-        }
+      const newProgresses = stepsRef.current.map((step) => {
+        if (!step) return 0;
+        const stepRect = step.getBoundingClientRect();
+        const stepCenter = (stepRect.top + stepRect.bottom) / 2 - sectionTop;
+        const progress = 1 - Math.abs((stepCenter - windowHeight / 2) / (sectionHeight / 2));
+        return Math.max(0, Math.min(1, progress));
       });
 
-      if (closestToCenter) {
-        const index = stepsRef.current.findIndex(el => el === closestToCenter.target);
-        setActiveStep(index);
-      }
+      setStepProgresses(newProgresses);
     };
 
-    const observer = new IntersectionObserver(callback, options);
+    window.addEventListener('scroll', calculateStepProgresses);
+    calculateStepProgresses();
 
-    stepsRef.current.forEach((step) => {
-      if (step) observer.observe(step);
-    });
-
-    return () => {
-      stepsRef.current.forEach((step) => {
-        if (step) observer.unobserve(step);
-      });
-    };
+    return () => window.removeEventListener('scroll', calculateStepProgresses);
   }, []);
 
   const steps = [
@@ -97,7 +82,7 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-16 md:mb-24 text-[#0A2647]">Our Appeal Process</h2>
         <div className="max-w-4xl mx-auto relative">
@@ -110,7 +95,7 @@ const ProcessSection = () => {
                 icon={step.icon}
                 title={step.title}
                 description={step.description}
-                isActive={index === activeStep}
+                progress={stepProgresses[index] || 0}
                 showSticker={step.showSticker}
               />
             </div>
