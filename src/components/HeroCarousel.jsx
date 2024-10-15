@@ -5,6 +5,14 @@ import AppealOverlay from './AppealOverlay';
 import Sticker from './Sticker';
 
 const HeroCarousel = () => {
+  const [autoplay] = useState(() => 
+    Autoplay({ 
+      delay: 10000, 
+      stopOnInteraction: true,
+      rootNode: (emblaRoot) => emblaRoot.parentElement,
+    })
+  );
+
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { 
       loop: true,
@@ -12,13 +20,7 @@ const HeroCarousel = () => {
       skipSnaps: false,
       startIndex: 0,
     }, 
-    [
-      Autoplay({ 
-        delay: 10000, 
-        stopOnInteraction: false,
-        rootNode: (emblaRoot) => emblaRoot.parentElement,
-      })
-    ]
+    [autoplay]
   );
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -81,7 +83,10 @@ const HeroCarousel = () => {
             className={`w-2 h-2 rounded-full ${
               index === selectedIndex ? 'bg-white' : 'bg-white bg-opacity-50'
             }`}
-            onClick={() => emblaApi && emblaApi.scrollTo(index)}
+            onClick={() => {
+              emblaApi && emblaApi.scrollTo(index);
+              autoplay.stop();
+            }}
           />
         ))}
       </div>
