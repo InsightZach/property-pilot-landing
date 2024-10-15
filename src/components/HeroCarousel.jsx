@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import AppealOverlay from './AppealOverlay';
 import Sticker from './Sticker';
 
 const HeroCarousel = () => {
-  const [emblaRef] = useEmblaCarousel(
+  const [emblaRef, emblaApi] = useEmblaCarousel(
     { 
       loop: true,
-      speed: 8, // Slower transition speed (in pixels per millisecond)
+      speed: 8,
       skipSnaps: false,
       startIndex: 0,
     }, 
@@ -20,6 +20,20 @@ const HeroCarousel = () => {
       })
     ]
   );
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi, setSelectedIndex]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on('select', onSelect);
+    return () => emblaApi.off('select', onSelect);
+  }, [emblaApi, onSelect]);
 
   const appealData = [
     { fileName: 'Appeal1', propertyType: 'Warehouse', location: 'St. Paul', assessmentYear: 2024, assessment: 4156500, settlement: 2700000, reduction: '-35%' },
@@ -39,23 +53,36 @@ const HeroCarousel = () => {
   ];
 
   return (
-    <div className="embla overflow-hidden" ref={emblaRef}>
-      <div className="embla__container flex">
-        {appealData.map((data, index) => (
-          <div key={index} className="embla__slide flex-[0_0_100%] min-w-0 relative rounded-lg overflow-hidden transition-opacity duration-500">
-            <img
-              src={`/${data.fileName}.jpg`}
-              alt={`Appeal ${index + 1}`}
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-            <div className="absolute top-0 right-0 bottom-0 w-[45%] bg-[#0A2647] bg-opacity-60">
-              <AppealOverlay data={data} />
+    <div className="relative">
+      <div className="embla overflow-hidden" ref={emblaRef}>
+        <div className="embla__container flex">
+          {appealData.map((data, index) => (
+            <div key={index} className="embla__slide flex-[0_0_100%] min-w-0 relative rounded-lg overflow-hidden transition-opacity duration-500">
+              <img
+                src={`/${data.fileName}.jpg`}
+                alt={`Appeal ${index + 1}`}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute top-0 right-0 bottom-0 w-[45%] bg-[#0A2647] bg-opacity-60">
+                <AppealOverlay data={data} />
+              </div>
+              <div className="absolute top-4 left-4">
+                <Sticker color="blue" text="YTD Appeal Results" />
+              </div>
             </div>
-            <div className="absolute top-4 left-4">
-              <Sticker color="blue" text="YTD Appeal Results" />
-            </div>
-          </div>
+          ))}
+        </div>
+      </div>
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {appealData.map((_, index) => (
+          <button
+            key={index}
+            className={`w-2 h-2 rounded-full ${
+              index === selectedIndex ? 'bg-white' : 'bg-white bg-opacity-50'
+            }`}
+            onClick={() => emblaApi && emblaApi.scrollTo(index)}
+          />
         ))}
       </div>
     </div>
