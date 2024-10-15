@@ -5,8 +5,8 @@ import { Linkedin } from 'lucide-react';
 const Footer = () => (
   <footer className="py-8 bg-[#0A2647] text-white">
     <div className="container mx-auto px-4">
-      <div className="flex justify-between items-center">
-        <div className="flex items-center">
+      <div className="flex flex-col sm:flex-row justify-between items-center">
+        <div className="flex items-center mb-4 sm:mb-0">
           <img 
             src="/logo.svg" 
             alt="Insight Property Tax Logo" 
@@ -16,7 +16,7 @@ const Footer = () => (
           />
         </div>
         <div className="flex items-center space-x-4">
-          <a href="mailto:zach@insightpropertytax.com" className="hover:text-[#d7b971]">
+          <a href="mailto:zach@insightpropertytax.com" className="hidden sm:inline hover:text-[#d7b971]">
             zach@insightpropertytax.com
           </a>
           <Button 
