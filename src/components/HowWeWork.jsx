@@ -16,22 +16,22 @@ const HowWeWork = () => (
             <p className="mb-4">Our contingency fee model ensures zero risk for you: you only pay if we successfully reduce your property taxes.</p>
             <ul className="space-y-2">
               <li className="flex items-center">
-                <CheckCircle className="mr-2 text-[#d7b971]" /> Pay $0 upfront
+                <CheckCircle className="mr-2 text-[#d7b971] w-5 h-5" /> Pay $0 upfront
               </li>
               <li className="flex items-center">
-                <CheckCircle className="mr-2 text-[#d7b971]" /> Our fee is 30% of tax savings
+                <CheckCircle className="mr-2 text-[#d7b971] w-5 h-5" /> Our fee is 30% of tax savings
               </li>
               <li className="flex items-center">
-                <CheckCircle className="mr-2 text-[#d7b971]" /> You pocket the rest
+                <CheckCircle className="mr-2 text-[#d7b971] w-5 h-5" /> You pocket the rest
               </li>
               <li className="flex items-center">
-                <CheckCircle className="mr-2 text-[#d7b971]" /> We handle everything
+                <CheckCircle className="mr-2 text-[#d7b971] w-5 h-5" /> We handle everything
               </li>
             </ul>
           </div>
           <div className="md:w-1/2 p-8 bg-[#324E6E]/90 text-white">
-            <h3 className="text-2xl font-bold mb-4">Full Service Assessment Appeals</h3>
-            <p className="text-lg mb-4">
+            <h3 className="text-2xl font-bold mb-4">Full Service Appeals</h3>
+            <p className="text-base mb-4">
               We handle the entire appeal process, from identifying over-assessments to negotiating successful outcomes.
             </p>
             <ul className="space-y-2">
