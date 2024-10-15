@@ -6,12 +6,20 @@ const HeroCarousel = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })]);
 
   const images = [
-    '/Appeal1.png',
-    '/Appeal2.png',
-    '/Appeal3.png',
-    '/Appeal4.png',
-    '/Appeal5.png',
-    // Add more image paths as needed
+    '/Appeal1.jpg',
+    '/Appeal2.jpg',
+    '/Appeal3.jpg',
+    '/Appeal4.jpg',
+    '/Appeal5.jpg',
+    '/Appeal6.jpg',
+    '/Appeal7.jpg',
+    '/Appeal8.jpg',
+    '/Appeal9.jpg',
+    '/Appeal10.jpg',
+    '/Appeal11.jpg',
+    '/Appeal12.jpg',
+    '/Appeal13.jpg',
+    '/Appeal14.jpg',
   ];
 
   return (
