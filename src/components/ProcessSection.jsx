@@ -5,8 +5,9 @@ import Sticker from './Sticker';
 const ProcessStep = ({ number, icon: Icon, title, description, isActive, isLast, showSticker }) => (
   <div className="flex flex-col md:flex-row items-start mb-12 md:mb-32 relative">
     <div className="relative flex items-center self-start md:self-center mr-4 md:mr-8 mb-4 md:mb-0">
-      <div className={`flex-shrink-0 w-8 h-8 rounded-full ${isActive ? 'bg-[#d7b971]' : 'bg-white'} border-2 border-[#d7b971] flex items-center justify-center text-[#0A2647] font-bold text-lg z-20 transition-colors duration-300`}>
-        {number}
+      <div className={`flex-shrink-0 w-8 h-8 rounded-full bg-white border-2 border-[#d7b971] flex items-center justify-center text-[#0A2647] font-bold text-lg z-20 transition-colors duration-300 relative overflow-hidden`}>
+        <div className={`absolute inset-0 bg-[#d7b971] transition-transform duration-1000 ${isActive ? 'translate-y-0' : 'translate-y-full'}`}></div>
+        <span className="relative z-10">{number}</span>
       </div>
     </div>
     <div className="flex-grow relative">
@@ -29,18 +30,27 @@ const ProcessSection = () => {
   const stepsRef = useRef([]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
-      
-      stepsRef.current.forEach((step, index) => {
-        if (step && scrollPosition >= step.offsetTop) {
-          setActiveStep(index);
-        }
-      });
-    };
+    const observers = [];
+    
+    stepsRef.current.forEach((step, index) => {
+      if (step) {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              setActiveStep(index);
+            }
+          },
+          { threshold: 0.5 } // Trigger when 50% of the element is visible
+        );
+        
+        observer.observe(step);
+        observers.push(observer);
+      }
+    });
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      observers.forEach(observer => observer.disconnect());
+    };
   }, []);
 
   const steps = [
@@ -81,7 +91,7 @@ const ProcessSection = () => {
                 icon={step.icon}
                 title={step.title}
                 description={step.description}
-                isActive={index === activeStep}
+                isActive={index <= activeStep}
                 isLast={index === steps.length - 1}
                 showSticker={step.showSticker}
               />
