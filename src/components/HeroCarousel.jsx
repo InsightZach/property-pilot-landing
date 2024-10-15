@@ -27,7 +27,7 @@ const HeroCarousel = () => {
     <div className="embla overflow-hidden" ref={emblaRef}>
       <div className="embla__container flex">
         {appealData.map((data, index) => (
-          <div key={index} className="embla__slide flex-[0_0_100%] min-w-0 relative">
+          <div key={index} className="embla__slide flex-[0_0_100%] min-w-0 relative rounded-lg overflow-hidden">
             <img
               src={`/${data.fileName}.jpg`}
               alt={`Appeal ${index + 1}`}
