@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Card, CardContent } from "@/components/ui/card";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProcessSection from '../components/ProcessSection';
@@ -89,7 +88,6 @@ const Index = () => {
           <ProcessSection />
           <WhoWeWorkWith />
           <RecentAppealsSection />
-          <PropertyTypesSection />
         </div>
         <div className="bg-gradient-to-b from-[#0A2647] to-[#2E5077]">
           <MeetTheOwner />
@@ -149,25 +147,6 @@ const RecentAppealsSection = () => (
       <h2 className="text-3xl font-semibold text-center text-[#0A2647] mb-8">Recent Appeals</h2>
       <h3 className="text-2xl font-semibold text-center text-[#0A2647] mb-6">Success Stories</h3>
       <RecentAppeals />
-    </div>
-  </section>
-);
-
-const PropertyTypesSection = () => (
-  <section className="py-16 bg-white">
-    <div className="container mx-auto px-8 md:px-16">
-      <h2 className="text-3xl font-semibold text-center text-[#0A2647] mb-8">Property Types We Serve</h2>
-      <h3 className="text-2xl font-semibold text-center text-[#0A2647] mb-6">Specialized Expertise</h3>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-        {['Commercial', 'Industrial', 'Apartments', 'Minnesota'].map((type) => (
-          <Card key={type} className="bg-white/80 backdrop-blur-sm border-[#d7b971]">
-            <CardContent className="p-4 flex flex-col items-center justify-center">
-              <img src={`/${type}.svg`} alt={`${type} Property Tax Appeals in Minnesota`} className="w-full h-24 object-contain mb-2" />
-              <p className="text-center font-semibold">{type}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
     </div>
   </section>
 );
