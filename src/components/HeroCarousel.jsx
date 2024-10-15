@@ -5,7 +5,21 @@ import AppealOverlay from './AppealOverlay';
 import Sticker from './Sticker';
 
 const HeroCarousel = () => {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 10000 })]);
+  const [emblaRef] = useEmblaCarousel(
+    { 
+      loop: true,
+      speed: 8, // Slower transition speed (in pixels per millisecond)
+      skipSnaps: false,
+      startIndex: 0,
+    }, 
+    [
+      Autoplay({ 
+        delay: 10000, 
+        stopOnInteraction: false,
+        rootNode: (emblaRoot) => emblaRoot.parentElement,
+      })
+    ]
+  );
 
   const appealData = [
     { fileName: 'Appeal1', propertyType: 'Warehouse', location: 'St. Paul', assessmentYear: 2024, assessment: 4156500, settlement: 2700000, reduction: '-35%' },
@@ -28,7 +42,7 @@ const HeroCarousel = () => {
     <div className="embla overflow-hidden" ref={emblaRef}>
       <div className="embla__container flex">
         {appealData.map((data, index) => (
-          <div key={index} className="embla__slide flex-[0_0_100%] min-w-0 relative rounded-lg overflow-hidden">
+          <div key={index} className="embla__slide flex-[0_0_100%] min-w-0 relative rounded-lg overflow-hidden transition-opacity duration-500">
             <img
               src={`/${data.fileName}.jpg`}
               alt={`Appeal ${index + 1}`}
