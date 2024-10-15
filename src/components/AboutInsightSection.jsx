@@ -60,11 +60,11 @@ const AboutInsightSection = () => (
 );
 
 const StatCard = ({ icon: Icon, title, description }) => (
-  <div className="bg-[#324E6E] text-white p-6 rounded-lg flex items-center shadow-lg">
-    <Icon className="text-[#d7b971] h-12 w-12 mr-4 flex-shrink-0" />
+  <div className="bg-[#324E6E] text-white p-4 sm:p-6 rounded-lg flex items-center shadow-lg">
+    <Icon className="text-[#d7b971] h-10 w-10 sm:h-12 sm:w-12 mr-3 sm:mr-4 flex-shrink-0" />
     <div className="flex-grow">
-      <h4 className="text-lg sm:text-xl font-bold mb-2">{title}</h4>
-      <p className="text-sm sm:text-base">{description}</p>
+      <h4 className="text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 whitespace-nowrap overflow-hidden text-ellipsis">{title}</h4>
+      <p className="text-xs sm:text-sm md:text-base">{description}</p>
     </div>
   </div>
 );
