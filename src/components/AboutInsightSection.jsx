@@ -12,7 +12,7 @@ const AboutInsightSection = () => (
             <span className="text-lg text-[#0A2647]">Commercial</span>
           </div>
           <div className="flex items-center mr-6">
-            <Factory className="text-[#d7971] w-6 h-6 mr-2" />
+            <Factory className="text-[#d7b971] w-6 h-6 mr-2" />
             <span className="text-lg text-[#0A2647]">Industrial</span>
           </div>
           <div className="flex items-center">
