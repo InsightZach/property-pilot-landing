@@ -37,7 +37,7 @@ const RecentAppeals = () => {
   };
 
   return (
-    <section className="py-12 bg-white">
+    <section className="py-6 bg-white"> {/* Reduced vertical padding from py-12 to py-6 */}
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
