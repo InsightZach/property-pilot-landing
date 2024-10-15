@@ -147,7 +147,7 @@ const WhoWeWorkWith = () => (
             </PropertyTypeCard>
           </div>
         </div>
-        <div>
+        <div className="bg-white rounded-lg p-8 mb-16">
           <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-left text-[#0A2647]">Minnesota Service Locations</h3>
           <HorizontalServiceLocationsAccordion />
         </div>
