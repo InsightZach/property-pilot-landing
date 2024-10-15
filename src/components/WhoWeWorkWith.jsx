@@ -127,7 +127,7 @@ const WhoWeWorkWith = () => (
           </div>
         </div>
         
-        <div>
+        <div className="bg-white rounded-lg p-8 mb-16">
           <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-left text-[#0A2647]">Property Types</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <PropertyTypeCard icon={Building2} text="Commercial Appeal">
