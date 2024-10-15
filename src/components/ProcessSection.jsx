@@ -17,9 +17,9 @@ const ProcessStep = ({ number, icon: Icon, title, description, progress, showSti
       <div className="flex flex-col md:flex-row items-start md:items-center mb-3">
         <Icon className="w-16 h-16 md:w-20 md:h-20 text-[#d7b971] mb-4 md:mb-0 md:mr-6 flex-shrink-0" />
         <div className="relative">
-          <h3 className="text-xl md:text-2xl font-semibold mb-2 text-[#0A2647] flex items-center">
+          <h3 className="text-xl md:text-2xl font-semibold mb-2 text-[#0A2647] flex items-end">
             {title}
-            {showSticker && <span className="ml-2 inline-flex items-center"><Sticker color="red" text="Free!" /></span>}
+            {showSticker && <span className="ml-2 inline-flex items-end"><Sticker color="red" text="Free!" /></span>}
           </h3>
           <p className="text-gray-700 text-base md:text-lg">{description}</p>
         </div>
