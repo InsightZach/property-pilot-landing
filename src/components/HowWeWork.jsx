@@ -19,7 +19,9 @@ const HowWeWork = () => (
                 <CheckCircle className="mr-2 text-[#d7b971] w-6 h-6" /> Pay $0 upfront
               </li>
               <li className="flex items-center">
-                <CheckCircle className="mr-2 text-[#d7b971] w-6 h-6" /> Our fee is 30% of tax savings
+                <CheckCircle className="mr-2 text-[#d7b971] w-6 h-6" /> 
+                <span className="md:hidden">Fee: 30% of tax savings</span>
+                <span className="hidden md:inline">Our fee is 30% of tax savings</span>
               </li>
               <li className="flex items-center">
                 <CheckCircle className="mr-2 text-[#d7b971] w-6 h-6" /> You pocket the rest
