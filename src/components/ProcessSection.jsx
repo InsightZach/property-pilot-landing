@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { FileSearch, BarChart3, FileText, HandshakeIcon } from 'lucide-react';
 import Sticker from './Sticker';
 
-const ProcessStep = ({ number, icon: Icon, title, description, isActive, isLast, showSticker }) => (
+const ProcessStep = ({ number, icon: Icon, title, description, isActive, showSticker }) => (
   <div className="flex flex-col md:flex-row items-start mb-12 md:mb-32 relative">
     <div className="relative flex items-center self-start md:self-center mr-4 md:mr-8 mb-4 md:mb-0">
       <div className={`flex-shrink-0 w-8 h-8 rounded-full border-2 border-[#d7b971] flex items-center justify-center font-bold text-lg z-20 transition-all duration-300 ${isActive ? 'bg-[#d7b971] text-white' : 'bg-white text-[#0A2647]'}`}>
@@ -29,27 +29,40 @@ const ProcessSection = () => {
   const stepsRef = useRef([]);
 
   useEffect(() => {
-    const observers = stepsRef.current.map((step, index) => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting && index > activeStep) {
-            setActiveStep(index);
-          }
-        },
-        { threshold: 0.5 }
-      );
-      
-      if (step) {
-        observer.observe(step);
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
+    };
+
+    const callback = (entries) => {
+      let maxIntersectionRatio = 0;
+      let mostVisibleIndex = -1;
+
+      entries.forEach((entry, index) => {
+        if (entry.intersectionRatio > maxIntersectionRatio) {
+          maxIntersectionRatio = entry.intersectionRatio;
+          mostVisibleIndex = index;
+        }
+      });
+
+      if (mostVisibleIndex !== -1) {
+        setActiveStep(mostVisibleIndex);
       }
-      
-      return observer;
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    stepsRef.current.forEach((step) => {
+      if (step) observer.observe(step);
     });
 
     return () => {
-      observers.forEach(observer => observer.disconnect());
+      stepsRef.current.forEach((step) => {
+        if (step) observer.unobserve(step);
+      });
     };
-  }, [activeStep]);
+  }, []);
 
   const steps = [
     {
@@ -89,8 +102,7 @@ const ProcessSection = () => {
                 icon={step.icon}
                 title={step.title}
                 description={step.description}
-                isActive={index <= activeStep}
-                isLast={index === steps.length - 1}
+                isActive={index === activeStep}
                 showSticker={step.showSticker}
               />
             </div>
