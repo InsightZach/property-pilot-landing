@@ -1,3 +1,4 @@
+// This script should be run as part of your build process
 const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
@@ -10,13 +11,11 @@ const optimizeImages = async () => {
     if (file.match(/\.(png|jpg|jpeg)$/i)) {
       const filePath = path.join(imageDir, file);
       await sharp(filePath)
-        .resize(1920, 1080, { fit: 'inside', withoutEnlargement: true })
-        .webp({ quality: 85 })
+        .resize(1200) // Adjust size as needed
+        .webp({ quality: 80 })
         .toFile(path.join(imageDir, `${path.parse(file).name}.webp`));
-      
-      console.log(`Optimized: ${file}`);
     }
   }
 };
 
-optimizeImages().then(() => console.log('Image optimization complete'));
+optimizeImages();

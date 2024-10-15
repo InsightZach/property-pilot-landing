@@ -6,11 +6,11 @@ const HeroCarousel = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })]);
 
   const images = [
-    '/Appeal1.webp',
-    '/Appeal2.webp',
-    '/Appeal3.webp',
-    '/Appeal4.webp',
-    '/Appeal5.webp',
+    '/Appeal1.png',
+    '/Appeal2.png',
+    '/Appeal3.png',
+    '/Appeal4.png',
+    '/Appeal5.png',
     // Add more image paths as needed
   ];
 
@@ -24,8 +24,6 @@ const HeroCarousel = () => {
               alt={`Appeal ${index + 1}`}
               className="w-full h-full object-cover"
               loading="lazy"
-              width="1920"
-              height="1080"
             />
           </div>
         ))}
