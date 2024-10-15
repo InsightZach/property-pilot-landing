@@ -39,7 +39,7 @@ const AppealServiceCard = ({ icon: Icon, title, description }) => (
     <CardHeader>
       <CardTitle className="flex items-center space-x-2">
         <Icon className="text-[#d7b971] w-6 h-6 flex-shrink-0" />
-        <span className="text-base sm:text-lg md:text-xl font-bold whitespace-nowrap overflow-hidden text-ellipsis">{title}</span>
+        <span className="text-lg sm:text-xl md:text-2xl font-bold whitespace-nowrap overflow-hidden text-ellipsis">{title}</span>
       </CardTitle>
     </CardHeader>
     <CardContent>
@@ -102,7 +102,7 @@ const WhoWeWorkWith = () => (
       
       <div className="w-full space-y-8">
         <div className="bg-white rounded-lg p-8 shadow-lg">
-          <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-center md:text-left text-[#0A2647]">Appeal Service Types</h3>
+          <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-center text-[#0A2647]">Appeal Service Types</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <AppealServiceCard 
               icon={BookOpen}
