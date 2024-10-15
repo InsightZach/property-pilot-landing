@@ -160,7 +160,6 @@ const GetStartedSection = () => (
         <CheckCircle className="text-[#d7b971] w-12 h-12 mx-2" />
       </div>
       <h2 className="text-3xl font-bold text-white mb-4">Ready to Reduce Your Property Taxes?</h2>
-      <h3 className="text-2xl font-semibold text-white mb-4">Start Your Free Assessment Review</h3>
       <Link to="/contact">
         <Button size="lg" className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] text-lg px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
           Start My Free Assessment Review
