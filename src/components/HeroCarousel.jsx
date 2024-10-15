@@ -66,8 +66,10 @@ const HeroCarousel = () => {
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute top-0 right-0 bottom-0 w-[45%] bg-[#0A2647] bg-opacity-60">
-                <AppealOverlay data={data} />
+              <div className="absolute inset-0 bg-[#0A2647] bg-opacity-60">
+                <div className="absolute top-0 right-0 bottom-0 w-[45%]">
+                  <AppealOverlay data={data} />
+                </div>
               </div>
               <div className="absolute top-4 left-4">
                 <Sticker color="blue" text="YTD Appeal Results" />
