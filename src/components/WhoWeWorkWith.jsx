@@ -98,9 +98,7 @@ const HorizontalServiceLocationsAccordion = () => {
 const WhoWeWorkWith = () => (
   <section className="py-8 bg-gray-100">
     <div className="container mx-auto px-4 relative z-10">
-      <div className="text-center">
-        <h2 className="text-4xl md:text-5xl font-semibold mb-12 text-[#0A2647] bg-white rounded-lg py-4 px-6 inline-flex mx-auto shadow-md">Property Tax Appeal Services</h2>
-      </div>
+      <h2 className="text-4xl md:text-5xl font-semibold mb-12 text-[#0A2647] text-center">Property Tax Appeal Services</h2>
       
       <div className="w-full space-y-8">
         <div className="bg-white rounded-lg p-8 shadow-lg">
