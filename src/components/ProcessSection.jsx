@@ -19,7 +19,7 @@ const ProcessStep = ({ number, icon: Icon, title, description, progress, showSti
         <div className="relative">
           <h3 className="text-xl md:text-2xl font-semibold mb-2 text-[#0A2647] flex items-center">
             {title}
-            {showSticker && <Sticker color="red" text="Free!" className="ml-2" />}
+            {showSticker && <span className="ml-2 inline-flex items-center"><Sticker color="red" text="Free!" /></span>}
           </h3>
           <p className="text-gray-700 text-base md:text-lg">{description}</p>
         </div>
