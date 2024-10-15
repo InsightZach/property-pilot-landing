@@ -34,7 +34,7 @@ const HeroCarousel = () => {
               className="w-full h-full object-cover"
               loading="lazy"
             />
-            <div className="absolute top-0 right-0 bottom-0 w-1/3 bg-[#0A2647] bg-opacity-20">
+            <div className="absolute top-0 right-0 bottom-0 w-2/5 bg-[#0A2647] bg-opacity-20">
               <AppealOverlay data={data} />
             </div>
           </div>
