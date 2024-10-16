@@ -125,7 +125,7 @@ const WhyInsight = () => {
             </Card>
             <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
               <CardHeader>
-                <CardTitle className="text-center">Contingency Fee</CardTitle>
+                <CardTitle className="text-center">No-Risk Contingency Fee</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
