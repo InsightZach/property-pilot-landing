@@ -18,20 +18,6 @@ const ResourcesContent = () => {
     <>
       <Card className="mb-8">
         <CardHeader>
-          <CardTitle className="text-2xl font-semibold text-[#0A2647]">Minnesota Property Tax Cycle</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="mb-4 text-gray-700">
-            The Minnesota property tax cycle is an annual process overseen by the Minnesota Department of Revenue. 
-            Each county oversees the assessments of cities and townships within its jurisdiction. 
-            The cycle includes property valuation, tax rate setting, and the collection of taxes.
-          </p>
-          <PropertyTaxCalendar />
-        </CardContent>
-      </Card>
-
-      <Card className="mb-8">
-        <CardHeader>
           <CardTitle className="text-2xl font-semibold text-[#0A2647]">DIY Appeal Process Overview</CardTitle>
         </CardHeader>
         <CardContent>
@@ -66,21 +52,37 @@ const ResourcesContent = () => {
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-2xl font-semibold text-[#0A2647]">Important Resources</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            <ExternalLinkButton href="https://www.revenue.state.mn.us/appealing-property-value-and-classification">
-              <span className="text-left">MN DOR-Property Tax Appeal</span>
-            </ExternalLinkButton>
-            <ExternalLinkButton href="https://mn.gov/tax-court/forms/forms/">
-              <span className="text-left">Minnesota Tax Court - Forms</span>
-            </ExternalLinkButton>
-          </div>
-        </CardContent>
-      </Card>
+      <div className="grid md:grid-cols-2 gap-8">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-semibold text-[#0A2647]">Minnesota Property Tax Cycle</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="mb-4 text-gray-700">
+              The Minnesota property tax cycle is an annual process overseen by the Minnesota Department of Revenue. 
+              Each county oversees the assessments of cities and townships within its jurisdiction. 
+              The cycle includes property valuation, tax rate setting, and the collection of taxes.
+            </p>
+            <PropertyTaxCalendar />
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-semibold text-[#0A2647]">Important Resources</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <ExternalLinkButton href="https://www.revenue.state.mn.us/appealing-property-value-and-classification">
+                <span className="text-left">MN DOR-Property Tax Appeal</span>
+              </ExternalLinkButton>
+              <ExternalLinkButton href="https://mn.gov/tax-court/forms/forms/">
+                <span className="text-left">Minnesota Tax Court - Forms</span>
+              </ExternalLinkButton>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </>
   );
 };
