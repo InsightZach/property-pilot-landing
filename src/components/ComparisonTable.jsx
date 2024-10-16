@@ -34,7 +34,7 @@ const ComparisonTable = () => {
                 {['DIYAppeal', 'NationalFirm', 'LocalAttorney', 'InsightPropertyTax'].map((column, colIndex) => (
                   <td key={column} className={`p-2 border text-center ${column === 'InsightPropertyTax' ? 'bg-blue-50' : ''} ${column === 'DIYAppeal' && index > 0 ? 'bg-gray-200' : ''}`}>
                     {column === 'DIYAppeal' && index > 0 ? (
-                      <span className="text-gray-400">N/A</span>
+                      <Minus className="inline-block text-gray-400 w-5 h-5" />
                     ) : (
                       <>
                         {row[column] === true && <CheckCircle className="inline-block text-green-500 w-5 h-5" />}
