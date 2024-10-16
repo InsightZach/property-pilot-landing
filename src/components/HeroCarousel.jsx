@@ -62,7 +62,7 @@ const HeroCarousel = () => {
             <div key={index} className="embla__slide flex-[0_0_100%] min-w-0 relative rounded-lg overflow-hidden transition-opacity duration-500">
               <img
                 src={`/${data.fileName}.jpg`}
-                alt={`Appeal ${index + 1}`}
+                alt={`${data.propertyType} in ${data.location} - ${data.assessmentYear} appeal with ${data.reduction} tax reduction`}
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
