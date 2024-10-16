@@ -132,7 +132,7 @@ const WhyInsight = () => {
           <RecentAppeals />
         </section>
 
-        <section className="bg-white rounded-lg p-8 mb-16">
+        <section className="hidden sm:block bg-white rounded-lg p-8 mb-16">
           <h2 className="text-3xl font-semibold text-[#0A2647] mb-8 text-center">Comparison of Property Tax Appeal Options</h2>
           <ComparisonTable />
         </section>
