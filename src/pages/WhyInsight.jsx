@@ -117,9 +117,6 @@ const WhyInsight = () => {
                   <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> 90-day appeal duration average</li>
                   <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> 100% appeal success rate</li>
                 </ul>
-                <Link to="/contact" className="block mt-4">
-                  <Button className="w-full bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Get Started</Button>
-                </Link>
               </CardContent>
             </Card>
             <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
@@ -133,9 +130,6 @@ const WhyInsight = () => {
                   <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> You pocket the rest</li>
                   <li className="flex items-center"><CheckCircle className="mr-2 text-[#d7b971]" /> We handle everything</li>
                 </ul>
-                <Link to="/contact" className="block mt-4">
-                  <Button className="w-full bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">Why Choose Insight?</Button>
-                </Link>
               </CardContent>
             </Card>
           </div>
