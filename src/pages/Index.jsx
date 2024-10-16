@@ -81,6 +81,7 @@ const Index = () => {
       </Helmet>
       <Header />
       <main>
+        <h1 className="sr-only">Minnesota Property Tax Assessment Appeals</h1>
         <HeroSection />
         <div className="bg-white">
           <AboutInsightSection />
@@ -102,11 +103,11 @@ const HeroSection = () => (
   <section className="bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] text-white py-12 md:py-20 relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A2647] opacity-70"></div>
     <div className="container mx-auto px-8 md:px-16 relative z-10">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12 text-white leading-tight">
+      <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12 text-white leading-tight">
         Minnesota Property Tax
         <br className="hidden md:inline" />
         Assessment Appeals
-      </h1>
+      </h2>
       <div className="flex flex-col lg:flex-row gap-8 items-stretch">
         <div className="flex-1 text-left flex flex-col justify-between">
           <div>
@@ -143,6 +144,8 @@ const HeroSection = () => (
           <HeroCarousel />
         </div>
       </div>
+    </div>
+  </section>
     </div>
   </section>
 );

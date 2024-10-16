@@ -122,7 +122,7 @@ const FAQ = () => {
           </div>
           <div className="bg-white p-8 rounded-lg flex flex-col md:flex-row justify-between items-center">
             <div className="md:w-2/3">
-              <h3 className="text-4xl font-bold text-[#0A2647] mb-4">Get Started</h3>
+              <h3 className="text-3xl font-bold text-[#0A2647] mb-4">Get Started</h3>
               <p className="text-[#0A2647] mb-4">
                 We'll review your property and provide an appeal recommendation. If an appeal benefits you, we'll take care of everything.
               </p>
