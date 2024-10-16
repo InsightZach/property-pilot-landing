@@ -3,6 +3,7 @@ import { ExternalLink } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import PropertyTaxCalendar from './PropertyTaxCalendar';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import CountyResources from './CountyResources';
 
 const ExternalLinkButton = ({ href, children }) => (
   <a href={href} target="_blank" rel="noopener noreferrer" className="w-full">
@@ -79,6 +80,7 @@ const ResourcesContent = () => {
               <ExternalLinkButton href="https://mn.gov/tax-court/forms/forms/">
                 <span className="text-left">Minnesota Tax Court - Forms</span>
               </ExternalLinkButton>
+              <CountyResources />
             </div>
           </CardContent>
         </Card>
