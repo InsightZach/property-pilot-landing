@@ -14,32 +14,34 @@ const comparisonData = [
 
 const ComparisonTable = () => {
   return (
-    <div className="overflow-x-auto">
-      <table className="w-full border-collapse text-sm">
-        <thead>
-          <tr className="bg-[#0A2647] text-white">
-            <th className="p-2 text-left">Benefits</th>
-            <th className="p-2 text-center w-20">DIY</th>
-            <th className="p-2 text-center w-20">National</th>
-            <th className="p-2 text-center w-20">Local</th>
-            <th className="p-2 text-center w-20 bg-[#1E3A5F]">Insight</th>
-          </tr>
-        </thead>
-        <tbody>
-          {comparisonData.map((row, index) => (
-            <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-100'}>
-              <td className="p-2 border">{row.benefit}</td>
-              {['DIYAppeal', 'NationalFirm', 'LocalAttorney', 'InsightPropertyTax'].map((column, colIndex) => (
-                <td key={column} className={`p-2 border text-center ${column === 'InsightPropertyTax' ? 'bg-blue-50' : ''}`}>
-                  {row[column] === true && <CheckCircle className="inline-block text-green-500 w-5 h-5" />}
-                  {row[column] === false && <Minus className="inline-block text-red-500 w-5 h-5" />}
-                  {typeof row[column] === 'string' && row[column]}
-                </td>
-              ))}
+    <div className="flex justify-center">
+      <div className="overflow-x-auto max-w-3xl">
+        <table className="w-full border-collapse text-sm">
+          <thead>
+            <tr className="bg-[#0A2647] text-white">
+              <th className="p-2 text-left w-40">Benefits</th>
+              <th className="p-2 text-center w-20">DIY</th>
+              <th className="p-2 text-center w-20">National</th>
+              <th className="p-2 text-center w-20">Local</th>
+              <th className="p-2 text-center w-20 bg-[#1E3A5F]">Insight</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {comparisonData.map((row, index) => (
+              <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-100'}>
+                <td className="p-2 border">{row.benefit}</td>
+                {['DIYAppeal', 'NationalFirm', 'LocalAttorney', 'InsightPropertyTax'].map((column, colIndex) => (
+                  <td key={column} className={`p-2 border text-center ${column === 'InsightPropertyTax' ? 'bg-blue-50' : ''}`}>
+                    {row[column] === true && <CheckCircle className="inline-block text-green-500 w-5 h-5" />}
+                    {row[column] === false && <Minus className="inline-block text-red-500 w-5 h-5" />}
+                    {typeof row[column] === 'string' && row[column]}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
