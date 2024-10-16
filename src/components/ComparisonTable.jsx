@@ -10,21 +10,21 @@ const comparisonData = [
   { benefit: 'Tailored Service', DIYAppeal: false, NationalFirm: false, LocalAttorney: true, InsightPropertyTax: true },
   { benefit: '90-Day Resolution', DIYAppeal: false, NationalFirm: '1yr+', LocalAttorney: '1yr+', InsightPropertyTax: true },
   { benefit: 'Risk-Free', DIYAppeal: false, NationalFirm: false, LocalAttorney: false, InsightPropertyTax: true },
-  { benefit: 'No Long-term Contracts', DIYAppeal: true, NationalFirm: false, LocalAttorney: false, InsightPropertyTax: true },
+  { benefit: 'No Long-Term Contracts', DIYAppeal: true, NationalFirm: false, LocalAttorney: false, InsightPropertyTax: true },
 ];
 
 const ComparisonTable = () => {
   return (
     <div className="flex justify-center">
       <div className="overflow-x-auto max-w-4xl">
-        <table className="w-full border-collapse text-sm">
+        <table className="w-full border-collapse text-sm rounded-lg overflow-hidden">
           <thead>
-            <tr className="bg-[#0A2647] text-white">
+            <tr className="bg-[#1E3A5F] text-white">
               <th className="p-2 text-left w-64">Client benefits</th>
               <th className="p-2 text-center w-24">DIY Appeal</th>
               <th className="p-2 text-center w-24">National Firm</th>
               <th className="p-2 text-center w-24">Local Attorney</th>
-              <th className="p-2 text-center w-32 bg-[#1E3A5F]">Insight Property Tax</th>
+              <th className="p-2 text-center w-32 bg-[#2E5077]">Insight Property Tax</th>
             </tr>
           </thead>
           <tbody>
