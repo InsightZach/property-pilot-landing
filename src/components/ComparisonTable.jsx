@@ -19,7 +19,7 @@ const ComparisonTable = () => {
       <table className="w-full border-collapse text-sm rounded-lg overflow-hidden">
         <thead>
           <tr className="bg-[#2E5077] text-white">
-            <th className="p-2 text-left">Client benefits</th>
+            <th className="p-2 text-left">Client Benefits</th>
             <th className="p-2 text-center">DIY Appeal</th>
             <th className="p-2 text-center">National Firm</th>
             <th className="p-2 text-center">Local Attorney</th>
