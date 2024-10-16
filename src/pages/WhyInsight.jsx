@@ -80,7 +80,7 @@ const WhyInsight = () => {
       <main className="container mx-auto px-4 py-16 relative z-10">
         <section className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-4">Why Choose <span className="text-[#d7b971]">Insight</span>?</h1>
-          <p className="text-xl text-white">Discover the Insight advantage in property tax appeals</p>
+          <p className="text-xl text-white">Client Focused Results</p>
         </section>
 
         <section className="bg-white rounded-lg p-8 mb-16">
