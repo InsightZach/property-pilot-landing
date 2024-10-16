@@ -85,13 +85,29 @@ const WhyInsight = () => {
 
         <section className="bg-white rounded-lg p-8 mb-16">
           <h2 className="text-3xl font-semibold text-[#0A2647] mb-8">Expert Minnesota Property Tax Appeals</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Insight Property Tax specializes in reducing assessment values for commercial, industrial, and apartment property owners and tenants in Minnesota, saving our clients significant amounts on property taxes.
-          </p>
-          <p className="text-lg text-gray-700 mb-8">
-            Our local expertise in Minnesota property tax laws gives clients direct access to a proven system that identifies over-assessments and consistently delivers successful appeal settlements throughout the state.
-          </p>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="text-lg text-gray-700 space-y-6">
+            <h3 className="text-2xl font-semibold text-[#0A2647]">Our Approach</h3>
+            <p>
+              At Insight Property Tax, we specialize in helping Minnesota commercial property owners and tenants reduce their property tax liabilities through expert assessment appeals. We believe that fair property assessments are essential to maximizing profitability, and we leverage decades of experience to ensure our clients aren't overpaying on their property taxes.
+            </p>
+            <p>
+              We've built a reputation for delivering results by focusing on one thing: saving our clients money. Using advanced analytics and a deep understanding of both the appraising and assessing sides of the process, we identify over-assessments and pursue efficient, end-to-end appeals.
+            </p>
+            
+            <h3 className="text-2xl font-semibold text-[#0A2647]">Our Expertise</h3>
+            <p>
+              With years of experience in property tax consulting, as well as time spent on the assessor's side, we know how the system works—and how to work it for you. This unique background gives us insight into how property values are set and how they can be corrected. Whether you own commercial, industrial, or apartment properties in the Minneapolis-St. Paul metro area, we're here to ensure you're paying the right amount of taxes, not a penny more.
+            </p>
+            
+            <h3 className="text-2xl font-semibold text-[#0A2647]">Our Commitment</h3>
+            <p>
+              We understand that property tax appeals can seem complex and overwhelming, but at Insight, we aim to make the process as straightforward and hassle-free as possible. Our clients rely on us to handle every step—from initial review to successful resolution. By offering a contingency-based service, you only pay if we secure savings, making this a no-risk, high-reward decision.
+            </p>
+            <p>
+              When you work with Insight Property Tax, you're working with a dedicated team committed to maximizing your property's profitability and minimizing unnecessary expenses.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 mt-8">
             <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
               <CardHeader>
                 <CardTitle className="text-center">Insight's Appeal Statistics</CardTitle>
