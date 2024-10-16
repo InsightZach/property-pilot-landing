@@ -84,7 +84,6 @@ const WhyInsight = () => {
         </section>
 
         <section className="bg-white rounded-lg p-8 mb-16">
-          <h2 className="text-3xl font-semibold text-[#0A2647] mb-8">Expert Minnesota Property Tax Appeals</h2>
           <div className="text-lg text-gray-700 space-y-6">
             <h3 className="text-2xl font-semibold text-[#0A2647]">Our Approach</h3>
             <p>
