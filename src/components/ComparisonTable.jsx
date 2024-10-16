@@ -19,12 +19,12 @@ const ComparisonTable = () => {
       <div className="overflow-x-auto max-w-4xl">
         <table className="w-full border-collapse text-sm rounded-lg overflow-hidden">
           <thead>
-            <tr className="bg-[#1E3A5F] text-white">
+            <tr className="bg-[#2E5077] text-white">
               <th className="p-2 text-left w-64">Client benefits</th>
               <th className="p-2 text-center w-24">DIY Appeal</th>
               <th className="p-2 text-center w-24">National Firm</th>
               <th className="p-2 text-center w-24">Local Attorney</th>
-              <th className="p-2 text-center w-32 bg-[#2E5077]">Insight Property Tax</th>
+              <th className="p-2 text-center w-32 bg-[#3E6087]">Insight Property Tax</th>
             </tr>
           </thead>
           <tbody>
@@ -32,10 +32,16 @@ const ComparisonTable = () => {
               <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-100'}>
                 <td className="p-2 border">{row.benefit}</td>
                 {['DIYAppeal', 'NationalFirm', 'LocalAttorney', 'InsightPropertyTax'].map((column, colIndex) => (
-                  <td key={column} className={`p-2 border text-center ${column === 'InsightPropertyTax' ? 'bg-blue-50' : ''}`}>
-                    {row[column] === true && <CheckCircle className="inline-block text-green-500 w-5 h-5" />}
-                    {row[column] === false && <Minus className="inline-block text-red-500 w-5 h-5" />}
-                    {typeof row[column] === 'string' && row[column]}
+                  <td key={column} className={`p-2 border text-center ${column === 'InsightPropertyTax' ? 'bg-blue-50' : ''} ${column === 'DIYAppeal' && index > 0 ? 'bg-gray-200' : ''}`}>
+                    {column === 'DIYAppeal' && index > 0 ? (
+                      <span className="text-gray-400">N/A</span>
+                    ) : (
+                      <>
+                        {row[column] === true && <CheckCircle className="inline-block text-green-500 w-5 h-5" />}
+                        {row[column] === false && <Minus className="inline-block text-red-500 w-5 h-5" />}
+                        {typeof row[column] === 'string' && row[column]}
+                      </>
+                    )}
                   </td>
                 ))}
               </tr>
