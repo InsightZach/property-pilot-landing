@@ -16,28 +16,84 @@ const FAQItem = ({ question, answer }) => (
 const FAQ = () => {
   const faqItems = [
     {
-      question: "What is the process for appealing my property tax assessment in Minnesota?",
-      answer: "The process begins with a thorough analysis of your property's assessment. If we identify an over-assessment, we prepare and file an appeal on your behalf. We handle all aspects of the appeal process, including negotiations and hearings, to ensure your property taxes are accurately assessed."
+      question: "What is the difference between an informal property tax appeal and a Tax Court petition?",
+      answer: "An informal appeal (also referred to as Open Book, Local Boards, or County Boards depending on your taxing jurisdiction) is filed with the local assessor's office. Any reductions are applied to the following year's taxes before payment is due. A Tax Court petition is a formal process filed with the Minnesota Tax Court. If successful, it results in a refund for overpaid taxes after they've been paid."
     },
     {
-      question: "How do I know if my property is over-assessed?",
-      answer: "An over-assessment occurs when the assessment value is higher than 'market value'. Many factors should be taken into account. Some typical indicators are: 1) Value Increase - An increase in value relative to your property's income production. 2) Equalization - Comparable properties received a lower value, but your property was not included. 3) Purchase price - You recently purchased your property below the assessment value. 4) Overstated improvement - You completed an improvement and the taxing jurisdiction added the permitted value on top of your assessment value."
+      question: "When should I file an informal appeal versus a Tax Court petition?",
+      answer: "File an informal appeal shortly after receiving your assessment notice (March). It's the fastest and least costly option. If unsuccessful or missed, you can file a Tax Court petition by April 30th of the payable year."
     },
     {
-      question: "What kind of savings can I expect from a successful property tax appeal?",
-      answer: "While savings can vary, our clients have seen an average reduction of 17.9% in their property tax assessments, resulting in average net savings of $24k+ per appeal. The actual savings will depend on your specific property and assessment. The tax consulting industry standard is around a 10% average reduction for context."
+      question: "How long does the property tax appeal process take?",
+      answer: "Informal appeals are typically resolved within 90 days, whereas Tax Court petitions can take 1-2 years. Insight Property Tax's process averages about 90 days for both informal and Tax Court appeals, much faster than standard timelines."
     },
     {
-      question: "How long does the property tax appeal process typically take?",
-      answer: "The appeal process in Minnesota falls into two categories: Board Appeals (Local or County) and Tax Court petitions. Board appeals apply to value notices, which you receive in early spring. There is a predetermined time frame depending on your taxing jurisdiction, typically ranging from 1-3 months. For Tax Court Petitions, a 2-year appeal time frame is not uncommon. However, our average timeframe is 90 days."
+      question: "What information do I need to provide for an appeal?",
+      answer: "For informal appeals, financial documents, rent rolls, and property appraisals are commonly required. For Tax Court petitions or income-producing properties, mandatory disclosures are required, including year-end financial statements, rent rolls, lease agreements, net rentable square footage, and a proposed budget for the following year."
     },
     {
-      question: "What information or documentation do I need to provide for the appeal process?",
-      answer: "This is all on a case by case basis, but information showing your property's Income & Expense for the last two years is standard. These include: Rent Roll, Income and Expense Report, and Lease."
+      question: "Do I need an attorney for an informal appeal?",
+      answer: "No. Attorneys are not needed to file an informal appeal. Insight Property Tax manages the entire process without legal representation. However, Tax Court petitions do require an attorney to file, a process we manage for our clients while continuing to represent our clients from filing to settlement."
     },
     {
-      question: "How do you determine if an appeal is worth pursuing?",
-      answer: "We conduct a detailed analysis of your property's assessment compared to its market value and similar properties. If we identify a significant over-assessment, we will recommend pursuing an appeal and outline the potential benefits."
+      question: "Case Study: How much could I save on a $4,000,000 property with a 10% reduction?",
+      answer: "For a $4,000,000 property, a 10% reduction in assessed value brings it down to $3,600,000. For commercial properties taxed at around 3.5%, this reduction would save approximately $14,000 in property taxes."
+    },
+    {
+      question: "Can my property's value increase after filing an appeal?",
+      answer: "In rare cases, yes, if the case goes to trial and the court deems the property was under-assessed. If you're concerned, Insight Property Tax ensures your appeal is withdrawn before reaching trial to avoid this risk."
+    },
+    {
+      question: "What happens if Insight Property Tax doesn't win the appeal?",
+      answer: "There's no risk to the client. Insight Property Tax works on a contingency basis, meaning you only pay if we successfully reduce your property taxes."
+    },
+    {
+      question: "What types of properties does Insight Property Tax work with?",
+      answer: "We focus on the Minneapolis-St. Paul metro area but work exclusively throughout Minnesota, providing property tax appeal services for commercial, industrial, and apartment property owners and tenants."
+    },
+    {
+      question: "How does Insight determine if my property is over-assessed?",
+      answer: "We use advanced analytics to locate over-assessed properties and use the three approaches to value: Sales Comparison, Income approach, and Cost approach. This comprehensive evaluation helps us identify over-assessments and pursue corrections."
+    },
+    {
+      question: "What are mandatory disclosure requirements for income-producing properties?",
+      answer: "For income-producing properties, you must provide the following by August 1st of the year taxes are due: Year-end financial statements for the previous and current year, rent rolls as of the assessment date, lease agreements detailing tenant names, terms, and rental rates, net rentable square footage of the property, and anticipated income and expenses (proposed budget for the following year). Failure to meet these disclosure requirements could result in automatic dismissal of your appeal."
+    },
+    {
+      question: "When must a Tax Court petition be filed?",
+      answer: "A Tax Court petition must be filed by April 30th of the payable year. This is the last chance to challenge your property's assessed value for the year, and Insight Property Tax can assist with this process."
+    },
+    {
+      question: "What happens if I miss the deadline for an informal appeal?",
+      answer: "If you miss the deadline for an informal appeal, you can still file a Tax Court petition by April 30th. Insight will ensure all necessary steps are taken before the deadline."
+    },
+    {
+      question: "Can I appeal multiple properties at once?",
+      answer: "Yes, as long as the properties are owned by the same entity and located within the same county, you can include multiple parcels in the same appeal."
+    },
+    {
+      question: "What happens if I win my appeal after paying property taxes?",
+      answer: "If you win through a Tax Court petition after taxes have been paid, you'll receive a refund for the overpaid amount, plus interest."
+    },
+    {
+      question: "What are the benefits of working with Insight Property Tax?",
+      answer: "Insight Property Tax offers: Risk-free services (you only pay if we succeed), fast results (our process averages 90 days for informal appeals), and local expertise (we specialize in Minnesota property tax law, delivering personalized service and avoiding bureaucratic delays common with national firms)."
+    },
+    {
+      question: "Can I reduce my property taxes without filing a petition?",
+      answer: "Yes, but only within a small window. If you appeal informally during the March–June period, your property's assessed value can be adjusted without needing to file a formal Tax Court petition."
+    },
+    {
+      question: "What if my appeal doesn't reduce the value as much as expected?",
+      answer: "In some cases, the reduction may not meet your expectations, but it will still result in savings. Insight Property Tax will ensure every possible reduction is pursued."
+    },
+    {
+      question: "How is the value of my property determined in an appeal?",
+      answer: "We use the sales comparison approach, cost approach, and income approach to evaluate your property's market value. These methods are recognized by Minnesota courts and help support your case during the appeal process."
+    },
+    {
+      question: "How can I get started with Insight Property Tax?",
+      answer: "Contact us for a free assessment review. We'll evaluate your property's assessment and identify whether there's an opportunity to reduce your tax burden. From there, we'll guide you through the appeal process step-by-step."
     }
   ];
 
