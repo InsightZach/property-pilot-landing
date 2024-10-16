@@ -36,4 +36,22 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.insightpropertytax.com/blog/essential-steps-successful-minnesota-property-tax-appeal</loc>
+    <lastmod>2024-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.insightpropertytax.com/blog/importance-strategy-property-tax-appeals-minnesota</loc>
+    <lastmod>2024-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.insightpropertytax.com/blog/navigating-minnesota-property-tax-appeals-expert-insights-faqs</loc>
+    <lastmod>2024-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
