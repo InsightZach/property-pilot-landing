@@ -15,15 +15,15 @@ const comparisonData = [
 const ComparisonTable = () => {
   return (
     <div className="flex justify-center">
-      <div className="overflow-x-auto max-w-3xl">
+      <div className="overflow-x-auto max-w-4xl">
         <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="bg-[#0A2647] text-white">
-              <th className="p-2 text-left w-40">Benefits</th>
-              <th className="p-2 text-center w-20">DIY</th>
-              <th className="p-2 text-center w-20">National</th>
-              <th className="p-2 text-center w-20">Local</th>
-              <th className="p-2 text-center w-20 bg-[#1E3A5F]">Insight</th>
+              <th className="p-2 text-left w-64">Client benefits</th>
+              <th className="p-2 text-center w-24">DIY Appeal</th>
+              <th className="p-2 text-center w-24">National Firm</th>
+              <th className="p-2 text-center w-24">Local Attorney</th>
+              <th className="p-2 text-center w-32 bg-[#1E3A5F]">Insight Property Tax</th>
             </tr>
           </thead>
           <tbody>
