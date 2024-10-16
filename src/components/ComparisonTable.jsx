@@ -39,7 +39,8 @@ const ComparisonTable = () => {
                       <>
                         {row[column] === true && <CheckCircle className="inline-block text-green-500 w-5 h-5" />}
                         {row[column] === false && <Minus className="inline-block text-red-500 w-5 h-5" />}
-                        {typeof row[column] === 'string' && row[column]}
+                        {row[column] === '1yr+' && <span className="text-red-500">1yr+</span>}
+                        {typeof row[column] === 'string' && row[column] !== '1yr+' && row[column]}
                       </>
                     )}
                   </td>
