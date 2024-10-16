@@ -15,7 +15,7 @@ const comparisonData = [
 
 const ComparisonTable = () => {
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto hidden sm:block">
       <table className="w-full border-collapse text-sm rounded-lg overflow-hidden">
         <thead>
           <tr className="bg-[#2E5077] text-white">
