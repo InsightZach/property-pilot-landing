@@ -109,7 +109,7 @@ const WhyInsight = () => {
           <div className="grid md:grid-cols-2 gap-8 mt-8">
             <Card className="bg-[#324E6E] text-white border-[#d7b971] border-2">
               <CardHeader>
-                <CardTitle className="text-center">Insight's Appeal Statistics</CardTitle>
+                <CardTitle className="text-center">Proven Minnesota Property Tax Appeal Success</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
