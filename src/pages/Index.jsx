@@ -146,8 +146,6 @@ const HeroSection = () => (
       </div>
     </div>
   </section>
-    </div>
-  </section>
 );
 
 const GetStartedSection = () => (
