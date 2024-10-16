@@ -100,7 +100,7 @@ const WhoWeWorkWith = () => (
     <div className="container mx-auto px-4 relative z-10">
       <div className="w-full space-y-8">
         <div className="bg-white rounded-lg p-8 shadow-lg">
-          <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-[#0A2647] text-left">Appeal Service Types</h3>
+          <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-[#0A2647] text-center md:text-left">Appeal Service Types</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <AppealServiceCard 
               icon={BookOpen}
@@ -121,7 +121,7 @@ const WhoWeWorkWith = () => (
         </div>
         
         <div className="bg-white rounded-lg p-8 shadow-lg">
-          <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-[#0A2647] text-left">Property Types</h3>
+          <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-[#0A2647] text-center md:text-left">Property Types</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <PropertyTypeCard icon={Building2} text="Commercial Appeal">
               <li>Office</li>
