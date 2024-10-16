@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import RecentAppeals from '../components/RecentAppeals';
 import ComparisonTable from '../components/ComparisonTable';
 import { CheckCircle, Percent, Clock, Wrench, DollarSign, HelpingHand, Building, MapPin } from 'lucide-react';
 
@@ -140,11 +139,6 @@ const WhyInsight = () => {
               </CardContent>
             </Card>
           </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold text-white mb-8 text-center">Recent Appeals</h2>
-          <RecentAppeals />
         </section>
 
         <section className="hidden sm:block bg-white rounded-lg p-8 mb-16">
