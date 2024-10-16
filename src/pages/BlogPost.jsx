@@ -34,6 +34,32 @@ const BlogPost = () => {
 
   const fullImageUrl = `https://www.insightpropertytax.com${post.imageUrl}`;
 
+  const blogPostSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "image": fullImageUrl,
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "author": {
+      "@type": "Person",
+      "name": "Zach Hepburn"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Insight Property Tax",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.insightpropertytax.com/logo.svg"
+      }
+    },
+    "description": post.excerpt,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://www.insightpropertytax.com/blog/${slug}`
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] relative">
       <Helmet>
@@ -52,6 +78,7 @@ const BlogPost = () => {
         <meta name="twitter:description" content={post.excerpt} />
         <meta name="twitter:image" content={fullImageUrl} />
         <link rel="canonical" href={`https://www.insightpropertytax.com/blog/${slug}`} />
+        <script type="application/ld+json">{JSON.stringify(blogPostSchema)}</script>
       </Helmet>
       <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
       <Header />

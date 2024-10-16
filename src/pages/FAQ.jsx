@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import Header from '../components/Header';
@@ -12,6 +13,38 @@ const FAQItem = ({ question, answer }) => (
     <AccordionContent className="px-4 py-2">{answer}</AccordionContent>
   </AccordionItem>
 );
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between an informal property tax appeal and a Tax Court petition?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An informal appeal is filed with the local assessor's office, with reductions applied to the following year's taxes. A Tax Court petition is a formal process filed with the Minnesota Tax Court, resulting in a refund for overpaid taxes after they've been paid."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I file an informal appeal versus a Tax Court petition?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "File an informal appeal shortly after receiving your assessment notice (March). It's the fastest and least costly option. If unsuccessful or missed, you can file a Tax Court petition by April 30th of the payable year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does the property tax appeal process take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Informal appeals are typically resolved within 90 days, whereas Tax Court petitions can take 1-2 years. Insight Property Tax's process averages about 90 days for both informal and Tax Court appeals, much faster than standard timelines."
+      }
+    }
+    // ... Add more FAQ items here
+  ]
+};
 
 const FAQ = () => {
   const faqItems = [
@@ -99,6 +132,11 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] relative">
+      <Helmet>
+        <title>FAQ | Insight Property Tax</title>
+        <meta name="description" content="Frequently asked questions about property tax appeals in Minnesota. Get expert answers from Insight Property Tax." />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
       <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
       <Header />
       <main className="container mx-auto px-4 py-16 relative z-10">

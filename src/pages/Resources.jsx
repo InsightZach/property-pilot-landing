@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ResourcesContent from '../components/ResourcesContent';
@@ -7,9 +8,22 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 
+const resourcesSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Minnesota Property Tax Resources",
+  "description": "Comprehensive resources for Minnesota property tax appeals, including county-specific information and expert guidance.",
+  "url": "https://insightpropertytax.com/resources"
+};
+
 const Resources = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] relative">
+      <Helmet>
+        <title>Minnesota Property Tax Resources | Insight Property Tax</title>
+        <meta name="description" content="Comprehensive resources for Minnesota property tax appeals, including county-specific information and expert guidance." />
+        <script type="application/ld+json">{JSON.stringify(resourcesSchema)}</script>
+      </Helmet>
       <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
       <Header />
       <main className="container mx-auto px-4 py-16 relative z-10 space-y-8">
