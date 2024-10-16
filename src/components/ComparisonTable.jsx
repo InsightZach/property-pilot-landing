@@ -3,6 +3,7 @@ import { CheckCircle } from 'lucide-react';
 
 const comparisonData = [
   { benefit: 'Free', DIYAppeal: true, NationalFirm: false, LocalAttorney: false, InsightPropertyTax: false },
+  { benefit: 'Nationwide availability', DIYAppeal: false, NationalFirm: true, LocalAttorney: false, InsightPropertyTax: false },
   { benefit: 'Increased Appeal Success Probability', DIYAppeal: false, NationalFirm: true, LocalAttorney: true, InsightPropertyTax: true },
   { benefit: 'Contingency Fee', DIYAppeal: false, NationalFirm: true, LocalAttorney: true, InsightPropertyTax: true },
   { benefit: 'Twin-Cities Market Focus', DIYAppeal: false, NationalFirm: false, LocalAttorney: true, InsightPropertyTax: true },
@@ -12,7 +13,6 @@ const comparisonData = [
   { benefit: 'No Long-term Commitments', DIYAppeal: false, NationalFirm: false, LocalAttorney: false, InsightPropertyTax: true },
   { benefit: 'Cross-Selling Products', DIYAppeal: false, NationalFirm: true, LocalAttorney: false, InsightPropertyTax: false },
   { benefit: 'Varying Consultant Experience levels', DIYAppeal: false, NationalFirm: true, LocalAttorney: false, InsightPropertyTax: false },
-  { benefit: 'Nationwide availability', DIYAppeal: false, NationalFirm: true, LocalAttorney: false, InsightPropertyTax: false },
   { benefit: 'Litigation Focus', DIYAppeal: false, NationalFirm: true, LocalAttorney: true, InsightPropertyTax: false },
   { benefit: 'Suits', DIYAppeal: false, NationalFirm: true, LocalAttorney: true, InsightPropertyTax: false },
 ];
