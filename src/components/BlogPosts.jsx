@@ -20,9 +20,11 @@ const BlogPosts = () => {
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error loading blog posts</div>;
 
-  const shareOnLinkedIn = (slug) => {
+  const shareOnLinkedIn = (slug, title) => {
     const postUrl = `https://www.insightpropertytax.com/blog/${slug}`;
-    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`;
+    const encodedPostUrl = encodeURIComponent(postUrl);
+    const encodedTitle = encodeURIComponent(title);
+    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedPostUrl}&title=${encodedTitle}`;
     window.open(linkedInShareUrl, '_blank');
   };
 
@@ -42,7 +44,7 @@ const BlogPosts = () => {
             <p className="text-gray-600 mb-4">{post.excerpt}</p>
             <p className="text-sm text-gray-500">{new Date(post.date).toLocaleDateString()}</p>
             <Button
-              onClick={() => shareOnLinkedIn(post.slug)}
+              onClick={() => shareOnLinkedIn(post.slug, post.title)}
               className="inline-flex items-center mt-4 bg-[#0077B5] text-white px-4 py-2 rounded hover:bg-[#006097] transition-colors"
             >
               <Linkedin className="mr-2 h-4 w-4" /> Share on LinkedIn
