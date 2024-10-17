@@ -43,45 +43,46 @@ const BlogPost = () => {
         <meta name="author" content="Zach Hepburn" />
         <meta name="keywords" content="property tax appeals, Minnesota, commercial property, industrial property, apartment property, tax reduction, Insight Property Tax" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={fullImageUrl} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.excerpt} />
-        <meta name="twitter:image" content={fullImageUrl} />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="article:published_time" content={post.date} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": post.title,
-            "image": fullImageUrl,
-            "datePublished": post.date,
-            "dateModified": post.date,
-            "author": {
-              "@type": "Person",
-              "name": "Zach Hepburn"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Insight Property Tax",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.insightpropertytax.com/logo.svg"
-              }
-            },
-            "description": post.excerpt,
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": canonicalUrl
-            }
-          })}
-        </script>
       </Helmet>
+      {/* Add Open Graph tags directly in the HTML */}
+      <meta property="og:title" content={`${post.title} | Insight Property Tax`} />
+      <meta property="og:description" content={post.excerpt} />
+      <meta property="og:image" content={fullImageUrl} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content="article" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={`${post.title} | Insight Property Tax`} />
+      <meta name="twitter:description" content={post.excerpt} />
+      <meta name="twitter:image" content={fullImageUrl} />
+      <meta property="article:published_time" content={post.date} />
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": post.title,
+          "image": fullImageUrl,
+          "datePublished": post.date,
+          "dateModified": post.date,
+          "author": {
+            "@type": "Person",
+            "name": "Zach Hepburn"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Insight Property Tax",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.insightpropertytax.com/logo.svg"
+            }
+          },
+          "description": post.excerpt,
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": canonicalUrl
+          }
+        })}
+      </script>
       <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
       <Header />
       <main className="container mx-auto px-4 py-16 relative z-10">
