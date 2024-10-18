@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet';
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ProcessSection from '../components/ProcessSection';
-import MeetTheOwner from '../components/MeetTheOwner';
-import HowWeWork from '../components/HowWeWork';
-import WhoWeWorkWith from '../components/WhoWeWorkWith';
-import AboutInsightSection from '../components/AboutInsightSection';
 import HeroCarousel from '../components/HeroCarousel';
+
+// Lazy load components
+const LazyProcessSection = lazy(() => import('../components/ProcessSection'));
+const LazyMeetTheOwner = lazy(() => import('../components/MeetTheOwner'));
+const LazyHowWeWork = lazy(() => import('../components/HowWeWork'));
+const LazyWhoWeWorkWith = lazy(() => import('../components/WhoWeWorkWith'));
+const LazyAboutInsightSection = lazy(() => import('../components/AboutInsightSection'));
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -83,13 +85,17 @@ const Index = () => {
       <main>
         <HeroSection />
         <div className="bg-white">
-          <AboutInsightSection />
-          <HowWeWork />
-          <ProcessSection />
-          <WhoWeWorkWith />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyAboutInsightSection />
+            <LazyHowWeWork />
+            <LazyProcessSection />
+            <LazyWhoWeWorkWith />
+          </Suspense>
         </div>
         <div className="bg-gradient-to-b from-[#0A2647] to-[#2E5077]">
-          <MeetTheOwner />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyMeetTheOwner />
+          </Suspense>
           <GetStartedSection />
         </div>
       </main>
