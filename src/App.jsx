@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Index from './pages/Index';
 import NotFound from './pages/NotFound';
-import PrivacyPolicy from './pages/PrivacyPolicy';
 import WhyInsight from './pages/WhyInsight';
 import Resources from './pages/Resources';
 import Contact from './pages/Contact';
@@ -23,7 +22,6 @@ const App = () => {
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/why-insight" element={<WhyInsight />} />
               <Route path="/resources" element={<Resources />} />
               <Route path="/contact" element={<Contact />} />
