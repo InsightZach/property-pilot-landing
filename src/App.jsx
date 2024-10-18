@@ -1,39 +1,68 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Index from './pages/Index';
-import NotFound from './pages/NotFound';
-import WhyInsight from './pages/WhyInsight';
-import Resources from './pages/Resources';
-import Contact from './pages/Contact';
+import { Toaster } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import { navItems } from "./nav-items";
+import NotFound from "./pages/NotFound";
+import React, { Suspense, useTransition, lazy, useEffect } from 'react';
+
+const queryClient = new QueryClient();
 
 // Lazy load components
-const LazyBlogPosts = React.lazy(() => import('./components/BlogPosts'))
-const LazyMeetTheOwner = React.lazy(() => import('./components/MeetTheOwner'))
-const LazyAppealStatistics = React.lazy(() => import('./components/AppealStatistics'))
+const LazyIndex = lazy(() => import("./pages/Index"));
+const LazyFAQ = lazy(() => import("./pages/FAQ"));
+const LazyContact = lazy(() => import("./pages/Contact"));
+const LazyResources = lazy(() => import("./pages/Resources"));
+const LazyWhyInsight = lazy(() => import("./pages/WhyInsight"));
+const LazyBlog = lazy(() => import("./pages/Blog"));
+const LazyBlogPost = lazy(() => import("./pages/BlogPost"));
 
-const App = () => {
-  return (
-    <Router>
-      <div className="flex flex-col min-h-screen">
-        <Header />
-        <main className="flex-grow">
-          <Suspense fallback={<div>Loading...</div>}>
+const NavigationWrapper = ({ children }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [isPending, startTransition] = useTransition();
+
+  const handleNavigation = (to) => {
+    startTransition(() => {
+      navigate(to);
+    });
+  };
+
+  useEffect(() => {
+    const currentRoute = navItems.find(item => item.to === location.pathname) || { title: "Insight Property Tax" };
+    document.title = `${currentRoute.title} | Insight Property Tax`;
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", currentRoute.description || "Expert property tax appeal services for commercial, industrial, and apartment properties in Minnesota. Maximize your savings with Insight Property Tax.");
+    }
+  }, [location]);
+
+  return React.cloneElement(children, { handleNavigation });
+};
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <BrowserRouter>
+        <NavigationWrapper>
+          <Suspense fallback={<div className="flex items-center justify-center h-screen">Loading...</div>}>
             <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/why-insight" element={<WhyInsight />} />
-              <Route path="/resources" element={<Resources />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<LazyBlogPosts />} />
+              <Route path="/" element={<LazyIndex />} />
+              <Route path="/why-insight" element={<LazyWhyInsight />} />
+              <Route path="/faq" element={<LazyFAQ />} />
+              <Route path="/resources" element={<LazyResources />} />
+              <Route path="/contact" element={<LazyContact />} />
+              <Route path="/blog" element={<LazyBlog />} />
+              <Route path="/blog/:slug" element={<LazyBlogPost />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
-        </main>
-        <Footer />
-      </div>
-    </Router>
-  );
-};
+        </NavigationWrapper>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
 
 export default App;
