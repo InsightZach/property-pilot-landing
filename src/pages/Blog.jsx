@@ -16,9 +16,8 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] relative">
       <Helmet>
-        <title>Property Tax Insights Blog | Insight Property Tax</title>
-        <meta name="description" content="Stay informed with the latest insights on Minnesota property tax appeals, strategies, and industry news. Expert articles from Insight Property Tax to help you navigate your property tax challenges." />
-        <meta name="keywords" content="Minnesota property tax blog, tax appeal strategies, commercial property tax insights, industrial property tax news, apartment property tax tips" />
+        <title>Blog | Insight Property Tax</title>
+        <meta name="description" content="Expert insights on property tax appeals and strategies for Minnesota commercial, industrial, and apartment properties." />
         <script type="application/ld+json">{JSON.stringify(blogSchema)}</script>
       </Helmet>
       <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
