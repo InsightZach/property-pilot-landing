@@ -3,8 +3,6 @@ import { Helmet } from 'react-helmet';
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import HeroCarousel from '../components/HeroCarousel';
 
 // Lazy load components
@@ -81,7 +79,6 @@ const Index = () => {
         <link rel="canonical" href="https://insightpropertytax.com" />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
-      <Header />
       <main>
         <HeroSection />
         <div className="bg-white">
@@ -99,7 +96,6 @@ const Index = () => {
           <GetStartedSection />
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
