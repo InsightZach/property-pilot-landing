@@ -133,8 +133,9 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] relative">
       <Helmet>
-        <title>FAQ | Insight Property Tax</title>
-        <meta name="description" content="Frequently asked questions about property tax appeals in Minnesota. Get expert answers from Insight Property Tax." />
+        <title>FAQ | Minnesota Property Tax Appeals | Insight Property Tax</title>
+        <meta name="description" content="Get answers to frequently asked questions about Minnesota property tax appeals. Learn about the appeal process, timelines, and how Insight Property Tax can help you save." />
+        <meta name="keywords" content="Minnesota property tax FAQ, tax appeal process, commercial property tax, industrial property tax, apartment property tax" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>

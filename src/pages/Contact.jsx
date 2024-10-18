@@ -1,123 +1,33 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Helmet } from 'react-helmet';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { Linkedin, Mail, Phone } from 'lucide-react';
-import { toast } from 'sonner';
-
-const contactSchema = {
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": "Contact Insight Property Tax",
-  "description": "Get in touch with Insight Property Tax for expert property tax appeal services in Minnesota.",
-  "url": "https://insightpropertytax.com/contact",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "Insight Property Tax",
-    "telephone": "+16122084419",
-    "email": "zach@insightpropertytax.com"
-  }
-};
 
 const Contact = () => {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm();
-
-  const onSubmit = async (data) => {
-    try {
-      const response = await fetch('/.netlify/functions/submit-form', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        toast.success(result.message || 'Form submitted successfully');
-        reset();
-      } else {
-        throw new Error(result.error || 'Form submission failed');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      toast.error(`Failed to submit form: ${error.message}. Please try again.`);
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] relative">
       <Helmet>
-        <title>Contact Us | Insight Property Tax</title>
-        <meta name="description" content="Get in touch with Insight Property Tax for expert property tax appeal services in Minnesota." />
-        <script type="application/ld+json">{JSON.stringify(contactSchema)}</script>
+        <title>Contact Insight Property Tax | Minnesota Tax Appeal Experts</title>
+        <meta name="description" content="Get in touch with Insight Property Tax for expert assistance with your Minnesota property tax appeal. We're here to help you reduce your commercial, industrial, or apartment property taxes." />
+        <meta name="keywords" content="contact property tax experts, Minnesota tax appeal consultation, commercial property tax, industrial property tax, apartment property tax" />
       </Helmet>
-      <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
-      <Header />
-      <main className="container mx-auto px-4 py-16 relative z-10">
-        <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
-          <div className="md:flex">
-            <div className="md:w-1/2 bg-[#0A2647] p-8 text-white">
-              <h2 className="text-3xl font-bold mb-4">Let's chat.</h2>
-              <p className="mb-6">Tell me about your property.</p>
-              <div className="flex items-center mb-4">
-                <Mail className="mr-2 h-5 w-5 text-[#d7b971]" />
-                <a href="mailto:zach@insightpropertytax.com" className="hover:text-[#d7b971]">zach@insightpropertytax.com</a>
-              </div>
-              <div className="flex items-center mb-4">
-                <Phone className="mr-2 h-5 w-5 text-[#d7b971]" />
-                <a href="tel:612-208-4419" className="hover:text-[#d7b971]">612-208-4419</a>
-              </div>
-              <div className="flex items-center">
-                <Linkedin className="mr-2 h-5 w-5 text-[#d7b971]" />
-                <a href="https://www.linkedin.com/in/zach-hepburn" target="_blank" rel="noopener noreferrer" className="hover:text-[#d7b971]">LinkedIn Profile</a>
-              </div>
-            </div>
-            <div className="md:w-1/2 p-8">
-              <h2 className="text-2xl font-bold mb-4 text-[#0A2647]">Send us a message</h2>
-              <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="mb-4">
-                  <Label htmlFor="firstName">First Name *</Label>
-                  <Input id="firstName" {...register("firstName", { required: true })} />
-                  {errors.firstName && <span className="text-red-500">This field is required</span>}
-                </div>
-                <div className="mb-4">
-                  <Label htmlFor="lastName">Last Name *</Label>
-                  <Input id="lastName" {...register("lastName", { required: true })} />
-                  {errors.lastName && <span className="text-red-500">This field is required</span>}
-                </div>
-                <div className="mb-4">
-                  <Label htmlFor="email">Email Address *</Label>
-                  <Input id="email" type="email" {...register("email", { required: true })} />
-                  {errors.email && <span className="text-red-500">This field is required</span>}
-                </div>
-                <div className="mb-4">
-                  <Label htmlFor="phone">Phone Number (Optional)</Label>
-                  <Input id="phone" {...register("phone")} />
-                </div>
-                <div className="mb-4">
-                  <Label htmlFor="propertyId">Property Identification # (Optional)</Label>
-                  <Input id="propertyId" {...register("propertyId")} />
-                </div>
-                <div className="mb-4">
-                  <Label htmlFor="propertyDetails">Tell me about your property (Optional)</Label>
-                  <Textarea id="propertyDetails" {...register("propertyDetails")} />
-                </div>
-                <Button type="submit" className="w-full bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647]">
-                  Send Message
-                </Button>
-              </form>
-            </div>
+      <div className="container mx-auto px-4 py-16 relative z-10">
+        <h1 className="text-4xl font-bold text-center text-white mb-8">Contact Us</h1>
+        <p className="text-lg text-center text-white mb-4">Have questions or need assistance? We're here to help!</p>
+        <form className="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+          <div className="mb-4">
+            <label className="block text-gray-700" htmlFor="name">Name</label>
+            <input className="border border-gray-300 p-2 w-full" type="text" id="name" required />
           </div>
-        </div>
-      </main>
-      <Footer />
+          <div className="mb-4">
+            <label className="block text-gray-700" htmlFor="email">Email</label>
+            <input className="border border-gray-300 p-2 w-full" type="email" id="email" required />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700" htmlFor="message">Message</label>
+            <textarea className="border border-gray-300 p-2 w-full" id="message" rows="4" required></textarea>
+          </div>
+          <button className="bg-[#d7b971] hover:bg-[#c7a961] text-[#0A2647] px-4 py-2 rounded" type="submit">Send Message</button>
+        </form>
+      </div>
     </div>
   );
 };

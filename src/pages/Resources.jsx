@@ -21,7 +21,8 @@ const Resources = () => {
     <div className="min-h-screen bg-gradient-to-br from-[#0A2647] via-[#1E3A5F] to-[#2E5077] relative">
       <Helmet>
         <title>Minnesota Property Tax Resources | Insight Property Tax</title>
-        <meta name="description" content="Comprehensive resources for Minnesota property tax appeals, including county-specific information and expert guidance." />
+        <meta name="description" content="Access comprehensive resources for Minnesota property tax appeals. Find county-specific information, expert guides, and tools to help with your property tax reduction." />
+        <meta name="keywords" content="Minnesota property tax resources, tax appeal guides, county tax information, commercial property tax, industrial property tax" />
         <script type="application/ld+json">{JSON.stringify(resourcesSchema)}</script>
       </Helmet>
       <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div>
