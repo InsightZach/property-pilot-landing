@@ -3,38 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <title>CRM Email Tracker</title>
+    <title>Property Pilot Email Tracker</title>
     <script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
-    <script src="tracking.js"></script>
-    <style>
-        .padding { padding: 15px; }
-        .button {
-            padding: 8px 16px;
-            background-color: #0078d4;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #106ebe;
-        }
-        #notification-message {
-            margin-bottom: 12px;
-        }
-        #tracking-status {
-            margin-bottom: 12px;
-            font-weight: bold;
-        }
-    </style>
+    <script type="module" src="/src/main.tsx"></script>
 </head>
 <body>
-    <div id="content-main">
-        <div class="padding">
-            <div id="notification-message"></div>
-            <div id="tracking-status"></div>
-            <button class="button" onclick="toggleTracking()">Toggle Tracking</button>
-        </div>
-    </div>
+    <div id="root"></div>
 </body>
 </html>
