@@ -1,7 +1,16 @@
-Office.onReady(() => {
-  console.log('Add-in initialized successfully');
-  Office.context.mailbox.item.addHandlerAsync(Office.EventType.ItemSend, handleEmailSend);
+// Initialize Office.js
+Office.onReady((info) => {
+  if (info.host === Office.HostType.Outlook) {
+    console.log("Office.js is ready in Outlook");
+    // Add email send handler
+    Office.context.mailbox.item.addHandlerAsync(Office.EventType.ItemSend, handleEmailSend);
+  }
 });
+
+// Handle any errors that occur during initialization
+Office.initialize = function (reason) {
+  console.log("Office initialized with reason:", reason);
+};
 
 let isTrackingEnabled = true;
 let selectedCampaignId = null;
